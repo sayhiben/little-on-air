@@ -64,7 +64,7 @@ jobs:
           sha256sum *.uf2 *.elf > SHA256SUMS
 
       - name: Upload release bundle
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: little-on-air-${{ github.ref_name }}
           path: little-on-air/dist/
@@ -77,7 +77,7 @@ jobs:
       contents: write
     steps:
       - name: Download release bundle
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: little-on-air-${{ github.ref_name }}
           path: dist
