@@ -8,7 +8,9 @@ Release. Do not swap their roles.
 For each board:
 
 1. Connect USB-C.
-2. Double-tap reset quickly. A `XIAO-BOOT` mass-storage drive appears.
+2. Double-tap reset quickly. A `XIAO-SENSE` mass-storage drive appears on the
+   factory Sense bootloader used by our test boards; other factory revisions
+   may label it `XIAO-BOOT`.
 3. Copy the appropriate `.uf2` file onto that drive.
 4. Wait for the board to program itself, eject, and restart.
 

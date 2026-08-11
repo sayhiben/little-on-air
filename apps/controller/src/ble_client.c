@@ -8,6 +8,7 @@
 #include <zephyr/bluetooth/hci.h>
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
 #include <zephyr/sys/atomic.h>
 #include <zephyr/sys/clock.h>
 
@@ -18,6 +19,8 @@
 #if !defined(CONFIG_BT_SMP_SC_PAIR_ONLY) || defined(CONFIG_BT_SMP_SC_ONLY)
 #error "Little On Air requires LE Secure Connections pairing with Just Works support"
 #endif
+
+LOG_MODULE_REGISTER(loa_controller_ble);
 
 static struct bt_uuid_128 service_uuid = BT_UUID_INIT_128(LOA_BT_UUID_SERVICE_VAL);
 static struct bt_uuid_128 command_uuid = BT_UUID_INIT_128(LOA_BT_UUID_COMMAND_VAL);
@@ -102,10 +105,10 @@ static bool advertisement_has_service(struct bt_data *data, void *user_data)
 static void device_found(const bt_addr_le_t *address, int8_t rssi, uint8_t type,
 			 struct net_buf_simple *advertising_data)
 {
+	char address_string[BT_ADDR_LE_STR_LEN];
 	bool found = false;
 	int err;
 
-	ARG_UNUSED(rssi);
 	if (type != BT_GAP_ADV_TYPE_ADV_IND && type != BT_GAP_ADV_TYPE_ADV_DIRECT_IND &&
 	    type != BT_GAP_ADV_TYPE_EXT_ADV) {
 		return;
@@ -116,8 +119,12 @@ static void device_found(const bt_addr_le_t *address, int8_t rssi, uint8_t type,
 		return;
 	}
 
+	bt_addr_le_to_str(address, address_string, sizeof(address_string));
+	LOG_INF("scan match peer=%s rssi=%d type=%u", address_string, rssi, type);
+
 	err = bt_le_scan_stop();
 	if (err != 0 && err != -EALREADY) {
+		LOG_ERR("scan stop failed err=%d", err);
 		connection_result = err;
 		k_sem_give(&connected_sem);
 		return;
@@ -126,8 +133,11 @@ static void device_found(const bt_addr_le_t *address, int8_t rssi, uint8_t type,
 	err = bt_conn_le_create(address, BT_CONN_LE_CREATE_CONN, BT_LE_CONN_PARAM_DEFAULT,
 				&default_conn);
 	if (err != 0) {
+		LOG_ERR("connection create failed err=%d", err);
 		connection_result = err;
 		k_sem_give(&connected_sem);
+	} else {
+		LOG_INF("connection create queued");
 	}
 }
 
@@ -137,14 +147,15 @@ static void connected(struct bt_conn *conn, uint8_t err)
 		return;
 	}
 
+	LOG_INF("connected err=%u", err);
 	connection_result = err == 0U ? 0 : -ECONNREFUSED;
 	k_sem_give(&connected_sem);
 }
 
 static void disconnected(struct bt_conn *conn, uint8_t reason)
 {
-	ARG_UNUSED(reason);
 	if (conn == default_conn) {
+		LOG_INF("disconnected reason=0x%02x", reason);
 		k_sem_give(&disconnected_sem);
 	}
 }
@@ -155,6 +166,7 @@ static void security_changed(struct bt_conn *conn, bt_security_t level, enum bt_
 		return;
 	}
 
+	LOG_INF("security changed level=%u err=%u", level, err);
 	security_result = err == BT_SECURITY_ERR_SUCCESS && level >= BT_SECURITY_L2 ? 0 : -EACCES;
 	k_sem_give(&security_sem);
 }
@@ -167,6 +179,7 @@ BT_CONN_CB_DEFINE(connection_callbacks) = {
 
 static void pairing_complete(struct bt_conn *conn, bool bonded)
 {
+	LOG_INF("pairing complete ours=%u bonded=%u", conn == default_conn, bonded);
 	if (conn == default_conn && bonded) {
 		atomic_set(&pairing_happened, 1);
 	}
@@ -174,7 +187,7 @@ static void pairing_complete(struct bt_conn *conn, bool bonded)
 
 static void pairing_failed(struct bt_conn *conn, enum bt_security_err reason)
 {
-	ARG_UNUSED(reason);
+	LOG_ERR("pairing failed ours=%u reason=%u", conn == default_conn, reason);
 	if (conn == default_conn) {
 		security_result = -EACCES;
 		k_sem_give(&security_sem);
@@ -191,12 +204,19 @@ static uint8_t indication_received(struct bt_conn *conn, struct bt_gatt_subscrib
 {
 	ARG_UNUSED(conn);
 	if (data == NULL) {
+		LOG_INF("subscription removed");
 		params->value_handle = 0U;
 		return BT_GATT_ITER_STOP;
 	}
 
-	if (loa_protocol_decode(&indicated_state, data, length) == 0) {
+	int err = loa_protocol_decode(&indicated_state, data, length);
+
+	if (err == 0) {
+		LOG_INF("indication transaction=0x%08x status=%u", indicated_state.transaction_id,
+			indicated_state.status);
 		k_sem_give(&ack_sem);
+	} else {
+		LOG_ERR("invalid indication len=%u err=%d", length, err);
 	}
 
 	return BT_GATT_ITER_CONTINUE;
@@ -207,6 +227,7 @@ static void subscription_complete(struct bt_conn *conn, uint8_t err,
 {
 	ARG_UNUSED(conn);
 	ARG_UNUSED(params);
+	LOG_INF("subscription complete att_err=0x%02x", err);
 	discovery_result = err == 0U ? 0 : -EIO;
 	k_sem_give(&discovery_sem);
 }
@@ -218,6 +239,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 
 	ARG_UNUSED(params);
 	if (attr == NULL) {
+		LOG_ERR("discovery stage=%u returned no attribute", discovery_stage);
 		discovery_result = -ENOENT;
 		k_sem_give(&discovery_sem);
 		return BT_GATT_ITER_STOP;
@@ -228,6 +250,8 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 		const struct bt_gatt_service_val *service = attr->user_data;
 
 		service_end_handle = service->end_handle;
+		LOG_INF("service handles start=0x%04x end=0x%04x", attr->handle,
+			service_end_handle);
 		discovery_stage = DISCOVER_COMMAND;
 		discover_params.uuid = &command_uuid.uuid;
 		discover_params.start_handle = attr->handle + 1U;
@@ -237,6 +261,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 	}
 	case DISCOVER_COMMAND:
 		command_value_handle = bt_gatt_attr_value_handle(attr);
+		LOG_INF("command value handle=0x%04x", command_value_handle);
 		discovery_stage = DISCOVER_STATE;
 		discover_params.uuid = &state_uuid.uuid;
 		discover_params.start_handle = command_value_handle + 1U;
@@ -245,6 +270,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 		break;
 	case DISCOVER_STATE:
 		state_value_handle = bt_gatt_attr_value_handle(attr);
+		LOG_INF("state value handle=0x%04x", state_value_handle);
 		discovery_stage = DISCOVER_CCC;
 		discover_params.uuid = &ccc_uuid.uuid;
 		discover_params.start_handle = state_value_handle + 1U;
@@ -252,6 +278,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 		discover_params.type = BT_GATT_DISCOVER_DESCRIPTOR;
 		break;
 	case DISCOVER_CCC:
+		LOG_INF("CCC handle=0x%04x; subscribing", attr->handle);
 		memset(&subscribe_params, 0, sizeof(subscribe_params));
 		subscribe_params.notify = indication_received;
 		subscribe_params.subscribe = subscription_complete;
@@ -262,6 +289,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 		atomic_set_bit(subscribe_params.flags, BT_GATT_SUBSCRIBE_FLAG_VOLATILE);
 		err = bt_gatt_subscribe(conn, &subscribe_params);
 		if (err != 0 && err != -EALREADY) {
+			LOG_ERR("subscribe queue failed err=%d", err);
 			discovery_result = err;
 			k_sem_give(&discovery_sem);
 		} else if (err == -EALREADY) {
@@ -275,6 +303,7 @@ static uint8_t discovery_callback(struct bt_conn *conn, const struct bt_gatt_att
 
 	err = bt_gatt_discover(conn, &discover_params);
 	if (err != 0) {
+		LOG_ERR("next discovery stage=%u failed err=%d", discovery_stage, err);
 		discovery_result = err;
 		k_sem_give(&discovery_sem);
 	}
@@ -293,12 +322,15 @@ static int discover_service(k_timepoint_t deadline)
 
 	discovery_result = bt_gatt_discover(default_conn, &discover_params);
 	if (discovery_result != 0) {
+		LOG_ERR("service discovery queue failed err=%d", discovery_result);
 		return discovery_result;
 	}
 
 	if (k_sem_take(&discovery_sem, sys_timepoint_timeout(deadline)) != 0) {
+		LOG_ERR("service preparation timed out");
 		return -ETIMEDOUT;
 	}
+	LOG_INF("service preparation result=%d", discovery_result);
 	return discovery_result;
 }
 
@@ -314,8 +346,10 @@ static int connect_and_prepare(k_timepoint_t deadline)
 
 	reset_operation_state();
 	atomic_set(&scan_active, 1);
+	LOG_INF("starting passive scan");
 	err = bt_le_scan_start(&scan_params, device_found);
 	if (err != 0) {
+		LOG_ERR("scan start failed err=%d", err);
 		atomic_clear(&scan_active);
 		return err;
 	}
@@ -324,23 +358,31 @@ static int connect_and_prepare(k_timepoint_t deadline)
 		if (atomic_cas(&scan_active, 1, 0)) {
 			(void)bt_le_scan_stop();
 		}
+		LOG_ERR("scan/connect timed out");
 		return -ETIMEDOUT;
 	}
 	if (connection_result != 0) {
+		LOG_ERR("connection failed result=%d", connection_result);
 		return connection_result;
 	}
 
 	if (bt_conn_get_security(default_conn) >= BT_SECURITY_L2) {
+		LOG_INF("connection already encrypted level=%u",
+			bt_conn_get_security(default_conn));
 		security_result = 0;
 	} else {
+		LOG_INF("requesting security level 2");
 		err = bt_conn_set_security(default_conn, BT_SECURITY_L2);
 		if (err != 0 && err != -EALREADY) {
+			LOG_ERR("security request failed err=%d", err);
 			return err;
 		}
 		if (k_sem_take(&security_sem, sys_timepoint_timeout(deadline)) != 0) {
+			LOG_ERR("security timed out");
 			return -ETIMEDOUT;
 		}
 		if (security_result != 0) {
+			LOG_ERR("security failed result=%d", security_result);
 			return security_result;
 		}
 	}
@@ -362,6 +404,7 @@ static void disconnect_and_release(void)
 
 	if (bt_conn_get_info(default_conn, &info) == 0 &&
 	    info.state != BT_CONN_STATE_DISCONNECTED) {
+		LOG_INF("disconnecting state=%u", info.state);
 		(void)bt_conn_disconnect(default_conn, BT_HCI_ERR_REMOTE_USER_TERM_CONN);
 		if (info.state == BT_CONN_STATE_CONNECTED) {
 			(void)k_sem_take(&disconnected_sem, K_MSEC(250));
@@ -370,12 +413,14 @@ static void disconnect_and_release(void)
 
 	bt_conn_unref(default_conn);
 	default_conn = NULL;
+	LOG_INF("connection released");
 }
 
 static void write_complete(struct bt_conn *conn, uint8_t err, struct bt_gatt_write_params *params)
 {
 	ARG_UNUSED(conn);
 	ARG_UNUSED(params);
+	LOG_INF("write complete att_err=0x%02x", err);
 	write_result = err == 0U ? 0 : -EIO;
 	k_sem_give(&write_sem);
 }
@@ -386,6 +431,7 @@ static uint8_t read_complete(struct bt_conn *conn, uint8_t err, struct bt_gatt_r
 	ARG_UNUSED(conn);
 	ARG_UNUSED(params);
 	if (err != 0U) {
+		LOG_ERR("state read failed att_err=0x%02x", err);
 		read_result = -EIO;
 		k_sem_give(&read_sem);
 		return BT_GATT_ITER_STOP;
@@ -393,6 +439,12 @@ static uint8_t read_complete(struct bt_conn *conn, uint8_t err, struct bt_gatt_r
 
 	if (data != NULL) {
 		read_result = loa_protocol_decode(&read_state, data, length);
+		if (read_result == 0) {
+			LOG_INF("state read transaction=0x%08x status=%u",
+				read_state.transaction_id, read_state.status);
+		} else {
+			LOG_ERR("invalid state read len=%u err=%d", length, read_result);
+		}
 		k_sem_give(&read_sem);
 	}
 	return BT_GATT_ITER_STOP;
@@ -411,9 +463,11 @@ static int read_snapshot(struct loa_message *snapshot, k_timepoint_t deadline)
 	int err = bt_gatt_read(default_conn, &read_params);
 
 	if (err != 0) {
+		LOG_ERR("state read queue failed err=%d", err);
 		return err;
 	}
 	if (k_sem_take(&read_sem, sys_timepoint_timeout(deadline)) != 0) {
+		LOG_ERR("state read timed out");
 		return -ETIMEDOUT;
 	}
 	if (read_result == 0) {
@@ -431,7 +485,10 @@ int loa_ble_client_init(void)
 	k_sem_init(&write_sem, 0, 1);
 	k_sem_init(&ack_sem, 0, 1);
 	k_sem_init(&read_sem, 0, 1);
-	return bt_conn_auth_info_cb_register(&auth_info_callbacks);
+	int err = bt_conn_auth_info_cb_register(&auth_info_callbacks);
+
+	LOG_INF("client initialized err=%d", err);
+	return err;
 }
 
 static void bond_found(const struct bt_bond_info *info, void *user_data)
@@ -447,12 +504,16 @@ bool loa_ble_client_has_bond(void)
 	bool found = false;
 
 	bt_foreach_bond(BT_ID_DEFAULT, bond_found, &found);
+	LOG_INF("bond present=%u", found);
 	return found;
 }
 
 int loa_ble_client_unpair_all(void)
 {
-	return bt_unpair(BT_ID_DEFAULT, BT_ADDR_LE_ANY);
+	int err = bt_unpair(BT_ID_DEFAULT, BT_ADDR_LE_ANY);
+
+	LOG_INF("unpair all result=%d", err);
+	return err;
 }
 
 int loa_ble_client_reconcile(struct loa_message *snapshot, k_timeout_t timeout, bool *new_pairing)
@@ -463,6 +524,7 @@ int loa_ble_client_reconcile(struct loa_message *snapshot, k_timeout_t timeout, 
 	if (err == 0) {
 		err = read_snapshot(snapshot, deadline);
 	}
+	LOG_INF("reconcile result=%d new_pairing=%u", err, atomic_get(&pairing_happened) != 0);
 	if (new_pairing != NULL) {
 		*new_pairing = atomic_get(&pairing_happened) != 0;
 	}
@@ -476,6 +538,9 @@ int loa_ble_client_send(const struct loa_message *command, struct loa_message *a
 	uint8_t payload[LOA_PROTOCOL_PAYLOAD_LEN];
 	k_timepoint_t deadline = sys_timepoint_calc(timeout);
 	int err = connect_and_prepare(deadline);
+
+	LOG_INF("send transaction=0x%08x status=%u prepare_result=%d", command->transaction_id,
+		command->status, err);
 
 	if (err != 0) {
 		goto done;
@@ -498,10 +563,12 @@ int loa_ble_client_send(const struct loa_message *command, struct loa_message *a
 
 	err = bt_gatt_write(default_conn, &write_params);
 	if (err != 0) {
+		LOG_ERR("write queue failed err=%d", err);
 		goto done;
 	}
 	if (k_sem_take(&write_sem, sys_timepoint_timeout(deadline)) != 0 || write_result != 0) {
 		err = write_result;
+		LOG_ERR("write response failed result=%d", err);
 		goto done;
 	}
 
@@ -514,6 +581,7 @@ int loa_ble_client_send(const struct loa_message *command, struct loa_message *a
 	}
 
 	/* A readback recovers the case where the indication was applied but lost. */
+	LOG_WRN("matching indication not received; reading state back");
 	err = read_snapshot(ack, deadline);
 	if (err == 0 &&
 	    (ack->transaction_id != command->transaction_id || ack->status != command->status)) {
@@ -521,6 +589,7 @@ int loa_ble_client_send(const struct loa_message *command, struct loa_message *a
 	}
 
 done:
+	LOG_INF("send final result=%d", err);
 	if (new_pairing != NULL) {
 		*new_pairing = atomic_get(&pairing_happened) != 0;
 	}
