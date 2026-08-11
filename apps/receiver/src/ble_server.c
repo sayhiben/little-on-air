@@ -17,6 +17,10 @@
 
 #include "ble_server.h"
 
+#if !defined(CONFIG_BT_SMP_SC_PAIR_ONLY) || defined(CONFIG_BT_SMP_SC_ONLY)
+#error "Little On Air requires LE Secure Connections pairing with Just Works support"
+#endif
+
 #define PAIRING_WINDOW           K_SECONDS(60)
 #define PAIR_SUCCESS_DURATION_MS 900U
 #define ADV_FAST_INTERVAL        0x00a0U

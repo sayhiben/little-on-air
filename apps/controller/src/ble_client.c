@@ -15,6 +15,10 @@
 
 #include "ble_client.h"
 
+#if !defined(CONFIG_BT_SMP_SC_PAIR_ONLY) || defined(CONFIG_BT_SMP_SC_ONLY)
+#error "Little On Air requires LE Secure Connections pairing with Just Works support"
+#endif
+
 static struct bt_uuid_128 service_uuid = BT_UUID_INIT_128(LOA_BT_UUID_SERVICE_VAL);
 static struct bt_uuid_128 command_uuid = BT_UUID_INIT_128(LOA_BT_UUID_COMMAND_VAL);
 static struct bt_uuid_128 state_uuid = BT_UUID_INIT_128(LOA_BT_UUID_STATE_VAL);
