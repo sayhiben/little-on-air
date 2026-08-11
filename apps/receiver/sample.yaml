@@ -1,0 +1,10 @@
+sample:
+  name: Little On Air receiver
+tests:
+  little_on_air.receiver.build:
+    build_only: true
+    platform_allow:
+      - xiao_ble/nrf52840
+    tags:
+      - bluetooth
+      - little_on_air

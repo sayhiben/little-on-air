@@ -1,0 +1,93 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+        with:
+          path: little-on-air
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Zephyr 4.3 toolchain
+        uses: zephyrproject-rtos/action-zephyr-setup@v1
+        with:
+          app-path: little-on-air
+          toolchains: arm-zephyr-eabi
+          ccache-cache-key: little-on-air-v0-release
+
+      - name: Verify release version
+        working-directory: little-on-air
+        run: test "v$(tr -d '\r\n' < VERSION)" = "${GITHUB_REF_NAME}"
+
+      - name: Check source formatting
+        working-directory: little-on-air
+        run: |
+          git diff --check "$(git hash-object -t tree /dev/null)" HEAD
+          git ls-files -z '*.c' '*.h' | xargs -0 clang-format --dry-run --Werror --style="file:../zephyr/.clang-format"
+
+      - name: Run unit tests
+        working-directory: little-on-air
+        run: west twister -T tests -v --inline-logs --integration
+
+      - name: Build release firmware
+        working-directory: little-on-air
+        run: |
+          west build -b xiao_ble/nrf52840 apps/controller -d build/controller
+          west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
+
+      - name: Package release
+        working-directory: little-on-air
+        run: |
+          mkdir dist
+          version="${GITHUB_REF_NAME}"
+          cp build/controller/zephyr/zephyr.uf2 "dist/little-on-air-controller-xiao-nrf52840-${version}.uf2"
+          cp build/controller/zephyr/zephyr.elf "dist/little-on-air-controller-xiao-nrf52840-${version}.elf"
+          cp build/receiver/zephyr/zephyr.uf2 "dist/little-on-air-receiver-xiao-nrf52840-${version}.uf2"
+          cp build/receiver/zephyr/zephyr.elf "dist/little-on-air-receiver-xiao-nrf52840-${version}.elf"
+          cp docs/FLASHING.md dist/FLASHING.md
+          cd dist
+          sha256sum *.uf2 *.elf > SHA256SUMS
+
+      - name: Upload release bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: little-on-air-${{ github.ref_name }}
+          path: little-on-air/dist/
+          if-no-files-found: error
+
+  publish:
+    needs: validate
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download release bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: little-on-air-${{ github.ref_name }}
+          path: dist
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "${GITHUB_REF_NAME}" dist/*
+          --repo "${GITHUB_REPOSITORY}"
+          --verify-tag
+          --generate-notes
+          --title "Little On Air ${GITHUB_REF_NAME}"

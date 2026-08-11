@@ -1,0 +1,80 @@
+/* SPDX-License-Identifier: MIT */
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
+/ {
+	chosen {
+		zephyr,settings-partition = &storage_partition;
+	};
+
+	loa_pwm_leds: loa-pwm-leds {
+		compatible = "pwm-leds";
+
+		loa_pwm_red: red {
+			pwms = <&pwm0 0 PWM_USEC(1000) PWM_POLARITY_INVERTED>;
+		};
+
+		loa_pwm_green: green {
+			pwms = <&pwm0 1 PWM_USEC(1000) PWM_POLARITY_INVERTED>;
+		};
+
+		loa_pwm_blue: blue {
+			pwms = <&pwm0 2 PWM_USEC(1000) PWM_POLARITY_INVERTED>;
+		};
+	};
+
+	aliases {
+		pwm-red = &loa_pwm_red;
+		pwm-green = &loa_pwm_green;
+		pwm-blue = &loa_pwm_blue;
+	};
+};
+&pinctrl {
+	loa_pwm_default: loa_pwm_default {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 26)>,
+				<NRF_PSEL(PWM_OUT1, 0, 30)>,
+				<NRF_PSEL(PWM_OUT2, 0, 6)>;
+			nordic,invert;
+		};
+	};
+
+	loa_pwm_sleep: loa_pwm_sleep {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 26)>,
+				<NRF_PSEL(PWM_OUT1, 0, 30)>,
+				<NRF_PSEL(PWM_OUT2, 0, 6)>;
+			low-power-enable;
+		};
+	};
+};
+
+&pwm0 {
+	status = "okay";
+	pinctrl-0 = <&loa_pwm_default>;
+	pinctrl-1 = <&loa_pwm_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+&uart0 {
+	status = "disabled";
+};
+
+&i2c1 {
+	status = "disabled";
+};
+
+&spi2 {
+	status = "disabled";
+};
+
+&qspi {
+	status = "disabled";
+};
+
+&ieee802154 {
+	status = "disabled";
+};
+
+zephyr_udc0: &usbd {
+	status = "disabled";
+};

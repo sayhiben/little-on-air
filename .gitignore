@@ -1,0 +1,23 @@
+# West workspace and dependencies
+.west/
+deps/
+.zephyr-workspace/
+.zephyr-sdk/
+.tool-bin/
+tmp*/
+
+# Build and test output
+build*/
+twister-out*/
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

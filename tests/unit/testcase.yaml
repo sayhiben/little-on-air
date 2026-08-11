@@ -1,0 +1,6 @@
+tests:
+  little_on_air.unit:
+    type: unit
+    tags:
+      - little_on_air
+      - unit

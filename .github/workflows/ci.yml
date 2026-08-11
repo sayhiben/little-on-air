@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "agent/**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    name: test-and-build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+        with:
+          path: little-on-air
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Zephyr 4.3 toolchain
+        uses: zephyrproject-rtos/action-zephyr-setup@v1
+        with:
+          app-path: little-on-air
+          toolchains: arm-zephyr-eabi
+          ccache-cache-key: little-on-air-v0
+
+      - name: Check whitespace
+        working-directory: little-on-air
+        run: git diff --check "$(git hash-object -t tree /dev/null)" HEAD
+
+      - name: Check C formatting
+        working-directory: little-on-air
+        run: >-
+          git ls-files -z '*.c' '*.h' |
+          xargs -0 clang-format --dry-run --Werror
+          --style="file:../zephyr/.clang-format"
+
+      - name: Run unit tests
+        working-directory: little-on-air
+        run: west twister -T tests -v --inline-logs --integration
+
+      - name: Build controller
+        working-directory: little-on-air
+        run: west build -b xiao_ble/nrf52840 apps/controller -d build/controller
+
+      - name: Build receiver
+        working-directory: little-on-air
+        run: west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
+
+      - name: Upload test reports and firmware
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: little-on-air-ci-${{ github.sha }}
+          if-no-files-found: warn
+          path: |
+            little-on-air/twister-out/*.xml
+            little-on-air/twister-out/*.json
+            little-on-air/build/controller/zephyr/zephyr.uf2
+            little-on-air/build/controller/zephyr/zephyr.elf
+            little-on-air/build/receiver/zephyr/zephyr.uf2
+            little-on-air/build/receiver/zephyr/zephyr.elf
