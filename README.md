@@ -117,7 +117,8 @@ and ELF files with checksums as GitHub Releases.
 - Secure Connections “Just Works” is intentionally limited to a physical
   pairing window. It provides encryption but no passkey-based MITM protection.
 
-See [architecture](docs/ARCHITECTURE.md), [power notes](docs/POWER.md), and the
+See [architecture](docs/ARCHITECTURE.md), [USB diagnostics](docs/DEBUGGING.md),
+[power notes](docs/POWER.md), and the
 [hardware acceptance checklist](docs/HARDWARE_ACCEPTANCE.md) for more detail.
 
 ## License
