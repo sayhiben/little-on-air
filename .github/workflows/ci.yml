@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out project
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: little-on-air
           persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -58,7 +58,7 @@ jobs:
 
       - name: Upload test reports and firmware
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: little-on-air-ci-${{ github.sha }}
           if-no-files-found: warn
