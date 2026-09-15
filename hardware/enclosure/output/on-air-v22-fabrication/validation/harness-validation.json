@@ -1,0 +1,642 @@
+{
+  "document": "Little On Air - Enclosure v2.2 - two switches",
+  "units": "mm",
+  "items": [
+    {
+      "name": "H1 front connector to LED1",
+      "radius_mm": 1.6,
+      "route_length_mm": 42.63,
+      "path": [
+        [
+          68,
+          24,
+          13.7
+        ],
+        [
+          47.5,
+          24,
+          13.7
+        ],
+        [
+          47.5,
+          6.8,
+          13.7
+        ],
+        [
+          47.5,
+          6.8,
+          6.5
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H2 LED1 to LED2",
+      "radius_mm": 1.6,
+      "route_length_mm": 75.73,
+      "path": [
+        [
+          32.5,
+          6.8,
+          6.5
+        ],
+        [
+          32.5,
+          6.8,
+          18
+        ],
+        [
+          87.5,
+          6.8,
+          18
+        ],
+        [
+          87.5,
+          6.8,
+          6.5
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H3 LED2 to LED3",
+      "radius_mm": 1.6,
+      "route_length_mm": 71.26,
+      "path": [
+        [
+          72.5,
+          6.8,
+          6.5
+        ],
+        [
+          72.5,
+          6.8,
+          13.7
+        ],
+        [
+          72.5,
+          30,
+          13.7
+        ],
+        [
+          87.5,
+          30,
+          13.7
+        ],
+        [
+          87.5,
+          53.2,
+          13.7
+        ],
+        [
+          87.5,
+          53.2,
+          6.5
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H4 LED3 to LED4",
+      "radius_mm": 1.6,
+      "route_length_mm": 64.52,
+      "path": [
+        [
+          72.5,
+          53.2,
+          6.5
+        ],
+        [
+          72.5,
+          53.2,
+          13.7
+        ],
+        [
+          72.5,
+          45.5,
+          13.7
+        ],
+        [
+          34,
+          45.5,
+          13.7
+        ],
+        [
+          34,
+          53.2,
+          13.7
+        ],
+        [
+          34,
+          53.2,
+          7.5
+        ],
+        [
+          32.5,
+          53.2,
+          6.5
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "B1 battery to charger",
+      "radius_mm": 1.6,
+      "route_length_mm": 71.48,
+      "path": [
+        [
+          87,
+          26,
+          18
+        ],
+        [
+          20.5,
+          26,
+          18
+        ],
+        [
+          20.5,
+          32,
+          18
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P1 charger OUT plus to SPDT",
+      "radius_mm": 0.8,
+      "route_length_mm": 35.22,
+      "path": [
+        [
+          23.5,
+          32,
+          18
+        ],
+        [
+          23.5,
+          30,
+          18
+        ],
+        [
+          41,
+          30,
+          18
+        ],
+        [
+          41,
+          46.5,
+          22.85
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P2 SPDT switched plus to DPDT RUN branch",
+      "radius_mm": 0.8,
+      "route_length_mm": 18.28,
+      "path": [
+        [
+          42,
+          46.5,
+          22.85
+        ],
+        [
+          50,
+          46.5,
+          24
+        ],
+        [
+          60,
+          44.5,
+          24
+        ]
+      ],
+      "collisions": {},
+      "passed": true,
+      "display_geometry": "individual tested primitives"
+    },
+    {
+      "name": "P3 switched plus and protected ground distribution",
+      "radius_mm": 1.2,
+      "route_length_mm": 16.0,
+      "path": [
+        [
+          60,
+          44.5,
+          24
+        ],
+        [
+          76,
+          44.5,
+          24
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P4 DPDT common A and ground to XIAO",
+      "radius_mm": 1.2,
+      "route_length_mm": 79.98,
+      "path": [
+        [
+          63,
+          44.5,
+          24
+        ],
+        [
+          64.8,
+          44.5,
+          18
+        ],
+        [
+          64.8,
+          30,
+          18
+        ],
+        [
+          97,
+          30,
+          18
+        ],
+        [
+          97,
+          44,
+          18
+        ],
+        [
+          109.5,
+          44,
+          18
+        ],
+        [
+          109.5,
+          44,
+          24
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "G1 charger OUT minus to ground distribution",
+      "radius_mm": 0.8,
+      "route_length_mm": 73.87,
+      "path": [
+        [
+          21.5,
+          32,
+          18
+        ],
+        [
+          21.5,
+          29,
+          14.7
+        ],
+        [
+          76,
+          29,
+          14.7
+        ],
+        [
+          76,
+          43,
+          24
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D1 XIAO data to DPDT RUN B",
+      "radius_mm": 0.8,
+      "route_length_mm": 82.55,
+      "path": [
+        [
+          109.5,
+          47,
+          18
+        ],
+        [
+          98,
+          47,
+          15
+        ],
+        [
+          98,
+          28,
+          16
+        ],
+        [
+          68,
+          28,
+          16
+        ],
+        [
+          68,
+          39,
+          16
+        ],
+        [
+          68,
+          44.5,
+          20.8
+        ],
+        [
+          60,
+          44.5,
+          20.8
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D2 DPDT common B to LED harness junction",
+      "radius_mm": 0.8,
+      "route_length_mm": 28.06,
+      "path": [
+        [
+          57,
+          44.5,
+          20.8
+        ],
+        [
+          57,
+          41,
+          23
+        ],
+        [
+          79,
+          41,
+          23
+        ],
+        [
+          79,
+          44,
+          24
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H0 LED harness junction to front connector",
+      "radius_mm": 1.6,
+      "route_length_mm": 37.9,
+      "path": [
+        [
+          79,
+          44,
+          24
+        ],
+        [
+          79,
+          36,
+          24
+        ],
+        [
+          79,
+          36,
+          13.7
+        ],
+        [
+          68,
+          36,
+          13.7
+        ],
+        [
+          68,
+          24,
+          13.7
+        ]
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "SPDT insulated solder bay",
+      "min_mm": [
+        36.8,
+        44,
+        20.5
+      ],
+      "max_mm": [
+        45.2,
+        48.8,
+        25.3
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Capacitor and distribution bay",
+      "min_mm": [
+        71.5,
+        41.5,
+        16
+      ],
+      "max_mm": [
+        90,
+        53,
+        29
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Front connector service space",
+      "min_mm": [
+        61,
+        18.5,
+        11.5
+      ],
+      "max_mm": [
+        74,
+        28.5,
+        19
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "DPDT insulated solder bay",
+      "min_mm": [
+        56.2,
+        42.5,
+        18.5
+      ],
+      "max_mm": [
+        63.8,
+        46.4,
+        25.3
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Charger solder bay",
+      "min_mm": [
+        15.3,
+        31.9,
+        17
+      ],
+      "max_mm": [
+        25.7,
+        33.8,
+        21.8
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "XIAO wire approach",
+      "min_mm": [
+        107.6,
+        43,
+        15.8
+      ],
+      "max_mm": [
+        110.6,
+        53,
+        26.5
+      ],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "Wire envelopes are clearance reservations, not a circuit simulation. Component and solder pad shapes remain measured-fit items.",
+  "passed": true
+}

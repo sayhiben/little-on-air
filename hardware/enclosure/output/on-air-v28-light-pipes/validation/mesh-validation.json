@@ -1,0 +1,98 @@
+[
+  {
+    "file": "stl/08-front-rgb-2.95mm.stl",
+    "bounds_mm": [
+      18.3,
+      4.1993,
+      2.8
+    ],
+    "volume_mm3": 93.8851,
+    "triangles": 1502,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 44.506,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "c77981d5574eb2b553647430ca73a5bb677a0d4e39edeb5f44085c46ee7bfc91"
+  },
+  {
+    "file": "stl/08-front-rgb-3.05mm.stl",
+    "bounds_mm": [
+      18.3,
+      4.1993,
+      2.8
+    ],
+    "volume_mm3": 98.4169,
+    "triangles": 1502,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 46.168,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "a2901338a2bffafb60c27e2aca51995f6fde79fd41d32977cdf187601839ec16"
+  },
+  {
+    "file": "stl/08-front-rgb-3.15mm.stl",
+    "bounds_mm": [
+      18.3,
+      4.1993,
+      2.8
+    ],
+    "volume_mm3": 103.0632,
+    "triangles": 1518,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 47.816,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "0fd9b508f694abd261b38710a682315c1761471b06bea2fb294eb0bdcfa52431"
+  },
+  {
+    "file": "stl/09-charger-2.95mm.stl",
+    "bounds_mm": [
+      6.3,
+      3.8999,
+      2.7998
+    ],
+    "volume_mm3": 38.8338,
+    "triangles": 1388,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 17.779,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "f84f3ce4c7f11971096f91db6b12933cd36d9618c994d1ece3e4e32f0b7fb352"
+  },
+  {
+    "file": "stl/09-charger-3.05mm.stl",
+    "bounds_mm": [
+      6.3,
+      3.8999,
+      2.7998
+    ],
+    "volume_mm3": 40.4053,
+    "triangles": 1392,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 18.355,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c"
+  },
+  {
+    "file": "stl/09-charger-3.15mm.stl",
+    "bounds_mm": [
+      6.3,
+      3.8999,
+      2.7998
+    ],
+    "volume_mm3": 42.0173,
+    "triangles": 1404,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 18.927,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "230b26a0e6e792fcff4ed1c04d8a081f29cf005fa2f4023b79dc08433046ff90"
+  }
+]

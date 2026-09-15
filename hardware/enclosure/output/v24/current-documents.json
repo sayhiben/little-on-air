@@ -1,0 +1,42 @@
+{
+  "message": "7 open document(s)",
+  "results": [
+    {
+      "isModified": false,
+      "isSaved": false,
+      "name": "Untitled"
+    },
+    {
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little On Air - Enclosure v2.3 - measured fits"
+    },
+    {
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little On Air - v2.3 measured fit final"
+    },
+    {
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little ON AIR v2.3 - production fit sections"
+    },
+    {
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little ON AIR v2.3 - production fit sections"
+    },
+    {
+      "isActive": true,
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little On Air - v2.4 second physical fit revision"
+    },
+    {
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little ON AIR v2.4 - production fit sections"
+    }
+  ],
+  "success": true
+}

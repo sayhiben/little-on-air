@@ -1,0 +1,3 @@
+﻿Ref,Quantity,Item,Specification,Location,Status
+A1,As needed,Removable wall strips,Sized for actual assembled mass,Flat rear,Assembly
+POWER-SWITCH-CHOICE,TBD,Rated replacement switch OR electronic power-switch stage,Resolve 100 mA switch limit and startup load; preserve USB/data isolation,Existing switch nest or unused auxiliary space; actual replacement fit to check,Unresolved; direct-load wiring not approved with identified switch

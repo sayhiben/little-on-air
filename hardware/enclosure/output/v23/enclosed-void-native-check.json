@@ -1,0 +1,1253 @@
+{
+  "document": "Little On Air - v2.3 measured fit final",
+  "units": "mm",
+  "components": [
+    {
+      "name": "01 Front optical bezel",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 15116.0318,
+          "min_mm": [
+            0.0,
+            0.0,
+            -11.0
+          ],
+          "max_mm": [
+            120.0,
+            60.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 Clear acrylic",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 12533.3125,
+          "min_mm": [
+            8.0,
+            11.0,
+            -4.775
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -1.6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03 Registered graphic backing",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 6693.1656,
+          "min_mm": [
+            8.0,
+            11.0,
+            -7.275
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -4.775
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04 Optical retainer",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 1588.556,
+          "min_mm": [
+            8.0,
+            3.0,
+            -9.075
+          ],
+          "max_mm": [
+            112.0,
+            57.0,
+            -4.6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "81 Laminate front spacer",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 207.375,
+          "min_mm": [
+            8.0,
+            11.0,
+            -5.275
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -4.775
+          ]
+        }
+      ]
+    },
+    {
+      "name": "82 Laminate rear shim",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 165.9,
+          "min_mm": [
+            8.0,
+            11.0,
+            -7.275
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -6.875
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05 Rear electronics housing",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 46696.1887,
+          "min_mm": [
+            0.0,
+            0.0,
+            -34.0
+          ],
+          "max_mm": [
+            120.0,
+            60.0,
+            -9.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Battery",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Battery pouch",
+          "solid": true,
+          "volume_mm3": 10920.0,
+          "min_mm": [
+            35.0,
+            11.0,
+            -30.6
+          ],
+          "max_mm": [
+            87.0,
+            32.0,
+            -20.6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Four LEDs",
+      "body_count": 4,
+      "bodies": [
+        {
+          "name": "LED module",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            36.0,
+            2.8,
+            -4.1875
+          ],
+          "max_mm": [
+            44.0,
+            10.8,
+            -2.1875
+          ]
+        },
+        {
+          "name": "LED module (1)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            36.0,
+            49.2,
+            -4.1875
+          ],
+          "max_mm": [
+            44.0,
+            57.2,
+            -2.1875
+          ]
+        },
+        {
+          "name": "LED module (2)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            76.0,
+            2.8,
+            -4.1875
+          ],
+          "max_mm": [
+            84.0,
+            10.8,
+            -2.1875
+          ]
+        },
+        {
+          "name": "LED module (3)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            76.0,
+            49.2,
+            -4.1875
+          ],
+          "max_mm": [
+            84.0,
+            57.2,
+            -2.1875
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF M3 screws",
+      "body_count": 16,
+      "bodies": [
+        {
+          "name": "Closure screw head",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            3.25,
+            3.25,
+            -3.2
+          ],
+          "max_mm": [
+            8.75,
+            8.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "Closure screw shaft",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            4.5,
+            4.5,
+            -28.2
+          ],
+          "max_mm": [
+            7.5,
+            7.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "Closure screw head (1)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            111.25,
+            3.25,
+            -3.2
+          ],
+          "max_mm": [
+            116.75,
+            8.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "Closure screw shaft (1)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            112.5,
+            4.5,
+            -28.2
+          ],
+          "max_mm": [
+            115.5,
+            7.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "Closure screw head (2)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            3.25,
+            51.25,
+            -3.2
+          ],
+          "max_mm": [
+            8.75,
+            56.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "Closure screw shaft (2)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            4.5,
+            52.5,
+            -28.2
+          ],
+          "max_mm": [
+            7.5,
+            55.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "Closure screw head (3)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            93.25,
+            51.25,
+            -3.2
+          ],
+          "max_mm": [
+            98.75,
+            56.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "Closure screw shaft (3)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            94.5,
+            52.5,
+            -28.2
+          ],
+          "max_mm": [
+            97.5,
+            55.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "Optical screw head",
+          "solid": true,
+          "volume_mm3": 42.104,
+          "min_mm": [
+            57.15,
+            3.15,
+            -10.725
+          ],
+          "max_mm": [
+            62.85,
+            8.85,
+            -9.075
+          ]
+        },
+        {
+          "name": "Optical screw shaft",
+          "solid": true,
+          "volume_mm3": 42.4115,
+          "min_mm": [
+            58.5,
+            4.5,
+            -9.075
+          ],
+          "max_mm": [
+            61.5,
+            7.5,
+            -3.075
+          ]
+        },
+        {
+          "name": "Optical screw head (1)",
+          "solid": true,
+          "volume_mm3": 42.104,
+          "min_mm": [
+            57.15,
+            51.15,
+            -10.725
+          ],
+          "max_mm": [
+            62.85,
+            56.85,
+            -9.075
+          ]
+        },
+        {
+          "name": "Optical screw shaft (1)",
+          "solid": true,
+          "volume_mm3": 42.4115,
+          "min_mm": [
+            58.5,
+            52.5,
+            -9.075
+          ],
+          "max_mm": [
+            61.5,
+            55.5,
+            -3.075
+          ]
+        },
+        {
+          "name": "Yoke screw head",
+          "solid": true,
+          "volume_mm3": 42.104,
+          "min_mm": [
+            32.15,
+            35.15,
+            -9.4
+          ],
+          "max_mm": [
+            37.85,
+            40.85,
+            -7.75
+          ]
+        },
+        {
+          "name": "Yoke screw shaft",
+          "solid": true,
+          "volume_mm3": 56.5487,
+          "min_mm": [
+            33.5,
+            36.5,
+            -17.4
+          ],
+          "max_mm": [
+            36.5,
+            39.5,
+            -9.4
+          ]
+        },
+        {
+          "name": "Yoke screw head (1)",
+          "solid": true,
+          "volume_mm3": 42.104,
+          "min_mm": [
+            100.15,
+            35.15,
+            -9.4
+          ],
+          "max_mm": [
+            105.85,
+            40.85,
+            -7.75
+          ]
+        },
+        {
+          "name": "Yoke screw shaft (1)",
+          "solid": true,
+          "volume_mm3": 56.5487,
+          "min_mm": [
+            101.5,
+            36.5,
+            -17.4
+          ],
+          "max_mm": [
+            104.5,
+            39.5,
+            -9.4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF M3 nuts",
+      "body_count": 8,
+      "bodies": [
+        {
+          "name": "M3 nut",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            2.82457,
+            3.25,
+            -27.3
+          ],
+          "max_mm": [
+            9.17543,
+            8.75,
+            -24.9
+          ]
+        },
+        {
+          "name": "M3 nut (1)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            110.82457,
+            3.25,
+            -27.3
+          ],
+          "max_mm": [
+            117.17543,
+            8.75,
+            -24.9
+          ]
+        },
+        {
+          "name": "M3 nut (2)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            2.82457,
+            51.25,
+            -27.3
+          ],
+          "max_mm": [
+            9.17543,
+            56.75,
+            -24.9
+          ]
+        },
+        {
+          "name": "M3 nut (3)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            92.82457,
+            51.25,
+            -27.3
+          ],
+          "max_mm": [
+            99.17543,
+            56.75,
+            -24.9
+          ]
+        },
+        {
+          "name": "M3 nut (4)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            56.82457,
+            3.25,
+            -5.7
+          ],
+          "max_mm": [
+            63.17543,
+            8.75,
+            -3.3
+          ]
+        },
+        {
+          "name": "M3 nut (5)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            56.82457,
+            51.25,
+            -5.7
+          ],
+          "max_mm": [
+            63.17543,
+            56.75,
+            -3.3
+          ]
+        },
+        {
+          "name": "M3 nut (6)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            31.82457,
+            35.25,
+            -16.3
+          ],
+          "max_mm": [
+            38.17543,
+            40.75,
+            -13.9
+          ]
+        },
+        {
+          "name": "M3 nut (7)",
+          "solid": true,
+          "volume_mm3": 44.17,
+          "min_mm": [
+            99.82457,
+            35.25,
+            -16.3
+          ],
+          "max_mm": [
+            106.17543,
+            40.75,
+            -13.9
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Capacitor",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "C1 680uF maximum 8x11.5mm",
+          "solid": true,
+          "volume_mm3": 578.053,
+          "min_mm": [
+            80.0,
+            43.5,
+            -27.7
+          ],
+          "max_mm": [
+            88.0,
+            51.5,
+            -16.2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06 Electronics retaining yoke",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 2657.734,
+          "min_mm": [
+            11.1,
+            31.5,
+            -23.0
+          ],
+          "max_mm": [
+            119.75,
+            59.75,
+            -9.4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "07 Guided rounded reset button",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "solid": true,
+          "volume_mm3": 51.1242,
+          "min_mm": [
+            114.25,
+            53.9,
+            -16.65
+          ],
+          "max_mm": [
+            120.7,
+            58.1,
+            -12.45
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Charger",
+      "body_count": 3,
+      "bodies": [
+        {
+          "name": "Charger PCB",
+          "solid": true,
+          "volume_mm3": 491.75,
+          "min_mm": [
+            12.25,
+            30.3,
+            -24.2
+          ],
+          "max_mm": [
+            29.75,
+            58.4,
+            -23.2
+          ]
+        },
+        {
+          "name": "Charger IC envelope",
+          "solid": true,
+          "volume_mm3": 177.1,
+          "min_mm": [
+            18.0,
+            34.3,
+            -23.2
+          ],
+          "max_mm": [
+            25.0,
+            45.3,
+            -20.9
+          ]
+        },
+        {
+          "name": "Measured USB-C socket envelope",
+          "solid": true,
+          "volume_mm3": 175.584,
+          "min_mm": [
+            17.075,
+            53.25,
+            -23.2
+          ],
+          "max_mm": [
+            25.925,
+            59.65,
+            -20.1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF XIAO",
+      "body_count": 4,
+      "bodies": [
+        {
+          "name": "XIAO PCB",
+          "solid": true,
+          "volume_mm3": 373.8,
+          "min_mm": [
+            111.6,
+            36.8,
+            -29.35
+          ],
+          "max_mm": [
+            112.6,
+            57.8,
+            -11.55
+          ]
+        },
+        {
+          "name": "XIAO component envelope",
+          "solid": true,
+          "volume_mm3": 243.0,
+          "min_mm": [
+            112.6,
+            42.8,
+            -25.0
+          ],
+          "max_mm": [
+            115.6,
+            51.8,
+            -16.0
+          ]
+        },
+        {
+          "name": "XIAO reset target",
+          "solid": true,
+          "volume_mm3": 5.4,
+          "min_mm": [
+            112.6,
+            55.0,
+            -15.45
+          ],
+          "max_mm": [
+            114.1,
+            57.0,
+            -13.65
+          ]
+        },
+        {
+          "name": "Measured USB-C socket envelope",
+          "solid": true,
+          "volume_mm3": 181.9834,
+          "min_mm": [
+            112.6,
+            53.15,
+            -26.72
+          ],
+          "max_mm": [
+            115.77,
+            59.55,
+            -17.75
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF DPDT",
+      "body_count": 7,
+      "bodies": [
+        {
+          "name": "DPDT body",
+          "solid": true,
+          "volume_mm3": 71.982,
+          "min_mm": [
+            55.7,
+            56.05,
+            -23.1
+          ],
+          "max_mm": [
+            64.3,
+            58.75,
+            -20.0
+          ]
+        },
+        {
+          "name": "DPDT terminal",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            56.8,
+            53.05,
+            -20.75
+          ],
+          "max_mm": [
+            57.2,
+            56.05,
+            -20.4
+          ]
+        },
+        {
+          "name": "DPDT terminal (1)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            56.8,
+            53.05,
+            -22.55
+          ],
+          "max_mm": [
+            57.2,
+            56.05,
+            -22.2
+          ]
+        },
+        {
+          "name": "DPDT terminal (2)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            59.8,
+            53.05,
+            -20.75
+          ],
+          "max_mm": [
+            60.2,
+            56.05,
+            -20.4
+          ]
+        },
+        {
+          "name": "DPDT terminal (3)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            59.8,
+            53.05,
+            -22.55
+          ],
+          "max_mm": [
+            60.2,
+            56.05,
+            -22.2
+          ]
+        },
+        {
+          "name": "DPDT terminal (4)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            62.8,
+            53.05,
+            -20.75
+          ],
+          "max_mm": [
+            63.2,
+            56.05,
+            -20.4
+          ]
+        },
+        {
+          "name": "DPDT terminal (5)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            62.8,
+            53.05,
+            -22.55
+          ],
+          "max_mm": [
+            63.2,
+            56.05,
+            -22.2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF DPDT moving actuator",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "DPDT fingernail actuator",
+          "solid": true,
+          "volume_mm3": 3.69,
+          "min_mm": [
+            59.29,
+            58.75,
+            -22.26
+          ],
+          "max_mm": [
+            60.71,
+            60.58,
+            -20.84
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF SPDT power switch",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "SPDT main body",
+          "solid": true,
+          "volume_mm3": 354.186,
+          "min_mm": [
+            31.135,
+            50.75,
+            -26.0
+          ],
+          "max_mm": [
+            50.865,
+            58.4,
+            -20.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF SPDT moving lever",
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "SPDT lever",
+          "solid": true,
+          "volume_mm3": 43.5125,
+          "min_mm": [
+            39.525,
+            58.4,
+            -24.475
+          ],
+          "max_mm": [
+            42.475,
+            63.4,
+            -21.525
+          ]
+        }
+      ]
+    }
+  ],
+  "feature_issues": [],
+  "interferences": [],
+  "motion_checks": [],
+  "timeline_features": 156,
+  "parameters": [
+    {
+      "name": "case_w",
+      "expression": "120.0000000 mm",
+      "comment": "Front width"
+    },
+    {
+      "name": "case_h",
+      "expression": "60.0000000 mm",
+      "comment": "Front height"
+    },
+    {
+      "name": "case_d",
+      "expression": "34.0000000 mm",
+      "comment": "Rear wiring margin included"
+    },
+    {
+      "name": "wall",
+      "expression": "2.4000000 mm",
+      "comment": "Structural shell wall"
+    },
+    {
+      "name": "front_lip",
+      "expression": "1.6000000 mm",
+      "comment": "Front optical lip"
+    },
+    {
+      "name": "front_depth",
+      "expression": "9.5000000 mm",
+      "comment": "Main front/rear seam"
+    },
+    {
+      "name": "acrylic_t",
+      "expression": "3.1750000 mm",
+      "comment": "Nominal Amazon 1/8 inch; measure actual sheet"
+    },
+    {
+      "name": "panel_w",
+      "expression": "104.0000000 mm",
+      "comment": "Shared optical outline"
+    },
+    {
+      "name": "panel_h",
+      "expression": "38.0000000 mm",
+      "comment": "Shared optical outline"
+    },
+    {
+      "name": "air_gap",
+      "expression": "0.5000000 mm",
+      "comment": "Rear engraving to white letter tips"
+    },
+    {
+      "name": "backing_base",
+      "expression": "1.6000000 mm",
+      "comment": "Black printed base"
+    },
+    {
+      "name": "letter_relief",
+      "expression": "0.4000000 mm",
+      "comment": "White letters above black base"
+    },
+    {
+      "name": "tray_t",
+      "expression": "1.6000000 mm",
+      "comment": "Optical retainer thickness"
+    },
+    {
+      "name": "fit",
+      "expression": "0.2500000 mm",
+      "comment": "Nominal mating clearance per side"
+    },
+    {
+      "name": "m3_hole",
+      "expression": "3.6 mm",
+      "comment": "M3 clearance"
+    },
+    {
+      "name": "nut_af",
+      "expression": "6 mm",
+      "comment": "Ordinary M3 nut trap"
+    },
+    {
+      "name": "head_d",
+      "expression": "6.8 mm",
+      "comment": "M3 socket-head counterbore"
+    },
+    {
+      "name": "head_depth",
+      "expression": "3.2000000 mm",
+      "comment": "Front bearing plane"
+    },
+    {
+      "name": "led_w",
+      "expression": "8.0000000 mm",
+      "comment": "Separated LED module"
+    },
+    {
+      "name": "led_h",
+      "expression": "8.0000000 mm",
+      "comment": "Separated LED module"
+    },
+    {
+      "name": "led_t",
+      "expression": "2.0000000 mm",
+      "comment": "LED module thickness"
+    },
+    {
+      "name": "led_optical_offset",
+      "expression": "1.0000000 mm",
+      "comment": "Unmeasured emitter center from module front"
+    },
+    {
+      "name": "text_h",
+      "expression": "18.0000000 mm",
+      "comment": "Reference text height"
+    },
+    {
+      "name": "switch_w",
+      "expression": "8.6000000 mm",
+      "comment": "DPDT case"
+    },
+    {
+      "name": "switch_h",
+      "expression": "3.1000000 mm",
+      "comment": "DPDT case depth"
+    },
+    {
+      "name": "switch_t",
+      "expression": "2.7000000 mm",
+      "comment": "DPDT case front-to-actuator axis"
+    },
+    {
+      "name": "switch_throw",
+      "expression": "2.58 mm",
+      "comment": "Confirmed: full slot 4 mm minus actuator width 1.42 mm"
+    },
+    {
+      "name": "actuator_w",
+      "expression": "1.4200000 mm",
+      "comment": "Updated reported actuator width"
+    },
+    {
+      "name": "actuator_d",
+      "expression": "1.42 mm",
+      "comment": "Confirmed actuator thickness"
+    },
+    {
+      "name": "actuator_h",
+      "expression": "1.8300000 mm",
+      "comment": "Updated reported actuator height"
+    },
+    {
+      "name": "reset_y",
+      "expression": "56 mm",
+      "comment": "Provisional XIAO reset center"
+    },
+    {
+      "name": "reset_depth",
+      "expression": "14.5500000 mm",
+      "comment": "Provisional XIAO reset center"
+    },
+    {
+      "name": "reset_tip_x",
+      "expression": "114.25 mm",
+      "comment": "v2.3: 0.15 mm nominal free play plus 0.30 mm actuation; 0.45 mm inward stop"
+    },
+    {
+      "name": "reset_stroke",
+      "expression": "0.45 mm",
+      "comment": "v2.3: 0.15 mm nominal free play plus 0.30 mm actuation; 0.45 mm inward stop"
+    },
+    {
+      "name": "spdt_body_length",
+      "expression": "10.6 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_body_depth",
+      "expression": "6 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_body_height",
+      "expression": "5.05 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_flange_length",
+      "expression": "19.73 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_knob_height",
+      "expression": "5.0000000 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_knob_envelope",
+      "expression": "2.95 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_travel",
+      "expression": "2.85 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "spdt_fit_clearance",
+      "expression": "0.2 mm",
+      "comment": "User measured switch; v2.3 uses 0.20 mm lateral and longitudinal running clearance"
+    },
+    {
+      "name": "charger_pcb_width",
+      "expression": "17.5000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "charger_pcb_length",
+      "expression": "28.1000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "charger_usb_overhang",
+      "expression": "1.25 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "charger_fit_per_side",
+      "expression": "0.3000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "reset_guide_length",
+      "expression": "4.8 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "reset_guide_per_side",
+      "expression": "0.2000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "xiao_shift_side",
+      "expression": "0.6000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "xiao_shift_top",
+      "expression": "1.3000000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "dpdt_actuator_exposed",
+      "expression": "0.5800000 mm",
+      "comment": "v2.3 measured fit revision; see change record"
+    },
+    {
+      "name": "charger_usb_width",
+      "expression": "8.85 mm",
+      "comment": "User measured September 10, 2026"
+    },
+    {
+      "name": "charger_usb_height",
+      "expression": "3.1 mm",
+      "comment": "User measured September 10, 2026"
+    },
+    {
+      "name": "xiao_usb_width",
+      "expression": "8.97 mm",
+      "comment": "User measured September 10, 2026"
+    },
+    {
+      "name": "xiao_usb_height",
+      "expression": "3.17 mm",
+      "comment": "User measured September 10, 2026"
+    },
+    {
+      "name": "xiao_usb_overhang",
+      "expression": "1.75 mm",
+      "comment": "User measured September 10, 2026"
+    }
+  ],
+  "all_occurrences_at_assembly_origin": true
+}

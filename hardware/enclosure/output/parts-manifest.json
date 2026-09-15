@@ -1,0 +1,52 @@
+[
+  {
+    "component": "01 Body and front frame",
+    "slug": "01-body-and-front-frame",
+    "bodies": 1
+  },
+  {
+    "component": "02 Engraved acrylic",
+    "slug": "02-engraved-acrylic",
+    "bodies": 1
+  },
+  {
+    "component": "03 Black and white backing",
+    "slug": "03-black-and-white-backing",
+    "bodies": 1
+  },
+  {
+    "component": "10 Wall back plate",
+    "slug": "10-wall-back-plate",
+    "bodies": 1
+  },
+  {
+    "component": "04 Optical and electronics tray",
+    "slug": "04-optical-and-electronics-tray",
+    "bodies": 1
+  },
+  {
+    "component": "05 Charger keeper",
+    "slug": "05-charger-keeper",
+    "bodies": 1
+  },
+  {
+    "component": "06 XIAO keeper",
+    "slug": "06-xiao-keeper",
+    "bodies": 1
+  },
+  {
+    "component": "09 Switch keeper",
+    "slug": "09-switch-keeper",
+    "bodies": 1
+  },
+  {
+    "component": "07 Captive reset plunger",
+    "slug": "07-captive-reset-plunger",
+    "bodies": 1
+  },
+  {
+    "component": "08 Captive power slider",
+    "slug": "08-captive-power-slider",
+    "bodies": 1
+  }
+]

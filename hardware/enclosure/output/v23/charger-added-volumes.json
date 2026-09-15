@@ -1,0 +1,106 @@
+[
+  {
+    "name": "05 Rear electronics housing",
+    "lo": [
+      12.25,
+      32,
+      24.2
+    ],
+    "hi": [
+      14.25,
+      34,
+      31.7
+    ]
+  },
+  {
+    "name": "05 Rear electronics housing",
+    "lo": [
+      12.25,
+      54,
+      24.2
+    ],
+    "hi": [
+      14.25,
+      56,
+      31.7
+    ]
+  },
+  {
+    "name": "05 Rear electronics housing",
+    "lo": [
+      27.75,
+      32,
+      24.2
+    ],
+    "hi": [
+      29.75,
+      34,
+      31.7
+    ]
+  },
+  {
+    "name": "05 Rear electronics housing",
+    "lo": [
+      27.75,
+      54,
+      24.2
+    ],
+    "hi": [
+      29.75,
+      56,
+      31.7
+    ]
+  },
+  {
+    "name": "06 Electronics retaining yoke",
+    "lo": [
+      12.25,
+      32,
+      11.4
+    ],
+    "hi": [
+      14.25,
+      34,
+      23.0
+    ]
+  },
+  {
+    "name": "06 Electronics retaining yoke",
+    "lo": [
+      12.25,
+      54,
+      11.4
+    ],
+    "hi": [
+      14.25,
+      56,
+      23.0
+    ]
+  },
+  {
+    "name": "06 Electronics retaining yoke",
+    "lo": [
+      27.75,
+      32,
+      11.4
+    ],
+    "hi": [
+      29.75,
+      34,
+      23.0
+    ]
+  },
+  {
+    "name": "06 Electronics retaining yoke",
+    "lo": [
+      27.75,
+      54,
+      11.4
+    ],
+    "hi": [
+      29.75,
+      56,
+      23.0
+    ]
+  }
+]

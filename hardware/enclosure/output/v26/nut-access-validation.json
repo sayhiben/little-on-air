@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "nut": "Lower left closure",
+      "center_xy_mm": [
+        6.000000000000001,
+        6.000000000000001
+      ],
+      "entry_offset_mm": [
+        8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Lower right closure",
+      "center_xy_mm": [
+        114.0,
+        6.000000000000001
+      ],
+      "entry_offset_mm": [
+        -8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Upper left closure",
+      "center_xy_mm": [
+        6.000000000000001,
+        54.0
+      ],
+      "entry_offset_mm": [
+        0,
+        -8
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Upper right closure",
+      "center_xy_mm": [
+        96.0,
+        54.0
+      ],
+      "entry_offset_mm": [
+        -8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Lower optical",
+      "center_xy_mm": [
+        60.0,
+        6.000000000000001
+      ],
+      "entry_offset_mm": [
+        8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Upper optical",
+      "center_xy_mm": [
+        60.0,
+        54.0
+      ],
+      "entry_offset_mm": [
+        8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Left yoke",
+      "center_xy_mm": [
+        35.0,
+        38.0
+      ],
+      "entry_offset_mm": [
+        8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    },
+    {
+      "nut": "Right yoke",
+      "center_xy_mm": [
+        103.0,
+        38.0
+      ],
+      "entry_offset_mm": [
+        -8,
+        0
+      ],
+      "samples": 162,
+      "passed": true,
+      "max_overlap_mm3": 0,
+      "failures": []
+    }
+  ],
+  "assembly": "Load nuts into empty housing / bare bezel before electronics, wires or optical stack."
+}

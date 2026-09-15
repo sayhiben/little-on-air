@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": true,\n  \"interior_keepout_min_mm\": [\n    111.75,\n    52.85,\n    15.665\n  ],\n  \"interior_keepout_max_mm\": [\n    115.47,\n    57.35,\n    25.235\n  ],\n  \"samples\": 130,\n  \"checks\": 261,\n  \"failures\": [],\n  \"note\": \"This supplements the measured PCB/socket model with extra assembly space for connector tabs and solder. Actual physical test still required.\"\n}\n",
+  "success": true
+}

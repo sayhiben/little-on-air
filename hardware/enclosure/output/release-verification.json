@@ -1,0 +1,21 @@
+{
+  "status": "digital geometry checks passed; physical first-fit verification required",
+  "manufactured_solids": 10,
+  "printable_parts": 9,
+  "fit_samples": 3,
+  "native_feature_errors": 0,
+  "detected_interferences_above_0_001_mm3": 0,
+  "watertight_print_meshes": 12,
+  "valid_millimetre_3mf_archives": 12,
+  "mesh_to_native_volume_difference_percent": {
+    "01-body-and-front-frame": 0.01227,
+    "03-black-and-white-backing": 0.00048,
+    "04-optical-and-electronics-tray": 3e-05,
+    "05-charger-keeper": 0.0,
+    "06-xiao-keeper": 0.0,
+    "07-captive-reset-plunger": 0.03729,
+    "08-captive-power-slider": 0.0,
+    "09-switch-keeper": 0.0,
+    "10-wall-back-plate": 0.00211
+  }
+}

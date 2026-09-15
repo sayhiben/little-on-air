@@ -1,0 +1,170 @@
+[
+  {
+    "part": "01-body-and-front-frame",
+    "triangles": 8226,
+    "watertight_edges": true,
+    "volume_mm3": 33316.766,
+    "print_bounds_mm": [
+      120.0,
+      60.0,
+      30.0
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "03-black-and-white-backing",
+    "triangles": 1364,
+    "watertight_edges": true,
+    "volume_mm3": 6602.06,
+    "print_bounds_mm": [
+      104.0,
+      38.0,
+      2.0
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": 1.6,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "04-optical-and-electronics-tray",
+    "triangles": 896,
+    "watertight_edges": true,
+    "volume_mm3": 9824.879,
+    "print_bounds_mm": [
+      111.0,
+      53.65,
+      22.9
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Support beneath the optical partition and carrier overhangs; inspect latch slots."
+  },
+  {
+    "part": "05-charger-keeper",
+    "triangles": 124,
+    "watertight_edges": true,
+    "volume_mm3": 136.24,
+    "print_bounds_mm": [
+      20.35,
+      24.0,
+      3.95
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "06-xiao-keeper",
+    "triangles": 48,
+    "watertight_edges": true,
+    "volume_mm3": 108.312,
+    "print_bounds_mm": [
+      16.5,
+      22.7,
+      4.3
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "07-captive-reset-plunger",
+    "triangles": 2000,
+    "watertight_edges": true,
+    "volume_mm3": 55.485,
+    "print_bounds_mm": [
+      5.5995,
+      5.5997,
+      6.4
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "08-captive-power-slider",
+    "triangles": 108,
+    "watertight_edges": true,
+    "volume_mm3": 110.212,
+    "print_bounds_mm": [
+      9.0,
+      5.2,
+      5.6
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "09-switch-keeper",
+    "triangles": 60,
+    "watertight_edges": true,
+    "volume_mm3": 45.6,
+    "print_bounds_mm": [
+      11.6,
+      5.0,
+      5.0
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "10-wall-back-plate",
+    "triangles": 1564,
+    "watertight_edges": true,
+    "volume_mm3": 15951.443,
+    "print_bounds_mm": [
+      116.4,
+      56.4,
+      14.45
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "90-m3-head-and-nut-fit-sample",
+    "triangles": 1260,
+    "watertight_edges": true,
+    "volume_mm3": 2825.102,
+    "print_bounds_mm": [
+      20.0,
+      16.0,
+      10.0
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "91-led-and-acrylic-fit-sample",
+    "triangles": 60,
+    "watertight_edges": true,
+    "volume_mm3": 2520.236,
+    "print_bounds_mm": [
+      24.0,
+      22.0,
+      7.0
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  },
+  {
+    "part": "92-reset-guide-fit-sample",
+    "triangles": 404,
+    "watertight_edges": true,
+    "volume_mm3": 579.572,
+    "print_bounds_mm": [
+      16.0,
+      16.0,
+      2.4
+    ],
+    "minimum_z_mm": 0,
+    "filament_change_mm": null,
+    "support_note": "Inspect overhangs in slicer; do not support snug interfaces unnecessarily."
+  }
+]

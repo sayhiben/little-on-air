@@ -1,0 +1,674 @@
+{
+  "projects": {
+    "little-on-air-X1C-PETG-AMS-ready.3mf": {
+      "sha256": "8e607ab74aeebe89583e53b727ef36ef9884aa7f1a220f4f1b85927f0194dca8",
+      "objects": {
+        "90-m3-head-and-nut-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            70.0,
+            120.0,
+            0.0
+          ],
+          "bed_max": [
+            90.0,
+            136.0,
+            10.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1260,
+          "volume_mm3": 2825.1024,
+          "bounds_mm": [
+            20.0,
+            16.0,
+            10.0
+          ]
+        },
+        "91-led-and-acrylic-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            116.0,
+            117.0,
+            0.0
+          ],
+          "bed_max": [
+            140.0,
+            139.0,
+            7.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 60,
+          "volume_mm3": 2520.2364,
+          "bounds_mm": [
+            24.0,
+            22.0,
+            7.0
+          ]
+        },
+        "92-reset-guide-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            168.0,
+            120.0,
+            0.0
+          ],
+          "bed_max": [
+            184.0,
+            136.0,
+            2.4
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 404,
+          "volume_mm3": 579.5716,
+          "bounds_mm": [
+            16.0,
+            16.0,
+            2.4
+          ]
+        },
+        "01-body-and-front-frame.stl": {
+          "plate": 2,
+          "mesh_matches_export": true,
+          "bed_min": [
+            68.0,
+            60.0,
+            0.0
+          ],
+          "bed_max": [
+            188.0,
+            120.0,
+            30.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 8226,
+          "volume_mm3": 33316.7696,
+          "bounds_mm": [
+            120.0,
+            60.0,
+            30.0
+          ]
+        },
+        "10-wall-back-plate.stl": {
+          "plate": 2,
+          "mesh_matches_export": true,
+          "bed_min": [
+            69.8,
+            149.8,
+            0.0
+          ],
+          "bed_max": [
+            186.2,
+            206.2,
+            14.45
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1564,
+          "volume_mm3": 15951.4425,
+          "bounds_mm": [
+            116.39999,
+            56.4,
+            14.45
+          ]
+        },
+        "04-optical-and-electronics-tray.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            72.5,
+            121.175,
+            0.0
+          ],
+          "bed_max": [
+            183.5,
+            174.825,
+            22.9
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 896,
+          "volume_mm3": 9824.8786,
+          "bounds_mm": [
+            111.0,
+            53.65,
+            22.9
+          ]
+        },
+        "05-charger-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            57.825,
+            68.0,
+            0.0
+          ],
+          "bed_max": [
+            78.175,
+            92.0,
+            3.95
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 124,
+          "volume_mm3": 136.2399,
+          "bounds_mm": [
+            20.35,
+            24.0,
+            3.95
+          ]
+        },
+        "06-xiao-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            95.75,
+            68.65,
+            0.0
+          ],
+          "bed_max": [
+            112.25,
+            91.35,
+            4.3
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 48,
+          "volume_mm3": 108.3116,
+          "bounds_mm": [
+            16.5,
+            22.7,
+            4.3
+          ]
+        },
+        "07-captive-reset-plunger.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            130.20025,
+            77.20013,
+            0.0
+          ],
+          "bed_max": [
+            135.79975,
+            82.79987,
+            6.4
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 2000,
+          "volume_mm3": 55.4847,
+          "bounds_mm": [
+            5.59949,
+            5.59975,
+            6.4
+          ]
+        },
+        "08-captive-power-slider.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            151.5,
+            77.4,
+            0.0
+          ],
+          "bed_max": [
+            160.5,
+            82.6,
+            5.6
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 108,
+          "volume_mm3": 110.212,
+          "bounds_mm": [
+            9.0,
+            5.2,
+            5.6
+          ]
+        },
+        "09-switch-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            179.2,
+            77.5,
+            0.0
+          ],
+          "bed_max": [
+            190.8,
+            82.5,
+            5.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 60,
+          "volume_mm3": 45.6,
+          "bounds_mm": [
+            11.6,
+            5.0,
+            5.0
+          ]
+        },
+        "03-black-and-white-backing.stl": {
+          "plate": 4,
+          "mesh_matches_export": true,
+          "bed_min": [
+            76.0,
+            109.0,
+            0.0
+          ],
+          "bed_max": [
+            180.0,
+            147.0,
+            2.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1364,
+          "volume_mm3": 6602.0602,
+          "bounds_mm": [
+            104.0,
+            38.0,
+            2.0
+          ]
+        }
+      },
+      "minimum_clearance_after_3_5_mm_expansion": 8.7
+    },
+    "little-on-air-X1C-PETG-manual-swap-ready.3mf": {
+      "sha256": "c2054d4a8ef8210e7be3319197613c08cf89e658656b2a9c850461c710807089",
+      "objects": {
+        "90-m3-head-and-nut-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            70.0,
+            120.0,
+            0.0
+          ],
+          "bed_max": [
+            90.0,
+            136.0,
+            10.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1260,
+          "volume_mm3": 2825.1024,
+          "bounds_mm": [
+            20.0,
+            16.0,
+            10.0
+          ]
+        },
+        "91-led-and-acrylic-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            116.0,
+            117.0,
+            0.0
+          ],
+          "bed_max": [
+            140.0,
+            139.0,
+            7.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 60,
+          "volume_mm3": 2520.2364,
+          "bounds_mm": [
+            24.0,
+            22.0,
+            7.0
+          ]
+        },
+        "92-reset-guide-fit-sample.stl": {
+          "plate": 1,
+          "mesh_matches_export": true,
+          "bed_min": [
+            168.0,
+            120.0,
+            0.0
+          ],
+          "bed_max": [
+            184.0,
+            136.0,
+            2.4
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 404,
+          "volume_mm3": 579.5716,
+          "bounds_mm": [
+            16.0,
+            16.0,
+            2.4
+          ]
+        },
+        "01-body-and-front-frame.stl": {
+          "plate": 2,
+          "mesh_matches_export": true,
+          "bed_min": [
+            68.0,
+            60.0,
+            0.0
+          ],
+          "bed_max": [
+            188.0,
+            120.0,
+            30.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 8226,
+          "volume_mm3": 33316.7696,
+          "bounds_mm": [
+            120.0,
+            60.0,
+            30.0
+          ]
+        },
+        "10-wall-back-plate.stl": {
+          "plate": 2,
+          "mesh_matches_export": true,
+          "bed_min": [
+            69.8,
+            149.8,
+            0.0
+          ],
+          "bed_max": [
+            186.2,
+            206.2,
+            14.45
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1564,
+          "volume_mm3": 15951.4425,
+          "bounds_mm": [
+            116.39999,
+            56.4,
+            14.45
+          ]
+        },
+        "04-optical-and-electronics-tray.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            72.5,
+            121.175,
+            0.0
+          ],
+          "bed_max": [
+            183.5,
+            174.825,
+            22.9
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 896,
+          "volume_mm3": 9824.8786,
+          "bounds_mm": [
+            111.0,
+            53.65,
+            22.9
+          ]
+        },
+        "05-charger-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            57.825,
+            68.0,
+            0.0
+          ],
+          "bed_max": [
+            78.175,
+            92.0,
+            3.95
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 124,
+          "volume_mm3": 136.2399,
+          "bounds_mm": [
+            20.35,
+            24.0,
+            3.95
+          ]
+        },
+        "06-xiao-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            95.75,
+            68.65,
+            0.0
+          ],
+          "bed_max": [
+            112.25,
+            91.35,
+            4.3
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 48,
+          "volume_mm3": 108.3116,
+          "bounds_mm": [
+            16.5,
+            22.7,
+            4.3
+          ]
+        },
+        "07-captive-reset-plunger.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            130.20025,
+            77.20013,
+            0.0
+          ],
+          "bed_max": [
+            135.79975,
+            82.79987,
+            6.4
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 2000,
+          "volume_mm3": 55.4847,
+          "bounds_mm": [
+            5.59949,
+            5.59975,
+            6.4
+          ]
+        },
+        "08-captive-power-slider.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            151.5,
+            77.4,
+            0.0
+          ],
+          "bed_max": [
+            160.5,
+            82.6,
+            5.6
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 108,
+          "volume_mm3": 110.212,
+          "bounds_mm": [
+            9.0,
+            5.2,
+            5.6
+          ]
+        },
+        "09-switch-keeper.stl": {
+          "plate": 3,
+          "mesh_matches_export": true,
+          "bed_min": [
+            179.2,
+            77.5,
+            0.0
+          ],
+          "bed_max": [
+            190.8,
+            82.5,
+            5.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 60,
+          "volume_mm3": 45.6,
+          "bounds_mm": [
+            11.6,
+            5.0,
+            5.0
+          ]
+        },
+        "03-black-and-white-backing.stl": {
+          "plate": 4,
+          "mesh_matches_export": true,
+          "bed_min": [
+            76.0,
+            109.0,
+            0.0
+          ],
+          "bed_max": [
+            180.0,
+            147.0,
+            2.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1364,
+          "volume_mm3": 6602.0602,
+          "bounds_mm": [
+            104.0,
+            38.0,
+            2.0
+          ]
+        }
+      },
+      "minimum_clearance_after_3_5_mm_expansion": 8.7
+    }
+  },
+  "optics": {
+    "stock_nominal_mm": 3.175,
+    "viewbox_mm": [
+      104,
+      38
+    ],
+    "rear_mirror_matches_printed_geometry": true,
+    "ENGRAVE": {
+      "closed_contours": 8,
+      "maximum_sampled_contour_difference_mm": 0.0820931,
+      "audit_tolerance_mm": 0.1
+    },
+    "CUT": {
+      "closed_contours": 1,
+      "maximum_sampled_contour_difference_mm": 0.0,
+      "audit_tolerance_mm": 0.0001
+    }
+  },
+  "ams_toolpaths": {
+    "plates": [
+      {
+        "plate": 1,
+        "seconds": 1979,
+        "filament_changes": 0,
+        "grams": 7.488,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 2,
+        "seconds": 11372,
+        "filament_changes": 0,
+        "grams": 59.009,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 3,
+        "seconds": 4798,
+        "filament_changes": 0,
+        "grams": 18.285,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 4,
+        "seconds": 2100,
+        "filament_changes": 1,
+        "grams": 9.801,
+        "slicer_warnings": []
+      }
+    ],
+    "backing_color": {
+      "model_filament_by_layer_height": {
+        "0.2": 1,
+        "0.4": 1,
+        "0.6": 1,
+        "0.8": 1,
+        "1.0": 1,
+        "1.2": 1,
+        "1.4": 1,
+        "1.6": 1,
+        "1.8": 2,
+        "2.0": 2
+      }
+    }
+  },
+  "manual_toolpaths": {
+    "plates": [
+      {
+        "plate": 1,
+        "seconds": 1979,
+        "filament_changes": 0,
+        "grams": 7.488,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 2,
+        "seconds": 11372,
+        "filament_changes": 0,
+        "grams": 59.009,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 3,
+        "seconds": 4798,
+        "filament_changes": 0,
+        "grams": 18.285,
+        "slicer_warnings": []
+      },
+      {
+        "plate": 4,
+        "seconds": 1817,
+        "filament_changes": 0,
+        "grams": 8.3,
+        "slicer_warnings": []
+      }
+    ],
+    "backing_color": {
+      "pause_before_layer": 9,
+      "black_height_mm": 1.6,
+      "automatic_changes": 0
+    }
+  },
+  "native_fusion": {
+    "feature_issues": [],
+    "interferences": [],
+    "component_count": 16
+  }
+}

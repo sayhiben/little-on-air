@@ -1,0 +1,1517 @@
+{
+  "document": "Little ON AIR v2.7 - 24 mm final revision",
+  "feature_issues": [],
+  "interferences": [],
+  "motion_checks": [
+    {
+      "name": "REF Charger straight front insertion",
+      "samples": 81,
+      "pair_checks": 405,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF XIAO straight front insertion",
+      "samples": 81,
+      "pair_checks": 405,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF DPDT straight front insertion",
+      "samples": 81,
+      "pair_checks": 648,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF SPDT straight front insertion",
+      "samples": 81,
+      "pair_checks": 162,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF Battery straight front insertion",
+      "samples": 81,
+      "pair_checks": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Keeper drops over installed PCBs and switches",
+      "samples": 81,
+      "pair_checks": 1701,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Complete front including reset closes",
+      "samples": 81,
+      "pair_checks": 9720,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Reset loads into bezel from rear",
+      "samples": 81,
+      "pair_checks": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Reset supported travel, target surface deflects",
+      "samples": 25,
+      "pair_checks": 75,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "POWER full detent travel",
+      "samples": 61,
+      "pair_checks": 122,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "MODE full detent travel",
+      "samples": 61,
+      "pair_checks": 122,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "02 rear optical insertion",
+      "samples": 65,
+      "pair_checks": 65,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "03 rear optical insertion",
+      "samples": 65,
+      "pair_checks": 130,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "04 rear optical insertion",
+      "samples": 65,
+      "pair_checks": 455,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "clearance_checks": [
+    {
+      "name": "RGB front sight",
+      "from": [
+        103.605,
+        55.006,
+        17.89
+      ],
+      "to": [
+        103.605,
+        55.006,
+        -0.1
+      ],
+      "radius": 0.5,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charger rear sight",
+      "from": [
+        14,
+        49.4,
+        17.11
+      ],
+      "to": [
+        14,
+        49.4,
+        24.2
+      ],
+      "radius": 0.5,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charger rear sight",
+      "from": [
+        14,
+        44.65,
+        17.11
+      ],
+      "to": [
+        14,
+        44.65,
+        24.2
+      ],
+      "radius": 0.5,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        39.7025,
+        18.0
+      ],
+      "to": [
+        85,
+        39.7025,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        42.2425,
+        18.0
+      ],
+      "to": [
+        85,
+        42.2425,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        44.7825,
+        18.0
+      ],
+      "to": [
+        85,
+        44.7825,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        47.3225,
+        18.0
+      ],
+      "to": [
+        85,
+        47.3225,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        49.8625,
+        18.0
+      ],
+      "to": [
+        85,
+        49.8625,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        52.4025,
+        18.0
+      ],
+      "to": [
+        85,
+        52.4025,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        90.27,
+        54.9425,
+        18.0
+      ],
+      "to": [
+        85,
+        54.9425,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        39.7025,
+        18.0
+      ],
+      "to": [
+        108.9,
+        39.7025,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        42.2425,
+        18.0
+      ],
+      "to": [
+        108.9,
+        42.2425,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        44.7825,
+        18.0
+      ],
+      "to": [
+        108.9,
+        44.7825,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        47.3225,
+        18.0
+      ],
+      "to": [
+        108.9,
+        47.3225,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        49.8625,
+        18.0
+      ],
+      "to": [
+        108.9,
+        49.8625,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        52.4025,
+        18.0
+      ],
+      "to": [
+        108.9,
+        52.4025,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO edge-pad wire exit",
+      "from": [
+        105.53,
+        54.9425,
+        18.0
+      ],
+      "to": [
+        108.9,
+        54.9425,
+        18.0
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO underside power wire exit",
+      "from": [
+        93.445,
+        47.64,
+        20.45
+      ],
+      "to": [
+        85,
+        47.64,
+        20.45
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "XIAO underside power wire exit",
+      "from": [
+        93.445,
+        49.545,
+        20.45
+      ],
+      "to": [
+        85,
+        49.545,
+        20.45
+      ],
+      "radius": 0.45,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charger lower OUT pad clearance",
+      "from": [
+        13.5,
+        32.3,
+        12.4
+      ],
+      "to": [
+        13.5,
+        32.3,
+        17
+      ],
+      "radius": 0.65,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charger lower OUT pad clearance",
+      "from": [
+        28.5,
+        32.3,
+        12.4
+      ],
+      "to": [
+        28.5,
+        32.3,
+        17
+      ],
+      "radius": 0.65,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Pre-soldered XIAO straight insertion",
+      "joint_envelopes": 16,
+      "sampled_poses": 1296,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "components": [
+    {
+      "name": "01 Front optical bezel",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 14746.920709351258,
+          "bounds": [
+            [
+              0.0,
+              0.0,
+              -11.0
+            ],
+            [
+              120.0,
+              60.0,
+              0.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 Clear acrylic",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 12533.312500000002,
+          "bounds": [
+            [
+              8.0,
+              11.0,
+              -4.775
+            ],
+            [
+              112.0,
+              49.0,
+              -1.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03 Registered graphic backing",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 6693.165571651009,
+          "bounds": [
+            [
+              8.0,
+              11.0,
+              -7.275
+            ],
+            [
+              112.0,
+              49.0,
+              -4.775
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04 Optical retainer",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 1588.5559673675812,
+          "bounds": [
+            [
+              8.0,
+              3.0,
+              -9.075
+            ],
+            [
+              112.0,
+              57.0,
+              -4.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "81 Laminate front spacer",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 207.3749996355998,
+          "bounds": [
+            [
+              8.0,
+              11.0,
+              -5.275
+            ],
+            [
+              112.0,
+              49.0,
+              -4.775
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "82 Laminate rear shim",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 165.8999997084799,
+          "bounds": [
+            [
+              8.0,
+              11.0,
+              -7.275
+            ],
+            [
+              112.0,
+              49.0,
+              -6.875
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Four LEDs",
+      "body_count": 4,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 128.00000000000006,
+          "bounds": [
+            [
+              36.0,
+              2.8,
+              -4.1875
+            ],
+            [
+              44.0,
+              10.8,
+              -2.1875
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 128.00000000000017,
+          "bounds": [
+            [
+              36.0,
+              49.2,
+              -4.1875
+            ],
+            [
+              44.0,
+              57.2,
+              -2.1875
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 128.0000000000001,
+          "bounds": [
+            [
+              76.0,
+              2.8,
+              -4.1875
+            ],
+            [
+              84.0,
+              10.8,
+              -2.1875
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 128.00000000000023,
+          "bounds": [
+            [
+              76.0,
+              49.2,
+              -4.1875
+            ],
+            [
+              84.0,
+              57.2,
+              -2.1875
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Charger",
+      "body_count": 5,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 491.75000000000045,
+          "bounds": [
+            [
+              12.25,
+              30.3,
+              -16.3
+            ],
+            [
+              29.75,
+              58.4,
+              -15.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 177.09999999999997,
+          "bounds": [
+            [
+              17.0,
+              34.3,
+              -18.6
+            ],
+            [
+              24.0,
+              45.3,
+              -16.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 175.5839999999999,
+          "bounds": [
+            [
+              16.075,
+              53.25,
+              -19.4
+            ],
+            [
+              24.925,
+              59.65,
+              -16.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5360000000000014,
+          "bounds": [
+            [
+              13.4,
+              48.6,
+              -17.1
+            ],
+            [
+              14.6,
+              50.2,
+              -16.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5360000000000014,
+          "bounds": [
+            [
+              13.4,
+              43.85,
+              -17.1
+            ],
+            [
+              14.6,
+              45.45,
+              -16.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF SPDT power switch",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 354.186,
+          "bounds": [
+            [
+              31.135,
+              50.75,
+              -20.0
+            ],
+            [
+              50.865,
+              58.4,
+              -14.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF SPDT moving lever",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 43.51250000000011,
+          "bounds": [
+            [
+              39.525,
+              58.4,
+              -18.475
+            ],
+            [
+              42.475,
+              63.4,
+              -15.525
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF DPDT",
+      "body_count": 7,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 113.74271999999979,
+          "bounds": [
+            [
+              55.45,
+              55.49,
+              -17.82
+            ],
+            [
+              64.55,
+              58.85,
+              -14.1
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              57.1,
+              52.24,
+              -14.8
+            ],
+            [
+              57.8,
+              55.49,
+              -14.1
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              57.1,
+              52.24,
+              -17.82
+            ],
+            [
+              57.8,
+              55.49,
+              -17.12
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              59.65,
+              52.24,
+              -14.8
+            ],
+            [
+              60.35,
+              55.49,
+              -14.1
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              59.65,
+              52.24,
+              -17.82
+            ],
+            [
+              60.35,
+              55.49,
+              -17.12
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              62.2,
+              52.24,
+              -14.8
+            ],
+            [
+              62.9,
+              55.49,
+              -14.1
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 1.5925000000000036,
+          "bounds": [
+            [
+              62.2,
+              52.24,
+              -17.82
+            ],
+            [
+              62.9,
+              55.49,
+              -17.12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF DPDT moving actuator",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 4.207500000000014,
+          "bounds": [
+            [
+              59.25,
+              58.85,
+              -16.71
+            ],
+            [
+              60.75,
+              60.72,
+              -15.21
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF XIAO",
+      "body_count": 5,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 448.5599999999973,
+          "bounds": [
+            [
+              89.0,
+              36.8,
+              -19.7
+            ],
+            [
+              106.8,
+              57.8,
+              -18.5
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 243.00000000000077,
+          "bounds": [
+            [
+              93.45,
+              42.8,
+              -18.5
+            ],
+            [
+              102.45,
+              51.8,
+              -15.5
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 181.98336000000032,
+          "bounds": [
+            [
+              93.415,
+              53.15,
+              -18.5
+            ],
+            [
+              102.385,
+              59.55,
+              -15.33
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 2.1600000000000166,
+          "bounds": [
+            [
+              91.115,
+              55.0,
+              -18.5
+            ],
+            [
+              92.915,
+              57.0,
+              -17.9
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 0.5999999999999882,
+          "bounds": [
+            [
+              103.105,
+              54.506,
+              -18.5
+            ],
+            [
+              104.105,
+              55.506,
+              -17.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05 Rear electronics housing",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 31899.094945825538,
+          "bounds": [
+            [
+              0.0,
+              0.0,
+              -24.0
+            ],
+            [
+              120.0,
+              60.0,
+              -9.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06 Electronics retaining yoke",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 3735.997023839414,
+          "bounds": [
+            [
+              10.05,
+              33.8,
+              -18.25
+            ],
+            [
+              109.5,
+              59.75,
+              -9.65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "07 Front guided reset button",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 186.21242703465649,
+          "bounds": [
+            [
+              89.415,
+              53.4,
+              -17.65
+            ],
+            [
+              94.615,
+              58.6,
+              2.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Battery",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 10919.999999999996,
+          "bounds": [
+            [
+              35.0,
+              11.0,
+              -20.9
+            ],
+            [
+              87.0,
+              32.0,
+              -10.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Capacitor",
+      "body_count": 1,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 578.0530482605474,
+          "bounds": [
+            [
+              99.0,
+              15.0,
+              -20.0
+            ],
+            [
+              107.0,
+              26.5,
+              -12.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF M3 screws",
+      "body_count": 16,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461385,
+          "bounds": [
+            [
+              4.5,
+              4.5,
+              -14.6
+            ],
+            [
+              7.5,
+              7.5,
+              -6.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.10401744249393,
+          "bounds": [
+            [
+              3.15,
+              3.15,
+              -6.6
+            ],
+            [
+              8.85,
+              8.85,
+              -4.95
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461412,
+          "bounds": [
+            [
+              112.5,
+              4.5,
+              -14.6
+            ],
+            [
+              115.5,
+              7.5,
+              -6.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.10401744249391,
+          "bounds": [
+            [
+              111.15,
+              3.15,
+              -6.6
+            ],
+            [
+              116.85,
+              8.85,
+              -4.95
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461387,
+          "bounds": [
+            [
+              4.5,
+              52.5,
+              -14.6
+            ],
+            [
+              7.5,
+              55.5,
+              -6.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.10401744249393,
+          "bounds": [
+            [
+              3.15,
+              51.15,
+              -6.6
+            ],
+            [
+              8.85,
+              56.85,
+              -4.95
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461412,
+          "bounds": [
+            [
+              112.5,
+              52.5,
+              -14.6
+            ],
+            [
+              115.5,
+              55.5,
+              -6.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.10401744249391,
+          "bounds": [
+            [
+              111.15,
+              51.15,
+              -6.6
+            ],
+            [
+              116.85,
+              56.85,
+              -4.95
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461413,
+          "bounds": [
+            [
+              58.5,
+              4.5,
+              -9.075
+            ],
+            [
+              61.5,
+              7.5,
+              -1.075
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.104017442493955,
+          "bounds": [
+            [
+              57.15,
+              3.15,
+              -10.725
+            ],
+            [
+              62.85,
+              8.85,
+              -9.075
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.5486677646141,
+          "bounds": [
+            [
+              58.5,
+              52.5,
+              -9.075
+            ],
+            [
+              61.5,
+              55.5,
+              -1.075
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.104017442493955,
+          "bounds": [
+            [
+              57.15,
+              51.15,
+              -10.725
+            ],
+            [
+              62.85,
+              56.85,
+              -9.075
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.54866776461379,
+          "bounds": [
+            [
+              33.5,
+              36.5,
+              -17.65
+            ],
+            [
+              36.5,
+              39.5,
+              -9.65
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.10401744249397,
+          "bounds": [
+            [
+              32.15,
+              35.15,
+              -9.65
+            ],
+            [
+              37.85,
+              40.85,
+              -8.0
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 56.548667764614144,
+          "bounds": [
+            [
+              71.5,
+              36.5,
+              -17.65
+            ],
+            [
+              74.5,
+              39.5,
+              -9.65
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 42.104017442493955,
+          "bounds": [
+            [
+              70.15,
+              35.15,
+              -9.65
+            ],
+            [
+              75.85,
+              40.85,
+              -8.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF M3 nuts",
+      "body_count": 8,
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 45.795558154276186,
+          "bounds": [
+            [
+              2.82457,
+              3.25,
+              -14.0
+            ],
+            [
+              9.17543,
+              8.75,
+              -11.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.795558154276314,
+          "bounds": [
+            [
+              110.82457,
+              3.25,
+              -14.0
+            ],
+            [
+              117.17543,
+              8.75,
+              -11.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.79555815427608,
+          "bounds": [
+            [
+              3.25,
+              50.82457,
+              -14.0
+            ],
+            [
+              8.75,
+              57.17543,
+              -11.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.7955581542763,
+          "bounds": [
+            [
+              110.82457,
+              51.25,
+              -14.0
+            ],
+            [
+              117.17543,
+              56.75,
+              -11.6
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.79555815427617,
+          "bounds": [
+            [
+              56.82457,
+              3.25,
+              -5.7
+            ],
+            [
+              63.17543,
+              8.75,
+              -3.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.795558154276165,
+          "bounds": [
+            [
+              56.82457,
+              51.25,
+              -5.7
+            ],
+            [
+              63.17543,
+              56.75,
+              -3.3
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.795558154276165,
+          "bounds": [
+            [
+              31.82457,
+              35.25,
+              -16.3
+            ],
+            [
+              38.17543,
+              40.75,
+              -13.9
+            ]
+          ]
+        },
+        {
+          "solid": true,
+          "volume_mm3": 45.79555815427615,
+          "bounds": [
+            [
+              69.82457,
+              35.25,
+              -16.3
+            ],
+            [
+              76.17543,
+              40.75,
+              -13.9
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

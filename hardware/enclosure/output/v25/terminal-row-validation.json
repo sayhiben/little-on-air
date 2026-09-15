@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "min_mm": [
+        56.9,
+        52.04,
+        19.8
+      ],
+      "max_mm": [
+        63.1,
+        55.49,
+        20.900000000000002
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "min_mm": [
+        56.9,
+        52.04,
+        22.82
+      ],
+      "max_mm": [
+        63.1,
+        55.49,
+        23.92
+      ],
+      "collisions": [],
+      "passed": true
+    }
+  ],
+  "note": "Entire terminal rows reserved, not just the measured pin positions; 0.2 mm allowance around bare 0.7 mm legs.",
+  "final_geometry_note": "After this passing check, only0.25mm was removed from the yoke front face. Contact tips, stops, ports and nut pockets stay fixed. Yoke screw heads/shafts move0.25mm deeper; static assembly rechecked."
+}

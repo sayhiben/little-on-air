@@ -14,6 +14,12 @@ Version 0 uses each board's onboard RGB LED. The receiver output is isolated
 behind a small driver interface so a later version can add bright addressable
 LEDs without changing the BLE protocol or state machines.
 
+## Enclosure and manufacturing files
+
+Use the [current enclosure release](release/little-on-air-enclosure-v2.13/README.md) for the complete STL/SVG/CAD set, three-plate Bambu Studio project, BOM and consolidated build guides. [Complete release ZIP](release/little-on-air-enclosure-v2.13.zip).
+
+The enclosure is version 2.13 and includes provisions for four external NeoPixels. The firmware below is independently versioned and currently drives only the onboard RGB LEDs; external-pixel firmware remains unfinished.
+
 ## What you need
 
 - Two Seeed Studio XIAO nRF52840 boards with their factory UF2 bootloaders

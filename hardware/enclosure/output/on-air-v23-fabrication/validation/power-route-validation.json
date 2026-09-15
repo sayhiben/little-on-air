@@ -1,0 +1,53 @@
+{
+  "document": "Little On Air - v2.3 measured fit final",
+  "units": "mm",
+  "items": [
+    {
+      "name": "P4 DPDT common A and ground to XIAO",
+      "radius_mm": 1.2,
+      "route_length_mm": 83.19,
+      "path": [
+        [
+          63,
+          51,
+          24
+        ],
+        [
+          64.8,
+          44.5,
+          18
+        ],
+        [
+          64.8,
+          30,
+          18
+        ],
+        [
+          95.5,
+          30,
+          18
+        ],
+        [
+          95.5,
+          43.5,
+          18
+        ],
+        [
+          109.5,
+          43.5,
+          18
+        ],
+        [
+          109.5,
+          43.5,
+          24
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "Wire envelopes are clearance reservations, not a circuit simulation. Component and solder pad shapes remain measured-fit items.",
+  "passed": true
+}

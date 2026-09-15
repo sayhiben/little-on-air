@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"changed_components\": [\n    \"05 Rear electronics housing\",\n    \"07 Front guided reset button\"\n  ],\n  \"old_collar_expression\": \"-3.0500000 mm\",\n  \"new_collar_mm\": 2.85,\n  \"old_travel_mm\": 0.6,\n  \"new_travel_mm\": 0.8,\n  \"charger_stop_width_mm\": 17.5,\n  \"charger_edge_freeplay_mm\": 0.3\n}\n",
+  "success": true
+}

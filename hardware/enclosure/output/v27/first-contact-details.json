@@ -1,0 +1,146 @@
+[
+  {
+    "one": "05 Rear electronics housing",
+    "two": "REF Charger",
+    "body": "Charger PCB",
+    "volume": 6.4400000000000865,
+    "bounds": [
+      [
+        12.250000000000005,
+        57.599999999999994,
+        -16.300000000000008
+      ],
+      [
+        29.750000000000007,
+        58.400000000000006,
+        -15.300000000000008
+      ]
+    ]
+  },
+  {
+    "one": "05 Rear electronics housing",
+    "two": "REF XIAO",
+    "body": "XIAO PCB",
+    "volume": 3.6977999999998814,
+    "bounds": [
+      [
+        88.99999999999999,
+        57.599999999999994,
+        -19.69999999999999
+      ],
+      [
+        106.79999999999998,
+        57.8,
+        -18.499999999999996
+      ]
+    ]
+  },
+  {
+    "one": "06 Electronics retaining yoke",
+    "two": "REF Charger",
+    "body": "Charger PCB",
+    "volume": 7.276500000000003,
+    "bounds": [
+      [
+        15.775000000000002,
+        57.3,
+        -16.0
+      ],
+      [
+        25.225,
+        58.400000000000006,
+        -15.300000000000008
+      ]
+    ]
+  },
+  {
+    "one": "06 Electronics retaining yoke",
+    "two": "REF SPDT power switch",
+    "body": "SPDT main body",
+    "volume": 8.875125000000018,
+    "bounds": [
+      [
+        37.85,
+        57.25,
+        -15.225
+      ],
+      [
+        44.15,
+        58.4,
+        -14.0
+      ]
+    ]
+  },
+  {
+    "one": "06 Electronics retaining yoke",
+    "two": "REF DPDT",
+    "body": "Measured DPDT body",
+    "volume": 4.294400000000035,
+    "bounds": [
+      [
+        57.8,
+        57.25,
+        -14.71
+      ],
+      [
+        62.199999999999996,
+        58.849999999999994,
+        -14.099999999999998
+      ]
+    ]
+  },
+  {
+    "one": "06 Electronics retaining yoke",
+    "two": "REF XIAO",
+    "body": "Measured reset target 1.8 mm from PCB back",
+    "volume": 0.021262500000004726,
+    "bounds": [
+      [
+        91.11499999999998,
+        56.65,
+        -18.35
+      ],
+      [
+        91.25,
+        57.0,
+        -17.89999999999999
+      ]
+    ]
+  },
+  {
+    "one": "06 Electronics retaining yoke",
+    "two": "05 Rear electronics housing",
+    "body": "Slim rear envelope",
+    "volume": 36.116875000000164,
+    "bounds": [
+      [
+        10.05,
+        49.8,
+        -18.35
+      ],
+      [
+        109.5,
+        59.39999999999999,
+        -9.65
+      ]
+    ]
+  },
+  {
+    "one": "07 Front guided reset button",
+    "two": "06 Electronics retaining yoke",
+    "body": "Common 2.75 mm keeper rail",
+    "volume": 0.2154950000000036,
+    "bounds": [
+      [
+        91.015,
+        56.65,
+        -17.650000000000002
+      ],
+      [
+        91.25,
+        57.0,
+        -15.030000000000001
+      ]
+    ]
+  }
+]

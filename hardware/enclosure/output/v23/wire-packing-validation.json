@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "route_pairs_checked": 78,
+  "approaches": [
+    {
+      "one": "P2 SPDT switched plus to DPDT RUN branch",
+      "two": "P1 charger OUT plus to SPDT",
+      "distance_mm": 1.0,
+      "required_compact_diameter_sum_mm": 0.9,
+      "at_one": [
+        42.0,
+        49.5,
+        23.0
+      ],
+      "at_two": [
+        41.0,
+        49.5,
+        23.0
+      ],
+      "shared_termination_or_trunk": "SPDT insulated solder bay",
+      "passed": true
+    },
+    {
+      "one": "P3 switched plus and protected ground distribution",
+      "two": "P2 SPDT switched plus to DPDT RUN branch",
+      "distance_mm": 0.0,
+      "required_compact_diameter_sum_mm": 1.35,
+      "at_one": [
+        60.0,
+        51.0,
+        24.0
+      ],
+      "at_two": [
+        60.0,
+        51.0,
+        24.0
+      ],
+      "shared_termination_or_trunk": "DPDT insulated solder bay",
+      "passed": true
+    },
+    {
+      "one": "P4 DPDT common A and ground to XIAO",
+      "two": "P3 switched plus and protected ground distribution",
+      "distance_mm": 0.846,
+      "required_compact_diameter_sum_mm": 1.7,
+      "at_one": [
+        63.176,
+        50.363,
+        23.412
+      ],
+      "at_two": [
+        62.897,
+        49.823,
+        24.0
+      ],
+      "shared_termination_or_trunk": "DPDT insulated solder bay",
+      "passed": true
+    },
+    {
+      "one": "G1 charger OUT minus to ground distribution",
+      "two": "H3 LED2 to LED3",
+      "distance_mm": 1.0,
+      "required_compact_diameter_sum_mm": 1.42,
+      "at_one": [
+        73.0,
+        29.0,
+        14.7
+      ],
+      "at_two": [
+        73.021,
+        28.979,
+        13.7
+      ],
+      "shared_termination_or_trunk": "Front connector service space",
+      "passed": true
+    },
+    {
+      "one": "G1 charger OUT minus to ground distribution",
+      "two": "B1 battery to charger",
+      "distance_mm": 1.0,
+      "required_compact_diameter_sum_mm": 1.42,
+      "at_one": [
+        21.5,
+        32.0,
+        18.0
+      ],
+      "at_two": [
+        20.5,
+        32.0,
+        18.0
+      ],
+      "shared_termination_or_trunk": "Charger solder bay",
+      "passed": true
+    },
+    {
+      "one": "G1 charger OUT minus to ground distribution",
+      "two": "P3 switched plus and protected ground distribution",
+      "distance_mm": 1.5,
+      "required_compact_diameter_sum_mm": 1.35,
+      "at_one": [
+        76.0,
+        43.0,
+        24.0
+      ],
+      "at_two": [
+        76.0,
+        44.5,
+        24.0
+      ],
+      "shared_termination_or_trunk": "Capacitor and distribution bay",
+      "passed": true
+    },
+    {
+      "one": "D2 DPDT common B to LED harness junction",
+      "two": "G1 charger OUT minus to ground distribution",
+      "distance_mm": 0.281,
+      "required_compact_diameter_sum_mm": 0.9,
+      "at_one": [
+        75.938,
+        41.0,
+        23.0
+      ],
+      "at_two": [
+        76.0,
+        41.145,
+        22.768
+      ],
+      "shared_termination_or_trunk": "Capacitor and distribution bay",
+      "passed": true
+    },
+    {
+      "one": "H0 LED harness junction to front connector",
+      "two": "H1 front connector to LED1",
+      "distance_mm": 0.0,
+      "required_compact_diameter_sum_mm": 1.94,
+      "at_one": [
+        68.0,
+        24.0,
+        13.7
+      ],
+      "at_two": [
+        68.0,
+        24.0,
+        13.7
+      ],
+      "shared_termination_or_trunk": "Front connector service space",
+      "passed": true
+    },
+    {
+      "one": "H0 LED harness junction to front connector",
+      "two": "G1 charger OUT minus to ground distribution",
+      "distance_mm": 1.003,
+      "required_compact_diameter_sum_mm": 1.42,
+      "at_one": [
+        68.0,
+        28.95,
+        13.7
+      ],
+      "at_two": [
+        68.051,
+        29.0,
+        14.7
+      ],
+      "shared_termination_or_trunk": "Front connector service space",
+      "passed": true
+    },
+    {
+      "one": "H0 LED harness junction to front connector",
+      "two": "D2 DPDT common B to LED harness junction",
+      "distance_mm": 0.0,
+      "required_compact_diameter_sum_mm": 1.42,
+      "at_one": [
+        79.0,
+        44.0,
+        24.0
+      ],
+      "at_two": [
+        79.0,
+        44.0,
+        24.0
+      ],
+      "shared_termination_or_trunk": "Capacitor and distribution bay",
+      "passed": true
+    }
+  ],
+  "note": "Compact wire cross sections with 0.2 placement allowance: single OD0.9 radius0.45, pair OD0.8 radius0.8, P3 pair OD0.9 radius0.9, three OD0.9 radius0.97. Connections spread within marked termination bays plus2mm dressing margin. Dress actual wires to these routes."
+}

@@ -1,0 +1,2405 @@
+[
+  {
+    "project": "on-air-v24-X1C-eSUN-PLA-plus-AMS.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 871,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 45,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 704.770263671875,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 9.887001037597656,
+            "Inner wall": 4379.0029296875,
+            "Internal solid infill": 2191.97900390625,
+            "Outer wall": 3235.4365234375,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 644.4715576171875,
+            "Top surface": 697.6763305664062,
+            "Travel": 1293.669921875,
+            "Undefined": 1278.7442626953125
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 72.45442199707031,
+              "total_used_g": 72.45442199707031
+            }
+          ],
+          "generate_support_material_time": 50,
+          "id": 1,
+          "infill_time": 431,
+          "layer_filament_change": 0,
+          "main_predication": 13908.505859375,
+          "make_perimeters_time": 463,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2344,
+          "sliced_time_with_cache": 1207,
+          "total_predication": 14437.02734375,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.8621520996094,
+            "Flush": 29.0,
+            "Gap infill": 2.5745041370391846,
+            "Inner wall": 754.3283081054688,
+            "Internal solid infill": 94.19063568115234,
+            "Outer wall": 557.6825561523438,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 47.5948486328125,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 106.73162078857422,
+            "Travel": 306.7518615722656,
+            "Undefined": 291.4341125488281
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 7.559976100921631,
+              "total_used_g": 7.559976577758789
+            }
+          ],
+          "generate_support_material_time": 12,
+          "id": 2,
+          "infill_time": 78,
+          "layer_filament_change": 0,
+          "main_predication": 2001.5867919921875,
+          "make_perimeters_time": 78,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 613,
+          "sliced_time_with_cache": 403,
+          "total_predication": 2530.1005859375,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.88739013671875,
+            "Brim": 46.473506927490234,
+            "Custom": 485.8554992675781,
+            "Flush": 171.7286376953125,
+            "Gap infill": 3.9541590213775635,
+            "Inner wall": 230.4097900390625,
+            "Internal solid infill": 1274.3363037109375,
+            "Outer wall": 157.32455444335938,
+            "Prime tower": 200.24180603027344,
+            "Top surface": 233.2490234375,
+            "Travel": 125.84278106689453,
+            "Undefined": 110.4665298461914
+          },
+          "filament_change_times": 1,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 8.209494590759277,
+              "total_used_g": 9.023344993591309
+            },
+            {
+              "filament_id": "GFL99",
+              "id": 2,
+              "main_used_g": 0.4492892622947693,
+              "total_used_g": 1.2988437414169312
+            }
+          ],
+          "generate_support_material_time": 6,
+          "id": 3,
+          "infill_time": 80,
+          "layer_filament_change": 1,
+          "main_predication": 2242.462890625,
+          "make_perimeters_time": 40,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 347,
+          "sliced_time_with_cache": 182,
+          "total_predication": 3113.882080078125,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": null,
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          1
+        ],
+        "1.8": [
+          1
+        ],
+        "1.9": [
+          1
+        ],
+        "2.0": [
+          1
+        ],
+        "2.1": [
+          1
+        ],
+        "2.2": [
+          1
+        ],
+        "2.3": [
+          1
+        ],
+        "2.4": [
+          1
+        ],
+        "2.5": [
+          1
+        ]
+      }
+    },
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-eSUN-PLA-plus-fit-checks.3mf",
+    "object_count": 3,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 613,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 42,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 209.83831787109375,
+            "Bridge": 6.304772853851318,
+            "Brim": 111.50692749023438,
+            "Custom": 485.8527526855469,
+            "Flush": 29.0,
+            "Gap infill": 6.47716760635376,
+            "Inner wall": 2462.8857421875,
+            "Internal solid infill": 1084.77783203125,
+            "Outer wall": 1944.219482421875,
+            "Overhang wall": 39.60486602783203,
+            "Sparse infill": 972.9682006835938,
+            "Support": 13.783049583435059,
+            "Support interface": 0.5800523161888123,
+            "Support transition": 0.9901305437088013,
+            "Top surface": 323.72222900390625,
+            "Travel": 847.53466796875,
+            "Undefined": 832.240234375
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 39.098655700683594,
+              "total_used_g": 39.098655700683594
+            }
+          ],
+          "generate_support_material_time": 34,
+          "id": 1,
+          "infill_time": 148,
+          "layer_filament_change": 0,
+          "main_predication": 7996.52880859375,
+          "make_perimeters_time": 223,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 34.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 87.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "99-upper-housing-complete-fit-section.stl",
+              "triangle_count": 3024
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55000305175781,
+                "x": 75.7249984741211,
+                "y": 149.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 9,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.200006008148193,
+                "height": 7.0,
+                "width": 4.1999969482421875,
+                "x": 125.9000015258789,
+                "y": 195.89999389648438,
+                "z": 0.0
+              },
+              "id": 13,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 1430,
+          "sliced_time_with_cache": 880,
+          "total_predication": 8525.056640625,
+          "triangle_count": 4260,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": null,
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-eSUN-PLA-plus-manual-swap.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 878,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 67,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 704.770263671875,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 9.887001037597656,
+            "Inner wall": 4379.06005859375,
+            "Internal solid infill": 2192.543212890625,
+            "Outer wall": 3235.490234375,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 644.4715576171875,
+            "Top surface": 694.6763305664062,
+            "Travel": 1296.76025390625,
+            "Undefined": 1281.8345947265625
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 72.45442199707031,
+              "total_used_g": 72.45442199707031
+            }
+          ],
+          "generate_support_material_time": 54,
+          "id": 1,
+          "infill_time": 456,
+          "layer_filament_change": 0,
+          "main_predication": 13909.26953125,
+          "make_perimeters_time": 467,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2441,
+          "sliced_time_with_cache": 1253,
+          "total_predication": 14437.791015625,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.8787536621094,
+            "Flush": 29.0,
+            "Gap infill": 2.5745041370391846,
+            "Inner wall": 754.3283081054688,
+            "Internal solid infill": 94.19063568115234,
+            "Outer wall": 557.6825561523438,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 47.5948486328125,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 106.73161315917969,
+            "Travel": 306.7023620605469,
+            "Undefined": 291.3680114746094
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 7.559976100921631,
+              "total_used_g": 7.559976577758789
+            }
+          ],
+          "generate_support_material_time": 12,
+          "id": 2,
+          "infill_time": 83,
+          "layer_filament_change": 0,
+          "main_predication": 2001.5343017578125,
+          "make_perimeters_time": 69,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 665,
+          "sliced_time_with_cache": 454,
+          "total_predication": 2530.048095703125,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.887451171875,
+            "Brim": 46.46514892578125,
+            "Custom": 485.7497863769531,
+            "Flush": 29.0,
+            "Gap infill": 3.925717353820801,
+            "Inner wall": 228.6739044189453,
+            "Internal solid infill": 1274.3363037109375,
+            "Outer wall": 153.41058349609375,
+            "Top surface": 233.2769317626953,
+            "Travel": 93.60035705566406,
+            "Undefined": 78.39431762695312
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 8.662406921386719,
+              "total_used_g": 8.662406921386719
+            }
+          ],
+          "generate_support_material_time": 7,
+          "id": 3,
+          "infill_time": 79,
+          "layer_filament_change": 0,
+          "main_predication": 2204.543212890625,
+          "make_perimeters_time": 36,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 290,
+          "sliced_time_with_cache": 160,
+          "total_predication": 2733.056396484375,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": [
+        {
+          "height": 1.7,
+          "line": 12793
+        }
+      ],
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          0
+        ],
+        "1.8": [
+          0
+        ],
+        "1.9": [
+          0
+        ],
+        "2.0": [
+          0
+        ],
+        "2.1": [
+          0
+        ],
+        "2.2": [
+          0
+        ],
+        "2.3": [
+          0
+        ],
+        "2.4": [
+          0
+        ],
+        "2.5": [
+          0
+        ]
+      }
+    },
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PETG-AMS.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 970,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 35,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 709.0423583984375,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 14.445816993713379,
+            "Inner wall": 4379.10791015625,
+            "Internal solid infill": 2229.580078125,
+            "Outer wall": 3235.5302734375,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 664.5955200195312,
+            "Top surface": 695.6013793945312,
+            "Travel": 1334.757080078125,
+            "Undefined": 1319.8314208984375
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 71.3705062866211,
+              "total_used_g": 71.3705062866211
+            }
+          ],
+          "generate_support_material_time": 52,
+          "id": 1,
+          "infill_time": 438,
+          "layer_filament_change": 0,
+          "main_predication": 14014.376953125,
+          "make_perimeters_time": 524,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2447,
+          "sliced_time_with_cache": 1207,
+          "total_predication": 14542.8974609375,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.8621520996094,
+            "Flush": 29.0,
+            "Gap infill": 2.662844181060791,
+            "Inner wall": 814.6696166992188,
+            "Internal solid infill": 102.85893249511719,
+            "Outer wall": 601.3613891601562,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 48.79722213745117,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 111.3430404663086,
+            "Travel": 314.4182434082031,
+            "Undefined": 299.1004943847656
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 7.456055164337158,
+              "total_used_g": 7.456055164337158
+            }
+          ],
+          "generate_support_material_time": 11,
+          "id": 2,
+          "infill_time": 77,
+          "layer_filament_change": 0,
+          "main_predication": 2127.88525390625,
+          "make_perimeters_time": 76,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 636,
+          "sliced_time_with_cache": 422,
+          "total_predication": 2656.399169921875,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.88739013671875,
+            "Brim": 46.473506927490234,
+            "Custom": 485.8554992675781,
+            "Flush": 173.48133850097656,
+            "Gap infill": 4.500839710235596,
+            "Inner wall": 234.1854248046875,
+            "Internal solid infill": 1274.638427734375,
+            "Outer wall": 168.50625610351562,
+            "Prime tower": 200.24180603027344,
+            "Top surface": 230.51170349121094,
+            "Travel": 129.8004150390625,
+            "Undefined": 114.42416381835938
+          },
+          "filament_change_times": 1,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 8.095795631408691,
+              "total_used_g": 8.92266845703125
+            },
+            {
+              "filament_id": "GFG99",
+              "id": 2,
+              "main_used_g": 0.4460698664188385,
+              "total_used_g": 1.3161779642105103
+            }
+          ],
+          "generate_support_material_time": 7,
+          "id": 3,
+          "infill_time": 75,
+          "layer_filament_change": 1,
+          "main_predication": 2259.49853515625,
+          "make_perimeters_time": 36,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 376,
+          "sliced_time_with_cache": 210,
+          "total_predication": 3132.67041015625,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": null,
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          1
+        ],
+        "1.8": [
+          1
+        ],
+        "1.9": [
+          1
+        ],
+        "2.0": [
+          1
+        ],
+        "2.1": [
+          1
+        ],
+        "2.2": [
+          1
+        ],
+        "2.3": [
+          1
+        ],
+        "2.4": [
+          1
+        ],
+        "2.5": [
+          1
+        ]
+      }
+    },
+    "material": [
+      "PETG",
+      "PETG"
+    ],
+    "nozzle_C": [
+      "255",
+      "255"
+    ],
+    "bed_C": [
+      "70",
+      "70"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PETG-fit-checks.3mf",
+    "object_count": 3,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 646,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 26,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 209.83831787109375,
+            "Bridge": 6.417850494384766,
+            "Brim": 111.50692749023438,
+            "Custom": 485.8527526855469,
+            "Flush": 29.0,
+            "Gap infill": 7.5782246589660645,
+            "Inner wall": 2462.92626953125,
+            "Internal solid infill": 1108.83056640625,
+            "Outer wall": 1944.21728515625,
+            "Overhang wall": 39.60486602783203,
+            "Sparse infill": 979.6029052734375,
+            "Support": 13.783049583435059,
+            "Support interface": 0.5800523161888123,
+            "Support transition": 0.9901305437088013,
+            "Top surface": 327.78240966796875,
+            "Travel": 867.1565551757812,
+            "Undefined": 851.8621215820312
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 38.51844787597656,
+              "total_used_g": 38.51844787597656
+            }
+          ],
+          "generate_support_material_time": 36,
+          "id": 1,
+          "infill_time": 151,
+          "layer_filament_change": 0,
+          "main_predication": 8052.21435546875,
+          "make_perimeters_time": 241,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 34.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 87.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "99-upper-housing-complete-fit-section.stl",
+              "triangle_count": 3024
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55000305175781,
+                "x": 75.7249984741211,
+                "y": 149.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 9,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.200006008148193,
+                "height": 7.0,
+                "width": 4.1999969482421875,
+                "x": 125.9000015258789,
+                "y": 195.89999389648438,
+                "z": 0.0
+              },
+              "id": 13,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 1498,
+          "sliced_time_with_cache": 901,
+          "total_predication": 8580.7421875,
+          "triangle_count": 4260,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": null,
+    "material": [
+      "PETG",
+      "PETG"
+    ],
+    "nozzle_C": [
+      "255",
+      "255"
+    ],
+    "bed_C": [
+      "70",
+      "70"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PETG-manual-swap.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 892,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 47,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 709.0423583984375,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 14.445816993713379,
+            "Inner wall": 4379.10791015625,
+            "Internal solid infill": 2229.580078125,
+            "Outer wall": 3235.451416015625,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 664.5955200195312,
+            "Top surface": 695.6013793945312,
+            "Travel": 1334.6282958984375,
+            "Undefined": 1319.70263671875
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 71.3705062866211,
+              "total_used_g": 71.3705062866211
+            }
+          ],
+          "generate_support_material_time": 49,
+          "id": 1,
+          "infill_time": 407,
+          "layer_filament_change": 0,
+          "main_predication": 14014.166015625,
+          "make_perimeters_time": 467,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2314,
+          "sliced_time_with_cache": 1180,
+          "total_predication": 14542.6865234375,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.8787536621094,
+            "Flush": 29.0,
+            "Gap infill": 2.662844181060791,
+            "Inner wall": 814.6696166992188,
+            "Internal solid infill": 102.85893249511719,
+            "Outer wall": 601.3613891601562,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 48.79722213745117,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 111.34303283691406,
+            "Travel": 314.4246520996094,
+            "Undefined": 299.09027099609375
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 7.456055164337158,
+              "total_used_g": 7.456055164337158
+            }
+          ],
+          "generate_support_material_time": 11,
+          "id": 2,
+          "infill_time": 71,
+          "layer_filament_change": 0,
+          "main_predication": 2127.89013671875,
+          "make_perimeters_time": 70,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 581,
+          "sliced_time_with_cache": 386,
+          "total_predication": 2656.404052734375,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.887451171875,
+            "Brim": 46.46514892578125,
+            "Custom": 485.9199523925781,
+            "Flush": 29.0,
+            "Gap infill": 7.50051736831665,
+            "Inner wall": 234.1854248046875,
+            "Internal solid infill": 1274.638427734375,
+            "Outer wall": 168.50625610351562,
+            "Top surface": 230.51170349121094,
+            "Travel": 94.88529205322266,
+            "Undefined": 79.509033203125
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 8.541866302490234,
+              "total_used_g": 8.541866302490234
+            }
+          ],
+          "generate_support_material_time": 7,
+          "id": 3,
+          "infill_time": 74,
+          "layer_filament_change": 0,
+          "main_predication": 2227.540283203125,
+          "make_perimeters_time": 34,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 291,
+          "sliced_time_with_cache": 167,
+          "total_predication": 2756.053466796875,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": [
+        {
+          "height": 1.7,
+          "line": 12862
+        }
+      ],
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          0
+        ],
+        "1.8": [
+          0
+        ],
+        "1.9": [
+          0
+        ],
+        "2.0": [
+          0
+        ],
+        "2.1": [
+          0
+        ],
+        "2.2": [
+          0
+        ],
+        "2.3": [
+          0
+        ],
+        "2.4": [
+          0
+        ],
+        "2.5": [
+          0
+        ]
+      }
+    },
+    "material": [
+      "PETG",
+      "PETG"
+    ],
+    "nozzle_C": [
+      "255",
+      "255"
+    ],
+    "bed_C": [
+      "70",
+      "70"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PLA-AMS.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 822,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 42,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 704.770263671875,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 9.887001037597656,
+            "Inner wall": 4379.05078125,
+            "Internal solid infill": 2192.543212890625,
+            "Outer wall": 3235.5185546875,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 644.4715576171875,
+            "Top surface": 697.6763305664062,
+            "Travel": 1293.7957763671875,
+            "Undefined": 1278.8701171875
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 71.87478637695312,
+              "total_used_g": 71.87478637695312
+            }
+          ],
+          "generate_support_material_time": 51,
+          "id": 1,
+          "infill_time": 433,
+          "layer_filament_change": 0,
+          "main_predication": 13909.291015625,
+          "make_perimeters_time": 468,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2383,
+          "sliced_time_with_cache": 1227,
+          "total_predication": 14437.8125,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.9818420410156,
+            "Flush": 29.0,
+            "Gap infill": 2.5745041370391846,
+            "Inner wall": 769.4566040039062,
+            "Internal solid infill": 93.24693298339844,
+            "Outer wall": 567.36474609375,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 47.59564208984375,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 106.94287872314453,
+            "Travel": 306.5807189941406,
+            "Undefined": 291.1432800292969
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 7.499489784240723,
+              "total_used_g": 7.499489784240723
+            }
+          ],
+          "generate_support_material_time": 13,
+          "id": 2,
+          "infill_time": 78,
+          "layer_filament_change": 0,
+          "main_predication": 2025.478759765625,
+          "make_perimeters_time": 80,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 658,
+          "sliced_time_with_cache": 444,
+          "total_predication": 2553.99267578125,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.88739013671875,
+            "Brim": 46.473506927490234,
+            "Custom": 485.8554992675781,
+            "Flush": 173.48133850097656,
+            "Gap infill": 3.9541590213775635,
+            "Inner wall": 230.4097900390625,
+            "Internal solid infill": 1274.3363037109375,
+            "Outer wall": 157.32455444335938,
+            "Prime tower": 200.24180603027344,
+            "Top surface": 233.2490234375,
+            "Travel": 125.84278106689453,
+            "Undefined": 110.4665298461914
+          },
+          "filament_change_times": 1,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 8.143818855285645,
+              "total_used_g": 8.95115852355957
+            },
+            {
+              "filament_id": "GFL99",
+              "id": 2,
+              "main_used_g": 0.4492892622947693,
+              "total_used_g": 1.2988437414169312
+            }
+          ],
+          "generate_support_material_time": 6,
+          "id": 3,
+          "infill_time": 89,
+          "layer_filament_change": 1,
+          "main_predication": 2242.462646484375,
+          "make_perimeters_time": 42,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 393,
+          "sliced_time_with_cache": 217,
+          "total_predication": 3115.634521484375,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": null,
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          1
+        ],
+        "1.8": [
+          1
+        ],
+        "1.9": [
+          1
+        ],
+        "2.0": [
+          1
+        ],
+        "2.1": [
+          1
+        ],
+        "2.2": [
+          1
+        ],
+        "2.3": [
+          1
+        ],
+        "2.4": [
+          1
+        ],
+        "2.5": [
+          1
+        ]
+      }
+    },
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PLA-fit-checks.3mf",
+    "object_count": 3,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 574,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 51,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 209.83831787109375,
+            "Bridge": 6.304772853851318,
+            "Brim": 111.50692749023438,
+            "Custom": 485.8527526855469,
+            "Flush": 29.0,
+            "Gap infill": 6.47716760635376,
+            "Inner wall": 2462.986572265625,
+            "Internal solid infill": 1084.77783203125,
+            "Outer wall": 1944.2684326171875,
+            "Overhang wall": 39.60486602783203,
+            "Sparse infill": 972.9680786132812,
+            "Support": 13.783049583435059,
+            "Support interface": 0.5800523161888123,
+            "Support transition": 0.9901305437088013,
+            "Top surface": 326.72235107421875,
+            "Travel": 844.5892944335938,
+            "Undefined": 829.2948608398438
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 38.78586959838867,
+              "total_used_g": 38.78586959838867
+            }
+          ],
+          "generate_support_material_time": 37,
+          "id": 1,
+          "infill_time": 145,
+          "layer_filament_change": 0,
+          "main_predication": 7996.73681640625,
+          "make_perimeters_time": 225,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 34.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 87.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "99-upper-housing-complete-fit-section.stl",
+              "triangle_count": 3024
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55000305175781,
+                "x": 75.7249984741211,
+                "y": 149.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 9,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.200006008148193,
+                "height": 7.0,
+                "width": 4.1999969482421875,
+                "x": 125.9000015258789,
+                "y": 195.89999389648438,
+                "z": 0.0
+              },
+              "id": 13,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 1495,
+          "sliced_time_with_cache": 929,
+          "total_predication": 8525.2646484375,
+          "triangle_count": 4260,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": null,
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  },
+  {
+    "project": "on-air-v24-X1C-PLA-manual-swap.3mf",
+    "object_count": 6,
+    "mesh_matches_STL": true,
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 854,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 56,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 530.2714233398438,
+            "Bridge": 704.770263671875,
+            "Brim": 175.2759246826172,
+            "Custom": 485.4770812988281,
+            "Flush": 29.0,
+            "Gap infill": 9.887001037597656,
+            "Inner wall": 4379.10791015625,
+            "Internal solid infill": 2192.543212890625,
+            "Outer wall": 3235.408203125,
+            "Overhang wall": 72.67094421386719,
+            "Sparse infill": 644.4715576171875,
+            "Top surface": 694.6763305664062,
+            "Travel": 1296.582763671875,
+            "Undefined": 1281.6571044921875
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 71.87478637695312,
+              "total_used_g": 71.87478637695312
+            }
+          ],
+          "generate_support_material_time": 52,
+          "id": 1,
+          "infill_time": 441,
+          "layer_filament_change": 0,
+          "main_predication": 13909.021484375,
+          "make_perimeters_time": 460,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 11.0,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 54.0,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "01-front-optical-bezel.stl",
+              "triangle_count": 2970
+            },
+            {
+              "bbox": {
+                "depth": 60.0,
+                "height": 24.5,
+                "width": 120.0,
+                "x": 68.0,
+                "y": 144.0,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "05-rear-electronics-housing.stl",
+              "triangle_count": 4776
+            }
+          ],
+          "sliced_time": 2323,
+          "sliced_time_with_cache": 1161,
+          "total_predication": 14437.54296875,
+          "triangle_count": 7746,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 6.392928123474121,
+            "Bridge": 3.2066640853881836,
+            "Brim": 120.35662841796875,
+            "Custom": 485.8621520996094,
+            "Flush": 29.0,
+            "Gap infill": 2.5745041370391846,
+            "Inner wall": 769.4566040039062,
+            "Internal solid infill": 94.31754302978516,
+            "Outer wall": 567.36474609375,
+            "Overhang wall": 15.621668815612793,
+            "Sparse infill": 47.5948486328125,
+            "Support": 13.784034729003906,
+            "Support interface": 0.5801929235458374,
+            "Support transition": 0.9945428967475891,
+            "Top surface": 106.94287872314453,
+            "Travel": 306.7518615722656,
+            "Undefined": 291.4341125488281
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 7.4994964599609375,
+              "total_used_g": 7.499496936798096
+            }
+          ],
+          "generate_support_material_time": 13,
+          "id": 2,
+          "infill_time": 85,
+          "layer_filament_change": 0,
+          "main_predication": 2026.72265625,
+          "make_perimeters_time": 67,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 54.0,
+                "height": 4.474999904632568,
+                "width": 103.99998474121094,
+                "x": 383.20001220703125,
+                "y": 137.0,
+                "z": 4.7683716530855236e-08
+              },
+              "id": 13,
+              "name": "04-optical-retainer.stl",
+              "triangle_count": 528
+            },
+            {
+              "bbox": {
+                "depth": 29.25,
+                "height": 13.600000381469727,
+                "width": 104.55001068115234,
+                "x": 382.92498779296875,
+                "y": 88.375,
+                "z": 9.265137101976961e-09
+              },
+              "id": 17,
+              "name": "06-electronics-retaining-yoke.stl",
+              "triangle_count": 1176
+            },
+            {
+              "bbox": {
+                "depth": 4.199998378753662,
+                "height": 7.0,
+                "width": 4.1999921798706055,
+                "x": 433.1000061035156,
+                "y": 60.900001525878906,
+                "z": 0.0
+              },
+              "id": 21,
+              "name": "07-guided-rounded-reset-button.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 643,
+          "sliced_time_with_cache": 430,
+          "total_predication": 2555.236572265625,
+          "triangle_count": 1764,
+          "warning_message": ""
+        },
+        {
+          "feature_type_times": {
+            "Bottom surface": 199.887451171875,
+            "Brim": 46.46514892578125,
+            "Custom": 485.9199523925781,
+            "Flush": 29.0,
+            "Gap infill": 3.9538371562957764,
+            "Inner wall": 230.4097900390625,
+            "Internal solid infill": 1274.3363037109375,
+            "Outer wall": 157.32455444335938,
+            "Top surface": 233.2490234375,
+            "Travel": 93.92765045166016,
+            "Undefined": 78.55139923095703
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL99",
+              "id": 1,
+              "main_used_g": 8.593108177185059,
+              "total_used_g": 8.593108177185059
+            }
+          ],
+          "generate_support_material_time": 7,
+          "id": 3,
+          "infill_time": 78,
+          "layer_filament_change": 0,
+          "main_predication": 2210.504638671875,
+          "make_perimeters_time": 38,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 37.999996185302734,
+                "height": 2.5,
+                "width": 104.0,
+                "x": 76.0,
+                "y": -198.1999969482422,
+                "z": 0.0
+              },
+              "id": 25,
+              "name": "03-registered-graphic-backing.stl",
+              "triangle_count": 1504
+            }
+          ],
+          "sliced_time": 289,
+          "sliced_time_with_cache": 155,
+          "total_predication": 2739.017822265625,
+          "triangle_count": 1504,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "color_change": {
+      "layers": 24,
+      "last_layer_mm": 2.5,
+      "black_base_mm": 1.6,
+      "first_white_layer_mm": 1.7,
+      "pause": [
+        {
+          "height": 1.7,
+          "line": 12791
+        }
+      ],
+      "tool_per_layer": {
+        "0.2": [
+          0
+        ],
+        "0.3": [
+          0
+        ],
+        "0.4": [
+          0
+        ],
+        "0.5": [
+          0
+        ],
+        "0.6": [
+          0
+        ],
+        "0.7": [
+          0
+        ],
+        "0.8": [
+          0
+        ],
+        "0.9": [
+          0
+        ],
+        "1.0": [
+          0
+        ],
+        "1.1": [
+          0
+        ],
+        "1.2": [
+          0
+        ],
+        "1.3": [
+          0
+        ],
+        "1.4": [
+          0
+        ],
+        "1.5": [
+          0
+        ],
+        "1.6": [
+          0
+        ],
+        "1.7": [
+          0
+        ],
+        "1.8": [
+          0
+        ],
+        "1.9": [
+          0
+        ],
+        "2.0": [
+          0
+        ],
+        "2.1": [
+          0
+        ],
+        "2.2": [
+          0
+        ],
+        "2.3": [
+          0
+        ],
+        "2.4": [
+          0
+        ],
+        "2.5": [
+          0
+        ]
+      }
+    },
+    "material": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle_C": [
+      "220",
+      "220"
+    ],
+    "bed_C": [
+      "55",
+      "55"
+    ],
+    "first_layer_inspection_disabled": true,
+    "expected_pauses_only": true,
+    "bed_leveling_sequence_present": true,
+    "normal_heater_shutdown_present": true
+  }
+]

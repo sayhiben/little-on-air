@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": true,\n  \"failed\": []\n}\n{\n  \"passed\": true,\n  \"added_mm3\": 2.708999999999996,\n  \"changed\": [\n    \"01 Front optical bezel\"\n  ],\n  \"continuous_motion_checks\": 6,\n  \"wire_items_checked\": 45\n}\n",
+  "success": true
+}

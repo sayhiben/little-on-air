@@ -1,0 +1,114 @@
+{
+  "document": "Little On Air - v2.4 second physical fit revision",
+  "units": "mm",
+  "items": [
+    {
+      "name": "G1 charger OUT minus to ground distribution",
+      "radius_mm": 0.8,
+      "route_length_mm": 98.62,
+      "path": [
+        [
+          22.3,
+          32,
+          18
+        ],
+        [
+          22.3,
+          27,
+          14.7
+        ],
+        [
+          91,
+          27,
+          14.7
+        ],
+        [
+          91,
+          33,
+          14.7
+        ],
+        [
+          76,
+          43,
+          24
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D1 XIAO data to DPDT RUN B",
+      "radius_mm": 0.8,
+      "route_length_mm": 91.5,
+      "path": [
+        [
+          108.7,
+          50.5,
+          22
+        ],
+        [
+          106.2,
+          50.5,
+          22
+        ],
+        [
+          106.2,
+          48.5,
+          18
+        ],
+        [
+          98,
+          47,
+          15
+        ],
+        [
+          98,
+          28,
+          16.6
+        ],
+        [
+          68,
+          28,
+          16.6
+        ],
+        [
+          68,
+          39,
+          16.6
+        ],
+        [
+          68,
+          51,
+          20.8
+        ],
+        [
+          60,
+          51,
+          20.8
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "XIAO lower solder approach",
+      "min_mm": [
+        107.6,
+        39.4,
+        20.2
+      ],
+      "max_mm": [
+        109.8,
+        44,
+        26.0
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "Wire envelopes are clearance reservations, not a circuit simulation. Component and solder pad shapes remain measured-fit items.",
+  "passed": true
+}

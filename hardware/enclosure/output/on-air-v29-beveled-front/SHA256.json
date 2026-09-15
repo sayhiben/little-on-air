@@ -1,0 +1,14 @@
+{
+  "bambu-studio/on-air-v29-X1C-eSUN-PLA-plus-beveled-front.3mf": "2381d130f2b6c7569a36c2ef8bdb62c81f003074c7417826ce0dd14b0517e838",
+  "bambu-studio/on-air-v29-X1C-PETG-beveled-front.3mf": "3aa38f35be6afbe19ace3be15cfe8bb6222a40e6a83a100f47d6182c62d88b3d",
+  "cad/little-on-air-v29-assembly.step": "b221b22b52fed2b82fdcaa1dc7efee940d359e06f6766168f3f20ac2c2851535",
+  "cad/little-on-air-v29.f3d": "b8698ec97b9fecb1be52b56e092259c0293ee1dd5e7a182cd54fc9c6c9020c8c",
+  "README.md": "7b97c5c820f22e9b6849d64914ef55044224e54ffe32b5c8719859d30b53e5f3",
+  "stl/01-front-optical-bezel.stl": "ab5d97830c3db7c92f18083d99371eccc1504b51eb2b92a1d81a7e4ce2332550",
+  "validation/mesh-validation.json": "4e461474f2a5033445bef0241ef502d860f233081f339224ba4bde8c6793b41a",
+  "validation/native-validation.json": "044fa2ab5e429b6d6601f12f009d7ea85342ce8cca8659160c007a97b076b13a",
+  "validation/slicing-validation.json": "42a2a8ffa6cda9d8713fc9cf5a6efc46e7ce6c42216cb93476b22e022ed28ace",
+  "views/beveled-assembly.png": "0e0d66f1491ecff57ba2e07ebcb560b0eefce159ad3c10916f6c4bc7ac5ed553",
+  "views/beveled-frame.png": "78074d09d508af4587fd888251aea71e7906f158c951362dbcf44cfa655e001e",
+  "views/beveled-front.png": "59371679b7d8d5eb780c91be516f95f51f34cd820264e9a21be66efe40459aa7"
+}

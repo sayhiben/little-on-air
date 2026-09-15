@@ -1,0 +1,148 @@
+{
+    "error_string": "Success.",
+    "export_time": 448,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 68,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 77.11222076416016,
+                "Bridge": 3.615605115890503,
+                "Brim": 120.12523651123047,
+                "Custom": 485.9321594238281,
+                "Flush": 29.0,
+                "Gap infill": 3.277611017227173,
+                "Inner wall": 1329.4808349609375,
+                "Internal solid infill": 417.8403625488281,
+                "Outer wall": 1485.8701171875,
+                "Overhang wall": 25.071928024291992,
+                "Sparse infill": 164.94752502441406,
+                "Support": 68.4937515258789,
+                "Support interface": 21.411300659179688,
+                "Support transition": 4.3289971351623535,
+                "Top surface": 147.50184631347656,
+                "Travel": 713.4395141601563,
+                "Undefined": 698.0243530273438
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL03",
+                    "id": 1,
+                    "main_used_g": 18.231359481811523,
+                    "total_used_g": 18.231359481811523
+                }
+            ],
+            "generate_support_material_time": 35,
+            "id": 1,
+            "infill_time": 96,
+            "layer_filament_change": 0,
+            "main_predication": 4553.48828125,
+            "make_perimeters_time": 127,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 33.0,
+                        "height": 24.5,
+                        "width": 24.0,
+                        "x": 53.0,
+                        "y": 61.5,
+                        "z": 0.0
+                    },
+                    "id": 5,
+                    "name": "92-charger-fit-section.stl",
+                    "triangle_count": 296
+                },
+                {
+                    "bbox": {
+                        "depth": 27.0,
+                        "height": 24.5,
+                        "width": 14.5,
+                        "x": 95.75,
+                        "y": 64.5,
+                        "z": 0.0
+                    },
+                    "id": 9,
+                    "name": "93-XIAO-and-reset-fit-section.stl",
+                    "triangle_count": 792
+                },
+                {
+                    "bbox": {
+                        "depth": 14.0,
+                        "height": 24.5,
+                        "width": 18.0,
+                        "x": 130.0,
+                        "y": 71.0,
+                        "z": 0.0
+                    },
+                    "id": 13,
+                    "name": "94-DPDT-fit-section.stl",
+                    "triangle_count": 160
+                },
+                {
+                    "bbox": {
+                        "depth": 14.0,
+                        "height": 24.5,
+                        "width": 20.70000648498535,
+                        "x": 165.64999389648438,
+                        "y": 71.0,
+                        "z": 0.0
+                    },
+                    "id": 17,
+                    "name": "98-SPDT-power-fit-section.stl",
+                    "triangle_count": 144
+                },
+                {
+                    "bbox": {
+                        "depth": 28.25,
+                        "height": 13.600000381469727,
+                        "width": 108.64999389648438,
+                        "x": 73.67500305175781,
+                        "y": 120.875,
+                        "z": 9.265137101976961e-09
+                    },
+                    "id": 21,
+                    "name": "06-electronics-retaining-yoke.stl",
+                    "triangle_count": 1146
+                },
+                {
+                    "bbox": {
+                        "depth": 4.200006008148193,
+                        "height": 6.4499969482421875,
+                        "width": 4.1999969482421875,
+                        "x": 125.9000015258789,
+                        "y": 171.89999389648438,
+                        "z": 2.587890612915089e-08
+                    },
+                    "id": 25,
+                    "name": "07-guided-rounded-reset-button.stl",
+                    "triangle_count": 616
+                }
+            ],
+            "sliced_time": 1296,
+            "sliced_time_with_cache": 919,
+            "total_predication": 5081.974609375,
+            "triangle_count": 3154,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 4
+}

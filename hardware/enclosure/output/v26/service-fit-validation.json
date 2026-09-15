@@ -1,0 +1,464 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "name": "RGB direct light line",
+      "start_mm": [
+        110.61,
+        55.006,
+        26.155
+      ],
+      "end_mm": [
+        120.2,
+        55.006,
+        26.155
+      ],
+      "radius_mm": 0.5,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "Charger indicator direct rear sight",
+      "start_mm": [
+        14,
+        49.4,
+        25.01
+      ],
+      "end_mm": [
+        14,
+        49.4,
+        34.2
+      ],
+      "radius_mm": 0.5,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "Charger indicator direct rear sight",
+      "start_mm": [
+        14,
+        44.65,
+        25.01
+      ],
+      "end_mm": [
+        14,
+        44.65,
+        34.2
+      ],
+      "radius_mm": 0.5,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        39.7025,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        39.7025,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        42.2425,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        42.2425,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        44.7825,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        44.7825,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        47.3225,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        47.3225,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        49.8625,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        49.8625,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        52.4025,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        52.4025,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        54.9425,
+        12.82
+      ],
+      "end_mm": [
+        112.6,
+        54.9425,
+        12.82
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        39.7025,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        39.7025,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        42.2425,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        42.2425,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        44.7825,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        44.7825,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        47.3225,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        47.3225,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        49.8625,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        49.8625,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        52.4025,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        52.4025,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO plated pad outward solder exit",
+      "start_mm": [
+        110.51,
+        54.9425,
+        28.08
+      ],
+      "end_mm": [
+        112.6,
+        54.9425,
+        28.08
+      ],
+      "radius_mm": 0.45,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO BAT underside solder exit",
+      "start_mm": [
+        108.75,
+        47.64,
+        15.995
+      ],
+      "end_mm": [
+        104.5,
+        47.64,
+        15.995
+      ],
+      "radius_mm": 0.65,
+      "passed": true,
+      "collisions": []
+    },
+    {
+      "name": "XIAO GND underside solder exit",
+      "start_mm": [
+        108.75,
+        49.545,
+        15.995
+      ],
+      "end_mm": [
+        104.5,
+        49.545,
+        15.995
+      ],
+      "radius_mm": 0.65,
+      "passed": true,
+      "collisions": []
+    }
+  ],
+  "hardware": [
+    {
+      "type": "Closure screw",
+      "xy": [
+        6,
+        6
+      ],
+      "bearing_depth": 6.6,
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 0.6,
+      "passed": true
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        114,
+        6
+      ],
+      "bearing_depth": 6.6,
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 0.6,
+      "passed": true
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        6,
+        54
+      ],
+      "bearing_depth": 6.6,
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 0.6,
+      "passed": true
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        96,
+        54
+      ],
+      "bearing_depth": 6.6,
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 0.6,
+      "passed": true
+    },
+    {
+      "type": "Optical screw",
+      "xy": [
+        60,
+        6
+      ],
+      "bearing_depth": 9.075,
+      "nut_depth": [
+        3.3,
+        5.699999999999999
+      ],
+      "shaft_depth": [
+        9.075,
+        1.0749999999999993
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 2.225,
+      "passed": true
+    },
+    {
+      "type": "Optical screw",
+      "xy": [
+        60,
+        54
+      ],
+      "bearing_depth": 9.075,
+      "nut_depth": [
+        3.3,
+        5.699999999999999
+      ],
+      "shaft_depth": [
+        9.075,
+        1.0749999999999993
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 2.225,
+      "passed": true
+    },
+    {
+      "type": "Yoke screw",
+      "xy": [
+        35,
+        38
+      ],
+      "bearing_depth": 9.65,
+      "nut_depth": [
+        13.9,
+        16.3
+      ],
+      "shaft_depth": [
+        9.65,
+        17.65
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 1.35,
+      "passed": true
+    },
+    {
+      "type": "Yoke screw",
+      "xy": [
+        103,
+        38
+      ],
+      "bearing_depth": 9.65,
+      "nut_depth": [
+        13.9,
+        16.3
+      ],
+      "shaft_depth": [
+        9.65,
+        17.65
+      ],
+      "nut_engagement_mm": 2.4,
+      "tip_past_nut_mm": 1.35,
+      "passed": true
+    }
+  ],
+  "source": "Seeed official KiCad XIAO nRF52840 v1.2; measured PCB placement. Outward pad exits reserve0.9mm insulated wires; solder board before fitting. Hole diameter3.2charger; XIAO printable sight aperture3.4wide."
+}

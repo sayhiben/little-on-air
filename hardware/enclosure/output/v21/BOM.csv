@@ -1,0 +1,29 @@
+﻿Ref,Quantity,Item,Specification,Location,Status
+P01-P08,7,Printed parts 01 03 04 05 06 07 08,PLA / calibrated PLA+ / PETG,Supplied STL and 3MF,Make
+AC1,1,Clear PMMA panel,104 x 38 nominal; measured 3.00-3.45 thick,Rear-engrave shared SVG,Owned stock
+BT1,1,Single-cell LiPo,1000 mAh; 52 x 21 x 10; verify protection and cell charge rating,Battery cradle,Owned
+MCU1,1,Seeed XIAO nRF52840,Original footprint 21 x 17.8; no pin headers,Edge-on nest and solder access,Owned
+CH1,1,HiLetgo TP4056 USB-C with protection,ASIN B07PKND8KG; 25 x 16.5 advertised; populated height check,Fixed charger nest,Owned
+SW1,1,DPDT slide switch,8.6 x 3.1 x 2.7 case; 1.42 square actuator; verify DC contact rating,Integrated switch nest,Owned
+LED1-4,4,Adafruit side-light RGB NeoPixel segments,Measured nominal 8 x 8 x 2; verify cut outline; keep SMD capacitors,Front seats,Owned; fit check first
+U2,1,Pololu U3V16F5 boost #4941,5 V; 13.2 x 8.1 x 3 maximum; direct solder,Left auxiliary landing,Additional
+U3,1,TI SN74AHCT1G125DBVR,Single-gate buffer; SOT-23-5; 5 V supply,Right signal carrier,Additional
+Q1,1,Diodes DMP1045U-7,P-channel MOSFET SOT-23; verify pinout,Right signal carrier,Additional
+C1,1,680 uF aluminium electrolytic,>=6.3 V; body <=8 diameter x11.5 long; polarity marked,Right signal carrier,Additional; select to dimensions
+C2,1,100 nF ceramic bypass,>=10 V; 0603/0805 or compact equivalent,Directly at U3 VCC/GND,Additional
+R1,1,330 ohm data series resistor,1/8 W compact axial or SMD; insulated assembly <=3.2 diameter,H1 near LED1,Additional
+R2,1,100 kilohm input pulldown,1%; compact,U3 A to ground,Additional
+R3,1,12 kilohm TP4056 charge-set replacement,1%; match existing SMD package; replace not parallel; bench verify100mA,On charger existing resistor pads,Additional
+R4,1,100 kilohm gate-to-source resistor,1%; compact,Q1 gate to source,Additional
+PCB2,1,Insulated signal carrier,17 x 10 x 1 maximum; SOT adapters must stay inside overall envelope,Right landing,Additional; fabricate/wire
+J1,1,Polarized 3-position inline connector pair,Assembled <=13 x10 x7.5; GND +5V DATA labelled,Front service space,Additional
+W1,3 m total,Flexible stranded 28 AWG wire,Insulated OD <=0.9; three colors; cut from routing list,LEDs and power,Additional
+W2,1 m total,Flexible stranded 30 AWG wire,Insulated OD <=0.8; signal/XIAO low-current branch,XIAO access corridor,Additional
+H1,4,M3 x25 socket-head screws,Head <=5.5 diameter x3.0 high,Front closure,Hardware
+H2,2,M3 x6 button-head screws,Standard low button head,Optical retainer,Hardware
+H3,2,M3 x8 button-head screws,Standard low button head,Electronics yoke,Hardware
+H4,8,M3 nuts,Standard 5.5 across flats x2.4 thick,Captive side-entry pockets,Hardware
+I1,As needed,Insulating adhesive and compressible shims,Measured stack; no conductive foam; do not cover ICs,PCBs optical retainer battery,Assembly
+I2,As needed,Heat shrink / insulating sleeves,DPDT finished OD <=1.2; no bare joints,Terminations,Assembly
+T1,3,Narrow nonconductive straps,2.5 wide; battery loose; anchors clear,Battery and two harness anchors,Assembly
+A1,As needed,Removable wall strips,Sized for actual assembled mass,Flat rear,Assembly

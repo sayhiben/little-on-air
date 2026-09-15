@@ -1,0 +1,151 @@
+{
+  "document": "Little On Air - v2.6 service access and common fasteners",
+  "units": "mm",
+  "items": [
+    {
+      "name": "P4 DPDT common A and ground to XIAO",
+      "radius_mm": 1.2,
+      "route_length_mm": 79.12,
+      "path": [
+        [
+          63,
+          51,
+          24
+        ],
+        [
+          64.8,
+          44.5,
+          18
+        ],
+        [
+          64.8,
+          30,
+          18
+        ],
+        [
+          95.5,
+          30,
+          18
+        ],
+        [
+          95.5,
+          43.5,
+          18
+        ],
+        [
+          101,
+          48.6,
+          16
+        ],
+        [
+          107.3,
+          48.6,
+          16
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D1 XIAO data to DPDT RUN B",
+      "radius_mm": 0.8,
+      "route_length_mm": 94.4,
+      "path": [
+        [
+          114.3,
+          49,
+          12
+        ],
+        [
+          114.3,
+          33,
+          12
+        ],
+        [
+          98,
+          33,
+          15
+        ],
+        [
+          98,
+          28,
+          16.6
+        ],
+        [
+          68,
+          28,
+          16.6
+        ],
+        [
+          68,
+          39,
+          16.6
+        ],
+        [
+          68,
+          51,
+          20.8
+        ],
+        [
+          60,
+          51,
+          20.8
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "XIAO BAT and GND underside solder bay",
+      "min_mm": [
+        104.8,
+        46.5,
+        14.5
+      ],
+      "max_mm": [
+        108.75,
+        50.5,
+        18.0
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "XIAO front pad wiring aisle",
+      "min_mm": [
+        110.5,
+        38.4,
+        11.7
+      ],
+      "max_mm": [
+        113.2,
+        55.6,
+        13.4
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "XIAO rear pad wiring aisle",
+      "min_mm": [
+        110.5,
+        38.4,
+        27.7
+      ],
+      "max_mm": [
+        115.7,
+        55.6,
+        30.9
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "Wire envelopes are clearance reservations, not a circuit simulation. Component and solder pad shapes remain measured-fit items.",
+  "passed": true
+}

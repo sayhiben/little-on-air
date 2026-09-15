@@ -1,0 +1,22 @@
+[
+  {
+    "file": "stl/01-front-optical-bezel.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      11.0
+    ],
+    "volume_mm3": 14318.4322,
+    "triangles": 3162,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 2922.794,
+    "horizontal_undersides_by_height_mm2": {
+      "6.6": 104.366,
+      "6.0": 61.317,
+      "9.1": 40.6
+    },
+    "sha256": "9beed866fa2f00c5b2f6c53956be9412839c5dc4943ca2e4eaf74b65e35cb3bf"
+  }
+]

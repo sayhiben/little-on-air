@@ -1,0 +1,83 @@
+[
+  {
+    "object_id": 2,
+    "source": "08-front-rgb-2.95mm.stl",
+    "fit_mm": 2.95,
+    "center_xy": [
+      108,
+      112
+    ]
+  },
+  {
+    "object_id": 4,
+    "source": "09-charger-2.95mm.stl",
+    "fit_mm": 2.95,
+    "center_xy": [
+      130,
+      112
+    ]
+  },
+  {
+    "object_id": 6,
+    "source": "09-charger-2.95mm.stl",
+    "fit_mm": 2.95,
+    "center_xy": [
+      144,
+      112
+    ]
+  },
+  {
+    "object_id": 8,
+    "source": "08-front-rgb-3.05mm.stl",
+    "fit_mm": 3.05,
+    "center_xy": [
+      108,
+      126
+    ]
+  },
+  {
+    "object_id": 10,
+    "source": "09-charger-3.05mm.stl",
+    "fit_mm": 3.05,
+    "center_xy": [
+      130,
+      126
+    ]
+  },
+  {
+    "object_id": 12,
+    "source": "09-charger-3.05mm.stl",
+    "fit_mm": 3.05,
+    "center_xy": [
+      144,
+      126
+    ]
+  },
+  {
+    "object_id": 14,
+    "source": "08-front-rgb-3.15mm.stl",
+    "fit_mm": 3.15,
+    "center_xy": [
+      108,
+      140
+    ]
+  },
+  {
+    "object_id": 16,
+    "source": "09-charger-3.15mm.stl",
+    "fit_mm": 3.15,
+    "center_xy": [
+      130,
+      140
+    ]
+  },
+  {
+    "object_id": 18,
+    "source": "09-charger-3.15mm.stl",
+    "fit_mm": 3.15,
+    "center_xy": [
+      144,
+      140
+    ]
+  }
+]

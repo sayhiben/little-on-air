@@ -1,0 +1,226 @@
+{
+    "error_string": "Success.",
+    "export_time": 240,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 66,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 108.26522827148438,
+                "Bridge": 13.316017150878906,
+                "Brim": 190.06617736816406,
+                "Custom": 485.9026794433594,
+                "Flush": 29.0,
+                "Gap infill": 6.387635707855225,
+                "Inner wall": 1874.1396484375,
+                "Internal solid infill": 612.7125854492188,
+                "Outer wall": 1712.9737548828125,
+                "Overhang wall": 18.860002517700195,
+                "Sparse infill": 307.11102294921875,
+                "Support": 27.91382598876953,
+                "Support interface": 35.908695220947266,
+                "Support transition": 10.40056037902832,
+                "Top surface": 225.92636108398438,
+                "Travel": 847.6826171875,
+                "Undefined": 832.2853393554688
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL03",
+                    "id": 1,
+                    "main_used_g": 24.603914260864258,
+                    "total_used_g": 24.603914260864258
+                }
+            ],
+            "generate_support_material_time": 32,
+            "id": 1,
+            "infill_time": 134,
+            "layer_filament_change": 0,
+            "main_predication": 5962.79345703125,
+            "make_perimeters_time": 186,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 108.6500015258789,
+                        "height": 13.450000762939453,
+                        "width": 25.950002670288086,
+                        "x": 158.02500915527344,
+                        "y": 85.93147277832031,
+                        "z": -1.4697265626750777e-09
+                    },
+                    "id": 5,
+                    "name": "06-electronics-retaining-yoke.stl",
+                    "triangle_count": 1042
+                },
+                {
+                    "bbox": {
+                        "depth": 29.999998092651367,
+                        "height": 24.5,
+                        "width": 23.999998092651367,
+                        "x": 122.0250015258789,
+                        "y": 164.58148193359375,
+                        "z": 0.0
+                    },
+                    "id": 9,
+                    "name": "92-charger-fit-section.stl",
+                    "triangle_count": 284
+                },
+                {
+                    "bbox": {
+                        "depth": 27.0,
+                        "height": 24.5,
+                        "width": 12.000005722045898,
+                        "x": 134.02499389648438,
+                        "y": 125.58148956298828,
+                        "z": 0.0
+                    },
+                    "id": 13,
+                    "name": "93-XIAO-and-reset-fit-section.stl",
+                    "triangle_count": 512
+                },
+                {
+                    "bbox": {
+                        "depth": 24.499998092651367,
+                        "height": 12.0,
+                        "width": 11.999999046325684,
+                        "x": 110.0250015258789,
+                        "y": 128.08148193359375,
+                        "z": -2.6645352591003757e-15
+                    },
+                    "id": 17,
+                    "name": "90-rear-nut-boss-section.stl",
+                    "triangle_count": 1644
+                },
+                {
+                    "bbox": {
+                        "depth": 14.000000953674316,
+                        "height": 24.5,
+                        "width": 20.700002670288086,
+                        "x": 125.32499694824219,
+                        "y": 99.58148956298828,
+                        "z": 0.0
+                    },
+                    "id": 21,
+                    "name": "98-SPDT-power-fit-section.stl",
+                    "triangle_count": 148
+                },
+                {
+                    "bbox": {
+                        "depth": 17.999998092651367,
+                        "height": 24.5,
+                        "width": 13.999998092651367,
+                        "x": 96.0250015258789,
+                        "y": 164.58148193359375,
+                        "z": 0.0
+                    },
+                    "id": 25,
+                    "name": "94-DPDT-fit-section.stl",
+                    "triangle_count": 136
+                },
+                {
+                    "bbox": {
+                        "depth": 31.00000762939453,
+                        "height": 9.5,
+                        "width": 13.000011444091797,
+                        "x": 85.02499389648438,
+                        "y": 121.58147430419922,
+                        "z": 0.0
+                    },
+                    "id": 29,
+                    "name": "95-optical-bezel-section.stl",
+                    "triangle_count": 700
+                },
+                {
+                    "bbox": {
+                        "depth": 31.0,
+                        "height": 4.474999904632568,
+                        "width": 11.00000286102295,
+                        "x": 102.32498931884766,
+                        "y": 84.60224151611328,
+                        "z": -2.3162840534496354e-09
+                    },
+                    "id": 33,
+                    "name": "96-optical-retainer-section.stl",
+                    "triangle_count": 368
+                },
+                {
+                    "bbox": {
+                        "depth": 26.162948608398438,
+                        "height": 2.5,
+                        "width": 26.162952423095703,
+                        "x": 137.49545288085938,
+                        "y": 61.41852569580078,
+                        "z": 0.0
+                    },
+                    "id": 37,
+                    "name": "97-optical-spacing-section.stl",
+                    "triangle_count": 28
+                },
+                {
+                    "bbox": {
+                        "depth": 12.00000286102295,
+                        "height": 9.5,
+                        "width": 12.000000953674316,
+                        "x": 72.02497863769531,
+                        "y": 164.5814666748047,
+                        "z": 0.0
+                    },
+                    "id": 41,
+                    "name": "91-front-screw-recess-section.stl",
+                    "triangle_count": 458
+                },
+                {
+                    "bbox": {
+                        "depth": 11.99999713897705,
+                        "height": 9.0,
+                        "width": 6.999999046325684,
+                        "x": 176.97499084472656,
+                        "y": 65.5873031616211,
+                        "z": 0.0
+                    },
+                    "id": 45,
+                    "name": "08-captive-run-program-slider.stl",
+                    "triangle_count": 88
+                },
+                {
+                    "bbox": {
+                        "depth": 8.41457462310791,
+                        "height": 3.1999998092651367,
+                        "width": 8.414571762084961,
+                        "x": 121.24300384521484,
+                        "y": 70.6706314086914,
+                        "z": -4.632568106899271e-09
+                    },
+                    "id": 49,
+                    "name": "07-captive-reset-plunger.stl",
+                    "triangle_count": 44
+                }
+            ],
+            "sliced_time": 1708,
+            "sliced_time_with_cache": 1211,
+            "total_predication": 6491.26806640625,
+            "triangle_count": 5452,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 4
+}

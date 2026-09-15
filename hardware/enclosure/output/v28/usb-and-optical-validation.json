@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "name": "Optical screw shaft front assembly path",
+      "samples": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Optical screw head front assembly path",
+      "samples": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Optical screw shaft (1) front assembly path",
+      "samples": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Optical screw head (1) front assembly path",
+      "samples": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF Charger socket plus0.15mm all around",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "REF XIAO socket plus0.15mm all around",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Reset stroke avoids PCB USB and LED",
+      "samples": 25,
+      "passed": true,
+      "failures": []
+    }
+  ]
+}

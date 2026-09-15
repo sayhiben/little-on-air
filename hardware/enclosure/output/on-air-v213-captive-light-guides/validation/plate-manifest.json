@@ -1,0 +1,95 @@
+[
+  {
+    "name": "on-air-v213-X1C-eSUN-PLA-plus-retention-housings.3mf",
+    "optical": false,
+    "objects": [
+      {
+        "object_id": 2,
+        "file": "01-front-optical-bezel.stl",
+        "center_xy": [
+          115,
+          84
+        ]
+      },
+      {
+        "object_id": 4,
+        "file": "05-rear-electronics-housing.stl",
+        "center_xy": [
+          115,
+          170
+        ]
+      },
+      {
+        "object_id": 6,
+        "file": "11-rear-light-guide-keeper.stl",
+        "center_xy": [
+          207,
+          128
+        ]
+      }
+    ],
+    "sliced": "bambu-studio/sliced-on-air-v213-X1C-eSUN-PLA-plus-retention-housings"
+  },
+  {
+    "name": "on-air-v213-X1C-PETG-retention-housings.3mf",
+    "optical": false,
+    "objects": [
+      {
+        "object_id": 2,
+        "file": "01-front-optical-bezel.stl",
+        "center_xy": [
+          115,
+          84
+        ]
+      },
+      {
+        "object_id": 4,
+        "file": "05-rear-electronics-housing.stl",
+        "center_xy": [
+          115,
+          170
+        ]
+      },
+      {
+        "object_id": 6,
+        "file": "11-rear-light-guide-keeper.stl",
+        "center_xy": [
+          207,
+          128
+        ]
+      }
+    ],
+    "sliced": "bambu-studio/sliced-on-air-v213-X1C-PETG-retention-housings"
+  },
+  {
+    "name": "on-air-v213-clear-PETG-three-light-guides.3mf",
+    "optical": true,
+    "objects": [
+      {
+        "object_id": 2,
+        "file": "08-captive-front-rgb-guide.stl",
+        "center_xy": [
+          110,
+          128
+        ]
+      },
+      {
+        "object_id": 4,
+        "file": "09-charger-light-guide.stl",
+        "center_xy": [
+          133,
+          128
+        ]
+      },
+      {
+        "object_id": 6,
+        "file": "09-charger-light-guide.stl",
+        "center_xy": [
+          145,
+          128
+        ]
+      }
+    ],
+    "sliced": "bambu-studio/sliced-on-air-v213-clear-PETG-three-light-guides"
+  }
+]

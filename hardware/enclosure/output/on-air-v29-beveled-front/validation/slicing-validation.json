@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "projects": [
+    {
+      "material": "eSUN-PLA-plus",
+      "source_and_sliced_mesh_match_STL": true,
+      "first_layer_inspection_disabled": true,
+      "no_pauses": true,
+      "normal_heater_shutdown": true,
+      "bed_leveling": true,
+      "slicer": {
+        "error_string": "Success.",
+        "export_time": 377,
+        "layer_height": 0.20000000298023224,
+        "plate_index": 0,
+        "prepare_time": 50,
+        "return_code": 0,
+        "sliced_plates": [
+          {
+            "feature_type_times": {
+              "Bottom surface": 137.85475158691406,
+              "Bridge": 34.44084167480469,
+              "Brim": 86.57305145263672,
+              "Custom": 485.7295227050781,
+              "Flush": 29.0,
+              "Gap infill": 4.184105396270752,
+              "Inner wall": 1238.9244384765625,
+              "Internal solid infill": 610.0007934570312,
+              "Outer wall": 895.630615234375,
+              "Overhang wall": 35.87746047973633,
+              "Sparse infill": 16.024147033691406,
+              "Top surface": 229.49647521972656,
+              "Travel": 429.2796936035156,
+              "Undefined": 414.05535888671875
+            },
+            "filament_change_times": 0,
+            "filaments": [
+              {
+                "filament_id": "GFL03",
+                "id": 1,
+                "main_used_g": 18.314668655395508,
+                "total_used_g": 18.314668655395508
+              }
+            ],
+            "generate_support_material_time": 19,
+            "id": 1,
+            "infill_time": 124,
+            "layer_filament_change": 0,
+            "main_predication": 3688.84375,
+            "make_perimeters_time": 171,
+            "obj_cached_cnt": 0,
+            "objects": [
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 11.0,
+                  "width": 120.0,
+                  "x": 68.0,
+                  "y": 98.0,
+                  "z": 0.0
+                },
+                "id": 5,
+                "name": "01-front-optical-bezel.stl",
+                "triangle_count": 3178
+              }
+            ],
+            "sliced_time": 747,
+            "sliced_time_with_cache": 395,
+            "total_predication": 4217.318359375,
+            "triangle_count": 3178,
+            "warning_message": ""
+          }
+        ],
+        "sparse_infill_density": 25.0,
+        "upward_compatible_machine": [
+          "Bambu Lab P1S 0.4 nozzle",
+          "Bambu Lab P1P 0.4 nozzle",
+          "Bambu Lab X1 0.4 nozzle",
+          "Bambu Lab X1E 0.4 nozzle",
+          "Bambu Lab A1 0.4 nozzle",
+          "Bambu Lab H2D 0.4 nozzle",
+          "Bambu Lab H2D Pro 0.4 nozzle",
+          "Bambu Lab H2S 0.4 nozzle",
+          "Bambu Lab P2S 0.4 nozzle",
+          "Bambu Lab H2C 0.4 nozzle",
+          "Bambu Lab X2D 0.4 nozzle",
+          "Bambu Lab A2L 0.4 nozzle"
+        ],
+        "wall_loops": 4
+      }
+    },
+    {
+      "material": "PETG",
+      "source_and_sliced_mesh_match_STL": true,
+      "first_layer_inspection_disabled": true,
+      "no_pauses": true,
+      "normal_heater_shutdown": true,
+      "bed_leveling": true,
+      "slicer": {
+        "error_string": "Success.",
+        "export_time": 366,
+        "layer_height": 0.20000000298023224,
+        "plate_index": 0,
+        "prepare_time": 45,
+        "return_code": 0,
+        "sliced_plates": [
+          {
+            "feature_type_times": {
+              "Bottom surface": 137.85475158691406,
+              "Bridge": 35.37031936645508,
+              "Brim": 86.57305145263672,
+              "Custom": 485.7295227050781,
+              "Flush": 29.0,
+              "Gap infill": 4.471420764923096,
+              "Inner wall": 1238.9241943359375,
+              "Internal solid infill": 618.9949340820312,
+              "Outer wall": 896.0160522460938,
+              "Overhang wall": 35.87746047973633,
+              "Sparse infill": 16.883459091186523,
+              "Top surface": 226.8805389404297,
+              "Travel": 439.7436828613281,
+              "Undefined": 424.51934814453125
+            },
+            "filament_change_times": 0,
+            "filaments": [
+              {
+                "filament_id": "GFG99",
+                "id": 1,
+                "main_used_g": 18.048315048217773,
+                "total_used_g": 18.048315048217773
+              }
+            ],
+            "generate_support_material_time": 20,
+            "id": 1,
+            "infill_time": 124,
+            "layer_filament_change": 0,
+            "main_predication": 3708.1328125,
+            "make_perimeters_time": 160,
+            "obj_cached_cnt": 0,
+            "objects": [
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 11.0,
+                  "width": 120.0,
+                  "x": 68.0,
+                  "y": 98.0,
+                  "z": 0.0
+                },
+                "id": 5,
+                "name": "01-front-optical-bezel.stl",
+                "triangle_count": 3178
+              }
+            ],
+            "sliced_time": 731,
+            "sliced_time_with_cache": 385,
+            "total_predication": 4236.607421875,
+            "triangle_count": 3178,
+            "warning_message": ""
+          }
+        ],
+        "sparse_infill_density": 25.0,
+        "upward_compatible_machine": [
+          "Bambu Lab P1S 0.4 nozzle",
+          "Bambu Lab P1P 0.4 nozzle",
+          "Bambu Lab X1 0.4 nozzle",
+          "Bambu Lab X1E 0.4 nozzle",
+          "Bambu Lab A1 0.4 nozzle",
+          "Bambu Lab H2D 0.4 nozzle",
+          "Bambu Lab H2D Pro 0.4 nozzle",
+          "Bambu Lab H2S 0.4 nozzle",
+          "Bambu Lab P2S 0.4 nozzle",
+          "Bambu Lab H2C 0.4 nozzle",
+          "Bambu Lab X2D 0.4 nozzle",
+          "Bambu Lab A2L 0.4 nozzle"
+        ],
+        "wall_loops": 4
+      }
+    }
+  ]
+}
