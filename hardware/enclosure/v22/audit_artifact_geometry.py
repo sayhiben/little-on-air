@@ -15,4 +15,3 @@ def run():
   results[label]={'actual_STL_to_shared_laser_master_error_mm':difference,'passed':True}
  (OUT/'optical-registration-validation.json').write_text(json.dumps(results,indent=2));print(json.dumps(results,indent=2))
 if __name__=='__main__':run()
-

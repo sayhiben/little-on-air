@@ -86,7 +86,7 @@ def main():
         "## FDM setup", "",
         "Starting setup: PETG, 0.4 mm nozzle, 0.2 mm layers, four walls on structural parts.",
         "Use solid infill for the small controls and keepers. Use your calibrated filament profile.",
-        "The files are meshes, not sliced jobs: inspect the layer preview and add selective supports", 
+        "The files are meshes, not sliced jobs: inspect the layer preview and add selective supports",
         "where listed. The carrier has a supported partition; none of these files contains support geometry.","",
         "| Part | Bed orientation | Support / color notes |","| --- | --- | --- |"]
     for item in manifest:
