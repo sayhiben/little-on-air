@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: MIT
+description: |
+  Little On Air's experimental padded SPI driver for four GRB pixels.
+  This application driver accepts ten-bit symbols, unlike the upstream
+  worldsemi,ws2812-spi driver. It clocks continuous LOW around each frame.
+
+compatible: "loa,padded-ws2812-spi"
+
+include: [spi-device.yaml, ws2812.yaml]
+
+properties:
+  bits-per-symbol:
+    type: int
+    required: true
+    const: 10
+  spi-zero-frame:
+    type: int
+    required: true
+  spi-one-frame:
+    type: int
+    required: true

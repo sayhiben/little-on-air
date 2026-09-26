@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "extension_down_mm": 9.5,
+  "correct_desk_orientation": true,
+  "hat_lift_for_push_mm": 1.2,
+  "changes_outside_allowed_regions_mm3": 0.0022646526805647493,
+  "original_shell_width_and_depth_preserved": true,
+  "parts": [
+    {
+      "name": "01-igor-measured-shell",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        49.0,
+        60.052855491638184,
+        72.01528930664062
+      ],
+      "volume_mm3": 31341.19275969007,
+      "sha256": "6b92a6142d068a1ad439b39372ab1f99549ab990202947a582f211770d8b0be8"
+    },
+    {
+      "name": "02-igor-measured-faceplate",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        46.599998474121094,
+        35.60000038146973,
+        7.200000047683716
+      ],
+      "volume_mm3": 2279.999956746047,
+      "sha256": "043597f83f0710b5f6daeaab1eb92d80e56c33a832bf367c2ae0a017de8039f9"
+    },
+    {
+      "name": "03-igor-measured-hat",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        38.56535339355469,
+        38.56535530090332,
+        20.0
+      ],
+      "volume_mm3": 21429.75879692978,
+      "sha256": "9e60725aa5c986cb607a4883eea08471b4c888f159bfdf2a1d01faccbfff59f1"
+    },
+    {
+      "name": "04-igor-small-inlay-original",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        21.600000381469727,
+        21.59572982788086,
+        0.7999992370605469
+      ],
+      "volume_mm3": 41.820881404587446,
+      "sha256": "42ecc9cc8a89be99bb47447e1697bc7f86265ea0c786273d36084ccb5309f7e9"
+    },
+    {
+      "name": "05-igor-large-inlay-original",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        26.600000381469727,
+        26.594741821289062,
+        0.7999992370605469
+      ],
+      "volume_mm3": 51.87397789607455,
+      "sha256": "9d53c792ad48c781b51e3cc70e5534287f0cf6914fe4c9ac1cb8ac684b019611"
+    },
+    {
+      "name": "06-front-diffuser-PETG",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        6.398735046386719,
+        6.399999618530273,
+        2.3999998569488525
+      ],
+      "volume_mm3": 57.1518535541055,
+      "sha256": "a24ffb35a40eba198fc800eb552d9daa644de792fc0a029ec24992ecf35a0cd0"
+    },
+    {
+      "name": "07-strip-cassette",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        6.200000762939453,
+        19.600000381469727,
+        3.6000001430511475
+      ],
+      "volume_mm3": 194.69600000000014,
+      "sha256": "bc6e7e683408441d5bfdace917d90fa2f0cef049a0167fcb98274c7223711e71"
+    },
+    {
+      "name": "08-xiao-carrier",
+      "watertight": true,
+      "single_connected_solid": true,
+      "native_valid": true,
+      "size_mm": [
+        44.0,
+        21.400001525878906,
+        3.699999988079071
+      ],
+      "volume_mm3": 1973.266000000001,
+      "sha256": "a0cc65f3bacdb172309c5d53424beeb9feb7c4db0495e18c33d19fc3173505b5"
+    }
+  ],
+  "physical_fit_tested": false
+}

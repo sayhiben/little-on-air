@@ -1,0 +1,590 @@
+{
+  "passed": true,
+  "xiao_native_collision_mm3": 0.0,
+  "xiao_model_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "nominal_collisions_mm3": {
+    "xiao / shell": 0.0,
+    "xiao / faceplate": 0.0,
+    "pixel / shell": 0.0,
+    "pixel / faceplate": 0.0,
+    "pixel-leads / shell": 0.0,
+    "pixel-leads / faceplate": 0.0,
+    "oled-envelope / shell": 0.0,
+    "oled-envelope / faceplate": 0.0,
+    "auxiliary / shell": 0.0,
+    "auxiliary / faceplate": 0.0,
+    "capacitor / shell": 0.0,
+    "capacitor / faceplate": 0.0,
+    "weight-1 / shell": 0.0,
+    "weight-1 / faceplate": 0.0,
+    "weight-2 / shell": 0.0,
+    "weight-2 / faceplate": 0.0,
+    "weight-3 / shell": 0.0,
+    "weight-3 / faceplate": 0.0
+  },
+  "xiao_insertion_samples": [
+    {
+      "front_offset_mm": -80,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -79,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -78,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -77,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -76,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -75,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -74,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -73,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -72,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -71,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -70,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -69,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -68,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -67,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -66,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -65,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -64,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -63,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -62,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -61,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -60,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -59,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -58,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -57,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -56,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -55,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -54,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -53,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -52,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -51,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -50,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -49,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -48,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -47,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -46,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -45,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -44,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -43,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -42,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -41,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -40,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -39,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -38,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -37,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -36,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -35,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -34,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -33,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -32,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -31,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -30,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -29,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -28,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -27,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -26,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -25,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -24,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -23,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -22,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -21,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -20,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -19,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -18,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -17,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -16,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -15,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -14,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -13,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -12,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -11,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -10,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -9,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -8,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -7,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -6,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -5,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -4,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.125,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.375,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.625,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 0.875,
+      "collision_mm3": 0.0
+    },
+    {
+      "align_socket_fraction": 1.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -4.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -3.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -3.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -3.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -3.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -2.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -2.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -2.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -2.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -1.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -1.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -1.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -1.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -0.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -0.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": -0.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "rearward_offset_mm": 0.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -15.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -14.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -14.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -13.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -13.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -12.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -12.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -11.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -11.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -10.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -10.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -9.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -9.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -8.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -8.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -7.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -7.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -6.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -6.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -5.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -5.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -4.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -4.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -3.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -3.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -2.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -2.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -1.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -1.0,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": -0.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "tip_deg": 0.0,
+      "collision_mm3": 0.0
+    }
+  ],
+  "pixel": "5 mm through-hole NeoPixel, 6 mm maximum flange, 7 mm body envelope",
+  "pixel_bore_mm": 5.4,
+  "led_flange_pocket_mm": 6.4,
+  "pixel_insulated_lead_envelope_mm": [
+    3.6,
+    7
+  ],
+  "weight_segment_max_mm": [
+    19,
+    11.5,
+    4
+  ],
+  "weight_count": 3,
+  "weight_total_g_if_5g_segments": 15,
+  "weight_location": "One 36 x 20 mm recess in the true horizontal base; no front nose weights",
+  "weight_floor_min_verified_mm": 2.1,
+  "usb_aperture_mm": [
+    9.8,
+    4.6
+  ],
+  "external_cable_body_envelope_mm": [
+    12,
+    7
+  ],
+  "pcb_tape_mm": 0.3,
+  "physical_fit_verified": false,
+  "oled_and_encoder": "Original mounts retained; purchased-module solder and wire fit still require prototype check."
+}

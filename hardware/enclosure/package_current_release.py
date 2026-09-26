@@ -11,6 +11,9 @@ V28=BASE/'output/on-air-v28-fabrication'
 V213=BASE/'output/on-air-v213-captive-light-guides'
 PRINT=BASE/'output/on-air-v213-complete-print'
 USERPRINT=BASE/'output/v213-complete/user-layout-release-check'
+# This manufacturing release includes the selected, unchanged firmware snapshot.
+# Update deliberately when selecting a newer firmware release, not for doc edits.
+FIRMWARE_REF='ce3745f0ddc3b3d8bd56da88aaa2f05fe750a1ab'
 PROVENANCE={}
 
 def write(rel,data,source=None):
@@ -27,8 +30,10 @@ def write_csv(rel,rows,source=None):
 
 def make():
     OUT.mkdir(parents=True,exist_ok=True)
-    for name in ['README.md','BUILD-AND-ASSEMBLY.md','LASER.md','FIRMWARE-STATUS.md','PRINTING.md']:
+    for name in ['README.md','BUILD-AND-ASSEMBLY.md','LASER.md','FIRMWARE-STATUS.md','PRINTING.md','WIRING.md','CAPACITOR-AND-RESISTOR.md']:
         copy(DOCS/name,name if name=='README.md' else 'guides/'+name)
+    copy(DOCS/'assets/capacitor-resistor-wiring.svg','reference/capacitor-resistor-wiring.svg')
+    copy(DOCS/'assets/capacitor-resistor-wiring.png','reference/previews/capacitor-resistor-wiring.png')
     copy(DOCS/'LAMINATE-ALTERNATIVE.md','alternatives/laminate/README.md')
     copy(ROOT/'LICENSE','LICENSE')
     parts=[]
@@ -76,6 +81,7 @@ def make():
     for node in route.iter(ns+'text'):
         if node.get('y')=='40':node.text='ON AIR v2.13 - retained harness routes - 120 x 60 x 24 mm'
         if node.text=='R1 inline':node.set('y','597')
+        if node.text=='C1 inline':node.text='C1 across power';node.set('x','906')
     for parent in route.iter():
         for child in list(parent):
             if float(child.get('y','0'))>=600:parent.remove(child)
@@ -89,11 +95,6 @@ def make():
     hardware.append({'type':'Rear light-guide keeper screw','xy':[6.5,42.3],'screw':'M3x8 button head','nut':'M3, 5.5 mm AF x 2.4 mm','nut_loading':'Lower into bay; slide 7.8 mm toward top under roof before fitting keeper','nut_roof_mm':2,'note':'See current Fusion/STEP for complete depth geometry; current native clamp/access audit is included.'})
     write('reference/fastener-layout.json',json.dumps({'units':'mm','view':'Front; x right, y up; depth measured behind front face','fasteners':hardware},indent=2),V28/'hardware-layout.json')
 
-    wiring=(BASE/'v22/TWO-SWITCH-WIRING.md').read_text(encoding='utf-8')
-    wiring='# Two-switch wiring - enclosure v2.13\n'+wiring.split('\n',1)[1]
-    wiring+='\n\n## Firmware status for this release\n\nThe reserved output is XIAO D2/P0.28. The packaged firmware v0.1.2 still uses onboard RGB PWM only; it does not send NeoPixel data. See [firmware status](FIRMWARE-STATUS.md) before commissioning the external harness. The mechanical guide is [BUILD-AND-ASSEMBLY.md](BUILD-AND-ASSEMBLY.md).\n'
-    write('guides/WIRING.md',wiring,BASE/'v22/TWO-SWITCH-WIRING.md')
-
     bom=list(csv.reader((V28/'BOM.csv').open(encoding='utf-8',newline='')))
     rows=[bom[0]]
     for part,label,qty,material,plate,revision,file in parts:
@@ -105,6 +106,8 @@ def make():
         if row[0]=='S1':row[4]='Integrated POWER nest; retained by yoke';row[5]='Owned; measured body fit retained'
         if row[0]=='S2':row[4]='Exposed fingernail slider; retained by yoke; open terminal channels'
         if row[0]=='LED1-4':row[5]='Owned; keep existing SMD components'
+        if row[0]=='C1':row[4]='Rear right lower bay; + to VBAT_SW after S1, - to charger OUT-; two branch splices; see capacitor/resistor guide'
+        if row[0]=='R1':row[4]='Front DATA pigtail -> R1 -> LED1 DIN; either orientation; behind LED1; see capacitor/resistor guide'
         rows.append(row)
     rows.append(['R_CHG','Only if required','Charger current-programming resistor replacement','Select for confirmed charger IC and battery permitted charge current; verify measured result','Existing resistor pads on charger; no new carrier or enclosure bay','Conditional; not an unconditional extra part'])
     write_csv('BOM.csv',rows,V28/'BOM.csv')
@@ -124,6 +127,8 @@ def make():
         ('Rear guides','Both collars caught by housing and keeper 11; nominal 0.20 axial play; actual LEDs remain clear'),
         ('LED modules','All four complete segment outlines fit; emitting faces toward clear acrylic edges'),
         ('Pigtails / capacitor / resistor','Insulated real bodies and bends fit reserved bays; polarity/pinout marked'),
+        ('C1 connections','680 uF >=6.3 V; + to VBAT_SW after S1 and before S2; negative stripe to OUT-; each lead insulated; power wires continue to LEDs'),
+        ('R1 connections','330 ohm measured before connecting electronics; front DATA -> R1 -> LED1 DIN; close to DIN; no bypass or power/ground connection'),
         ('Wire routing','Outside diameters fit; staged depth crossings; service slack; no wires across pouch or guide keeper'),
         ('Acrylic stock','Confirmed laser-suitable PMMA; thickness measured at five points; range 3.00-3.45'),
         ('Optical cushion','Rear gap =0.45-(acrylic thickness-3.175); shims/compliant layer fill without bowing'),
@@ -146,19 +151,19 @@ def make():
 
     # Firmware source is immutable and identified by commit. It is not promoted
     # to a new firmware release and no local build directory is used.
-    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-    version=subprocess.check_output(['git','show','HEAD:VERSION'],cwd=ROOT,text=True).strip()
+    commit=subprocess.check_output(['git','rev-parse',FIRMWARE_REF],cwd=ROOT,text=True).strip()
+    version=subprocess.check_output(['git','show',commit+':VERSION'],cwd=ROOT,text=True).strip()
     source_zip=OUT/f'firmware/little-on-air-firmware-v{version}-source.zip';source_zip.parent.mkdir(exist_ok=True)
     # Once manufacturing files are tracked, keep them out of the firmware
     # snapshot so later packages cannot recursively include earlier releases.
-    tracked_roots=subprocess.check_output(['git','ls-tree','--name-only','HEAD'],cwd=ROOT,text=True).splitlines()
+    tracked_roots=subprocess.check_output(['git','ls-tree','--name-only',commit],cwd=ROOT,text=True).splitlines()
     firmware_roots=[name for name in tracked_roots if name not in ('hardware','release')]
     assert 'src' in firmware_roots and 'apps' in firmware_roots
-    subprocess.run(['git','archive','--format=zip','--prefix=little-on-air-firmware-v'+version+'/','-o',str(source_zip),'HEAD','--',*firmware_roots],cwd=ROOT,check=True)
+    subprocess.run(['git','archive','--format=zip','--prefix=little-on-air-firmware-v'+version+'/','-o',str(source_zip),commit,'--',*firmware_roots],cwd=ROOT,check=True)
     PROVENANCE[str(source_zip.relative_to(OUT)).replace('\\','/')]={'source':'Git tracked source snapshot','git_commit':commit,'firmware_version':version,'exact_copy':True}
     write('firmware/README.md',f'# Firmware source snapshot\n\nVersion **{version}**, commit `{commit}`. The source ZIP includes build, flashing and pairing instructions and LICENSE. It uses onboard RGB PWM only; the four external NeoPixels are not implemented. Read [firmware status](../guides/FIRMWARE-STATUS.md) and the enclosure USB operating procedure before flashing. No UF2/ELF or build toolchain is included.\n')
     write('validation/README.md','# Validation records\n\n`release-audit.json` checks this package after copying: inventory, source identity, STL topology, 3MF contents, SVG registration, disabled LightBurn review output, local guide links and ZIP checksums.\n\n`printing.json` is the completed three-plate slicer/mesh/toolpath audit. `cad-v213/` retains the completed native interference, motion, guide-retention, nut-access, harness and seam checks. `unchanged-v28/` retains the applicable earlier solder/USB/reset and wire-packing checks for unchanged interfaces. These are existing validation results; packaging did not rerun Fusion or change geometry. Paths in historical JSON records identify the original workspace provenance.\n\nPhysical fit, actual charge current, optical clarity and external-pixel firmware remain commissioning tasks described in the guides.\n')
-    write('RELEASE-NOTES.md','# Current release contents\n\nThis consolidates the v2.13 frame, rear housing and captive guides with the unchanged v2.8 backing, optical retainer, electronics yoke and corrected reset button. The complete editable Fusion/STEP assembly is v2.13. Laser artwork and the optional laminate stack are unchanged.\n\nThe Bambu project retains the user\'s three-plate arrangement and painted insert. It restores black/white PLA+ and clear optical PETG profiles, and removes the user-identified spare guide keeper. The original edited file is preserved outside the release. All three plates were re-sliced and verified.\n\nDocumentation now gives one current assembly order, nine matching screws/nuts, direct DPDT actuation, full-width charger stop, corrected reset stroke, front and rear guide capture, the selected capacitor/resistor-only two-switch circuit and the firmware limitation. Old fit coupons and alternate-size guide sets are excluded from production files.\n')
+    write('RELEASE-NOTES.md','# Current release contents\n\nThis consolidates the v2.13 frame, rear housing and captive guides with the unchanged v2.8 backing, optical retainer, electronics yoke and corrected reset button. The complete editable Fusion/STEP assembly is v2.13. Laser artwork and the optional laminate stack are unchanged.\n\nThe Bambu project retains the user\'s three-plate arrangement and painted insert. It restores black/white PLA+ and clear optical PETG profiles, and removes the user-identified spare guide keeper. The original edited file is preserved outside the release. All three plates were re-sliced and verified.\n\nDocumentation now gives one current assembly order, nine matching screws/nuts, direct DPDT actuation, full-width charger stop, corrected reset stroke, front and rear guide capture, the selected capacitor/resistor-only two-switch circuit and the firmware limitation. Old fit coupons and alternate-size guide sets are excluded from production files.\n\nThe capacitor/resistor documentation update adds an illustrated soldering walkthrough, exact lead connections, polarity identification, component purposes and meter checks. The assembly guide, wiring guide, BOM and commissioning checklist point to the same connections. Fabrication files and the selected firmware snapshot are unchanged.\n')
     (OUT/'MANIFEST.json').write_text(json.dumps({'enclosure_version':'2.13','firmware_version':version,'firmware_commit':commit,'packaged_date':'2026-09-14','production_stl_count':9,'production_print_instances':10,'bambu_plates':3,'provenance':PROVENANCE},indent=2),encoding='utf-8')
     print(json.dumps({'release':str(OUT),'files':len(list(OUT.rglob('*'))),'firmware_source_commit':commit},indent=2))
 

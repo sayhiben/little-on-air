@@ -2,9 +2,31 @@
 
 [![CI](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml/badge.svg)](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml)
 
-Little On Air is a two-board, battery-powered status light built with Seeed
-XIAO nRF52840 boards. Pressing the controller's reset button cycles the shared
-state through:
+Little On Air is a paired controller and status light. The current controller
+hardware design is a **computer-powered XIAO ESP32-S3 desk unit**, with an OLED,
+rotary push encoder, one RGB pixel and a weighted Project IGOR enclosure.
+See the [Measured Igor controller design and print files](hardware/controller/igor-measured-v4/README.md).
+The [complete controller prototype ZIP](release/little-on-air-igor-controller-v4.zip)
+includes the STLs, STEP models, Bambu projects, BOM and build guide.
+
+The [ESP32-S3 controller firmware](apps/controller-esp32s3/README.md) supports the
+128×64 SSD1306 OLED, rotary push encoder, and one NeoPixel. Turn to preview a
+state, press to apply it, and hold to open pairing and hardware-test controls.
+It preserves the existing nRF52840 receiver's BLE protocol; see the
+[controller bench results](docs/ESP32S3_BENCH.md) for current test coverage.
+
+The [six-mood update](docs/BUDDY_UPDATE.md) adds flashing-green Request, a slowly
+flowing diagonal rainbow for Special, warmer amber for Warn, and an expressive
+OLED buddy. Routine connection checks keep the sign's lights uninterrupted.
+
+The [pairing and power-light update](docs/PAIRING_POWER_UPDATE.md) fixes
+**Forget this sign**, adds five paced reset presses for recovery without a
+computer, and gives the receiver an independent red power light. The sign's
+four pixels are a little brighter; the controller's indicator is dimmer.
+See the [current pairing instructions](apps/controller-esp32s3/README.md#reconnecting-after-forget-this-sign).
+
+The legacy **v0 firmware** uses two XIAO nRF52840 boards. In that firmware,
+pressing the controller's reset button cycles the shared state through:
 
 ```text
 Off -> Yellow (warn) -> Red (on air) -> Green (okay) -> Off
@@ -14,13 +36,19 @@ Version 0 uses each board's onboard RGB LED. The receiver output is isolated
 behind a small driver interface so a later version can add bright addressable
 LEDs without changing the BLE protocol or state machines.
 
-## Enclosure and manufacturing files
+## Receiver enclosure and manufacturing files
 
-Use the [current enclosure release](release/little-on-air-enclosure-v2.13/README.md) for the complete STL/SVG/CAD set, three-plate Bambu Studio project, BOM and consolidated build guides. [Complete release ZIP](release/little-on-air-enclosure-v2.13.zip).
+Use the [current enclosure release](release/little-on-air-enclosure-v2.16/README.md) for the complete STL/SVG/CAD set, three-plate Bambu Studio project, BOM and consolidated build guides. v2.16 changes the rear housing and electronics yoke so LED wires can turn rearward behind the optical mounts; a two-part upgrade project is included. The existing front and optics are unchanged. [Complete release ZIP](release/little-on-air-enclosure-v2.16.zip).
 
-The enclosure is version 2.13 and includes provisions for four external NeoPixels. The firmware below is independently versioned and currently drives only the onboard RGB LEDs; external-pixel firmware remains unfinished.
+The receiver enclosure includes four external NeoPixels. The optional current
+[four-pixel receiver profile and paired bench guide](docs/PAIRED_BENCH.md) drives
+them on D2/P0.28. The firmware snapshots in
+the enclosure ZIPs still drive only the onboard RGB LED. The current receiver
+source defaults to using that LED for power/status; select the four-pixel profile
+for the assembled sign. The ESP32-S3 controller
+drives its own external NeoPixel.
 
-## What you need
+## Existing v0 firmware: what you need
 
 - Two Seeed Studio XIAO nRF52840 boards with their factory UF2 bootloaders
 - Two small protected 3.7 V LiPo batteries, if running untethered

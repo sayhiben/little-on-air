@@ -1,0 +1,315 @@
+{
+  "passed": true,
+  "changed_parts": [
+    "05",
+    "06"
+  ],
+  "projects": [
+    {
+      "name": "all-plates",
+      "objects": 10,
+      "plates": [
+        {
+          "plate": 1,
+          "items": [
+            {
+              "name": "05-rear-electronics-housing.stl",
+              "bounds": [
+                [
+                  95.99999,
+                  151.97497,
+                  0.0
+                ],
+                [
+                  215.99999,
+                  211.97497,
+                  14.5
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "01-front-optical-bezel.stl",
+              "bounds": [
+                [
+                  95.99999,
+                  80.97501,
+                  0.0
+                ],
+                [
+                  224.99999,
+                  149.97501,
+                  11.0
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "04-optical-retainer.stl",
+              "bounds": [
+                [
+                  40.00001,
+                  98.97496000000001,
+                  4.999999969612645e-08
+                ],
+                [
+                  94.00001,
+                  202.97496,
+                  4.47499995
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "06-electronics-retaining-yoke.stl",
+              "bounds": [
+                [
+                  116.5499915,
+                  53.025029599999996,
+                  9.99999993922529e-09
+                ],
+                [
+                  215.9999885,
+                  78.9750304,
+                  8.600000390000002
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "07-front-guided-reset-button.stl",
+              "bounds": [
+                [
+                  83.80002153,
+                  86.77497153,
+                  0.0
+                ],
+                [
+                  89.00001847,
+                  91.97496847000001,
+                  20.1499996
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "11-rear-light-guide-keeper.stl",
+              "bounds": [
+                [
+                  94.60000962000001,
+                  59.325019239999996,
+                  -1.999999987845058e-08
+                ],
+                [
+                  109.55001038,
+                  73.97502075999999,
+                  4.99999902
+                ]
+              ],
+              "STL_matches": true
+            }
+          ]
+        },
+        {
+          "plate": 2,
+          "items": [
+            {
+              "name": "03-registered-graphic-backing.stl",
+              "bounds": [
+                [
+                  105.99078600000001,
+                  57.389560700000004,
+                  0.0
+                ],
+                [
+                  209.990786,
+                  95.3895607,
+                  2.5
+                ]
+              ],
+              "STL_matches": true
+            }
+          ]
+        },
+        {
+          "plate": 3,
+          "items": [
+            {
+              "name": "08-captive-front-rgb-guide.stl",
+              "bounds": [
+                [
+                  101.39998981,
+                  125.80048225999997,
+                  3.9999999978945766e-08
+                ],
+                [
+                  118.99999019,
+                  130.19953773999998,
+                  2.9000015599999998
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "09-charger-light-guide.stl",
+              "bounds": [
+                [
+                  130.04999038000003,
+                  126.05004690999996,
+                  3.0000000039720476e-08
+                ],
+                [
+                  136.34998962,
+                  129.94997309,
+                  2.79976657
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "09-charger-light-guide.stl",
+              "bounds": [
+                [
+                  142.20593938000002,
+                  126.07620990999999,
+                  3.0000000039720476e-08
+                ],
+                [
+                  148.50593862,
+                  129.97613609,
+                  2.79976657
+                ]
+              ],
+              "STL_matches": true
+            }
+          ]
+        }
+      ],
+      "slicing": [
+        {
+          "plate": 1,
+          "seconds": 18451.9609375,
+          "grams": 65.10934448242188,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 65.10933685302734,
+              "total_used_g": 65.10934448242188
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "plate": 2,
+          "seconds": 4552.23046875,
+          "grams": 10.152384519577026,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 8.152290344238281,
+              "total_used_g": 8.842839241027832
+            },
+            {
+              "filament_id": "GFL03",
+              "id": 2,
+              "main_used_g": 0.4531393349170685,
+              "total_used_g": 1.3095452785491943
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "plate": 3,
+          "seconds": 805.3339233398438,
+          "grams": 0.5501180291175842,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 3,
+              "main_used_g": 0.5501180291175842,
+              "total_used_g": 0.5501180291175842
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "no_roofs_across_new_wire_reliefs": true,
+      "inspection_disabled": true,
+      "heater_shutdown": true
+    },
+    {
+      "name": "upgrade-parts",
+      "objects": 2,
+      "plates": [
+        {
+          "plate": 1,
+          "items": [
+            {
+              "name": "05-rear-electronics-housing.stl",
+              "bounds": [
+                [
+                  68.0,
+                  75.0,
+                  0.0
+                ],
+                [
+                  188.0,
+                  135.0,
+                  14.5
+                ]
+              ],
+              "STL_matches": true
+            },
+            {
+              "name": "06-electronics-retaining-yoke.stl",
+              "bounds": [
+                [
+                  78.2750015,
+                  146.0249996,
+                  9.99999993922529e-09
+                ],
+                [
+                  177.7249985,
+                  171.9750004,
+                  8.600000390000002
+                ]
+              ],
+              "STL_matches": true
+            }
+          ]
+        }
+      ],
+      "slicing": [
+        {
+          "plate": 1,
+          "seconds": 11140.7958984375,
+          "grams": 40.51460266113281,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 40.51460266113281,
+              "total_used_g": 40.51460266113281
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "no_roofs_across_new_wire_reliefs": true,
+      "inspection_disabled": true,
+      "heater_shutdown": true
+    }
+  ],
+  "unchanged_mesh_and_paint_payloads": [
+    "3D/Objects/object_4.model",
+    "3D/Objects/object_7.model",
+    "3D/Objects/object_11.model",
+    "3D/Objects/object_9.model",
+    "3D/Objects/object_6.model",
+    "3D/Objects/object_10.model",
+    "3D/Objects/object_8.model",
+    "3D/Objects/object_1.model"
+  ]
+}

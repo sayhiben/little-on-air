@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "production_print_instances": 10,
+  "additional_spare_keeper": 0,
+  "project_objects": 10,
+  "bambu_plates": 3,
+  "changed_geometry": [
+    "01 front frame"
+  ],
+  "rear_housing_plate_1_shift_y_mm": 9,
+  "unchanged_other_mesh_and_paint_payloads": [
+    "3D/Objects/object_4.model",
+    "3D/Objects/object_10.model",
+    "3D/Objects/object_8.model",
+    "3D/Objects/object_5.model",
+    "3D/Objects/object_9.model",
+    "3D/Objects/object_11.model",
+    "3D/Objects/object_6.model",
+    "3D/Objects/object_7.model",
+    "3D/Objects/object_2.model"
+  ],
+  "slicing": [
+    {
+      "plate": 1,
+      "seconds": 19183,
+      "filaments": [
+        {
+          "filament_id": "GFL03",
+          "id": 1,
+          "main_used_g": 67.90428924560547,
+          "total_used_g": 67.90428924560547
+        }
+      ],
+      "warnings": [],
+      "support_only_on_reset_or_guide_keepers": true,
+      "first_layer_inspection_disabled": true,
+      "no_manual_pauses": true,
+      "bed_leveling_and_heater_shutdown": true
+    },
+    {
+      "plate": 2,
+      "seconds": 4553,
+      "filaments": [
+        {
+          "filament_id": "GFL03",
+          "id": 1,
+          "main_used_g": 8.152290344238281,
+          "total_used_g": 8.842839241027832
+        },
+        {
+          "filament_id": "GFL03",
+          "id": 2,
+          "main_used_g": 0.4531393349170685,
+          "total_used_g": 1.3095452785491943
+        }
+      ],
+      "warnings": [],
+      "support_only_on_reset_or_guide_keepers": true,
+      "first_layer_inspection_disabled": true,
+      "no_manual_pauses": true,
+      "bed_leveling_and_heater_shutdown": true,
+      "insert_colors": {
+        "black_base_mm": 1.6,
+        "first_white_layer_z_mm": 1.7,
+        "all_25_layers_correct": true,
+        "mechanism": "User-painted mesh retained; no height-change event required",
+        "filament_changes": 1
+      }
+    },
+    {
+      "plate": 3,
+      "seconds": 805,
+      "filaments": [
+        {
+          "filament_id": "GFG99",
+          "id": 3,
+          "main_used_g": 0.5501180291175842,
+          "total_used_g": 0.5501180291175842
+        }
+      ],
+      "warnings": [],
+      "support_only_on_reset_or_guide_keepers": true,
+      "first_layer_inspection_disabled": true,
+      "no_manual_pauses": true,
+      "bed_leveling_and_heater_shutdown": true,
+      "optical_fill": {
+        "long_runs_parallel_to_guide_axis": 332,
+        "off_axis_runs": 0,
+        "maximum_fill_speed_mm_s": 20,
+        "low_cooling_restored": true
+      }
+    }
+  ],
+  "plates": [
+    {
+      "plate": 1,
+      "objects": [
+        {
+          "name": "05-rear-electronics-housing.stl",
+          "bounds": [
+            [
+              95.99999,
+              151.97497,
+              0.0
+            ],
+            [
+              215.99999,
+              211.97497,
+              14.5
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "01-front-optical-bezel.stl",
+          "bounds": [
+            [
+              95.99999,
+              80.97501,
+              0.0
+            ],
+            [
+              224.99999,
+              149.97501,
+              11.0
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "04-optical-retainer.stl",
+          "bounds": [
+            [
+              40.00001,
+              98.97496000000001,
+              4.999999969612645e-08
+            ],
+            [
+              94.00001,
+              202.97496,
+              4.47499995
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 3
+        },
+        {
+          "name": "06-electronics-retaining-yoke.stl",
+          "bounds": [
+            [
+              116.5499915,
+              53.025029599999996,
+              9.99999993922529e-09
+            ],
+            [
+              215.9999885,
+              78.9750304,
+              8.600000390000002
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "07-front-guided-reset-button.stl",
+          "bounds": [
+            [
+              83.80002153,
+              86.77497153,
+              0.0
+            ],
+            [
+              89.00001847,
+              91.97496847000001,
+              20.1499996
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "11-rear-light-guide-keeper.stl",
+          "bounds": [
+            [
+              94.60000962000001,
+              59.325019239999996,
+              -1.999999987845058e-08
+            ],
+            [
+              109.55001038,
+              73.97502075999999,
+              4.99999902
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        }
+      ]
+    },
+    {
+      "plate": 2,
+      "objects": [
+        {
+          "name": "03-registered-graphic-backing.stl",
+          "bounds": [
+            [
+              105.99078600000001,
+              57.389560700000004,
+              0.0
+            ],
+            [
+              209.990786,
+              95.3895607,
+              2.5
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        }
+      ]
+    },
+    {
+      "plate": 3,
+      "objects": [
+        {
+          "name": "08-captive-front-rgb-guide.stl",
+          "bounds": [
+            [
+              101.39998981,
+              125.80048225999997,
+              3.9999999978945766e-08
+            ],
+            [
+              118.99999019,
+              130.19953773999998,
+              2.9000015599999998
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "09-charger-light-guide.stl",
+          "bounds": [
+            [
+              130.04999038000003,
+              126.05004690999996,
+              3.0000000039720476e-08
+            ],
+            [
+              136.34998962,
+              129.94997309,
+              2.79976657
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        },
+        {
+          "name": "09-charger-light-guide.stl",
+          "bounds": [
+            [
+              142.20593938000002,
+              126.07620990999999,
+              3.0000000039720476e-08
+            ],
+            [
+              148.50593862,
+              129.97613609,
+              2.79976657
+            ]
+          ],
+          "source_STL_matches": true,
+          "XY_rotation_quarter_turns": 0
+        }
+      ]
+    }
+  ],
+  "total_estimated_seconds": 24541,
+  "user_original_retained": true,
+  "materials_PLA_PLA_PETG": true,
+  "front_only": {
+    "mesh_matches": true,
+    "supports": false,
+    "bridge_angle_deg": 45,
+    "roof_bridge_runs": 1327,
+    "max_roof_bridge_extrusion_length_mm": 17.49947862080469,
+    "seconds": 7389.095703125,
+    "grams": 25.082304000854492
+  }
+}

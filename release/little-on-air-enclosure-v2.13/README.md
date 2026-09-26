@@ -7,7 +7,7 @@ This is the complete manufacturing package for the **120 × 60 × 24 mm** enclos
 1. Check the [parts and hardware list](BOM.csv).
 2. Open the [single Bambu Studio project](bambu-studio/on-air-v213-X1C-all-plates.3mf) **as a project**, keeping its settings. It contains all ten production prints on three plates. [Printing guide](guides/PRINTING.md).
 3. Cut and rear-engrave the acrylic using the [production SVG](laser/02-acrylic-REAR-engrave-and-cut.svg) and [laser guide](guides/LASER.md). The artwork is already mirrored; do not mirror again.
-4. Follow the [complete build guide](guides/BUILD-AND-ASSEMBLY.md) and [two-switch wiring guide](guides/WIRING.md), then record the physical checks in [COMMISSIONING.csv](guides/COMMISSIONING.csv).
+4. Follow the [complete build guide](guides/BUILD-AND-ASSEMBLY.md) and [two-switch wiring guide](guides/WIRING.md). The [capacitor and resistor walkthrough](guides/CAPACITOR-AND-RESISTOR.md) shows their purpose, exact lead connections and soldering steps. Record the physical checks in [COMMISSIONING.csv](guides/COMMISSIONING.csv).
 
 **Firmware status:** the included firmware source snapshot is version 0.1.2 and drives the onboard RGB LEDs. It does not yet drive the four external NeoPixels. The mechanical files and wiring provisions are current; external-pixel firmware remains unfinished. See [firmware status](guides/FIRMWARE-STATUS.md).
 

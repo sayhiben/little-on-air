@@ -1,0 +1,16 @@
+Item,Quantity,Specification,Notes
+Controller,1,Seeed Studio XIAO ESP32-S3 standard 21 x 17.8 mm,No Sense expansion board; USB-powered
+BLE antenna,1,XIAO-compatible U.FL flexible antenna,Use antenna supplied with board; mount on upper plastic wall away from ballast
+Display,1,Igor-compatible 0.96 inch SSD1306 128x64 I2C OLED,27 x 27 mm PCB family; match original faceplate and 21.2 x 23 mm mounting-center pattern before buying
+Encoder,1,KY-040 rotary encoder module with pushbutton,Use Igor-compatible shaft and supplied panel nut/washer; connect module to 3.3 V
+Status LED,1,5 mm through-hole addressable NeoPixel; e.g. Adafruit 1938,6 mm maximum flange; 7 mm body and 7 mm trimmed lead envelope; front faceplate; verify RGB order and availability
+Level shifter,1,SN74AHCT1G125 at 5 V on small breakout,TTL-compatible input; completed insulated assembly must fit 18 x 12 x 4 mm envelope
+Pixel data resistor,1,330 ohm 0.125 W or smaller,Between shifter output and pixel DIN
+Input pulldown,1,100 kilohm,Shifter A input to ground
+Ceramic bypass capacitors,2,100 nF,One at buffer supply; one across through-hole pixel power leads
+Bulk capacitor,1,47 uF at least 10 V low profile,Across 5 V/GND near pixel feed; maximum diameter 6.3 mm and length 8.5 mm
+Wheel weight segments,3,5 g steel adhesive segments,19 x 11.5 x 4 mm maximum including adhesive; one flat-base well; 15 g total with 5 g segments
+XIAO mounting tape,1 piece,0.3 mm thick electrically insulating double-sided tape,13 x 17 mm maximum on center pad; pocket locates the PCB; socket centered at original USB position
+Insulation and wire,as needed,28-30 AWG stranded insulated wire and heat shrink,No pin headers; insulate auxiliary board and capacitor leads
+USB cable,1,USB-C data cable from computer,Case checked for plug overmould at most 12 mm wide x 7 mm high
+Printed parts,3 main parts plus 2 original decorative inlays,Revised shell and LED faceplate; original hat and inlays,No extra covers or case fasteners; original hat can be reused

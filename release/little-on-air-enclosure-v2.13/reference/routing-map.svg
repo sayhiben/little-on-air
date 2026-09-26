@@ -30,7 +30,7 @@
 <rect x="160" y="384" width="104" height="80" rx="5" fill="#f8e4a7" stroke="#526777" stroke-width="2" />
 <text x="212.0" y="432" text-anchor="middle" font-size="12">Disconnect</text>
 <rect x="856" y="364.0" width="64" height="92.0" rx="5" fill="#bfd7ef" stroke="#526777" stroke-width="2" />
-<text x="888" y="476.0" text-anchor="middle" font-size="12">C1 inline</text>
+<text x="906" y="476.0" text-anchor="middle" font-size="12">C1 across power</text>
 <rect x="544" y="192.0" width="88" height="36.0" rx="5" fill="none" stroke="#b35568" stroke-width="2" stroke-dasharray="5 4" />
 <text x="592" y="256" text-anchor="middle" font-size="12">Insulated junctions</text>
 <rect x="348.0" y="492.0" width="100.0" height="45.6" rx="5" fill="none" stroke="#b35568" stroke-width="2" stroke-dasharray="5 4" />

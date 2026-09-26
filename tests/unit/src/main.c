@@ -25,7 +25,9 @@ ZTEST(status_suite, test_color_cycle)
 	zassert_equal(loa_status_next(LOA_STATUS_OFF), LOA_STATUS_WARN);
 	zassert_equal(loa_status_next(LOA_STATUS_WARN), LOA_STATUS_ON_AIR);
 	zassert_equal(loa_status_next(LOA_STATUS_ON_AIR), LOA_STATUS_OKAY);
-	zassert_equal(loa_status_next(LOA_STATUS_OKAY), LOA_STATUS_OFF);
+	zassert_equal(loa_status_next(LOA_STATUS_OKAY), LOA_STATUS_REQUEST);
+	zassert_equal(loa_status_next(LOA_STATUS_REQUEST), LOA_STATUS_SPECIAL);
+	zassert_equal(loa_status_next(LOA_STATUS_SPECIAL), LOA_STATUS_OFF);
 }
 
 ZTEST(status_suite, test_color_mapping)
@@ -33,7 +35,7 @@ ZTEST(status_suite, test_color_mapping)
 	struct loa_rgb color = loa_status_rgb(LOA_STATUS_WARN);
 
 	zassert_equal(color.red, 255U);
-	zassert_equal(color.green, 255U);
+	zassert_equal(color.green, 112U);
 	zassert_equal(color.blue, 0U);
 	color = loa_status_rgb(LOA_STATUS_ON_AIR);
 	zassert_equal(color.red, 255U);
@@ -60,6 +62,22 @@ ZTEST(protocol_suite, test_round_trip)
 	zassert_ok(loa_protocol_decode(&decoded, payload, sizeof(payload)));
 	zassert_equal(decoded.transaction_id, source.transaction_id);
 	zassert_equal(decoded.status, source.status);
+}
+
+ZTEST(record_suite, test_all_six_states_survive_wire_and_storage)
+{
+	for (enum loa_status status = LOA_STATUS_OFF; status < LOA_STATUS_COUNT; ++status) {
+		struct loa_message source = {.transaction_id = 0x76543210U, .status = status};
+		struct loa_message decoded;
+		uint8_t payload[LOA_PROTOCOL_PAYLOAD_LEN], record[LOA_RECORD_LEN];
+		zassert_ok(loa_protocol_encode(payload, &source));
+		zassert_ok(loa_protocol_decode(&decoded, payload, sizeof(payload)));
+		zassert_equal(decoded.status, status);
+		loa_record_encode(record, &source);
+		zassert_ok(loa_record_decode(&decoded, record, sizeof(record)));
+		zassert_equal(decoded.status, status);
+		zassert_equal(decoded.transaction_id, source.transaction_id);
+	}
 }
 
 ZTEST(protocol_suite, test_rejects_malformed_payloads)

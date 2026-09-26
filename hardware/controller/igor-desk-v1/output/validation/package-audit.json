@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "five_STLs_match_three_sliced_projects": true,
+  "source_geometry": "UrbanCircles/igor@7543085fe11f102f121f08aabd8f6c25c38bdf60",
+  "native_geometry": true,
+  "native_xiao_fit_and_insertion": true,
+  "sliced_without_warnings": true,
+  "physical_print_or_electronics_test": false,
+  "esp32_firmware_port_complete": false,
+  "total_estimated_minutes": 342.5827962239583,
+  "total_estimated_filament_g": 100.98184475302696
+}

@@ -1,0 +1,218 @@
+{
+  "ASSEMBLY.md": {
+    "bytes": 3399,
+    "sha256": "869abf78c6489a32bbabfa57ee82bfeb899b5a4a46e20f11e7b3a56c1f095506"
+  },
+  "BOM.csv": {
+    "bytes": 2021,
+    "sha256": "6fb7736885777b547ba1d74114fda87778422715e619272abe491938bee06be4"
+  },
+  "build.py": {
+    "bytes": 6540,
+    "sha256": "f539297d6839923d6e7936afb76255f711d58d5b7a77dd900c555ae10b5391ff"
+  },
+  "FIRMWARE.md": {
+    "bytes": 3025,
+    "sha256": "33d580f109482afdf5e8868aee58fc7a0b0cc4b42dfc466d9d2c5bf471f7e2ca"
+  },
+  "LICENSE.txt": {
+    "bytes": 1069,
+    "sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec"
+  },
+  "output/assembly-meshes/01-igor-flat-base-shell.stl": {
+    "bytes": 1547384,
+    "sha256": "d42941a56238cd745aaa2292f8b08c8d9ccd1fbb2b45632476c28ce4fa5e37d9"
+  },
+  "output/assembly-meshes/02-igor-front-led-faceplate.stl": {
+    "bytes": 575284,
+    "sha256": "05e530b56121c43e03686a83f3922b6efa5bcf4c16df9151b25c090e7e822852"
+  },
+  "output/assembly-meshes/03-igor-hat-original.stl": {
+    "bytes": 237684,
+    "sha256": "f297bce2e376a435c7ccf6cf3e7690a2f3d10be1d91abf020439d09918e07add"
+  },
+  "output/assembly-meshes/04-igor-small-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "ee8f900b5e93bbfb4c53785e25ecdadd3d8404b3c4c714d461216dac417ebb8c"
+  },
+  "output/assembly-meshes/05-igor-large-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "3573dd15b6d848cca435ca3c8ef03d3e3cc7350875876b4d6caa871eed657219"
+  },
+  "output/assembly-meshes/original-faceplate-reference.stl": {
+    "bytes": 478884,
+    "sha256": "df7094ebffbe1e903fd1342d1c82ad9c264002b86762bbc484304574aa799515"
+  },
+  "output/assembly-meshes/original-shell-reference.stl": {
+    "bytes": 1511884,
+    "sha256": "c3ec89ac064f0162fb153f602f742fc7e85fefb28745808ecc9f839b04de9af9"
+  },
+  "output/assembly-meshes/pixel-reference.stl": {
+    "bytes": 63084,
+    "sha256": "49c1500755a203b04eaa7bdc0654dfc4c3cf9c7c1033da0afe1afd6855f5adf4"
+  },
+  "output/assembly-meshes/weight-reference.stl": {
+    "bytes": 1884,
+    "sha256": "65d8761b572380c044417fef3cfb02c1e623de406beba01f42fc923d9f3bd7f5"
+  },
+  "output/assembly-meshes/xiao-reference.stl": {
+    "bytes": 5834484,
+    "sha256": "8b64bef052a214c3a1af775f66a1a695f405b89f41c818f7ae0e648f629997e7"
+  },
+  "output/bambu-studio/igor-flat-base-v3-X1C-PLA-face-inlays.3mf": {
+    "bytes": 155106,
+    "sha256": "10dbec0f7bbcf98eae4a2aa38f6b1234e77bd6e69884653aa7559a1effa8e1e5"
+  },
+  "output/bambu-studio/igor-flat-base-v3-X1C-PLA-shell-hat.3mf": {
+    "bytes": 462144,
+    "sha256": "a40343d81a499241deef8ca7902250341af25ab8172a3be9ff7aa37f4cc85b19"
+  },
+  "output/cad/01-igor-flat-base-shell.step": {
+    "bytes": 387697,
+    "sha256": "e5cd9acac4d77e154cd9111fe1bb62b0924e9bc31cd2a4068c40efc255285bd1"
+  },
+  "output/cad/02-igor-front-led-faceplate.step": {
+    "bytes": 259294,
+    "sha256": "d0fc238fa72856083552bbaeb32a9a8b656753f2bc7252cead6885c0ba6dfa23"
+  },
+  "output/cad/03-igor-hat-original.step": {
+    "bytes": 928751,
+    "sha256": "bd06b0db265b193ce06a1a6c64ceb40832dbb9e7ecd1dc1c1ec11f97de32a55f"
+  },
+  "output/cad/04-igor-small-inlay-original.step": {
+    "bytes": 10263,
+    "sha256": "f13591b1bf53633dc9ac9b1e50306cfec1fd26fc69c4c2b0662f4a59bce876be"
+  },
+  "output/cad/05-igor-large-inlay-original.step": {
+    "bytes": 10272,
+    "sha256": "4e6b8dca8200518d3b7e5960ef804c0f007e4fc4a2b899f384429fa1b5242269"
+  },
+  "output/cad/igor-flat-base-v3.step": {
+    "bytes": 1632246,
+    "sha256": "a12bc9396aa79d5907bac63bbaf98e91154e4d1adb8a5a4aa3dbea257d63c107"
+  },
+  "output/stl/01-igor-flat-base-shell.stl": {
+    "bytes": 1547384,
+    "sha256": "9c5a0ec2deeff78973315d5457b2d239d6073eee33f54c498e1f2ad403630d56"
+  },
+  "output/stl/02-igor-front-led-faceplate.stl": {
+    "bytes": 575384,
+    "sha256": "cb159608a2c09f7d5e661b00000561c5a4973fc255bdec4fa229bdf33ff400d7"
+  },
+  "output/stl/03-igor-hat-original.stl": {
+    "bytes": 237684,
+    "sha256": "e44f3a6987f65d22b15c381e1172569884c7e5572029e024fb77873915f58eef"
+  },
+  "output/stl/04-igor-small-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "3b9b73bccaadf783e399a32d84cbf5886417a23ac25aed2fb12e2f54801a1686"
+  },
+  "output/stl/05-igor-large-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "ea1c725bd5bb27c6493a3548497e0269782d3b2ace54a37bb7364f104e97af26"
+  },
+  "output/validation/fit.json": {
+    "bytes": 11403,
+    "sha256": "51a8f720b7faebdc835bafe4bbfb758ce621dbce6ff5cd143f9cfe33302745ec"
+  },
+  "output/validation/geometry.json": {
+    "bytes": 2616,
+    "sha256": "35172e1f6c7f555329ffd766333058fb22818fca1595d2d89c2629ba203e50c9"
+  },
+  "output/validation/package-audit.json": {
+    "bytes": 591,
+    "sha256": "94c9fc0fc75e1ffa763d552a4a0e93618223549d5660f10cc3298d5ba69d7a9f"
+  },
+  "output/validation/slicing.json": {
+    "bytes": 10146,
+    "sha256": "5784b29f2e699f3d79f1a0befdde091733692967131f3a541103990af4f19762"
+  },
+  "output/views/inside.png": {
+    "bytes": 97317,
+    "sha256": "344a32663b6d873c12d74b479c9765bc5f63630774836ac4762b35568e4006c8"
+  },
+  "output/views/original-side.png": {
+    "bytes": 51801,
+    "sha256": "677989019d50a3ac0495fdd25557376f6606a09697af040e7e158ac4e83199a9"
+  },
+  "output/views/original-vs-corrected.png": {
+    "bytes": 340994,
+    "sha256": "ed82100d182ebfbeb583f4e52b24669c77eac9a1cf456a0c0fa5627624bc9d62"
+  },
+  "output/views/original.png": {
+    "bytes": 115347,
+    "sha256": "7836683c89c146b3ba012671c72e8ded1431551dfc6862ee3458cd6ab8983270"
+  },
+  "output/views/print-plate.png": {
+    "bytes": 11365,
+    "sha256": "cc4d6705c9e5199f407a4cafe402f0753bd07686c3e8fb2d154795fb453c925d"
+  },
+  "output/views/revised-side.png": {
+    "bytes": 63302,
+    "sha256": "1fd6e7d03d47ae018fe9f6dba44c868198e74aa77a47870dca50c1e87f19bf8f"
+  },
+  "output/views/revised.png": {
+    "bytes": 118650,
+    "sha256": "9ac3258cd857f1de828a2ae476db59533d22be299737f56d4e41b0cc4a46b5e3"
+  },
+  "output/views/side-profile-comparison.png": {
+    "bytes": 146955,
+    "sha256": "5f31c7739e9dec1cd9aadce5ad106f285276b88c2f7a9bf753b6f26d3c35e010"
+  },
+  "package.py": {
+    "bytes": 4124,
+    "sha256": "1afcec7ca3f2a45db5cd933bc376ff113013b4f144dbb7855ff85be1dad92870"
+  },
+  "prepare_prints.py": {
+    "bytes": 7820,
+    "sha256": "c19ebc912b431845d4eb34f40b08adb9507162a7f6f952fb93e64d45e3caf93c"
+  },
+  "print-profiles.json": {
+    "bytes": 120155,
+    "sha256": "fed75673a0841e3db76fc96e85f5b44b84982adfe9bd39321d21e44586bed75f"
+  },
+  "README.md": {
+    "bytes": 3681,
+    "sha256": "85caee2155e9ee1002d2c6ea60660e02b2186aa411be81f61b3402aa8218d4dc"
+  },
+  "reference/xiao-esp32s3-seeed.step": {
+    "bytes": 1335902,
+    "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd"
+  },
+  "render_views.py": {
+    "bytes": 5703,
+    "sha256": "c4524ad838312dfaca94cd8bdfa74f4afb29753b96b15137ba12edc15873b1e3"
+  },
+  "requirements.txt": {
+    "bytes": 109,
+    "sha256": "213c3d44de7d9e2ff0252c111cc3d04085f87f9f33d5e2371a4c08056151f3c2"
+  },
+  "run_cad.py": {
+    "bytes": 931,
+    "sha256": "3a3392f7e31f352ba9fd04c9b476b2a2a26c0de3e16ce058de0e6bb65eddd676"
+  },
+  "SOURCES.md": {
+    "bytes": 3068,
+    "sha256": "5c1cddcc66b941ea317384ab9a81fb38575869d97342e54140c55d153bbc755e"
+  },
+  "upstream/igor-v1.3mf": {
+    "bytes": 157784,
+    "sha256": "bcb8dca8bdacedaecb269dfc912eb03bc336b9debc88b6f716f300ba4d47eac9"
+  },
+  "upstream/igor-v1.step": {
+    "bytes": 570378,
+    "sha256": "9645738bee23f74ca35bc64abd22047e27ce61a9ba0c0e83864a13e755bd8c33"
+  },
+  "upstream/LICENSE": {
+    "bytes": 1090,
+    "sha256": "80476d4452d46daa8b16e7c7ee54887ab30f8e2618457d2ecbb28005036a3c7e"
+  },
+  "validate_fit.py": {
+    "bytes": 4465,
+    "sha256": "44c9295e4b2eccf23d6ad81f4200d26de06e73e4eae70434567c17d1a5d3c7f1"
+  },
+  "WIRING.md": {
+    "bytes": 3558,
+    "sha256": "d429dc13c153d4dfe908ad607d1c374a506db93075e62580fe3b4f686931d91e"
+  }
+}

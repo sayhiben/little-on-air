@@ -1,0 +1,46 @@
+# Bambu Studio — current three-plate project
+
+Open [on-air-v214-X1C-all-plates.3mf](../bambu-studio/on-air-v214-X1C-all-plates.3mf) **as a project**, keeping its settings. It targets the **Bambu X1 Carbon, 0.4 mm nozzle and textured PEI plate**. This release replaces frame 01 with its wider wiring revision. The rear housing moves 9 mm on plate 1 to maintain spacing; every other mesh, painting and print setting is preserved. All ten required pieces are present.
+
+| Plate | Contents | Material | Slicer estimate |
+| --- | --- | --- | --- |
+| 1 | 01 frame, 05 housing, 04 optical retainer, 06 electronics yoke, 07 reset button, 11 rear guide keeper | Black PLA+ | 5 h 20 min / 67.90 g |
+| 2 | 03 registered backing | Black and white PLA+ | 1 h 16 min / 10.15 g |
+| 3 | 08 front guide and two identical 09 rear guides | Transparent PETG | 13 min / 0.55 g |
+
+Total: approximately **6 h 49 min / 78.61 g**, excluding plate changes. The acrylic is laser-cut separately. There is exactly one keeper 11; the second rear guide is the second copy of STL 09, not an extra keeper.
+
+## Map the filaments
+
+1. **Black PLA+** — previous eSUN PLA+ baseline: 220 °C nozzle, 55 °C textured bed.
+2. **White PLA+** — the same PLA+ profile as black, with white color assigned. The PETG assignment from the edited working file has been corrected.
+3. **Transparent PETG** — optical profile: 255 °C nozzle, 70 °C textured bed, low part cooling and auxiliary fan off. The generic PETG assignment from the working file has been replaced with the earlier optical profile.
+
+These numbers identify project filaments, not mandatory physical AMS bays. Map them to the actual loaded spools when sending each plate. Match temperatures and calibrated flow to your actual material. If changing a filament profile, re-slice and keep the guide objects' optical settings and low cooling.
+
+The black/white insert uses your mesh painting. Sliced paths remain black through the **1.60 mm base**, with the first white layer at **Z = 1.70 mm**. Letter tops finish at 2.0 mm; the upper registration pads finish at 2.5 mm and are also white. The plate makes one automatic filament change. Its prime tower and **700 mm³ black-to-white flush** are included. Do not add a second manual color change over the painting. The insert's object-level filament can display white while the painted base still slices black; use Preview to inspect the actual paths.
+
+## Settings and handling
+
+- Main structure: 0.20 mm layers, four walls. Housings use 25% gyroid; the optical retainer and yoke use solid infill.
+- Reset button and insert: 0.10 mm layers. The insert retains your slower 12 mm/s top-surface setting.
+- Guides: lying on their continuous flats, long axes along bed X; 0.10 mm layers, one wall, 100% aligned fill, up to 20 mm/s extrusion, no brim or support. Do not rotate their axes away from the fill direction.
+- Automatic support is confined to **07 reset button and 11 rear guide keeper** on plate 1. Other structural parts retain their intended unsupported bridges.
+- The compact arrangement has some approximately 2 mm part-to-part gaps. Brims can join; cut connecting brim material after cooling instead of pulling neighboring parts apart.
+
+For keeper 11, support the rigid printed body on the bench while clipping the support away in small sections. Work along the supported underside and avoid levering against the open arm, retaining shoulders or thin edge. Stop and inspect if removal begins bending the keeper. The keeper geometry is unchanged by this packaging update; its fit depends on those retaining surfaces remaining intact.
+
+The first-layer height/speeds and acceleration are shared project settings: **0.10 mm first layer at 15 mm/s**, 1000 mm/s² default acceleration and 500 mm/s² outer-wall acceleration. These retain the optical requirements; main structural layers after the first remain 0.20 mm. Bambu's configuration separates these project settings from [object settings](https://github.com/bambulab/BambuStudio/blob/master/src/libslic3r/PrintConfig.hpp).
+
+**First-layer inspection remains disabled** for the prior timeout workaround. Bed leveling and end-of-print heater shutdown remain enabled. No manual pause commands were added.
+
+## Verification
+
+All three plates were sliced with Bambu Studio 2.8.2.61 without slicer warnings. The ten placed pieces match the latest nine unique STLs, allowing your rotations within the bed plane. Checks confirmed all 25 insert layers' colors, one keeper, correct materials and bed temperatures, support locations, and **332 long guide fill runs parallel to their axes**. See [printing validation](../validation/printing.json).
+
+The original edited project remains preserved in the development archive outside this release. The release file is the corrected, re-sliced copy. Follow the [assembly guide](BUILD-AND-ASSEMBLY.md) after printing; the finished enclosure uses nine M3×8 button-head screws and nine M3 nuts. No print job was sent.
+
+
+## Replacement frame only
+
+Use [on-air-v214-X1C-front-only.3mf](../bambu-studio/on-air-v214-X1C-front-only.3mf) for an existing build: approximately **2 h 03 min / 25.08 g**, black PLA+ only. No support. Keep its **45° bridge-angle override** when re-slicing; automatic direction creates unsuitable long roof spans. Inspect the [roof toolpaths](../reference/roof-toolpaths.svg) and [front assembly instructions](FRONT-WIRING.md). Filament slots 2/3 are unused in this one-object file.

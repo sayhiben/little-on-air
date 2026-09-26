@@ -11,6 +11,15 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/../../cmake/loa-common.cmake)
 target_sources(app PRIVATE
   src/ble_server.c
   src/main.c
+  src/pair_reset.c
+  src/device_indicator.c
 )
 
 target_include_directories(app PRIVATE src)
+
+if(CONFIG_LOA_PIXELS_PADDED_SPI)
+  target_sources(app PRIVATE
+    src/padded_pixels.c
+    ../../src/ws2812_frame.c
+  )
+endif()

@@ -10,6 +10,7 @@ tmp*/
 build*/
 twister-out*/
 *.log
+.pio/
 
 # Python
 .venv/

@@ -9,12 +9,12 @@
   "provenance": {
     "README.md": {
       "source": "hardware/enclosure/release-docs/README.md",
-      "source_sha256": "242409f97854c8595769c705cd103038cca9cbff1aebfb0cd327ea0b764ac6ae",
+      "source_sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
       "exact_copy": true
     },
     "guides/BUILD-AND-ASSEMBLY.md": {
       "source": "hardware/enclosure/release-docs/BUILD-AND-ASSEMBLY.md",
-      "source_sha256": "01b949091809cac75c6f3aa8c1743adfb38d3563bdfe9e31c7602788471f71fc",
+      "source_sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
       "exact_copy": true
     },
     "guides/LASER.md": {
@@ -30,6 +30,26 @@
     "guides/PRINTING.md": {
       "source": "hardware/enclosure/release-docs/PRINTING.md",
       "source_sha256": "855cc9cf5e61e1664564fdbbd76e1e6543c6255de6d10a8f07c4eb006808d5fe",
+      "exact_copy": true
+    },
+    "guides/WIRING.md": {
+      "source": "hardware/enclosure/release-docs/WIRING.md",
+      "source_sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "exact_copy": true
+    },
+    "guides/CAPACITOR-AND-RESISTOR.md": {
+      "source": "hardware/enclosure/release-docs/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "exact_copy": true
+    },
+    "reference/capacitor-resistor-wiring.svg": {
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "exact_copy": true
+    },
+    "reference/previews/capacitor-resistor-wiring.png": {
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
       "exact_copy": true
     },
     "alternatives/laminate/README.md": {
@@ -246,11 +266,6 @@
       "source_sha256": "0299b320d9f3bc3ffea5f2c43ea1f63697e0241bdc78990e20c8d0a7ae6e18fd",
       "exact_copy": false
     },
-    "guides/WIRING.md": {
-      "source": "hardware/enclosure/v22/TWO-SWITCH-WIRING.md",
-      "source_sha256": "1cf78ec9c7b304f7102ccf3c497a3f329ccc677b8523f98685b39146a276f7d6",
-      "exact_copy": false
-    },
     "BOM.csv": {
       "source": "hardware/enclosure/output/on-air-v28-fabrication/BOM.csv",
       "source_sha256": "d7b8b548c635f7d9805837f1fcf671b6a0da937774ce656866fd75965cfeaeb8",
@@ -322,8 +337,8 @@
     },
     {
       "path": "BOM.csv",
-      "bytes": 4123,
-      "sha256": "e36831f00e731f985612f93d9210c25254fa4892ff340c08adcbee15c5983cd4",
+      "bytes": 4226,
+      "sha256": "49434beb475f776f39fcff94d80eedb51f7a6f4ebe6b82b5892b534c063d45c1",
       "source": "hardware/enclosure/output/on-air-v28-fabrication/BOM.csv",
       "source_sha256": "d7b8b548c635f7d9805837f1fcf671b6a0da937774ce656866fd75965cfeaeb8",
       "exact_copy": false
@@ -362,16 +377,24 @@
     },
     {
       "path": "guides/BUILD-AND-ASSEMBLY.md",
-      "bytes": 10690,
-      "sha256": "01b949091809cac75c6f3aa8c1743adfb38d3563bdfe9e31c7602788471f71fc",
+      "bytes": 12035,
+      "sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
       "source": "hardware/enclosure/release-docs/BUILD-AND-ASSEMBLY.md",
-      "source_sha256": "01b949091809cac75c6f3aa8c1743adfb38d3563bdfe9e31c7602788471f71fc",
+      "source_sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/CAPACITOR-AND-RESISTOR.md",
+      "bytes": 6705,
+      "sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "source": "hardware/enclosure/release-docs/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
       "exact_copy": true
     },
     {
       "path": "guides/COMMISSIONING.csv",
-      "bytes": 3359,
-      "sha256": "b3ae86c4313935149919a33e8dd457fe4020310ba07763c7b5b19407254104db",
+      "bytes": 3652,
+      "sha256": "232094f8ee4f2795306ba6704da0fc3cbef01de545ef1c1187bbf202c7fbb3f7",
       "source": "Consolidated for the current release",
       "exact_copy": false
     },
@@ -401,11 +424,11 @@
     },
     {
       "path": "guides/WIRING.md",
-      "bytes": 7372,
-      "sha256": "92914e6dcd4a777a5d4f3b92e2d4aa8ef5076df8292426e92db131f034d67ebc",
-      "source": "hardware/enclosure/v22/TWO-SWITCH-WIRING.md",
-      "source_sha256": "1cf78ec9c7b304f7102ccf3c497a3f329ccc677b8523f98685b39146a276f7d6",
-      "exact_copy": false
+      "bytes": 8625,
+      "sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "source": "hardware/enclosure/release-docs/WIRING.md",
+      "source_sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "exact_copy": true
     },
     {
       "path": "laser/02-acrylic-REAR-engrave-and-cut.svg",
@@ -464,10 +487,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3966,
-      "sha256": "242409f97854c8595769c705cd103038cca9cbff1aebfb0cd327ea0b764ac6ae",
+      "bytes": 4101,
+      "sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
       "source": "hardware/enclosure/release-docs/README.md",
-      "source_sha256": "242409f97854c8595769c705cd103038cca9cbff1aebfb0cd327ea0b764ac6ae",
+      "source_sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/capacitor-resistor-wiring.svg",
+      "bytes": 5720,
+      "sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
       "exact_copy": true
     },
     {
@@ -508,9 +539,17 @@
       "exact_copy": false
     },
     {
+      "path": "reference/previews/capacitor-resistor-wiring.png",
+      "bytes": 157147,
+      "sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "exact_copy": true
+    },
+    {
       "path": "reference/previews/routing-map.png",
-      "bytes": 104867,
-      "sha256": "db2735f0cc3077e0213e1991fb8dad485ba7efff4a767cc7486045178d6f67bc",
+      "bytes": 105759,
+      "sha256": "d40bd424ddf9e6ebf8d09dbeda8225ba77ebed60880cead6a685d053e7c08147",
       "source": "Generated validation or preview in this release",
       "exact_copy": false
     },
@@ -524,8 +563,8 @@
     },
     {
       "path": "reference/routing-map.svg",
-      "bytes": 6241,
-      "sha256": "83eb6c35dd27bb5305c45e96841d27827535c2e2be52ea6c7ae1cf094d047667",
+      "bytes": 6247,
+      "sha256": "fa8c11f5d92313f05cc68542d766122beebc97f8942a6820a0c6cfcd22a4f8df",
       "source": "hardware/enclosure/output/on-air-v28-fabrication/routing-map.svg",
       "source_sha256": "f6ac9727571b47463a1a1ddf015b8fe4713c1341bc2f09e19fe803aabcfcd964",
       "exact_copy": false
@@ -572,8 +611,8 @@
     },
     {
       "path": "RELEASE-NOTES.md",
-      "bytes": 955,
-      "sha256": "f160f202fe9323348b6837638902f8e719fd8cbc38813289c4050d372ec29590",
+      "bytes": 1294,
+      "sha256": "bf83583200958a07944a392bd7f3d57ba92d79a0907bc6cce136d12e795e68e9",
       "source": "Consolidated for the current release",
       "exact_copy": false
     },
@@ -715,7 +754,7 @@
     {
       "path": "validation/release-audit.json",
       "bytes": 3660,
-      "sha256": "d8d189e8423163283100ac83be897c57d20bc00c83789db403a1ef0693a40bc2",
+      "sha256": "10c44aee2d4c8d24aa2605058950e8a361e6d639a9148615fc54f48b659b1b93",
       "source": "Generated validation or preview in this release",
       "exact_copy": false
     },

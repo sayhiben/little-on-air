@@ -25,7 +25,18 @@ Solder the boards outside the case without pin headers. The XIAO's component fac
 
 Use flexible stranded wire sized by **insulated outside diameter**, not AWG alone: up to 0.9 for individual leads and compact three-wire LED bundles, and up to 0.8 for the constrained paired routes. Use the [routing map](../reference/routing-map.svg), [coordinate record](../reference/routing-coordinates.json) and [wire-length allowances](../reference/harness-length-guide.csv). Crossing lines on the map may be at different depths. Leave service slack and trim after fitting the actual connectors.
 
-Solder and insulate the 330-ohm resistor in series with DATA near LED1. Keep its insulated body within 12 length × 3.2 diameter, in the 12.5 × 5.7 × 5.6 reserved space behind LED1. Put the 680 µF capacitor across VBAT_SW and protected ground, observing polarity. Its body must fit within 8 diameter × 11.5 length; secure it on its side in the right lower bay. Secure insulated splices so they cannot move onto PCB pads or the pouch.
+### Connect the capacitor and resistor
+
+Use one of each for the whole four-pixel chain. Follow the [illustrated soldering guide](CAPACITOR-AND-RESISTOR.md) for identifying leads, making the splices, insulating them and checking them with a meter.
+
+| Part | What it does | How to connect it |
+| --- | --- | --- |
+| **C1: 680 µF, ≥6.3 V capacitor** | Stores a little energy to smooth brief changes in LED power demand | **+** to the VBAT_SW splice after S1 POWER; **−** to charger OUT− / protected ground. These are two branch connections; the main LED power and ground wires continue past them. |
+| **R1: 330 Ω resistor** | Reduces sharp transients at the first pixel's data input | Front pigtail **DATA → either resistor lead → other resistor lead → LED1 DIN**. Either orientation works. All data to LED1 must pass through it. |
+
+C1 is polarized: its negative stripe faces the ground connection. Keep its power branch before S2 MODE, and use OUT− rather than the charger's B−. R1 goes in the data wire only; it has no connection to power or ground. Leave the modules' existing SMD components in place. See [Adafruit's NeoPixel guidance](https://learn.adafruit.com/adafruit-neopixel-uberguide/best-practices) for the recommended capacitor and resistor arrangement.
+
+Keep R1 close to LED1 DIN. Its insulated assembly must fit within 12 length × 3.2 diameter, in the 12.5 × 5.7 × 5.6 space behind LED1. C1 stays on the rear housing side of the pigtail: its body must fit within 8 diameter × 11.5 length, on its side in the right lower bay. Use short insulated branch leads with service slack, sleeve every exposed joint separately, and secure the parts so they cannot pull on solder pads or touch the battery pouch. Check both connections before closing the case.
 
 The mated pigtail pair belongs in the left lower service bay, within 13 × 10 × 7.5 including its body. Label and verify both halves **GND, VBAT_SW, DATA**. Junctions belong in the open center, with the dressed trunk following the checked passages. Keep all leads out of screw/nut entries and the new guide keeper's channel.
 

@@ -18,6 +18,9 @@ struct loa_reset_decision loa_reset_gesture_update(uint8_t retained_value, bool 
 	decision.button_press = true;
 	if ((retained_value & 0xf0U) == LOA_RESET_GESTURE_MAGIC) {
 		count = retained_value & 0x0fU;
+		if (count >= LOA_FACTORY_RESET_PRESS_COUNT) {
+			count = 0U;
+		}
 	}
 
 	count++;

@@ -13,6 +13,8 @@ Front guide,Internal collar caught by frame and yoke; nominal 0.25 axial play; a
 Rear guides,Both collars caught by housing and keeper 11; nominal 0.20 axial play; actual LEDs remain clear,,
 LED modules,All four complete segment outlines fit; emitting faces toward clear acrylic edges,,
 Pigtails / capacitor / resistor,Insulated real bodies and bends fit reserved bays; polarity/pinout marked,,
+C1 connections,680 uF >=6.3 V; + to VBAT_SW after S1 and before S2; negative stripe to OUT-; each lead insulated; power wires continue to LEDs,,
+R1 connections,330 ohm measured before connecting electronics; front DATA -> R1 -> LED1 DIN; close to DIN; no bypass or power/ground connection,,
 Wire routing,Outside diameters fit; staged depth crossings; service slack; no wires across pouch or guide keeper,,
 Acrylic stock,Confirmed laser-suitable PMMA; thickness measured at five points; range 3.00-3.45,,
 Optical cushion,Rear gap =0.45-(acrylic thickness-3.175); shims/compliant layer fill without bowing,,

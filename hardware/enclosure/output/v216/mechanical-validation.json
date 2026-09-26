@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "static": [],
+  "yoke_insertion": [],
+  "closure": [],
+  "bays": [
+    {
+      "name": "Pigtail connector",
+      "lo": [
+        4,
+        14,
+        12
+      ],
+      "hi": [
+        17,
+        24,
+        19.5
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "name": "R1 DATA inline resistor",
+      "lo": [
+        70,
+        5.2,
+        18
+      ],
+      "hi": [
+        82,
+        8.4,
+        21.2
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "name": "Lower service slack",
+      "lo": [
+        18,
+        15,
+        10.3
+      ],
+      "hi": [
+        30,
+        27,
+        12.4
+      ],
+      "collisions": [],
+      "passed": true
+    }
+  ],
+  "poses_per_motion": 31,
+  "physical_limits": "Nominal geometry and hand-dressed path reservations; actual LED pad positions, solder fillets, insulation OD and print fit require dry fitting. No structural FEA or physical print claim."
+}

@@ -1,0 +1,979 @@
+{
+  "enclosure_version": "2.14",
+  "firmware_version": "0.1.2",
+  "firmware_commit": "ce3745f0ddc3b3d8bd56da88aaa2f05fe750a1ab",
+  "packaged_date": "2026-09-18",
+  "production_stl_count": 9,
+  "production_print_instances": 10,
+  "bambu_plates": 3,
+  "provenance": {
+    "BOM.csv": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "LICENSE": {
+      "source": "release/little-on-air-enclosure-v2.13/LICENSE",
+      "source_sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "exact_copy": true
+    },
+    "PARTS.csv": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "README.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "RELEASE-NOTES.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "firmware/little-on-air-firmware-v0.1.2-source.zip": {
+      "source": "release/little-on-air-enclosure-v2.13/firmware/little-on-air-firmware-v0.1.2-source.zip",
+      "source_sha256": "d49763eb2411a710a5b5eecc0226f35331757cf315a8dd89830378236affa5a2",
+      "exact_copy": true
+    },
+    "firmware/README.md": {
+      "source": "release/little-on-air-enclosure-v2.13/firmware/README.md",
+      "source_sha256": "d4ca5ee65bade3349bc7f8d66c7c56cefd4773c7161cda2a880b238e518c7493",
+      "exact_copy": true
+    },
+    "guides/BUILD-AND-ASSEMBLY.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "guides/CAPACITOR-AND-RESISTOR.md": {
+      "source": "release/little-on-air-enclosure-v2.13/guides/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "exact_copy": true
+    },
+    "guides/COMMISSIONING.csv": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "guides/FIRMWARE-STATUS.md": {
+      "source": "release/little-on-air-enclosure-v2.13/guides/FIRMWARE-STATUS.md",
+      "source_sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "exact_copy": true
+    },
+    "guides/LASER.md": {
+      "source": "release/little-on-air-enclosure-v2.13/guides/LASER.md",
+      "source_sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "exact_copy": true
+    },
+    "guides/PRINTING.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "guides/WIRING.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "laser/02-acrylic-REAR-engrave-and-cut.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "source_sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "exact_copy": true
+    },
+    "laser/02-acrylic-REVIEW-ONLY.lbrn2": {
+      "source": "release/little-on-air-enclosure-v2.13/laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "source_sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "exact_copy": true
+    },
+    "reference/capacitor-resistor-wiring.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "exact_copy": true
+    },
+    "reference/fastener-layout.json": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/fastener-layout.json",
+      "source_sha256": "b1607b3a98b8fc4248c73ae857059d3b56a2ab31b50bd5023aa19ee6cb569fc6",
+      "exact_copy": true
+    },
+    "reference/harness-length-guide.csv": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "reference/routing-coordinates.json": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "stl/01-front-optical-bezel.stl": {
+      "source": "hardware/enclosure/output/v214/stl/01-front-optical-bezel.stl",
+      "source_sha256": "8d1bd1eb22e0285f876e1c7302700971a6d3b51fc47dfd8be605761adcfb6838",
+      "exact_copy": true
+    },
+    "stl/03-registered-graphic-backing.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/03-registered-graphic-backing.stl",
+      "source_sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "exact_copy": true
+    },
+    "stl/04-optical-retainer.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/04-optical-retainer.stl",
+      "source_sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "exact_copy": true
+    },
+    "stl/05-rear-electronics-housing.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/05-rear-electronics-housing.stl",
+      "source_sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "exact_copy": true
+    },
+    "stl/06-electronics-retaining-yoke.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/06-electronics-retaining-yoke.stl",
+      "source_sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "exact_copy": true
+    },
+    "stl/07-front-guided-reset-button.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/07-front-guided-reset-button.stl",
+      "source_sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "exact_copy": true
+    },
+    "stl/08-captive-front-rgb-guide.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/08-captive-front-rgb-guide.stl",
+      "source_sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "exact_copy": true
+    },
+    "stl/09-charger-light-guide.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/09-charger-light-guide.stl",
+      "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "exact_copy": true
+    },
+    "stl/11-rear-light-guide-keeper.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/stl/11-rear-light-guide-keeper.stl",
+      "source_sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "exact_copy": true
+    },
+    "validation/printing-source-manifest.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/printing-source-manifest.json",
+      "source_sha256": "9080116415d225aa169cdade8c65009f2972cb236994f70898a0d908648c4461",
+      "exact_copy": true
+    },
+    "validation/printing.json": {
+      "source": "hardware/enclosure/output/v214/printing-validation.json",
+      "source_sha256": "844aa445034162dfe832980624075732f71a119aa8b911f1120e65f9ab4f51ca",
+      "exact_copy": true
+    },
+    "validation/README.md": {
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    "alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "source_sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "exact_copy": true
+    },
+    "alternatives/laminate/81-laminate-front-spacer.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/81-laminate-front-spacer.stl",
+      "source_sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "exact_copy": true
+    },
+    "alternatives/laminate/82-laminate-rear-shim.stl": {
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/82-laminate-rear-shim.stl",
+      "source_sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "exact_copy": true
+    },
+    "alternatives/laminate/README.md": {
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/README.md",
+      "source_sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "exact_copy": true
+    },
+    "laser/calibration/90-fit-strip-CUT-ONLY.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/90-fit-strip-CUT-ONLY.svg",
+      "source_sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "exact_copy": true
+    },
+    "laser/calibration/91-kerf-plug-and-frame-CUT.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/91-kerf-plug-and-frame-CUT.svg",
+      "source_sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "exact_copy": true
+    },
+    "laser/calibration/92-engraving-quality-nine-samples-FILL.svg": {
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/92-engraving-quality-nine-samples-FILL.svg",
+      "source_sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "exact_copy": true
+    },
+    "reference/previews/02-acrylic-REAR-engrave-and-cut.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/02-acrylic-REAR-engrave-and-cut.png",
+      "source_sha256": "9a908d0232b3e2372574e233f30035ff2d0abe90ab6d442cd3b2d479027cacbc",
+      "exact_copy": true
+    },
+    "reference/previews/91-kerf-plug-and-frame-CUT.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/91-kerf-plug-and-frame-CUT.png",
+      "source_sha256": "b4556d1b1bb21512dbe13ec37bd73e3b728943843ea991281f8a18c6291e0dee",
+      "exact_copy": true
+    },
+    "reference/previews/92-engraving-quality-nine-samples-FILL.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/92-engraving-quality-nine-samples-FILL.png",
+      "source_sha256": "1d985afea200640b6212d8e1018c18ab1380136811fe450b12753e391259abf8",
+      "exact_copy": true
+    },
+    "reference/previews/capacitor-resistor-wiring.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "exact_copy": true
+    },
+    "reference/views/complete-assembly.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/complete-assembly.png",
+      "source_sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "exact_copy": true
+    },
+    "reference/views/front-captive-guide.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/front-captive-guide.png",
+      "source_sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "exact_copy": true
+    },
+    "reference/views/front-guide-shape.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/front-guide-shape.png",
+      "source_sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "exact_copy": true
+    },
+    "reference/views/rear-guide-keeper.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/rear-guide-keeper.png",
+      "source_sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "exact_copy": true
+    },
+    "reference/views/rear-housing-with-retention.png": {
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/rear-housing-with-retention.png",
+      "source_sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "exact_copy": true
+    },
+    "validation/cad-v213/build-record.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/build-record.json",
+      "source_sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "exact_copy": true
+    },
+    "validation/cad-v213/harness-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/harness-validation.json",
+      "source_sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "exact_copy": true
+    },
+    "validation/cad-v213/mesh-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/mesh-validation.json",
+      "source_sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "exact_copy": true
+    },
+    "validation/cad-v213/native-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/native-validation.json",
+      "source_sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "exact_copy": true
+    },
+    "validation/cad-v213/perimeter-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/perimeter-validation.json",
+      "source_sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/changed-interface-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/changed-interface-validation.json",
+      "source_sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/nut-access-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/nut-access-validation.json",
+      "source_sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/usb-and-optical-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/usb-and-optical-validation.json",
+      "source_sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/wire-packing-validation.json": {
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/wire-packing-validation.json",
+      "source_sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "exact_copy": true
+    },
+    "cad/little-on-air-v214.f3d": {
+      "source": "hardware/enclosure/output/v214/little-on-air-v214.f3d",
+      "source_sha256": "22836634630de36c604c5dd024d70b3c53e1b8ca959ce705a55f3ab7c2e62eb3",
+      "exact_copy": true
+    },
+    "cad/little-on-air-v214-assembly.step": {
+      "source": "hardware/enclosure/output/v214/little-on-air-v214-assembly.step",
+      "source_sha256": "413af2b6ed90b4f4340743dd2c9021da8e6349ec1d7cf163d5d8d89d827d1aa8",
+      "exact_copy": true
+    },
+    "bambu-studio/on-air-v214-X1C-all-plates.3mf": {
+      "source": "hardware/enclosure/output/v214/bambu-studio/all-plates/on-air-v214-X1C-all-plates.3mf",
+      "source_sha256": "e9076a053acd50517002bfc91d9fd91f85587953881bf1deb795400b817c9398",
+      "exact_copy": true
+    },
+    "bambu-studio/on-air-v214-X1C-front-only.3mf": {
+      "source": "hardware/enclosure/output/v214/bambu-studio/front-only/on-air-v214-X1C-front-only.3mf",
+      "source_sha256": "c19506de36e4ef04a880ec4c983684f385fd3f688984948375725723af4adbac",
+      "exact_copy": true
+    },
+    "validation/cad-v214/native-build.json": {
+      "source": "hardware/enclosure/output/v214/native-build.json",
+      "source_sha256": "b220c4c7fb41e85fc346abd84d0cb7f25d299ae05bc060cbd6d4026ba992cb33",
+      "exact_copy": true
+    },
+    "validation/cad-v214/native-validation.json": {
+      "source": "hardware/enclosure/output/v214/native-validation.json",
+      "source_sha256": "0fac1d946df8d30722494128cfc00b6a6527869d48b70f4fdd60c2b26ec4c14d",
+      "exact_copy": true
+    },
+    "validation/cad-v214/final-native-check.json": {
+      "source": "hardware/enclosure/output/v214/final-native-check.json",
+      "source_sha256": "f1a9ff82a4805efdb4b43440beb9f2fe02fcee48535d8f79a0c28d5dcf446fa0",
+      "exact_copy": true
+    },
+    "validation/cad-v214/mesh-validation.json": {
+      "source": "hardware/enclosure/output/v214/mesh-validation.json",
+      "source_sha256": "766f53b3d7529b209c17f7785015bcf22ceca3c4a38d3a51decd5fd05153534b",
+      "exact_copy": true
+    },
+    "validation/cad-v214/bridge-validation.json": {
+      "source": "hardware/enclosure/output/v214/bridge-validation.json",
+      "source_sha256": "f7c93588a2d74df2edbb4d1ca604dce73fd81bbb428c9fa81eb162f31ec70370",
+      "exact_copy": true
+    },
+    "reference/front-wiring.svg": {
+      "source": "hardware/enclosure/output/v214/front-wiring.svg",
+      "source_sha256": "fecd22cbec6fb7f30dcd671d037f5a5c1893b69970fb3a08d9f59a168baf2312",
+      "exact_copy": true
+    },
+    "reference/previews/front-wiring.png": {
+      "source": "hardware/enclosure/output/v214/front-wiring.png",
+      "source_sha256": "c087baa25cee3bd20dd34571bf67e28780e5e35a9d7d3b180799fbad54ebe12f",
+      "exact_copy": true
+    },
+    "reference/roof-toolpaths.svg": {
+      "source": "hardware/enclosure/output/v214/roof-toolpaths.svg",
+      "source_sha256": "259a778fe46ceacec6ee2ec560fa835ebcdac2e33c6d43a2c0bc7a5136a7298d",
+      "exact_copy": true
+    },
+    "reference/previews/roof-toolpaths.png": {
+      "source": "hardware/enclosure/output/v214/roof-toolpaths.png",
+      "source_sha256": "41d90fa7ba99003a2de98d4ba8fd6c0f696d4364a932eccf856c8e1315560a69",
+      "exact_copy": true
+    },
+    "reference/views/v214-assembly.png": {
+      "source": "hardware/enclosure/output/v214/views/assembly.png",
+      "source_sha256": "4db360c8ac7f9d193275cbf36df3d2dd88a34c72d8f09c114e54bb54da11d09d",
+      "exact_copy": true
+    },
+    "reference/views/v214-front.png": {
+      "source": "hardware/enclosure/output/v214/views/front.png",
+      "source_sha256": "d295ae0c40da9abcba811bea95b7c0596fee23dc7492b2dcd97262f2f93ccfac",
+      "exact_copy": true
+    },
+    "reference/views/v214-inside.png": {
+      "source": "hardware/enclosure/output/v214/views/inside.png",
+      "source_sha256": "a78337267f5991871da5126f96361fc004e0f08e7f3385970b7b7989c62a0671",
+      "exact_copy": true
+    },
+    "guides/FRONT-WIRING.md": {
+      "source": "hardware/enclosure/v214/FRONT-WIRING.md",
+      "source_sha256": "6fe4cec83dd4a429ca94dddc86a57088d32a86b8b45166c311bc4882637ad06f",
+      "exact_copy": true
+    }
+  },
+  "files_excluded_from_self_hash": [
+    "MANIFEST.json",
+    "SHA256SUMS.txt"
+  ],
+  "bambu_projects": 2,
+  "changed_production_parts": [
+    "01"
+  ],
+  "front_bounds_mm": [
+    129,
+    69,
+    11
+  ],
+  "rear_body_bounds_mm": [
+    120,
+    60,
+    24
+  ],
+  "files": [
+    {
+      "path": "alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "bytes": 7364,
+      "sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "source_sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/81-laminate-front-spacer.stl",
+      "bytes": 2084,
+      "sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/81-laminate-front-spacer.stl",
+      "source_sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/82-laminate-rear-shim.stl",
+      "bytes": 2084,
+      "sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/82-laminate-rear-shim.stl",
+      "source_sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/README.md",
+      "bytes": 1136,
+      "sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "source": "release/little-on-air-enclosure-v2.13/alternatives/laminate/README.md",
+      "source_sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "exact_copy": true
+    },
+    {
+      "path": "bambu-studio/on-air-v214-X1C-all-plates.3mf",
+      "bytes": 3195995,
+      "sha256": "e9076a053acd50517002bfc91d9fd91f85587953881bf1deb795400b817c9398",
+      "source": "hardware/enclosure/output/v214/bambu-studio/all-plates/on-air-v214-X1C-all-plates.3mf",
+      "source_sha256": "e9076a053acd50517002bfc91d9fd91f85587953881bf1deb795400b817c9398",
+      "exact_copy": true
+    },
+    {
+      "path": "bambu-studio/on-air-v214-X1C-front-only.3mf",
+      "bytes": 1172914,
+      "sha256": "c19506de36e4ef04a880ec4c983684f385fd3f688984948375725723af4adbac",
+      "source": "hardware/enclosure/output/v214/bambu-studio/front-only/on-air-v214-X1C-front-only.3mf",
+      "source_sha256": "c19506de36e4ef04a880ec4c983684f385fd3f688984948375725723af4adbac",
+      "exact_copy": true
+    },
+    {
+      "path": "BOM.csv",
+      "bytes": 4768,
+      "sha256": "97e798b7a7d7a2a58521d87d2b1a4ad96600966b2557b68bac7344b8e1fde74d",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "cad/little-on-air-v214-assembly.step",
+      "bytes": 2200654,
+      "sha256": "413af2b6ed90b4f4340743dd2c9021da8e6349ec1d7cf163d5d8d89d827d1aa8",
+      "source": "hardware/enclosure/output/v214/little-on-air-v214-assembly.step",
+      "source_sha256": "413af2b6ed90b4f4340743dd2c9021da8e6349ec1d7cf163d5d8d89d827d1aa8",
+      "exact_copy": true
+    },
+    {
+      "path": "cad/little-on-air-v214.f3d",
+      "bytes": 4127195,
+      "sha256": "22836634630de36c604c5dd024d70b3c53e1b8ca959ce705a55f3ab7c2e62eb3",
+      "source": "hardware/enclosure/output/v214/little-on-air-v214.f3d",
+      "source_sha256": "22836634630de36c604c5dd024d70b3c53e1b8ca959ce705a55f3ab7c2e62eb3",
+      "exact_copy": true
+    },
+    {
+      "path": "firmware/little-on-air-firmware-v0.1.2-source.zip",
+      "bytes": 52484,
+      "sha256": "d49763eb2411a710a5b5eecc0226f35331757cf315a8dd89830378236affa5a2",
+      "source": "release/little-on-air-enclosure-v2.13/firmware/little-on-air-firmware-v0.1.2-source.zip",
+      "source_sha256": "d49763eb2411a710a5b5eecc0226f35331757cf315a8dd89830378236affa5a2",
+      "exact_copy": true
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 410,
+      "sha256": "d4ca5ee65bade3349bc7f8d66c7c56cefd4773c7161cda2a880b238e518c7493",
+      "source": "release/little-on-air-enclosure-v2.13/firmware/README.md",
+      "source_sha256": "d4ca5ee65bade3349bc7f8d66c7c56cefd4773c7161cda2a880b238e518c7493",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/BUILD-AND-ASSEMBLY.md",
+      "bytes": 12518,
+      "sha256": "c8df6c71889ac3d26fa9468b23f30938d52c7e6d2865f13229421c07d3b4d107",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "guides/CAPACITOR-AND-RESISTOR.md",
+      "bytes": 6705,
+      "sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "source": "release/little-on-air-enclosure-v2.13/guides/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/COMMISSIONING.csv",
+      "bytes": 3939,
+      "sha256": "23fa02e45b8c61109ebeb0bf18d1cedc60e4550a530c685121ddb490ea60cb29",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "guides/FIRMWARE-STATUS.md",
+      "bytes": 1816,
+      "sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "source": "release/little-on-air-enclosure-v2.13/guides/FIRMWARE-STATUS.md",
+      "source_sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/FRONT-WIRING.md",
+      "bytes": 7824,
+      "sha256": "6fe4cec83dd4a429ca94dddc86a57088d32a86b8b45166c311bc4882637ad06f",
+      "source": "hardware/enclosure/v214/FRONT-WIRING.md",
+      "source_sha256": "6fe4cec83dd4a429ca94dddc86a57088d32a86b8b45166c311bc4882637ad06f",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/LASER.md",
+      "bytes": 5680,
+      "sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "source": "release/little-on-air-enclosure-v2.13/guides/LASER.md",
+      "source_sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/PRINTING.md",
+      "bytes": 5467,
+      "sha256": "4d8bc1bb521f64f79fd541923b2ab8b96c6e520e639ebf8b191aac8db42bb8ec",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "guides/WIRING.md",
+      "bytes": 8781,
+      "sha256": "f31d664e39087ab02c9acc7f6236cfc3a15ba79e27ffe2718b7b6e3fd5b73df7",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "bytes": 7383,
+      "sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "source": "release/little-on-air-enclosure-v2.13/laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "source_sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "bytes": 20115,
+      "sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "source": "release/little-on-air-enclosure-v2.13/laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "source_sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/90-fit-strip-CUT-ONLY.svg",
+      "bytes": 381,
+      "sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/90-fit-strip-CUT-ONLY.svg",
+      "source_sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/91-kerf-plug-and-frame-CUT.svg",
+      "bytes": 412,
+      "sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/91-kerf-plug-and-frame-CUT.svg",
+      "source_sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/92-engraving-quality-nine-samples-FILL.svg",
+      "bytes": 60932,
+      "sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "source": "release/little-on-air-enclosure-v2.13/laser/calibration/92-engraving-quality-nine-samples-FILL.svg",
+      "source_sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "exact_copy": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "source": "release/little-on-air-enclosure-v2.13/LICENSE",
+      "source_sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "exact_copy": true
+    },
+    {
+      "path": "PARTS.csv",
+      "bytes": 1076,
+      "sha256": "530e7d7e983dbfe5a314d867865758deaaccc9d7654168a5a9ece9e6c26d6256",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 4648,
+      "sha256": "09ac6dd34261e56832dea2e3a0cbbbe57ce93146669f8ac3096ad22ddf8a06e4",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/capacitor-resistor-wiring.svg",
+      "bytes": 5720,
+      "sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "source": "release/little-on-air-enclosure-v2.13/reference/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/fastener-layout.json",
+      "bytes": 3181,
+      "sha256": "b1607b3a98b8fc4248c73ae857059d3b56a2ab31b50bd5023aa19ee6cb569fc6",
+      "source": "release/little-on-air-enclosure-v2.13/reference/fastener-layout.json",
+      "source_sha256": "b1607b3a98b8fc4248c73ae857059d3b56a2ab31b50bd5023aa19ee6cb569fc6",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/front-wiring.svg",
+      "bytes": 47882,
+      "sha256": "fecd22cbec6fb7f30dcd671d037f5a5c1893b69970fb3a08d9f59a168baf2312",
+      "source": "hardware/enclosure/output/v214/front-wiring.svg",
+      "source_sha256": "fecd22cbec6fb7f30dcd671d037f5a5c1893b69970fb3a08d9f59a168baf2312",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/harness-length-guide.csv",
+      "bytes": 2291,
+      "sha256": "93d567354940a0fa35347dbff214a9a17664f8eb392ef394632035727f03bfd4",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/previews/02-acrylic-REAR-engrave-and-cut.png",
+      "bytes": 15699,
+      "sha256": "9a908d0232b3e2372574e233f30035ff2d0abe90ab6d442cd3b2d479027cacbc",
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/02-acrylic-REAR-engrave-and-cut.png",
+      "source_sha256": "9a908d0232b3e2372574e233f30035ff2d0abe90ab6d442cd3b2d479027cacbc",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/91-kerf-plug-and-frame-CUT.png",
+      "bytes": 6802,
+      "sha256": "b4556d1b1bb21512dbe13ec37bd73e3b728943843ea991281f8a18c6291e0dee",
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/91-kerf-plug-and-frame-CUT.png",
+      "source_sha256": "b4556d1b1bb21512dbe13ec37bd73e3b728943843ea991281f8a18c6291e0dee",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/92-engraving-quality-nine-samples-FILL.png",
+      "bytes": 35164,
+      "sha256": "1d985afea200640b6212d8e1018c18ab1380136811fe450b12753e391259abf8",
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/92-engraving-quality-nine-samples-FILL.png",
+      "source_sha256": "1d985afea200640b6212d8e1018c18ab1380136811fe450b12753e391259abf8",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/capacitor-resistor-wiring.png",
+      "bytes": 157147,
+      "sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "source": "release/little-on-air-enclosure-v2.13/reference/previews/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/front-wiring.png",
+      "bytes": 180751,
+      "sha256": "c087baa25cee3bd20dd34571bf67e28780e5e35a9d7d3b180799fbad54ebe12f",
+      "source": "hardware/enclosure/output/v214/front-wiring.png",
+      "source_sha256": "c087baa25cee3bd20dd34571bf67e28780e5e35a9d7d3b180799fbad54ebe12f",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/roof-toolpaths.png",
+      "bytes": 128933,
+      "sha256": "41d90fa7ba99003a2de98d4ba8fd6c0f696d4364a932eccf856c8e1315560a69",
+      "source": "hardware/enclosure/output/v214/roof-toolpaths.png",
+      "source_sha256": "41d90fa7ba99003a2de98d4ba8fd6c0f696d4364a932eccf856c8e1315560a69",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/roof-toolpaths.svg",
+      "bytes": 219226,
+      "sha256": "259a778fe46ceacec6ee2ec560fa835ebcdac2e33c6d43a2c0bc7a5136a7298d",
+      "source": "hardware/enclosure/output/v214/roof-toolpaths.svg",
+      "source_sha256": "259a778fe46ceacec6ee2ec560fa835ebcdac2e33c6d43a2c0bc7a5136a7298d",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/routing-coordinates.json",
+      "bytes": 7283,
+      "sha256": "bf316639b5ee66b9d1ca28f80045608be722920bef401d5ec7d10469e4bac326",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/views/complete-assembly.png",
+      "bytes": 193349,
+      "sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/complete-assembly.png",
+      "source_sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/front-captive-guide.png",
+      "bytes": 129427,
+      "sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/front-captive-guide.png",
+      "source_sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/front-guide-shape.png",
+      "bytes": 79878,
+      "sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/front-guide-shape.png",
+      "source_sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/rear-guide-keeper.png",
+      "bytes": 125017,
+      "sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/rear-guide-keeper.png",
+      "source_sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/rear-housing-with-retention.png",
+      "bytes": 233298,
+      "sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "source": "release/little-on-air-enclosure-v2.13/reference/views/rear-housing-with-retention.png",
+      "source_sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/v214-assembly.png",
+      "bytes": 178387,
+      "sha256": "4db360c8ac7f9d193275cbf36df3d2dd88a34c72d8f09c114e54bb54da11d09d",
+      "source": "hardware/enclosure/output/v214/views/assembly.png",
+      "source_sha256": "4db360c8ac7f9d193275cbf36df3d2dd88a34c72d8f09c114e54bb54da11d09d",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/v214-front.png",
+      "bytes": 122050,
+      "sha256": "d295ae0c40da9abcba811bea95b7c0596fee23dc7492b2dcd97262f2f93ccfac",
+      "source": "hardware/enclosure/output/v214/views/front.png",
+      "source_sha256": "d295ae0c40da9abcba811bea95b7c0596fee23dc7492b2dcd97262f2f93ccfac",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/v214-inside.png",
+      "bytes": 178351,
+      "sha256": "a78337267f5991871da5126f96361fc004e0f08e7f3385970b7b7989c62a0671",
+      "source": "hardware/enclosure/output/v214/views/inside.png",
+      "source_sha256": "a78337267f5991871da5126f96361fc004e0f08e7f3385970b7b7989c62a0671",
+      "exact_copy": true
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "bytes": 1288,
+      "sha256": "8a0185f5f72c956bee7f7edd238055623cc5629fa1df0af0743f4d1adb0046b0",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "stl/01-front-optical-bezel.stl",
+      "bytes": 213584,
+      "sha256": "8d1bd1eb22e0285f876e1c7302700971a6d3b51fc47dfd8be605761adcfb6838",
+      "source": "hardware/enclosure/output/v214/stl/01-front-optical-bezel.stl",
+      "source_sha256": "8d1bd1eb22e0285f876e1c7302700971a6d3b51fc47dfd8be605761adcfb6838",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/03-registered-graphic-backing.stl",
+      "bytes": 75284,
+      "sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "source": "release/little-on-air-enclosure-v2.13/stl/03-registered-graphic-backing.stl",
+      "source_sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/04-optical-retainer.stl",
+      "bytes": 26484,
+      "sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "source": "release/little-on-air-enclosure-v2.13/stl/04-optical-retainer.stl",
+      "source_sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/05-rear-electronics-housing.stl",
+      "bytes": 256084,
+      "sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "source": "release/little-on-air-enclosure-v2.13/stl/05-rear-electronics-housing.stl",
+      "source_sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/06-electronics-retaining-yoke.stl",
+      "bytes": 64884,
+      "sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "source": "release/little-on-air-enclosure-v2.13/stl/06-electronics-retaining-yoke.stl",
+      "source_sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/07-front-guided-reset-button.stl",
+      "bytes": 82684,
+      "sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "source": "release/little-on-air-enclosure-v2.13/stl/07-front-guided-reset-button.stl",
+      "source_sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/08-captive-front-rgb-guide.stl",
+      "bytes": 82884,
+      "sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "source": "release/little-on-air-enclosure-v2.13/stl/08-captive-front-rgb-guide.stl",
+      "source_sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/09-charger-light-guide.stl",
+      "bytes": 69684,
+      "sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "source": "release/little-on-air-enclosure-v2.13/stl/09-charger-light-guide.stl",
+      "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/11-rear-light-guide-keeper.stl",
+      "bytes": 98684,
+      "sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "source": "release/little-on-air-enclosure-v2.13/stl/11-rear-light-guide-keeper.stl",
+      "source_sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/build-record.json",
+      "bytes": 441,
+      "sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/build-record.json",
+      "source_sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/harness-validation.json",
+      "bytes": 16659,
+      "sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/harness-validation.json",
+      "source_sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/mesh-validation.json",
+      "bytes": 2330,
+      "sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/mesh-validation.json",
+      "source_sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/native-validation.json",
+      "bytes": 5048,
+      "sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/native-validation.json",
+      "source_sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/perimeter-validation.json",
+      "bytes": 1236,
+      "sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "source": "release/little-on-air-enclosure-v2.13/validation/cad-v213/perimeter-validation.json",
+      "source_sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v214/bridge-validation.json",
+      "bytes": 3288,
+      "sha256": "f7c93588a2d74df2edbb4d1ca604dce73fd81bbb428c9fa81eb162f31ec70370",
+      "source": "hardware/enclosure/output/v214/bridge-validation.json",
+      "source_sha256": "f7c93588a2d74df2edbb4d1ca604dce73fd81bbb428c9fa81eb162f31ec70370",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v214/final-native-check.json",
+      "bytes": 4039,
+      "sha256": "f1a9ff82a4805efdb4b43440beb9f2fe02fcee48535d8f79a0c28d5dcf446fa0",
+      "source": "hardware/enclosure/output/v214/final-native-check.json",
+      "source_sha256": "f1a9ff82a4805efdb4b43440beb9f2fe02fcee48535d8f79a0c28d5dcf446fa0",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v214/mesh-validation.json",
+      "bytes": 511,
+      "sha256": "766f53b3d7529b209c17f7785015bcf22ceca3c4a38d3a51decd5fd05153534b",
+      "source": "hardware/enclosure/output/v214/mesh-validation.json",
+      "source_sha256": "766f53b3d7529b209c17f7785015bcf22ceca3c4a38d3a51decd5fd05153534b",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v214/native-build.json",
+      "bytes": 4662,
+      "sha256": "b220c4c7fb41e85fc346abd84d0cb7f25d299ae05bc060cbd6d4026ba992cb33",
+      "source": "hardware/enclosure/output/v214/native-build.json",
+      "source_sha256": "b220c4c7fb41e85fc346abd84d0cb7f25d299ae05bc060cbd6d4026ba992cb33",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v214/native-validation.json",
+      "bytes": 53651,
+      "sha256": "0fac1d946df8d30722494128cfc00b6a6527869d48b70f4fdd60c2b26ec4c14d",
+      "source": "hardware/enclosure/output/v214/native-validation.json",
+      "source_sha256": "0fac1d946df8d30722494128cfc00b6a6527869d48b70f4fdd60c2b26ec4c14d",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/printing-source-manifest.json",
+      "bytes": 11672,
+      "sha256": "9080116415d225aa169cdade8c65009f2972cb236994f70898a0d908648c4461",
+      "source": "release/little-on-air-enclosure-v2.13/validation/printing-source-manifest.json",
+      "source_sha256": "9080116415d225aa169cdade8c65009f2972cb236994f70898a0d908648c4461",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/printing.json",
+      "bytes": 7500,
+      "sha256": "844aa445034162dfe832980624075732f71a119aa8b911f1120e65f9ab4f51ca",
+      "source": "hardware/enclosure/output/v214/printing-validation.json",
+      "source_sha256": "844aa445034162dfe832980624075732f71a119aa8b911f1120e65f9ab4f51ca",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 926,
+      "sha256": "460d7bc248aadec17be87a925d40e2924cde25632c6cc2a674c919d1cc0bcab4",
+      "source": "v2.14 release documentation/generated data",
+      "exact_copy": false
+    },
+    {
+      "path": "validation/release-audit.json",
+      "bytes": 4572,
+      "sha256": "a113fa9b92fb01ced01651d4c212dcd34de93b022451b9d3f28535452a2c32cc",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "validation/unchanged-v28/changed-interface-validation.json",
+      "bytes": 1515,
+      "sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/changed-interface-validation.json",
+      "source_sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/nut-access-validation.json",
+      "bytes": 2375,
+      "sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/nut-access-validation.json",
+      "source_sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/usb-and-optical-validation.json",
+      "bytes": 978,
+      "sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/usb-and-optical-validation.json",
+      "source_sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/wire-packing-validation.json",
+      "bytes": 6651,
+      "sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "source": "release/little-on-air-enclosure-v2.13/validation/unchanged-v28/wire-packing-validation.json",
+      "source_sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "exact_copy": true
+    }
+  ],
+  "validated": true
+}

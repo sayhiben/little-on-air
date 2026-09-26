@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "nominal_component_fit_passed": true,
+  "component_collisions": [],
+  "physical_fit_verified": false,
+  "component_source": "User-supplied measured envelopes plus Seeed XIAO reference STEP",
+  "xiao_reference_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "push_samples": [
+    {
+      "press_mm": -0.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.2,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.30000000000000004,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.4,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.5,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.6000000000000001,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.7000000000000001,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.8,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 0.9,
+      "overlap_mm3": 0.0
+    },
+    {
+      "press_mm": 1.0,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "encoder_insertion_max_overlap_mm3": 0.0004211681232211122,
+  "xiao_insertion_max_overlap_mm3": 0.0,
+  "weight_insertion_max_overlap_mm3": 0.0,
+  "carrier_insertion_max_overlap_mm3": 0.0,
+  "populated_face_closure_max_overlap_mm3": 0.0,
+  "diffuser_captured_front_and_rear": true,
+  "measured_active_area_unobstructed": true,
+  "weight_floor_verified_mm": 2.4,
+  "clearances_mm": {
+    "weight_side_per_outer_edge": 0.25,
+    "weight_gap_between": 0.5,
+    "weight_under_xiao_carrier": 0.7,
+    "encoder_box_each_side": 0.2,
+    "encoder_box_top_adhesive_gap": 0.25,
+    "collar_radial": 0.2,
+    "knob_rest_to_shell": 1.2,
+    "knob_after_1mm_press_to_shell": 0.2,
+    "D_shaft_radial": 0.1,
+    "D_flat": 0.15,
+    "OLED_PCB_sides": 0.2,
+    "OLED_PCB_ends": 0.2,
+    "OLED_glass_to_faceplate_rear": 0.5,
+    "strip_each_side": 0.2,
+    "strip_each_end": 0.2,
+    "strip_back_mount_tape": 0.2,
+    "diffuser_stem_radial": 0.15,
+    "diffuser_flange_radial": 0.2,
+    "diffuser_back_to_LED_envelope": 1.5,
+    "cassette_side": 0.2,
+    "cassette_back": 0.2,
+    "xiao_carrier_sides": 0.2,
+    "xiao_PCB_side": 0.21,
+    "xiao_mount_tape": 0.3
+  },
+  "assumed_connector_envelopes": {
+    "encoder_mm": [
+      13.5,
+      8.5,
+      3
+    ],
+    "oled_mm": [
+      10.8,
+      8,
+      2.6
+    ]
+  },
+  "limitations": [
+    "Approximate mounting-hole offsets are edge clearances, not centers; no printed locating pins depend on them.",
+    "Encoder 1.9 mm pin spacing is conservatively treated as clear gap, or 2.54 mm pitch; no mating connector is fabricated.",
+    "Encoder tab plan dimensions and push travel were not supplied; reserve 12 x 3 mm and 1 mm travel.",
+    "Connector housings were not supplied; modeled clear envelopes are stated separately from measured pin fit.",
+    "Glass height means its front is 2 mm above PCB front; the entire 2 mm volume is reserved."
+  ]
+}

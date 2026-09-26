@@ -1,0 +1,20 @@
+Item,Quantity,Specification,Notes
+Controller,1,Seeed Studio XIAO ESP32-S3 standard 21 x 17.8 mm,No Sense expansion board; USB-powered
+BLE antenna,1,XIAO-compatible U.FL flexible antenna,Use antenna supplied with board; mount on upper plastic wall away from ballast
+Display,1,Igor-compatible 0.96 inch SSD1306 128x64 I2C OLED,27 x 27 mm PCB family; match original faceplate and 21.2 x 23 mm mounting-center pattern before buying
+Encoder,1,KY-040 rotary encoder module with pushbutton,Use Igor-compatible shaft and supplied panel nut/washer; connect module to 3.3 V
+Status LED,1,WS2812B RGB 5050 on 10 x 10 x 1.6 mm PCB,Centered emitter up to 1.6 mm tall; solder wires on rear; do not substitute a 12 mm Flora disc
+Level shifter,1,SN74AHCT1G125 at 5 V on small breakout,TTL-compatible input; completed insulated assembly must fit 18 x 12 x 4 mm envelope
+Pixel data resistor,1,330 ohm 0.125 W or smaller,Between shifter output and pixel DIN
+Input pulldown,1,100 kilohm,Shifter A input to ground
+Ceramic bypass capacitors,2,100 nF,At shifter supply and pixel supply; onboard capacitor may fulfill pixel requirement
+Bulk capacitor,1,47 uF at least 10 V low profile,Across 5 V/GND near pixel feed; maximum diameter 6.3 mm and length 8.5 mm
+Case screws,4,M3 x 8 mm 90-degree countersunk,Overall length including head; maximum head diameter 6.2 mm
+Heat-set inserts,4,M3 nominal 4.2 mm OD x 4 mm long,4.0 mm pilot; test actual insert fit on scrap first
+Wheel weight segments,up to 16,5 g steel adhesive segments,Each at most 19 x 11.5 x 4 mm including tape; two layers provide 80 g
+Rubber feet,4,Approximately 8 mm diameter x 1.2 mm,Adhere to bottom cover; clear screws
+XIAO mounting tape,1 piece,0.3 mm thick electrically insulating double-sided tape,13 x 17 mm maximum on center pedestal; USB insertion stop is printed
+Insulation and wire,as needed,28-30 AWG stranded insulated wire and heat shrink,No pin headers; insulate auxiliary board and capacitor leads
+Anti-rattle pad,1,Thin closed-cell foam,Compress lightly over ballast; total weights/tape/pad no more than 10 mm
+USB cable,1,USB-C data cable from computer,Case checked for plug overmould at most 12 mm wide x 7 mm high
+Printed parts,5,Shell/faceplate/hat/cover/diffuser,See STL and Bambu projects

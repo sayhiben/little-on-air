@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "changed_components": [
+    "06 Electronics retaining yoke",
+    "05 Rear electronics housing"
+  ],
+  "unchanged_components": [
+    "01 Front optical bezel",
+    "02 Clear acrylic",
+    "03 Registered graphic backing",
+    "04 Optical retainer",
+    "81 Laminate front spacer",
+    "82 Laminate rear shim",
+    "REF Four LEDs",
+    "REF Charger",
+    "REF SPDT power switch",
+    "REF SPDT moving lever",
+    "REF DPDT",
+    "REF DPDT moving actuator",
+    "REF XIAO",
+    "07 Front guided reset button",
+    "REF Battery",
+    "REF Capacitor",
+    "REF M3 screws",
+    "REF M3 nuts",
+    "09 Upper charger light guide",
+    "10 Lower charger light guide",
+    "08 Front RGB light guide",
+    "REF Guide keeper hardware",
+    "11 Rear light guide keeper"
+  ],
+  "interface_checks": [
+    {
+      "name": "Left screw seat",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Right screw seat",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "XIAO complete",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "MODE contact pads",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Charger lower contact pads",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Charger left upper contact",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "POWER left contact",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "POWER right contact",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "POWER body supports",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "POWER mounting flange",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "MODE body seat",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "name": "Charger complete",
+      "changed_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "feature_health": [],
+  "added_yoke_mm3": 193.3026250000003,
+  "removed_yoke_mm3": 170.89587500000042,
+  "removed_rear_mm3": 40.21789999999979,
+  "added_rear_mm3": 0.0,
+  "minimum_relieved_charger_rail_width_mm": 4.0,
+  "reinforced_MODE_rail_width_mm": 4.9,
+  "wire_groove_floor_mm": 1.95,
+  "retainer_original_thickness_mm": 2.75,
+  "upper_right_charger_contact_change": "Relocated from outer corner to the bare PCB front below the USB end: X17.9..20.3,Y53.7..56.7. Unchanged 2.4 x3 mm contact area, 2.8 mm height and 0.15 mm PCB face clearance.",
+  "final_lip_cleanup": {
+    "removed_mm3": 0.29564999999988745,
+    "added_mm3": 0.0,
+    "no_new_interference_possible": true,
+    "body_seat_Y_55_29_and_beyond_unchanged": true
+  },
+  "relocated_contact_support": {
+    "angle_degrees": 45,
+    "added_mm3": 1.083,
+    "bounds_mm": [
+      [
+        17.9,
+        53.7,
+        -12.350000000000001
+      ],
+      [
+        20.299999999999997,
+        54.65,
+        -11.400000000000002
+      ]
+    ],
+    "maximum_depth_mm": 12.35,
+    "nearest_wire_envelope_depth_mm": 12.85
+  }
+}

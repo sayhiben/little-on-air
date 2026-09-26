@@ -15,8 +15,12 @@
 #include <little_on_air/protocol.h>
 #include <little_on_air/receiver_processor.h>
 #include <little_on_air/store.h>
+#include <little_on_air/status_output.h>
+#include <little_on_air/pairing_control.h>
 
 #include "ble_server.h"
+#include "device_indicator.h"
+#include "pair_reset.h"
 
 #if !defined(CONFIG_BT_SMP_SC_PAIR_ONLY) || defined(CONFIG_BT_SMP_SC_ONLY)
 #error "Little On Air requires LE Secure Connections pairing with Just Works support"
@@ -24,12 +28,11 @@
 
 LOG_MODULE_REGISTER(loa_receiver_ble);
 
-#define PAIRING_WINDOW           K_SECONDS(60)
-#define PAIR_SUCCESS_DURATION_MS 900U
-#define ADV_RESTART_DELAY        K_MSEC(100)
-#define ADV_RETRY_DELAY          K_MSEC(250)
-#define ADV_FAST_INTERVAL        0x00a0U
-#define ADV_SLOW_INTERVAL        0x0640U
+#define PAIRING_WINDOW    K_SECONDS(60)
+#define ADV_RESTART_DELAY K_MSEC(100)
+#define ADV_RETRY_DELAY   K_MSEC(250)
+#define ADV_FAST_INTERVAL 0x00a0U
+#define ADV_SLOW_INTERVAL 0x0640U
 
 static struct bt_uuid_128 service_uuid = BT_UUID_INIT_128(LOA_BT_UUID_SERVICE_VAL);
 static struct bt_uuid_128 command_uuid = BT_UUID_INIT_128(LOA_BT_UUID_COMMAND_VAL);
@@ -40,11 +43,9 @@ static struct bt_conn *current_conn;
 static struct k_work indication_work;
 static struct k_work_delayable advertising_restart_work;
 static struct k_work_delayable pairing_timeout_work;
-static struct k_work_delayable pair_success_done_work;
 static struct bt_gatt_indicate_params indication_params;
 static uint8_t state_payload[LOA_PROTOCOL_PAYLOAD_LEN];
 static atomic_t indicating;
-static atomic_t pair_success_active;
 static bool indications_enabled;
 static bool advertising;
 static bool pairing_window_open;
@@ -64,6 +65,11 @@ static int apply_state(const struct loa_message *state, void *user_data)
 {
 	ARG_UNUSED(user_data);
 	LOG_INF("apply transaction=0x%08x status=%u", state->transaction_id, state->status);
+#if defined(CONFIG_LED_STRIP)
+	if (loa_status_output_test_active()) {
+		(void)loa_status_output_test_pixel(UINT8_MAX, (struct loa_rgb){0});
+	}
+#endif
 	loa_indicator_set(LOA_PATTERN_SOLID, state->status);
 	return 0;
 }
@@ -150,13 +156,80 @@ static void state_ccc_changed(const struct bt_gatt_attr *attr, uint16_t value)
 	LOG_INF("CCC changed value=0x%04x indications=%u", value, indications_enabled);
 }
 
+#if defined(CONFIG_LED_STRIP)
+/* Optional, encrypted diagnostics: version, pixel index (255=end), R, G, B.
+ * This characteristic leaves the six-byte status protocol and stored state alone. */
+static struct bt_uuid_128 pixel_uuid =
+	BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x7f6c0003, 0x6b7e, 0x4c80, 0x9f2a, 0xf9b9d7e2a601));
+static uint8_t pixel_payload[5] = {1, UINT8_MAX, 0, 0, 0};
+
+static ssize_t read_pixel(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf,
+			  uint16_t len, uint16_t offset)
+{
+	const uint8_t idle[] = {1, UINT8_MAX, 0, 0, 0};
+	const uint8_t *payload = loa_status_output_test_active() ? pixel_payload : idle;
+	return bt_gatt_attr_read(conn, attr, buf, len, offset, payload, sizeof(pixel_payload));
+}
+
+static ssize_t write_pixel(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf,
+			   uint16_t len, uint16_t offset, uint8_t flags)
+{
+	ARG_UNUSED(conn);
+	ARG_UNUSED(attr);
+	const uint8_t *data = buf;
+	if (offset != 0 || (flags & BT_GATT_WRITE_FLAG_PREPARE) != 0 || len != 5) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_ATTRIBUTE_LEN);
+	}
+	if (data[0] != 1 || (data[1] >= 4 && data[1] != UINT8_MAX)) {
+		return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+	}
+	int err =
+		loa_status_output_test_pixel(data[1], (struct loa_rgb){data[2], data[3], data[4]});
+	if (err != 0) {
+		return BT_GATT_ERR(BT_ATT_ERR_UNLIKELY);
+	}
+	memcpy(pixel_payload, data, sizeof(pixel_payload));
+	LOG_INF("pixel test index=%u rgb=%u,%u,%u", data[1], data[2], data[3], data[4]);
+	return len;
+}
+#endif
+
+static struct bt_uuid_128 pairing_control_uuid =
+	BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x7f6c0004, 0x6b7e, 0x4c80, 0x9f2a, 0xf9b9d7e2a601));
+
+static ssize_t write_pairing_control(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+				     const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
+{
+	ARG_UNUSED(attr);
+	if (offset != 0U || (flags & BT_GATT_WRITE_FLAG_PREPARE) != 0U ||
+	    !loa_pairing_control_valid(buf, len)) {
+		return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+	}
+	if (!bonded || conn != current_conn || bt_conn_get_security(conn) < BT_SECURITY_L2) {
+		return BT_GATT_ERR(BT_ATT_ERR_AUTHORIZATION);
+	}
+	/* An ATT success response means the reset intent is durable. */
+	int err = loa_pair_reset_request();
+	LOG_INF("remote forget persisted=%d", err);
+	return err == 0 ? len : BT_GATT_ERR(BT_ATT_ERR_UNLIKELY);
+}
+
 BT_GATT_SERVICE_DEFINE(
 	loa_service, BT_GATT_PRIMARY_SERVICE(&service_uuid),
 	BT_GATT_CHARACTERISTIC(&command_uuid.uuid, BT_GATT_CHRC_WRITE, BT_GATT_PERM_WRITE_ENCRYPT,
 			       NULL, write_command, NULL),
 	BT_GATT_CHARACTERISTIC(&state_uuid.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_INDICATE,
 			       BT_GATT_PERM_READ_ENCRYPT, read_state, NULL, NULL),
-	BT_GATT_CCC(state_ccc_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE_ENCRYPT));
+	BT_GATT_CCC(state_ccc_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE_ENCRYPT)
+#if defined(CONFIG_LED_STRIP)
+		,
+	BT_GATT_CHARACTERISTIC(&pixel_uuid.uuid, BT_GATT_CHRC_WRITE | BT_GATT_CHRC_READ,
+			       BT_GATT_PERM_WRITE_ENCRYPT | BT_GATT_PERM_READ_ENCRYPT, read_pixel,
+			       write_pixel, NULL)
+#endif
+		,
+	BT_GATT_CHARACTERISTIC(&pairing_control_uuid.uuid, BT_GATT_CHRC_WRITE,
+			       BT_GATT_PERM_WRITE_ENCRYPT, NULL, write_pairing_control, NULL));
 
 static void send_indication(struct k_work *work)
 {
@@ -295,14 +368,8 @@ static void pairing_window_expired(struct k_work *work)
 		loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
 		(void)start_advertising(false, true);
 	} else {
-		loa_indicator_set(LOA_PATTERN_DESYNCED, LOA_STATUS_OFF);
+		loa_device_indicator_set(LOA_DEVICE_UNPAIRED);
 	}
-}
-
-static void pair_success_finished(struct k_work *work)
-{
-	ARG_UNUSED(work);
-	atomic_clear(&pair_success_active);
 }
 
 static void connected(struct bt_conn *conn, uint8_t err)
@@ -315,7 +382,12 @@ static void connected(struct bt_conn *conn, uint8_t err)
 	(void)k_work_cancel_delayable(&advertising_restart_work);
 	advertising = false;
 	current_conn = bt_conn_ref(conn);
-	loa_indicator_set(LOA_PATTERN_SYNCING, processor.current.status);
+	/* Bonded peers connect briefly for commands and once-per-minute reads.
+	 * Transport activity must never replace the sign's actual status.
+	 */
+	if (!bonded) {
+		loa_device_indicator_set(LOA_DEVICE_PAIRING);
+	}
 }
 
 static void disconnected(struct bt_conn *conn, uint8_t reason)
@@ -332,13 +404,11 @@ static void disconnected(struct bt_conn *conn, uint8_t reason)
 	atomic_clear(&indicating);
 
 	if (bonded) {
-		if (atomic_get(&pair_success_active) == 0) {
-			loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
-		}
+		/* Preserve output and animation phase across routine disconnects. */
 	} else if (pairing_window_open) {
-		loa_indicator_set(LOA_PATTERN_SYNCING, LOA_STATUS_OFF);
+		loa_device_indicator_set(LOA_DEVICE_PAIRING);
 	} else {
-		loa_indicator_set(LOA_PATTERN_DESYNCED, LOA_STATUS_OFF);
+		loa_device_indicator_set(LOA_DEVICE_UNPAIRED);
 		return;
 	}
 
@@ -361,10 +431,8 @@ static void pairing_complete(struct bt_conn *conn, bool is_bonded)
 	bonded = true;
 	pairing_window_open = false;
 	(void)k_work_cancel_delayable(&pairing_timeout_work);
-	atomic_set(&pair_success_active, 1);
-	(void)k_work_reschedule(&pair_success_done_work, K_MSEC(PAIR_SUCCESS_DURATION_MS));
-	loa_indicator_play(LOA_PATTERN_PAIR_SUCCESS, processor.current.status, LOA_PATTERN_SOLID,
-			   processor.current.status);
+	loa_device_indicator_set(LOA_DEVICE_READY);
+	loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
 }
 
 static void pairing_failed(struct bt_conn *conn, enum bt_security_err reason)
@@ -400,7 +468,6 @@ int loa_ble_server_init(const struct loa_message *initial_state)
 	k_work_init(&indication_work, send_indication);
 	k_work_init_delayable(&advertising_restart_work, restart_advertising);
 	k_work_init_delayable(&pairing_timeout_work, pairing_window_expired);
-	k_work_init_delayable(&pair_success_done_work, pair_success_finished);
 	loa_receiver_processor_init(&processor, initial_state, persist_state, apply_state,
 				    acknowledge_state, NULL);
 	int err = bt_conn_auth_info_cb_register(&auth_info_callbacks);
@@ -415,17 +482,19 @@ int loa_ble_server_start(bool pairing_requested)
 	bonded = loa_ble_server_has_bond();
 	LOG_INF("server start pairing_requested=%u bonded=%u", pairing_requested, bonded);
 	if (bonded) {
+		loa_device_indicator_set(LOA_DEVICE_READY);
 		loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
 		return start_advertising(false, true);
 	}
 
 	if (!pairing_requested) {
-		loa_indicator_set(LOA_PATTERN_DESYNCED, LOA_STATUS_OFF);
+		loa_device_indicator_set(LOA_DEVICE_UNPAIRED);
 		return 0;
 	}
 
 	pairing_window_open = true;
-	loa_indicator_set(LOA_PATTERN_SYNCING, LOA_STATUS_OFF);
+	loa_device_indicator_set(LOA_DEVICE_PAIRING);
+	loa_indicator_set(LOA_PATTERN_SOLID, LOA_STATUS_OFF);
 	(void)k_work_reschedule(&pairing_timeout_work, PAIRING_WINDOW);
 	return start_advertising(true, false);
 }

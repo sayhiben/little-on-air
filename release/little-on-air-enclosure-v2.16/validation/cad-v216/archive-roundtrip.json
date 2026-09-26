@@ -1,0 +1,14 @@
+[
+  {
+    "name": "05-rear-electronics-housing.stl",
+    "volume_mm3": 31944.21293340092,
+    "faces": 525,
+    "triangles": 258284
+  },
+  {
+    "name": "06-electronics-retaining-yoke.stl",
+    "volume_mm3": 3758.4037738394186,
+    "faces": 213,
+    "triangles": 69884
+  }
+]

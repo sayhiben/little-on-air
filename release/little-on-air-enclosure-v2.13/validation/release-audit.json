@@ -140,7 +140,7 @@
     }
   },
   "laser_review_outputs_disabled": true,
-  "guide_links_checked": 34,
+  "guide_links_checked": 41,
   "firmware_version": "0.1.2",
   "firmware_onboard_RGB_only": true,
   "no_geometry_or_machine_jobs_performed": true,

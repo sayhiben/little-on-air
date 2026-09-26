@@ -1,0 +1,244 @@
+{
+  "passed": true,
+  "changed_components": [
+    "01 Front optical bezel"
+  ],
+  "unchanged_components_native_symmetric_difference": [
+    "02 Clear acrylic",
+    "03 Registered graphic backing",
+    "04 Optical retainer",
+    "81 Laminate front spacer",
+    "82 Laminate rear shim",
+    "REF Four LEDs",
+    "REF Charger",
+    "REF SPDT power switch",
+    "REF SPDT moving lever",
+    "REF DPDT",
+    "REF DPDT moving actuator",
+    "REF XIAO",
+    "05 Rear electronics housing",
+    "06 Electronics retaining yoke",
+    "07 Front guided reset button",
+    "REF Battery",
+    "REF Capacitor",
+    "REF M3 screws",
+    "REF M3 nuts",
+    "09 Upper charger light guide",
+    "10 Lower charger light guide",
+    "08 Front RGB light guide",
+    "REF Guide keeper hardware",
+    "11 Rear light guide keeper"
+  ],
+  "critical_unchanged_regions": [
+    {
+      "region": "Reset guide",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical stack and aperture",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw and compression post 6,6",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw and compression post 6,54",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw and compression post 114,6",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw and compression post 114,54",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical retainer boss and nut 6",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical retainer boss and nut 54",
+      "changed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "RGB guide bearing",
+      "changed_mm3": 0.0,
+      "passed": true,
+      "depth_range_mm": [
+        1.5,
+        11.01
+      ]
+    },
+    {
+      "region": "RGB front aperture",
+      "changed_mm3": 0.0,
+      "passed": true,
+      "depth_range_mm": [
+        0,
+        11.01
+      ]
+    }
+  ],
+  "feature_health_failures": [],
+  "front_bounds_mm": [
+    129,
+    69,
+    11
+  ],
+  "tunnel_width_mm": 4.2,
+  "tunnel_depth_range_mm": [
+    1.8,
+    8.1
+  ],
+  "roof_mm": 1.4,
+  "outer_wall_min_mm": 1.6,
+  "outer_bevel_mm": 1.4,
+  "led_floor_depth_mm": 2.1875,
+  "led_access_windows": [
+    {
+      "led_center": [
+        40,
+        6.8
+      ],
+      "side": "left",
+      "x": 28.2,
+      "y": 1.2,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        40,
+        6.8
+      ],
+      "side": "right",
+      "x": 44.5,
+      "y": 1.2,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        40,
+        53.2
+      ],
+      "side": "left",
+      "x": 28.2,
+      "y": 50.6,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        40,
+        53.2
+      ],
+      "side": "right",
+      "x": 44.5,
+      "y": 50.6,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        80,
+        6.8
+      ],
+      "side": "left",
+      "x": 68.2,
+      "y": 1.2,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        80,
+        6.8
+      ],
+      "side": "right",
+      "x": 84.5,
+      "y": 1.2,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        80,
+        53.2
+      ],
+      "side": "left",
+      "x": 68.2,
+      "y": 50.6,
+      "width": 7.3,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    },
+    {
+      "led_center": [
+        80,
+        53.2
+      ],
+      "side": "right",
+      "x": 84.5,
+      "y": 50.6,
+      "width": 4.0,
+      "height": 8.2,
+      "depth_range": [
+        1.8,
+        8.1
+      ]
+    }
+  ],
+  "added_mm3": 9264.029726421246,
+  "removed_mm3": 3561.1857206136015,
+  "reset_collar_keepout": {
+    "min": [
+      89.15,
+      53.2,
+      5.8
+    ],
+    "max": [
+      94.88,
+      58.85,
+      9.51
+    ],
+    "scope": "Added rim only; original v2.13 bearing geometry preserved"
+  }
+}

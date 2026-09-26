@@ -1,0 +1,312 @@
+[
+  {
+    "project": "igor-flat-base-v3-X1C-PLA-shell-hat.3mf",
+    "objects": [
+      {
+        "file": "01-igor-flat-base-shell.stl",
+        "sha256": "9c5a0ec2deeff78973315d5457b2d239d6073eee33f54c498e1f2ad403630d56",
+        "support": true,
+        "center_xy": [
+          100,
+          110
+        ]
+      },
+      {
+        "file": "03-igor-hat-original.stl",
+        "sha256": "e44f3a6987f65d22b15c381e1172569884c7e5572029e024fb77873915f58eef",
+        "support": false,
+        "center_xy": [
+          170,
+          110
+        ]
+      }
+    ],
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 1534,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 228,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 48.198486328125,
+            "Bridge": 138.34812927246094,
+            "Brim": 74.06672668457031,
+            "Custom": 503.1578063964844,
+            "Flush": 29.0,
+            "Gap infill": 5.6148152351379395,
+            "Inner wall": 3441.318603515625,
+            "Internal solid infill": 500.69488525390625,
+            "Outer wall": 3160.133056640625,
+            "Overhang wall": 36.808624267578125,
+            "Sparse infill": 1408.5125732421875,
+            "Support": 1467.3709716796875,
+            "Support interface": 817.2012939453125,
+            "Support transition": 15.52035140991211,
+            "Top surface": 87.05977630615234,
+            "Travel": 719.5504760742188,
+            "Undefined": 704.239990234375
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 63.43845748901367,
+              "total_used_g": 63.43845748901367
+            }
+          ],
+          "generate_support_material_time": 781,
+          "id": 1,
+          "infill_time": 669,
+          "layer_filament_change": 0,
+          "main_predication": 11891.55078125,
+          "make_perimeters_time": 921,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0528564453125,
+                "height": 70.26528930664062,
+                "width": 49.0,
+                "x": 75.5,
+                "y": 79.97357177734375,
+                "z": 4.6679687670803105e-08
+              },
+              "id": 5,
+              "name": "01-igor-flat-base-shell.stl",
+              "triangle_count": 30946
+            },
+            {
+              "bbox": {
+                "depth": 38.56535339355469,
+                "height": 20.0,
+                "width": 38.56536102294922,
+                "x": 150.71731567382812,
+                "y": 90.71732330322266,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "03-igor-hat-original.stl",
+              "triangle_count": 4752
+            }
+          ],
+          "sliced_time": 4913,
+          "sliced_time_with_cache": 2196,
+          "total_predication": 12437.3671875,
+          "triangle_count": 35698,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "profile_overrides": {
+      "print_settings_id": "igor-flat-base-v3-X1C-PLA-shell-hat",
+      "scan_first_layer": "0",
+      "layer_height": ".2",
+      "initial_layer_print_height": ".2",
+      "wall_loops": "4",
+      "sparse_infill_density": "25%",
+      "sparse_infill_pattern": "gyroid",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "5",
+      "enable_support": "1",
+      "support_type": "normal(auto)",
+      "support_style": "snug",
+      "support_on_build_plate_only": "0",
+      "support_threshold_angle": "30",
+      "support_top_z_distance": ".2",
+      "support_object_xy_distance": ".35",
+      "support_interface_top_layers": "2",
+      "brim_type": "outer_only",
+      "brim_width": "3",
+      "brim_object_gap": ".15",
+      "enable_prime_tower": "0",
+      "outer_wall_speed": "50",
+      "inner_wall_speed": "100",
+      "bridge_speed": "25",
+      "initial_layer_speed": "25",
+      "initial_layer_infill_speed": "35"
+    }
+  },
+  {
+    "project": "igor-flat-base-v3-X1C-PLA-face-inlays.3mf",
+    "objects": [
+      {
+        "file": "02-igor-front-led-faceplate.stl",
+        "sha256": "cb159608a2c09f7d5e661b00000561c5a4973fc255bdec4fa229bdf33ff400d7",
+        "support": false,
+        "center_xy": [
+          100,
+          110
+        ]
+      },
+      {
+        "file": "04-igor-small-inlay-original.stl",
+        "sha256": "3b9b73bccaadf783e399a32d84cbf5886417a23ac25aed2fb12e2f54801a1686",
+        "support": false,
+        "center_xy": [
+          160,
+          90
+        ]
+      },
+      {
+        "file": "05-igor-large-inlay-original.stl",
+        "sha256": "ea1c725bd5bb27c6493a3548497e0269782d3b2ace54a37bb7364f104e97af26",
+        "support": false,
+        "center_xy": [
+          160,
+          140
+        ]
+      }
+    ],
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 459,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 96,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 57.72114944458008,
+            "Brim": 80.88985443115234,
+            "Custom": 503.2883605957031,
+            "Flush": 29.0,
+            "Gap infill": 0.5681682825088501,
+            "Inner wall": 88.8659896850586,
+            "Internal solid infill": 195.06460571289062,
+            "Outer wall": 172.4574737548828,
+            "Top surface": 62.592769622802734,
+            "Travel": 45.40787887573242,
+            "Undefined": 30.026165008544922
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 3.5652031898498535,
+              "total_used_g": 3.5652031898498535
+            }
+          ],
+          "generate_support_material_time": 20,
+          "id": 1,
+          "infill_time": 60,
+          "layer_filament_change": 0,
+          "main_predication": 674.620849609375,
+          "make_perimeters_time": 148,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 35.60000228881836,
+                "height": 4.0,
+                "width": 46.60000228881836,
+                "x": 76.69999694824219,
+                "y": 92.19999694824219,
+                "z": 0.0
+              },
+              "id": 5,
+              "name": "02-igor-front-led-faceplate.stl",
+              "triangle_count": 11506
+            },
+            {
+              "bbox": {
+                "depth": 21.595731735229492,
+                "height": 0.7999991774559021,
+                "width": 21.60000228881836,
+                "x": 149.1999969482422,
+                "y": 79.20213317871094,
+                "z": 1.127204907191981e-08
+              },
+              "id": 9,
+              "name": "04-igor-small-inlay-original.stl",
+              "triangle_count": 1264
+            },
+            {
+              "bbox": {
+                "depth": 26.594741821289062,
+                "height": 0.7999991774559021,
+                "width": 26.60000228881836,
+                "x": 146.6999969482422,
+                "y": 126.70262908935547,
+                "z": 1.127204907191981e-08
+              },
+              "id": 13,
+              "name": "05-igor-large-inlay-original.stl",
+              "triangle_count": 1264
+            }
+          ],
+          "sliced_time": 587,
+          "sliced_time_with_cache": 330,
+          "total_predication": 1220.496826171875,
+          "triangle_count": 14034,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "profile_overrides": {
+      "print_settings_id": "igor-flat-base-v3-X1C-PLA-face-inlays",
+      "scan_first_layer": "0",
+      "layer_height": ".2",
+      "initial_layer_print_height": ".2",
+      "wall_loops": "4",
+      "sparse_infill_density": "25%",
+      "sparse_infill_pattern": "gyroid",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "5",
+      "enable_support": "1",
+      "support_type": "normal(auto)",
+      "support_style": "snug",
+      "support_on_build_plate_only": "0",
+      "support_threshold_angle": "30",
+      "support_top_z_distance": ".2",
+      "support_object_xy_distance": ".35",
+      "support_interface_top_layers": "2",
+      "brim_type": "outer_only",
+      "brim_width": "3",
+      "brim_object_gap": ".15",
+      "enable_prime_tower": "0",
+      "outer_wall_speed": "50",
+      "inner_wall_speed": "100",
+      "bridge_speed": "25",
+      "initial_layer_speed": "25",
+      "initial_layer_infill_speed": "35"
+    }
+  }
+]

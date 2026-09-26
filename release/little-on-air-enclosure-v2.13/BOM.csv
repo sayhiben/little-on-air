@@ -15,8 +15,8 @@ CH1,1,HiLetgo TP4056 USB-C with protection,Measured PCB 28.1 x17.5; USB 8.85 x3.
 S2,1,WMYCONGCONG DPDT B07F7PNDGM,Body9.1 x3.72 x3.36; six legs0.7 wide x3.25 projection; 1.85 clear gaps; actuator1.5 square x1.87; travel2.4; no flange,Exposed fingernail slider; retained by yoke; open terminal channels,Owned; confirm MCU branch current
 S1,1,Tnuocke SPDT SS12F15-G5 B099N3HFPG,Measured body10.6 x6 x5.05; flange19.73; terminals2.6; actuator2.95 square x5 high; travel2.85,Integrated POWER nest; retained by yoke,Owned; measured body fit retained
 LED1-4,4,Adafruit side-light RGB NeoPixel segments,Measured nominal 8 x 8 x 2; verify cut outline; keep SMD capacitors,Front seats,Owned; keep existing SMD components
-C1,1,680 uF aluminium electrolytic,>=6.3 V; body <=8 diameter x11.5 long; polarity marked,On its side in right lower bay; across VBAT_SW and protected ground,Selected addition; body fit check
-R1,1,330 ohm data series resistor,330 ohm; insulated body <=12 long x3.2 diameter,Behind LED1 in reserved inline assembly bay,Additional
+C1,1,680 uF aluminium electrolytic,>=6.3 V; body <=8 diameter x11.5 long; polarity marked,"Rear right lower bay; + to VBAT_SW after S1, - to charger OUT-; two branch splices; see capacitor/resistor guide",Selected addition; body fit check
+R1,1,330 ohm data series resistor,330 ohm; insulated body <=12 long x3.2 diameter,Front DATA pigtail -> R1 -> LED1 DIN; either orientation; behind LED1; see capacitor/resistor guide,Additional
 J1,1,User pigtail disconnects,Mated envelope <=13 x10 x7.5 reserved; verify pinout and actual bends,Left lower service bay,User supplied
 W1,3 m total,Flexible stranded 28 AWG wire,Insulated OD <=0.9; three colors; cut from routing list,Dressed LED bundles and individual leads; routing length guide,Additional
 W2,1 m total,Flexible stranded 30 AWG wire,Insulated OD <=0.8; signal/XIAO low-current branch,Paired power fanout and signal leads; OD <=0.8 for pairs,Additional

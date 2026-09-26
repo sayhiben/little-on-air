@@ -1,0 +1,290 @@
+[
+  {
+    "name": "Upper rear-emerging lead 37.3,50.8",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        50.8,
+        5.3
+      ],
+      [
+        37.3,
+        50.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 37.3,52.8",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        52.8,
+        5.3
+      ],
+      [
+        37.3,
+        52.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 37.3,54.8",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        54.8,
+        5.3
+      ],
+      [
+        37.3,
+        54.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 44.6,50.8",
+    "radius": 1,
+    "points": [
+      [
+        44.6,
+        50.8,
+        5.3
+      ],
+      [
+        44.6,
+        50.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 44.6,52.8",
+    "radius": 1,
+    "points": [
+      [
+        44.6,
+        52.8,
+        5.3
+      ],
+      [
+        44.6,
+        52.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 44.6,54.8",
+    "radius": 1,
+    "points": [
+      [
+        44.6,
+        54.8,
+        5.3
+      ],
+      [
+        44.6,
+        54.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 74.8,50.8",
+    "radius": 1,
+    "points": [
+      [
+        74.8,
+        50.8,
+        5.3
+      ],
+      [
+        74.8,
+        50.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 74.8,52.8",
+    "radius": 1,
+    "points": [
+      [
+        74.8,
+        52.8,
+        5.3
+      ],
+      [
+        74.8,
+        52.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 74.8,54.8",
+    "radius": 1,
+    "points": [
+      [
+        74.8,
+        54.8,
+        5.3
+      ],
+      [
+        74.8,
+        54.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 85.3,50.8",
+    "radius": 1,
+    "points": [
+      [
+        85.3,
+        50.8,
+        5.3
+      ],
+      [
+        85.3,
+        50.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 85.3,52.8",
+    "radius": 1,
+    "points": [
+      [
+        85.3,
+        52.8,
+        5.3
+      ],
+      [
+        85.3,
+        52.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper rear-emerging lead 85.3,54.8",
+    "radius": 1,
+    "points": [
+      [
+        85.3,
+        54.8,
+        5.3
+      ],
+      [
+        85.3,
+        54.8,
+        13
+      ]
+    ]
+  },
+  {
+    "name": "Upper under-mount cross-run y48.3",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        48.3,
+        13.5
+      ],
+      [
+        74.8,
+        48.3,
+        13.5
+      ]
+    ]
+  },
+  {
+    "name": "Upper under-mount cross-run y50.3",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        50.3,
+        13.5
+      ],
+      [
+        74.8,
+        50.3,
+        13.5
+      ]
+    ]
+  },
+  {
+    "name": "Upper under-mount cross-run y52.3",
+    "radius": 1,
+    "points": [
+      [
+        37.3,
+        52.3,
+        13.5
+      ],
+      [
+        74.8,
+        52.3,
+        13.5
+      ]
+    ]
+  },
+  {
+    "name": "Lower under-mount cross-run y4.8",
+    "radius": 1,
+    "points": [
+      [
+        48.05,
+        4.8,
+        12.8
+      ],
+      [
+        71.95,
+        4.8,
+        12.8
+      ]
+    ]
+  },
+  {
+    "name": "Lower under-mount cross-run y6.8",
+    "radius": 1,
+    "points": [
+      [
+        48.05,
+        6.8,
+        12.8
+      ],
+      [
+        71.95,
+        6.8,
+        12.8
+      ]
+    ]
+  },
+  {
+    "name": "Lower under-mount cross-run y8.8",
+    "radius": 1,
+    "points": [
+      [
+        48.05,
+        8.8,
+        12.8
+      ],
+      [
+        71.95,
+        8.8,
+        12.8
+      ]
+    ]
+  }
+]

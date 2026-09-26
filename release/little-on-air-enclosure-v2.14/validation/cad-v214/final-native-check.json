@@ -1,0 +1,200 @@
+{
+  "feature_health": [],
+  "control_bounds": [
+    {
+      "component": "REF Charger",
+      "body": "Charger PCB",
+      "min": [
+        12.250000000000005,
+        30.300000000000004,
+        -16.300000000000004
+      ],
+      "max": [
+        29.750000000000007,
+        58.400000000000006,
+        -15.300000000000008
+      ]
+    },
+    {
+      "component": "REF Charger",
+      "body": "Charger IC envelope",
+      "min": [
+        17.000000000000007,
+        34.3,
+        -18.6
+      ],
+      "max": [
+        24.000000000000007,
+        45.3,
+        -16.300000000000008
+      ]
+    },
+    {
+      "component": "REF Charger",
+      "body": "Measured USB-C socket envelope",
+      "min": [
+        16.07500000000001,
+        53.25,
+        -19.4
+      ],
+      "max": [
+        24.925000000000004,
+        59.65,
+        -16.300000000000004
+      ]
+    },
+    {
+      "component": "REF Charger",
+      "body": "Measured charger indicator",
+      "min": [
+        13.4,
+        48.6,
+        -17.1
+      ],
+      "max": [
+        14.6,
+        50.2,
+        -16.299999999999997
+      ]
+    },
+    {
+      "component": "REF Charger",
+      "body": "Measured charger indicator (1)",
+      "min": [
+        13.4,
+        43.849999999999994,
+        -17.1
+      ],
+      "max": [
+        14.6,
+        45.45,
+        -16.299999999999997
+      ]
+    },
+    {
+      "component": "REF SPDT moving lever",
+      "body": "SPDT lever",
+      "min": [
+        39.525,
+        58.4,
+        -18.474999999999998
+      ],
+      "max": [
+        42.47500000000001,
+        63.4,
+        -15.524999999999999
+      ]
+    },
+    {
+      "component": "REF DPDT moving actuator",
+      "body": "Direct MODE actuator",
+      "min": [
+        59.25,
+        58.849999999999994,
+        -16.709999999999997
+      ],
+      "max": [
+        60.75,
+        60.72,
+        -15.209999999999999
+      ]
+    },
+    {
+      "component": "REF XIAO",
+      "body": "XIAO PCB",
+      "min": [
+        88.99999999999999,
+        36.8,
+        -19.69999999999999
+      ],
+      "max": [
+        106.79999999999998,
+        57.8,
+        -18.499999999999996
+      ]
+    },
+    {
+      "component": "REF XIAO",
+      "body": "XIAO component envelope",
+      "min": [
+        93.44999999999997,
+        42.8,
+        -18.499999999999996
+      ],
+      "max": [
+        102.44999999999997,
+        51.8,
+        -15.49999999999999
+      ]
+    },
+    {
+      "component": "REF XIAO",
+      "body": "Measured centered USB-C socket",
+      "min": [
+        93.41499999999998,
+        53.14999999999999,
+        -18.499999999999996
+      ],
+      "max": [
+        102.38499999999999,
+        59.55,
+        -15.329999999999995
+      ]
+    },
+    {
+      "component": "REF XIAO",
+      "body": "Measured reset target 1.8 mm from PCB back",
+      "min": [
+        91.11499999999998,
+        55.0,
+        -18.499999999999996
+      ],
+      "max": [
+        92.91499999999998,
+        57.0,
+        -17.89999999999999
+      ]
+    },
+    {
+      "component": "REF XIAO",
+      "body": "RGB6 status LED manufacturer position",
+      "min": [
+        103.10499999999998,
+        54.506,
+        -18.499999999999996
+      ],
+      "max": [
+        104.10499999999998,
+        55.506,
+        -17.90000000000001
+      ]
+    }
+  ],
+  "socket_plug_reservations": [
+    {
+      "component": "REF Charger",
+      "body": "Measured USB-C socket envelope",
+      "assumed_overmold_mm": [
+        12,
+        16,
+        6.5
+      ],
+      "min_y_mm": 60,
+      "front_intersection_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "component": "REF XIAO",
+      "body": "Measured centered USB-C socket",
+      "assumed_overmold_mm": [
+        12,
+        16,
+        6.5
+      ],
+      "min_y_mm": 60,
+      "front_intersection_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

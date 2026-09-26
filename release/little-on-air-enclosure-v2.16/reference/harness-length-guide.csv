@@ -1,0 +1,13 @@
+Run,Nominal modeled centerline mm,Cutting / fitting instruction
+H1 input to lower-right pixel lane0,115.5,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H1 input to lower-right pixel lane1,114.7,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H1 input to lower-right pixel lane2,112.6,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H2 lower inner-pad connection lane0,43.5,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H2 lower inner-pad connection lane1,43.5,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H2 lower inner-pad connection lane2,43.5,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H3 left interior connection lane0,90.3,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H3 left interior connection lane1,81.9,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H3 left interior connection lane2,73.5,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H4 upper interior connection lane0,43.6,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H4 upper interior connection lane1,43.6,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"
+H4 upper interior connection lane2,43.6,"Not a cut length: excludes pad fanout/end joints; start overlong, dry-fit, trim; lane is not a pin number"

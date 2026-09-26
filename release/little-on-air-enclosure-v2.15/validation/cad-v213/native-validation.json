@@ -1,0 +1,207 @@
+{
+  "passed": true,
+  "static": [],
+  "motion": [
+    {
+      "name": "Front closes with captive RGB guide",
+      "poses": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Front guide loads from inside frame",
+      "poses": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Rear guides insert before keeper and charger",
+      "poses": 29,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Rear keeper lowers over seated guides",
+      "poses": 41,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Charger loads after guide keeper",
+      "poses": 81,
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Yoke installs over completed electronics",
+      "poses": 81,
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "retention": [
+    {
+      "guide": "Front",
+      "depth_offset_range_mm": [
+        0,
+        0.25
+      ],
+      "nominal_axial_play_mm": 0.25,
+      "free_play_collisions": [],
+      "stop_probes": [
+        {
+          "depth_offset_mm": -0.1,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                0.1
+              ],
+              "moving": "08 Front RGB light guide",
+              "fixed": "01 Front optical bezel",
+              "mm3": 0.4442291589596734
+            }
+          ],
+          "blocked_by_structure": true
+        },
+        {
+          "depth_offset_mm": 0.35,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                -0.35
+              ],
+              "moving": "08 Front RGB light guide",
+              "fixed": "06 Electronics retaining yoke",
+              "mm3": 0.43219182998150774
+            }
+          ],
+          "blocked_by_structure": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "guide": "Upper rear",
+      "depth_offset_range_mm": [
+        -0.2,
+        0
+      ],
+      "nominal_axial_play_mm": 0.2,
+      "free_play_collisions": [],
+      "stop_probes": [
+        {
+          "depth_offset_mm": -0.30000000000000004,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                0.30000000000000004
+              ],
+              "moving": "09 Upper charger light guide",
+              "fixed": "11 Rear light guide keeper",
+              "mm3": 0.20472225051431725
+            }
+          ],
+          "blocked_by_structure": true
+        },
+        {
+          "depth_offset_mm": 0.1,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                -0.1
+              ],
+              "moving": "09 Upper charger light guide",
+              "fixed": "05 Rear electronics housing",
+              "mm3": 0.322231752267688
+            }
+          ],
+          "blocked_by_structure": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "guide": "Lower rear",
+      "depth_offset_range_mm": [
+        -0.2,
+        0
+      ],
+      "nominal_axial_play_mm": 0.2,
+      "free_play_collisions": [],
+      "stop_probes": [
+        {
+          "depth_offset_mm": -0.30000000000000004,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                0.30000000000000004
+              ],
+              "moving": "10 Lower charger light guide",
+              "fixed": "11 Rear light guide keeper",
+              "mm3": 0.20472225051431725
+            }
+          ],
+          "blocked_by_structure": true
+        },
+        {
+          "depth_offset_mm": 0.1,
+          "contacts": [
+            {
+              "offset_mm": [
+                0,
+                0,
+                -0.1
+              ],
+              "moving": "10 Lower charger light guide",
+              "fixed": "05 Rear electronics housing",
+              "mm3": 0.322231752267688
+            }
+          ],
+          "blocked_by_structure": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "access": [
+    {
+      "name": "Straight driver access before installing front",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "Nut lowers into bay then slides 7.8 mm under roof before keeper",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "name": "M3 clamp reacts through housing nut roof and keeper seat",
+      "nut_roof_probe_mm3": 1.6018508266847546,
+      "keeper_seat_probe": [
+        {
+          "offset_mm": [
+            0,
+            0,
+            -0.1
+          ],
+          "moving": "11 Rear light guide keeper",
+          "fixed": "05 Rear electronics housing",
+          "mm3": 3.9592597266814957
+        }
+      ],
+      "nut_roof_thickness_mm": 2,
+      "passed": true
+    }
+  ],
+  "features": []
+}

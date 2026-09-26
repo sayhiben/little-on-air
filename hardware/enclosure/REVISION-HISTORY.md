@@ -1,10 +1,18 @@
 # Little On Air enclosure
 
-## Complete Bambu Studio project — all current parts
+## v2.16 — rearward LED wiring
+
+Use the [complete v2.16 release](../../release/little-on-air-enclosure-v2.16/README.md). Replace **05 rear housing and 06 electronics yoke**; reuse the v2.15 front and all other parts. Shallow housing reliefs, reinforced open yoke grooves and one relocated charger contact let separate LED leads turn rearward behind the optical mounts. The [upgrade project](../../release/little-on-air-enclosure-v2.16/bambu-studio/on-air-v216-X1C-upgrade-parts.3mf) prints both parts in black PLA+, about 3 h 06 min / 40.51 g, without supports. All 12 modeled wire paths, their 66 pairwise separations, rigid assembly checks and both sliced projects pass; actual pad exits, solder and print fit remain physical checks. Read [the illustrated routing guide](../../release/little-on-air-enclosure-v2.16/guides/FRONT-WIRING.md).
+
+## v2.15 and v2.14 — wider perimeter wire channels
+
+[v2.14](../../release/little-on-air-enclosure-v2.14/README.md) widened the front to 129 × 69 mm and added perimeter passages. Their roofs failed the user's physical bridge print. [v2.15](../../release/little-on-air-enclosure-v2.15/README.md) opened those channels toward the rear. Its frame remains current in v2.16, but the deeper LED paths now replace the awkward perimeter turns at the pads.
+
+## Historical v2.13 complete Bambu Studio project
 
 Use the [single four-plate v2.13 project](output/on-air-v213-complete-print/on-air-v213-X1C-all-plates.3mf) for a complete print: black PLA+ enclosure and retainers, black/white PLA+ display backing, and transparent PETG guides. It contains ten production pieces, including the new captive front guide and rear keeper, with no extra fit-size sets. All four plates are sliced and validated. See the [plate and filament guide](output/on-air-v213-complete-print/README.md) for material mapping and the shared first-layer settings. Estimated total: 6 h 14 min / 71.65 g.
 
-## Current enclosure revision: v2.13 — captive light guides
+## v2.13 — captive light guides
 
 Use the [v2.13 retention package](output/on-air-v213-captive-light-guides.zip). The front guide has an internal collar captured by the frame and existing yoke; one rigid keeper secures both rear guides in keyed seats. Replace **01 front frame, 05 rear housing and 08 front guide**, and add **11 rear guide keeper** with one additional **M3×8 button-head screw and M3 nut**. Existing short rear guides may be reused if they fit freely. The clear-PETG plate now contains exactly **one front and two rear guides**, with no alternate-size copies. Structural parts have a separate PLA+ or PETG plate; only keeper 11 uses automatic support. The wider bevels and all four seam corrections are included. See the [assembly and printing instructions](output/on-air-v213-captive-light-guides/README.md).
 

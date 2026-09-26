@@ -1,0 +1,1260 @@
+{
+  "passed": true,
+  "wire_OD_max_mm": 1.8,
+  "pairs": [
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H2 lower inner-pad connection lane1",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          6.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H2 lower inner-pad connection lane2",
+      "center_distance_mm": 4.000000000000001,
+      "surface_gap_at_1_8_OD_mm": 2.200000000000001,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          8.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H3 left interior connection lane0",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          4.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H3 left interior connection lane1",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          6.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H3 left interior connection lane2",
+      "center_distance_mm": 11.049434374663708,
+      "surface_gap_at_1_8_OD_mm": 9.249434374663707,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          8.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 45.25,
+      "surface_gap_at_1_8_OD_mm": 43.45,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 47.25,
+      "surface_gap_at_1_8_OD_mm": 45.45,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 49.25,
+      "surface_gap_at_1_8_OD_mm": 47.45,
+      "closest": {
+        "a": [
+          45.15,
+          4.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 6.8731361109758335,
+      "surface_gap_at_1_8_OD_mm": 5.073136110975834,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          4.8,
+          12.788584094275237
+        ],
+        "b": [
+          25.0,
+          3.8,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 7.088018058667741,
+      "surface_gap_at_1_8_OD_mm": 5.288018058667741,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          4.8,
+          12.788584094275237
+        ],
+        "b": [
+          27.2,
+          6.800000000000001,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane0",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 5.315072906367316,
+      "surface_gap_at_1_8_OD_mm": 3.5150729063673163,
+      "closest": {
+        "a": [
+          51.15,
+          4.8,
+          12.8
+        ],
+        "b": [
+          29.4,
+          8.3,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H2 lower inner-pad connection lane2",
+      "center_distance_mm": 2.000000000000001,
+      "surface_gap_at_1_8_OD_mm": 0.20000000000000084,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          8.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H3 left interior connection lane0",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          4.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H3 left interior connection lane1",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          6.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H3 left interior connection lane2",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          8.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 43.25,
+      "surface_gap_at_1_8_OD_mm": 41.45,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 45.25,
+      "surface_gap_at_1_8_OD_mm": 43.45,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 47.25,
+      "surface_gap_at_1_8_OD_mm": 45.45,
+      "closest": {
+        "a": [
+          45.15,
+          6.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 7.432361670424818,
+      "surface_gap_at_1_8_OD_mm": 5.632361670424818,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          6.8,
+          12.788584094275237
+        ],
+        "b": [
+          25.0,
+          3.8,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 6.800000000000001,
+      "surface_gap_at_1_8_OD_mm": 5.000000000000001,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          6.8,
+          12.788584094275237
+        ],
+        "b": [
+          27.2,
+          6.800000000000001,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane1",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 4.272001872658761,
+      "surface_gap_at_1_8_OD_mm": 2.472001872658761,
+      "closest": {
+        "a": [
+          51.15,
+          6.8,
+          12.8
+        ],
+        "b": [
+          29.4,
+          8.3,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H3 left interior connection lane0",
+      "center_distance_mm": 11.049434374663708,
+      "surface_gap_at_1_8_OD_mm": 9.249434374663707,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          4.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H3 left interior connection lane1",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          6.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H3 left interior connection lane2",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          8.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 41.25,
+      "surface_gap_at_1_8_OD_mm": 39.45,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 43.25,
+      "surface_gap_at_1_8_OD_mm": 41.45,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 45.25,
+      "surface_gap_at_1_8_OD_mm": 43.45,
+      "closest": {
+        "a": [
+          45.15,
+          8.8,
+          3.3
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 8.440379138403676,
+      "surface_gap_at_1_8_OD_mm": 6.640379138403676,
+      "closest": {
+        "a": [
+          51.15,
+          8.8,
+          12.8
+        ],
+        "b": [
+          25.0,
+          3.8,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 7.088018058667741,
+      "surface_gap_at_1_8_OD_mm": 5.288018058667741,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          8.8,
+          12.788584094275237
+        ],
+        "b": [
+          27.2,
+          6.800000000000001,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H2 lower inner-pad connection lane2",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 4.0311288741492755,
+      "surface_gap_at_1_8_OD_mm": 2.2311288741492756,
+      "closest": {
+        "a": [
+          50.88853277175703,
+          8.8,
+          12.788584094275237
+        ],
+        "b": [
+          29.4,
+          8.3,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H3 left interior connection lane1",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          34.85,
+          4.8,
+          3.3
+        ],
+        "b": [
+          34.85,
+          6.8,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H3 left interior connection lane2",
+      "center_distance_mm": 4.0,
+      "surface_gap_at_1_8_OD_mm": 2.2,
+      "closest": {
+        "a": [
+          24.0,
+          54.05,
+          13.85
+        ],
+        "b": [
+          28.138532771757024,
+          50.03858409427524,
+          13.85
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 11.049434374663708,
+      "surface_gap_at_1_8_OD_mm": 9.249434374663707,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          54.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          54.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          54.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 5.750000000000002,
+      "surface_gap_at_1_8_OD_mm": 3.950000000000002,
+      "closest": {
+        "a": [
+          22.5,
+          5.201923788646685,
+          13.85
+        ],
+        "b": [
+          22.401923788646684,
+          5.300000000000001,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 5.750000000000002,
+      "surface_gap_at_1_8_OD_mm": 3.950000000000002,
+      "closest": {
+        "a": [
+          21.0,
+          7.800000000000001,
+          13.85
+        ],
+        "b": [
+          18.15,
+          18.2,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane0",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 2.950000000000001,
+      "surface_gap_at_1_8_OD_mm": 1.150000000000001,
+      "closest": {
+        "a": [
+          21.0,
+          7.800000000000001,
+          13.85
+        ],
+        "b": [
+          18.15,
+          20.4,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H3 left interior connection lane2",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          26.2,
+          52.05,
+          13.85
+        ],
+        "b": [
+          28.138532771757024,
+          50.03858409427524,
+          13.85
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          52.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          52.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          52.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 5.873882872512868,
+      "surface_gap_at_1_8_OD_mm": 4.073882872512868,
+      "closest": {
+        "a": [
+          23.211415905724763,
+          9.538532771757026,
+          13.85
+        ],
+        "b": [
+          22.0,
+          13.0,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 5.750000000000002,
+      "surface_gap_at_1_8_OD_mm": 3.950000000000002,
+      "closest": {
+        "a": [
+          29.111467228242976,
+          6.8,
+          13.838584094275237
+        ],
+        "b": [
+          27.2,
+          6.800000000000001,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane1",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 2.950000000000001,
+      "surface_gap_at_1_8_OD_mm": 1.150000000000001,
+      "closest": {
+        "a": [
+          23.2,
+          9.8,
+          13.85
+        ],
+        "b": [
+          18.15,
+          20.4,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H4 upper interior connection lane0",
+      "center_distance_mm": 10.299999999999997,
+      "surface_gap_at_1_8_OD_mm": 8.499999999999996,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          50.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          50.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 10.492378186092987,
+      "surface_gap_at_1_8_OD_mm": 8.692378186092986,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          50.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 11.049434374663708,
+      "surface_gap_at_1_8_OD_mm": 9.249434374663707,
+      "closest": {
+        "a": [
+          34.58853277175703,
+          50.05,
+          3.311415905724763
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 6.680007485025747,
+      "surface_gap_at_1_8_OD_mm": 4.8800074850257475,
+      "closest": {
+        "a": [
+          25.411415905724763,
+          11.538532771757026,
+          13.85
+        ],
+        "b": [
+          22.0,
+          13.0,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 5.873882872512868,
+      "surface_gap_at_1_8_OD_mm": 4.073882872512868,
+      "closest": {
+        "a": [
+          25.411415905724763,
+          11.538532771757026,
+          13.85
+        ],
+        "b": [
+          24.2,
+          15.2,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H3 left interior connection lane2",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 2.950000000000001,
+      "surface_gap_at_1_8_OD_mm": 1.150000000000001,
+      "closest": {
+        "a": [
+          27.623542864692435,
+          8.902222521132796,
+          13.85
+        ],
+        "b": [
+          27.47163717094038,
+          9.001866670643066,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane0",
+      "b": "H4 upper interior connection lane1",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          50.05,
+          3.3
+        ],
+        "b": [
+          45.15,
+          52.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane0",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 4.0,
+      "surface_gap_at_1_8_OD_mm": 2.2,
+      "closest": {
+        "a": [
+          45.15,
+          50.05,
+          3.3
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane0",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 45.1076447553622,
+      "surface_gap_at_1_8_OD_mm": 43.307644755362205,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          50.05,
+          10.626457135307561
+        ],
+        "b": [
+          20.92836282905962,
+          15.298133329356935,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane0",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 42.08206436318639,
+      "surface_gap_at_1_8_OD_mm": 40.28206436318639,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          50.05,
+          10.626457135307561
+        ],
+        "b": [
+          22.920729309053137,
+          17.657456132866976,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane0",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 38.53269150852863,
+      "surface_gap_at_1_8_OD_mm": 36.73269150852863,
+      "closest": {
+        "a": [
+          48.195576740963375,
+          50.05,
+          10.37094453300079
+        ],
+        "b": [
+          24.9,
+          19.998076211353315,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane1",
+      "b": "H4 upper interior connection lane2",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          45.15,
+          52.05,
+          3.3
+        ],
+        "b": [
+          45.15,
+          54.05,
+          3.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane1",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 46.66309179985122,
+      "surface_gap_at_1_8_OD_mm": 44.863091799851226,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          52.05,
+          10.626457135307561
+        ],
+        "b": [
+          20.5,
+          15.598076211353316,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane1",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 43.64209086260836,
+      "surface_gap_at_1_8_OD_mm": 41.842090862608366,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          52.05,
+          10.626457135307561
+        ],
+        "b": [
+          22.7,
+          17.798076211353315,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane1",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 40.11905395644278,
+      "surface_gap_at_1_8_OD_mm": 38.31905395644278,
+      "closest": {
+        "a": [
+          48.195576740963375,
+          52.05,
+          10.37094453300079
+        ],
+        "b": [
+          24.9,
+          19.998076211353315,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane2",
+      "b": "H1 input to lower-right pixel lane0",
+      "center_distance_mm": 48.24742803290011,
+      "surface_gap_at_1_8_OD_mm": 46.44742803290011,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          54.05,
+          10.626457135307561
+        ],
+        "b": [
+          20.5,
+          15.598076211353316,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane2",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 45.23496734086029,
+      "surface_gap_at_1_8_OD_mm": 43.43496734086029,
+      "closest": {
+        "a": [
+          48.25222252113279,
+          54.05,
+          10.626457135307561
+        ],
+        "b": [
+          22.7,
+          17.798076211353315,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H4 upper interior connection lane2",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 41.740971069543875,
+      "surface_gap_at_1_8_OD_mm": 39.94097106954388,
+      "closest": {
+        "a": [
+          48.195576740963375,
+          54.05,
+          10.37094453300079
+        ],
+        "b": [
+          24.9,
+          19.998076211353315,
+          16.8
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H1 input to lower-right pixel lane0",
+      "b": "H1 input to lower-right pixel lane1",
+      "center_distance_mm": 2.0,
+      "surface_gap_at_1_8_OD_mm": 0.19999999999999996,
+      "closest": {
+        "a": [
+          94.24828759089466,
+          4.799999999999995,
+          19.6
+        ],
+        "b": [
+          94.0,
+          6.8,
+          19.6
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H1 input to lower-right pixel lane0",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 4.000000000000001,
+      "surface_gap_at_1_8_OD_mm": 2.200000000000001,
+      "closest": {
+        "a": [
+          98.71892336110994,
+          4.8,
+          15.332145214777903
+        ],
+        "b": [
+          98.59807621135332,
+          8.8,
+          15.3
+        ]
+      },
+      "passed": true
+    },
+    {
+      "a": "H1 input to lower-right pixel lane1",
+      "b": "H1 input to lower-right pixel lane2",
+      "center_distance_mm": 2.000000000000001,
+      "surface_gap_at_1_8_OD_mm": 0.20000000000000084,
+      "closest": {
+        "a": [
+          98.71892336110994,
+          6.8,
+          15.332145214777903
+        ],
+        "b": [
+          98.59807621135332,
+          8.8,
+          15.3
+        ]
+      },
+      "passed": true
+    }
+  ]
+}

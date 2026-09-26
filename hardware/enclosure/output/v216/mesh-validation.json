@@ -1,0 +1,44 @@
+[
+  {
+    "file": "stl/05-rear-electronics-housing.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      14.5
+    ],
+    "volume_mm3": 31943.7989,
+    "triangles": 5164,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 7176.19,
+    "horizontal_undersides_by_height_mm2": {
+      "3.7": 28.285,
+      "2.31": 2.581,
+      "3.62": 0.485,
+      "10.2": 61.317,
+      "12.5": 122.634
+    },
+    "sha256": "904254c0e28f66a47efb5a20a23d59f8a907f52ef7d0aab5c4e9e788e15b9641"
+  },
+  {
+    "file": "stl/06-electronics-retaining-yoke.stl",
+    "bounds_mm": [
+      99.45,
+      25.95,
+      8.6
+    ],
+    "volume_mm3": 3758.7172,
+    "triangles": 1396,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 1189.154,
+    "horizontal_undersides_by_height_mm2": {
+      "1.48": 11.926,
+      "2.7": 17.554,
+      "1.6": 16.68
+    },
+    "sha256": "3069e77996b99bc9b9b655957017c25c1315db972451c446897f3c8b2bbc9d7d"
+  }
+]
