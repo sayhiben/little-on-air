@@ -1,6 +1,7 @@
 # Workspace guide
 
-Start with [the project README](../README.md) for firmware behavior and
+Start with [the product manual](../README.md) for using the devices,
+[the developer guide](../CONTRIBUTING.md) for implementation and builds, and
 [the hardware index](../hardware/README.md) for the current physical designs.
 
 | Location | Contents |

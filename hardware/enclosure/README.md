@@ -15,7 +15,7 @@ The current set uses black PLA+ structure, black/white PLA+ backing and three cl
 
 The existing CAD, print projects, validation records and published checksums are unchanged. This selection records which case the user kept; it does not add a new physical fit or electrical validation result. The v2.16 rearward-wiring housing/yoke revision is preserved in [the archive](../archive/enclosure/v216/README.md).
 
-The package preserves the earlier firmware 0.1.2 snapshot, which uses onboard RGB only. Follow the [project README](../../README.md#four-pixel-nrf52840-receiver) for the current four-pixel firmware; release-bundled firmware notes describe the historical snapshot.
+The package preserves the earlier firmware 0.1.2 snapshot, which uses onboard RGB only. Follow the [developer guide](../../CONTRIBUTING.md#four-pixel-nrf52840-receiver) for the current four-pixel firmware; release-bundled firmware notes describe the historical snapshot.
 
 ## Development files
 

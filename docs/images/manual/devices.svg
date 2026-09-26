@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Little On Air device controls</title>
+  <desc id="desc">Illustrated controller with top rotary push knob, front OLED and mood light, and rear USB-C power. Sign front with mood panel, rectangular RESET and round red power light; a separate key lists its top switches and two USB ports, plus rear charger indicators. Schematics are not to scale.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #183b39; }
+      .title { font-size: 32px; font-weight: 700; }
+      .heading { font-size: 25px; font-weight: 700; }
+      .label { font-size: 20px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .small { font-size: 16px; fill: #506b67; }
+      .number { font-size: 17px; font-weight: 700; fill: white; text-anchor: middle; }
+      .wire { fill: none; stroke: #65817b; stroke-width: 2; }
+      .badge { fill: #176b5f; stroke: white; stroke-width: 3; }
+    </style>
+  </defs>
+  <rect width="1200" height="780" rx="20" fill="#f3f6f5"/>
+  <text x="32" y="51" class="title">Meet your devices</text>
+  <text x="32" y="81" class="body">Two devices. One confirmed mood.</text>
+  <rect x="24" y="106" width="552" height="604" rx="16" fill="white" stroke="#d5dfdc"/>
+  <rect x="600" y="106" width="576" height="604" rx="16" fill="white" stroke="#d5dfdc"/>
+  <text x="48" y="148" class="heading">Desk controller</text>
+  <text x="48" y="176" class="small">USB-powered • Igor measured v4</text>
+  <!-- Stylized three-quarter view; control placement follows the current CAD. -->
+  <ellipse cx="294" cy="439" rx="166" ry="17" fill="#e8eeeb"/>
+  <path d="M151 310 L183 257 L373 257 L425 309 L425 409 Q425 428 405 433 L157 433 Q139 430 139 413 Z" fill="#20554e" stroke="#183b39" stroke-width="3"/>
+  <path d="M153 309 L414 309 L409 390 L150 390 Z" fill="#e3d8bd" stroke="#b5bca9" stroke-width="2"/>
+  <path d="M156 303 L184 260 L372 260 L409 303 Z" fill="#317568"/>
+  <ellipse cx="284" cy="268" rx="58" ry="18" fill="#122b28"/>
+  <path d="M226 230 L226 263 Q284 298 342 263 L342 230 Z" fill="#253c37"/>
+  <ellipse cx="284" cy="230" rx="58" ry="20" fill="#40534c" stroke="#122b28" stroke-width="2"/>
+  <path d="M267 218 L298 220" stroke="#94aaa0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="176" y="326" width="142" height="49" rx="3" fill="#10201f"/>
+  <text x="247" y="357" text-anchor="middle" style="font-size:21px; fill:#f8fcfa; letter-spacing:3px">OLED</text>
+  <circle cx="365" cy="351" r="16" fill="#f4e8d0" stroke="#a6aa93" stroke-width="2"/>
+  <rect x="374" y="270" width="23" height="9" rx="4" fill="#10201f"/>
+  <path d="M318 215 L369 201 L445 201" class="wire"/>
+  <circle cx="464" cy="201" r="17" class="badge"/><text x="464" y="207" class="number">1</text>
+  <path d="M176 348 L105 348" class="wire"/>
+  <circle cx="86" cy="348" r="17" class="badge"/><text x="86" y="354" class="number">2</text>
+  <path d="M382 351 L459 351" class="wire"/>
+  <circle cx="478" cy="351" r="17" class="badge"/><text x="478" y="357" class="number">3</text>
+  <path d="M397 274 L459 274" class="wire"/>
+  <circle cx="478" cy="274" r="17" class="badge"/><text x="478" y="280" class="number">4</text>
+  <text x="48" y="483" class="label">1  Rotary push knob</text>
+  <text x="72" y="508" class="body">Turn: preview • Press: send • Hold: settings</text>
+  <text x="48" y="547" class="label">2  OLED screen</text>
+  <text x="72" y="572" class="body">Selection, confirmation and connection state</text>
+  <text x="48" y="611" class="label">3  Mood light</text>
+  <text x="72" y="636" class="body">Confirmed mood; dim white when unverified</text>
+  <text x="48" y="678" class="label">4  Rear USB-C • controller power</text>
+  <text x="624" y="148" class="heading">Status sign</text>
+  <text x="624" y="176" class="small">Battery-powered in RUN • v2.15 case</text>
+  <rect x="650" y="217" width="475" height="232" rx="15" fill="#25584f"/>
+  <rect x="663" y="229" width="449" height="205" rx="9" fill="#dce3d6" stroke="#bdcdbb" stroke-width="2"/>
+  <rect x="687" y="281" width="401" height="127" rx="3" fill="#faefec" stroke="#ccbab5" stroke-width="2"/>
+  <path d="M698 294 L717 294 M1056 294 L1075 294 M698 395 L717 395 M1056 395 L1075 395" stroke="#dd6256" stroke-width="7" stroke-linecap="round"/>
+  <text x="887" y="362" text-anchor="middle" style="font-size:46px; font-weight:700; letter-spacing:5px; fill:#94423b">ON AIR</text>
+  <rect x="996" y="247" width="19" height="15" rx="2" fill="#5b6b62"/>
+  <circle cx="1046" cy="254" r="7" fill="#da453b"/>
+  <circle cx="676" cy="242" r="3" fill="#899c8d"/><circle cx="1099" cy="242" r="3" fill="#899c8d"/>
+  <circle cx="676" cy="421" r="3" fill="#899c8d"/><circle cx="1099" cy="421" r="3" fill="#899c8d"/>
+  <path d="M1006 248 L981 201 L895 201" class="wire"/>
+  <text x="753" y="207" class="small">RESET button</text>
+  <path d="M1046 248 L1066 201 L1134 201" class="wire"/>
+  <text x="1053" y="191" class="small">Power light</text>
+  <text x="648" y="479" class="label">Front: mood panel + separate red indicator</text>
+  <text x="648" y="506" class="body">Four corner lights blend across the sign face.</text>
+  <path d="M624 528 H1152" stroke="#d5dfdc"/>
+  <text x="648" y="560" class="label">Top controls and connections</text>
+  <text x="648" y="589" class="body">POWER switch • RUN / PROGRAM switch</text>
+  <text x="648" y="617" class="body">Charger USB • XIAO USB for firmware service</text>
+  <text x="648" y="663" class="label">Rear: two charger indicator light guides</text>
+  <text x="32" y="749" class="small">Illustrations identify controls; not to scale. Sign USB: POWER OFF + PROGRAM, one port at a time.</text>
+</svg>

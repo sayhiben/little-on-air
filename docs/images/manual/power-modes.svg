@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+  <title id="title">Sign power and USB modes</title>
+  <desc id="desc">Normal use: POWER ON, MODE RUN, neither sign USB port connected. Charging: POWER OFF, MODE PROGRAM, charger USB only. Firmware service: POWER OFF, MODE PROGRAM, XIAO USB only. Unplug USB and turn POWER OFF before changing MODE.</desc>
+  <defs><style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #183b39; }
+    .title { font-size: 29px; font-weight: 700; }
+    .heading { font-size: 25px; font-weight: 700; }
+    .key { font-size: 17px; fill: #506b67; }
+    .value { font-size: 23px; font-weight: 700; }
+    .body { font-size: 19px; }
+  </style></defs>
+  <rect width="1200" height="410" rx="16" fill="#f3f6f5"/>
+  <text x="28" y="46" class="title">One sign. Three connection modes.</text>
+  <rect x="24" y="72" width="368" height="252" rx="12" fill="white" stroke="#d5dfdc"/>
+  <rect x="416" y="72" width="368" height="252" rx="12" fill="white" stroke="#d5dfdc"/>
+  <rect x="808" y="72" width="368" height="252" rx="12" fill="white" stroke="#d5dfdc"/>
+  <rect x="24" y="72" width="368" height="7" rx="3" fill="#24755e"/>
+  <rect x="416" y="72" width="368" height="7" rx="3" fill="#ce9230"/>
+  <rect x="808" y="72" width="368" height="7" rx="3" fill="#527a97"/>
+  <text x="48" y="119" class="heading">Normal use</text>
+  <text x="440" y="119" class="heading">Charge the battery</text>
+  <text x="832" y="119" class="heading">Firmware service</text>
+  <text x="48" y="160" class="key">POWER</text><text x="163" y="160" class="value">ON</text>
+  <text x="440" y="160" class="key">POWER</text><text x="555" y="160" class="value">OFF</text>
+  <text x="832" y="160" class="key">POWER</text><text x="947" y="160" class="value">OFF</text>
+  <text x="48" y="198" class="key">MODE</text><text x="163" y="198" class="value">RUN</text>
+  <text x="440" y="198" class="key">MODE</text><text x="555" y="198" class="value">PROGRAM</text>
+  <text x="832" y="198" class="key">MODE</text><text x="947" y="198" class="value">PROGRAM</text>
+  <path d="M48 220 H368 M440 220 H760 M832 220 H1152" stroke="#d5dfdc"/>
+  <text x="48" y="254" class="body">Both sign USB ports unplugged</text>
+  <text x="440" y="254" class="body">Charger USB connected</text>
+  <text x="832" y="254" class="body">XIAO USB connected</text>
+  <text x="48" y="287" class="key">Controller stays on its own USB.</text>
+  <text x="440" y="287" class="key">Leave XIAO USB unplugged.</text>
+  <text x="832" y="287" class="key">Leave charger USB unplugged.</text>
+  <text x="28" y="366" class="body">Before changing MODE: POWER OFF and both sign USB ports unplugged.</text>
+  <text x="28" y="393" class="key">After charging or service: unplug USB → select RUN → POWER ON. Never connect both sign USB ports.</text>
+</svg>

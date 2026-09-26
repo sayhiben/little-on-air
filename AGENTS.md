@@ -1,8 +1,9 @@
 # Repository guidance
 
 This file is the shared project guidance for coding agents. Read the
-[README](README.md) and [workspace guide](docs/WORKSPACE.md) first, then the
-application or hardware documentation relevant to the task. Follow the user's
+[product manual](README.md), [developer guide](CONTRIBUTING.md) and
+[workspace guide](docs/WORKSPACE.md) first, then the application or hardware
+documentation relevant to the task. Follow the user's
 current instructions and preserve unrelated work.
 
 ## Project map
@@ -10,7 +11,7 @@ current instructions and preserve unrelated work.
 - `apps/controller-esp32s3/`: current OLED/encoder controller; Arduino and
   PlatformIO. Package pins are in `platformio.ini`.
 - `apps/receiver/`: Zephyr nRF52840 receiver. The assembled sign uses the padded
-  375 ns four-pixel profile documented in the README.
+  375 ns four-pixel profile documented in CONTRIBUTING.md.
 - `apps/controller/`: supported legacy Zephyr reset-button controller.
 - `src/`, `include/little_on_air/`: shared protocol, status, state machines,
   persistence, reset handling and output behavior.
@@ -36,8 +37,9 @@ they are not disposable build caches. Keep them out of Git. Reuse installed
 `.venv/`, `.zephyr-sdk/`, `.zephyr-workspace/` and `.tool-bin/` dependencies.
 Do not edit downloaded SDK or PlatformIO library sources to implement fixes.
 
-The README's Zephyr commands assume the repository is inside a configured west
-workspace. This Windows checkout also has a nested `.zephyr-workspace/`; inspect
+The developer guide's Zephyr commands assume the repository is inside a
+configured west workspace. This Windows checkout also has a nested
+`.zephyr-workspace/`; inspect
 its configuration and existing SDK paths before building. Use Linux/WSL for host
 tests and OLED rendering. Configure separate build directories for Windows and
 WSL: CMake caches contain absolute paths and must not be relocated or shared
@@ -89,8 +91,8 @@ west twister -T tests -v --inline-logs --integration --outdir build/twister
 ```
 
 For receiver/shared-code changes, build the default receiver, legacy controller
-and relevant pixel profiles using the README and CI commands. For pixel timing
-changes, run `tools/simulate_pixels.py` against the actual generated header from
+and relevant pixel profiles using CONTRIBUTING.md and CI commands. For pixel
+timing changes, run `tools/simulate_pixels.py` against the actual generated header from
 the matching firmware build. For OLED changes, run `tools/render_buddy_ui.py`
 after PlatformIO dependencies are installed and inspect the generated preview.
 
