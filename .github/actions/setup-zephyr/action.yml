@@ -1,0 +1,26 @@
+name: Set up cached Zephyr workspace
+description: Restore pinned west sources and use the official SDK, pip and ccache setup.
+
+runs:
+  using: composite
+  steps:
+    # Keep Git metadata so west can verify the pinned revisions without fetching.
+    # Do not cache .west: the upstream action runs west init on every invocation.
+    - name: Cache west source dependencies
+      uses: actions/cache@v6
+      with:
+        path: |
+          bootloader
+          modules
+          tools
+          zephyr
+        key: west-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('little-on-air/west.yml', 'little-on-air/.github/actions/setup-zephyr/action.yml') }}
+
+    - name: Set up Zephyr 4.3 toolchain
+      uses: zephyrproject-rtos/action-zephyr-setup@v1
+      with:
+        app-path: little-on-air
+        toolchains: arm-zephyr-eabi
+        # Both Zephyr firmware targets are nRF52840; keep all non-HAL modules.
+        west-project-filter: -hal_.*,+hal_nordic
+        ccache-cache-key: little-on-air-v0

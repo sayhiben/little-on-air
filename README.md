@@ -156,6 +156,15 @@ test output and simulations stay under `build/`. [CI](.github/workflows/ci.yml)
 checks formatting, host and core tests, both controllers, receiver profiles,
 OLED bounds and pixel timing on pull requests.
 
+CI and release builds share a [cached Zephyr setup](.github/actions/setup-zephyr/action.yml).
+The official Zephyr action caches the SDK, pip downloads and compiled objects;
+the local wrapper also caches west source dependencies by the pinned manifest
+and setup configuration. Only the Nordic HAL is needed for the current Zephyr
+targets. ESP32 builds cache PlatformIO packages and libraries by `platformio.ini`
+and the PlatformIO version. Builds and tests still run on every CI invocation,
+and a missing cache is populated automatically. Update the HAL filter when
+adding a Zephyr target from another chip vendor.
+
 ## Project layout and further reading
 
 Firmware lives in `apps/`, `src/`, `include/` and `boards/`. Current CAD and print
