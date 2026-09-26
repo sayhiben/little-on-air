@@ -2,120 +2,95 @@
 
 [![CI](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml/badge.svg)](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml)
 
-[Workspace guide](docs/WORKSPACE.md) · [Current hardware](hardware/README.md) · [Hardware archive](hardware/archive/README.md)
+A wireless desk controller and status sign. Turn the knob to choose a mood,
+press to send it, and see the confirmed state on the controller's OLED and the
+sign's four corner lights.
 
-Little On Air is a paired controller and status light. The current controller
-hardware design is a **computer-powered XIAO ESP32-S3 desk unit**, with an OLED,
-rotary push encoder, one RGB pixel and a weighted Project IGOR enclosure.
-See the [Measured Igor controller design and print files](hardware/controller/igor-measured-v4/README.md).
-The [complete controller prototype ZIP](release/little-on-air-igor-controller-v4.zip)
-includes the STLs, STEP models, Bambu projects, BOM and build guide.
+[Workspace guide](docs/WORKSPACE.md) · [Hardware](hardware/README.md) · [Current bench results](docs/PAIRING_POWER_UPDATE.md) · [Design history](hardware/archive/README.md)
 
-The [ESP32-S3 controller firmware](apps/controller-esp32s3/README.md) supports the
-128×64 SSD1306 OLED, rotary push encoder, and one NeoPixel. Turn to preview a
-state, press to apply it, and hold to open pairing and hardware-test controls.
-It preserves the existing nRF52840 receiver's BLE protocol; see the
-[controller bench results](docs/ESP32S3_BENCH.md) for current test coverage.
+## Current system
 
-The [six-mood update](docs/BUDDY_UPDATE.md) adds flashing-green Request, a slowly
-flowing diagonal rainbow for Special, warmer amber for Warn, and an expressive
-OLED buddy. Routine connection checks keep the sign's lights uninterrupted.
+| Part | Hardware and firmware | Design files |
+| --- | --- | --- |
+| Desk controller | USB-powered XIAO ESP32-S3, 128×64 SSD1306 OLED, rotary push encoder and one NeoPixel; Arduino/PlatformIO | [Measured Igor v4](hardware/controller/igor-measured-v4/README.md) · [Complete ZIP](release/little-on-air-igor-controller-v4.zip) |
+| Status sign | XIAO nRF52840, four external NeoPixels and an independent onboard power/status LED; Zephyr | [Enclosure v2.16](release/little-on-air-enclosure-v2.16/README.md) · [Complete ZIP](release/little-on-air-enclosure-v2.16.zip) |
 
-The [pairing and power-light update](docs/PAIRING_POWER_UPDATE.md) fixes
-**Forget this sign**, adds five paced reset presses for recovery without a
-computer, and gives the receiver an independent red power light. The sign's
-four pixels are a little brighter; the controller's indicator is dimmer.
-See the [current pairing instructions](apps/controller-esp32s3/README.md#reconnecting-after-forget-this-sign).
+The current controller firmware is `esp32s3-0.4.0`. Its matching receiver profile
+uses padded SPI transmission with 375 ns zero pulses. The paired hardware has
+been tested through all six moods, battery operation, pairing recovery and
+online Forget; details and image hashes are in the
+[pairing and power-light record](docs/PAIRING_POWER_UPDATE.md).
 
-The legacy **v0 firmware** uses two XIAO nRF52840 boards. In that firmware,
-pressing the controller's reset button cycles the shared state through:
+The latest enclosure and controller CAD have digital fit and manufacturing
+checks. Physical print fit remains a separate validation step documented in
+their assembly guides.
 
-```text
-Off -> Yellow (warn) -> Red (on air) -> Green (okay) -> Off
+**Choose firmware separately from the manufacturing ZIPs.** The enclosure ZIPs
+retain a firmware 0.1.2 snapshot that drives the onboard RGB LED only. Use the
+current four-pixel receiver build below for an assembled sign. Local validated
+firmware snapshots, when present, are under `.local/firmware/current/`; they are
+not included in a fresh clone.
+
+## Using the sign
+
+| Mood | Light |
+| --- | --- |
+| Off | Dark |
+| Warn | Warm amber |
+| On Air | Red |
+| Okay | Steady green |
+| Request | Flashing green |
+| Special | Slowly flowing rainbow |
+
+- **Turn** to preview a mood. The sign and controller pixel retain the confirmed
+  mood until you send a change.
+- **Press** to apply the selection, or to connect when the controller is unpaired.
+- **Hold for 1.2 seconds** to open the menu for connection checks, pairing, light
+  tests and **Forget this sign**.
+
+The OLED distinguishes confirmed state from an unverified cached state. A BLE
+write alone is not confirmation: the receiver must acknowledge the exact mood
+and transaction. Background checks leave the lights and animations undisturbed.
+
+For first pairing, power the sign and reset an unpaired receiver once to open
+its 60-second pairing window. Press the unpaired controller's knob to connect.
+The receiver's onboard LED blinks red during pairing and stays red when paired,
+including when the front lights are Off.
+
+To pair again, keep the sign on and choose **Forget this sign → Forget sign**.
+After **Ready to connect**, press the knob. If the sign was unavailable, follow
+the displayed recovery steps: five receiver reset presses about two seconds
+apart clear its bond and saved mood. Rapid double-reset still enters the UF2
+bootloader.
+
+See the [controller wiring and controls](apps/controller-esp32s3/README.md) for
+complete setup and [pairing recovery](apps/controller-esp32s3/README.md#reconnecting-after-forget-this-sign).
+
+## Build the firmware
+
+The commands below use a Linux/WSL shell. Host checks need a C/C++ compiler and
+CMake. Receiver builds also need Git, Python, Ninja, west and the Zephyr host
+dependencies. Reuse an existing configured workspace and toolchain when available;
+the [workspace guide](docs/WORKSPACE.md) describes this checkout's local setup.
+
+### ESP32-S3 controller
+
+From the repository root:
+
+```sh
+python -m pip install platformio==6.1.18
+python -m platformio run -d apps/controller-esp32s3
 ```
 
-Version 0 uses each board's onboard RGB LED. The receiver output is isolated
-behind a small driver interface so a later version can add bright addressable
-LEDs without changing the BLE protocol or state machines.
+Dependencies are pinned in [platformio.ini](apps/controller-esp32s3/platformio.ini).
+Outputs are in `apps/controller-esp32s3/.pio/build/xiao_esp32s3/`. Use the
+[PlatformIO upload instructions](apps/controller-esp32s3/README.md#build-flash-and-inspect)
+to flash the controller's bootloader, partition table and application.
 
-## Receiver enclosure and manufacturing files
+### Four-pixel nRF52840 receiver
 
-Use the [current enclosure release](release/little-on-air-enclosure-v2.16/README.md) for the complete STL/SVG/CAD set, three-plate Bambu Studio project, BOM and consolidated build guides. v2.16 changes the rear housing and electronics yoke so LED wires can turn rearward behind the optical mounts; a two-part upgrade project is included. The existing front and optics are unchanged. [Complete release ZIP](release/little-on-air-enclosure-v2.16.zip).
-
-The receiver enclosure includes four external NeoPixels. The optional current
-[four-pixel receiver profile and paired bench guide](docs/PAIRED_BENCH.md) drives
-them on D2/P0.28. The firmware snapshots in
-the enclosure ZIPs still drive only the onboard RGB LED. The current receiver
-source defaults to using that LED for power/status; select the four-pixel profile
-for the assembled sign. The ESP32-S3 controller
-drives its own external NeoPixel.
-
-## Existing v0 firmware: what you need
-
-- Two Seeed Studio XIAO nRF52840 boards with their factory UF2 bootloaders
-- Two small protected 3.7 V LiPo batteries, if running untethered
-- USB-C cables for flashing and charging
-- Git, Python 3.10+, CMake, Ninja, and west 1.x for local development
-- The Zephyr 4.3.0 host tools and Arm SDK toolchain installed below
-
-The firmware targets `xiao_ble/nrf52840`; it does not use the Sense-only
-sensors, so it also works on the Sense variant.
-
-## First pairing
-
-1. Flash `receiver.uf2` onto the display board and `controller.uf2` onto the
-   remote board as described in [the flashing guide](docs/FLASHING.md).
-2. Power both boards. An unpaired board slowly flashes blue.
-3. Press reset once on the receiver and once on the controller within 60
-   seconds. Both flash blue quickly while connecting.
-4. Three green pulses confirm a bond. Both LEDs then turn off.
-
-The controller disconnects after each transaction. The receiver advertises at
-a low duty cycle only to its bonded controller, so a dark, idle system spends
-most of its time asleep.
-
-## Everyday use
-
-Press reset once on the controller. The stock bootloader runs first, so a v0
-button action has an expected 1-2 second delay. The controller flashes the
-requested color while it connects and the two LEDs become solid only after the
-receiver has persisted and applied the command.
-
-If no acknowledgment arrives within eight seconds, the controller alternates
-red and white three times, then reads the receiver's authoritative state. It
-retries with bounded backoff before returning to a slow blue desynced pattern.
-
-The receiver restores its last acknowledged status after a recharge. A
-controller power-up reads that status instead of advancing the color.
-
-### Repairing the pair
-
-To deliberately erase a pairing, first press reset five times on the
-controller, then do the same on the receiver while the controller is still
-trying to pair. Wait for the LED to return between the first four presses;
-pressing twice rapidly enters the UF2 bootloader instead. Each fifth paced
-press clears that board's saved bond and status and enters a fresh pairing
-window. If the windows do not overlap, press either unpaired board once to
-reopen its window.
-
-## LED language
-
-| Condition | Pattern |
-| --- | --- |
-| Waiting/desynced | Blue, 250 ms on / 1750 ms off |
-| Pairing, connecting, reconciling | Blue, 150 ms on/off |
-| Sending a color | Requested color, 150 ms on/off |
-| Sending Off | Blue, 150 ms on/off |
-| Confirmed | Off or solid yellow/red/green |
-| Failed command | Red/white three times at 200 ms per color |
-
-The default PWM ceiling is 12.5%. It can be adjusted at configure time with
-`LOA_LED_BRIGHTNESS_PERMILLE`; per-channel calibration variables are available
-for balancing yellow and reducing battery drain.
-
-## Build and test
-
-Create a west workspace and install the pinned Zephyr dependencies:
+For a fresh Zephyr workspace, install the pinned dependencies from
+[west.yml](west.yml):
 
 ```sh
 mkdir little-on-air-workspace && cd little-on-air-workspace
@@ -125,37 +100,75 @@ west update
 west zephyr-export
 west packages pip --install
 west sdk install -t arm-zephyr-eabi
+cd little-on-air
 ```
 
-Then build and test from the workspace root:
+Then, from the repository root within that workspace:
 
 ```sh
-west build -b xiao_ble/nrf52840 little-on-air/apps/controller -d build/controller
-west build -b xiao_ble/nrf52840 little-on-air/apps/receiver -d build/receiver
-west twister -T little-on-air/tests -v --inline-logs
+west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-timing375 -- \
+  -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf" \
+  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
 ```
 
-The user-facing images are `build/controller/zephyr/zephyr.uf2` and
-`build/receiver/zephyr/zephyr.uf2`. GitHub Actions runs the same tests and
-builds on every push and pull request. Semantic version tags publish named UF2
-and ELF files with checksums as GitHub Releases.
+Flash `build/receiver-pixels-timing375/zephyr/zephyr.uf2` using the
+[UF2 instructions](docs/FLASHING.md) and the assembled sign's
+[USB/battery connection sequence](docs/PAIRED_BENCH.md#connections).
+The factory bootloader, reset pin, bond storage and saved state are preserved by
+ordinary application-only updates.
 
-## Design notes
+### Legacy controller and default receiver
 
-- The BLE service is encrypted and bonded, supports exactly one pair, and uses
-  an explicit 32-bit transaction ID for every command.
-- The receiver stores state before applying it and indicates success only
-  after both operations complete. Duplicate transactions are idempotent.
-- P0.18 remains nRESET. Firmware reads and clears `RESETREAS.RESETPIN`; it does
-  not erase UICR or replace the factory bootloader.
-- Pairing/status records use the board's 32 KiB internal storage partition and
-  survive application-only UF2 updates.
-- Secure Connections “Just Works” is intentionally limited to a physical
-  pairing window. It provides encryption but no passkey-based MITM protection.
+`apps/controller/` retains the reset-button nRF52840 controller. The default
+receiver build uses the onboard power/status LED; external sign pixels require
+the profile above. Both applications remain covered by CI:
 
-See [architecture](docs/ARCHITECTURE.md), [USB diagnostics](docs/DEBUGGING.md),
-[power notes](docs/POWER.md), and the
-[hardware acceptance checklist](docs/HARDWARE_ACCEPTANCE.md) for more detail.
+```sh
+west build -b xiao_ble/nrf52840 apps/controller -d build/controller
+west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
+```
+
+The [tagged release workflow](.github/workflows/release.yml) publishes nRF52840
+UF2/ELF images. Those controller UF2 files are not ESP32-S3 firmware.
+
+## Test and inspect
+
+From the repository root, with the corresponding toolchains configured:
+
+```sh
+cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake --build build/desk-tests
+ctest --test-dir build/desk-tests --output-on-failure
+west twister -T tests -v --inline-logs --integration --outdir build/twister
+```
+
+After building the controller and four-pixel receiver, check the actual OLED
+renderer and simulated pixel waveform:
+
+```sh
+python -m pip install Pillow==10.4.0
+python tools/render_buddy_ui.py
+python tools/simulate_pixels.py --profile timing375
+```
+
+The OLED renderer uses g++ and the PlatformIO-installed GFX library. Previews,
+test output and simulations stay under `build/`. [CI](.github/workflows/ci.yml)
+checks formatting, host and core tests, both controllers, receiver profiles,
+OLED bounds and pixel timing on pull requests.
+
+## Project layout and further reading
+
+Firmware lives in `apps/`, `src/`, `include/` and `boards/`. Current CAD and print
+files are under `hardware/enclosure/` and `hardware/controller/`; older designs
+are under `hardware/archive/`. Published manufacturing bundles retain their
+versioned paths in `release/`. Disposable output belongs in `build/`, and local
+firmware snapshots, bench evidence and scratch work belong in `.local/`.
+
+- [Workspace guide](docs/WORKSPACE.md): directory map and preserved local records.
+- [Architecture](docs/ARCHITECTURE.md): shared protocol, state machines and persistence.
+- [Power](docs/POWER.md) and [debugging](docs/DEBUGGING.md): board-specific details.
+- [Hardware acceptance](docs/HARDWARE_ACCEPTANCE.md): physical validation checklist.
+- [Contributing](CONTRIBUTING.md) and [agent guidance](AGENTS.md): development conventions.
 
 ## License
 
