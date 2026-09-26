@@ -5,7 +5,8 @@ Candidate only until routing, interface, mesh and slicing audits pass.
 import adsk.core as C,adsk.fusion as F,adsk,importlib.util,json
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1];OUT=BASE/'output/v216'
-s=importlib.util.spec_from_file_location('helpers216',BASE/'build_enclosure.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
+ARCHIVE=BASE.parent/'archive/enclosure'
+s=importlib.util.spec_from_file_location('helpers216',ARCHIVE/'build_enclosure.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
 def fingerprint(q):
  return [q.volume,q.area,q.faces.count,q.edges.count,q.boundingBox.minPoint.asArray(),q.boundingBox.maxPoint.asArray()]
 def contact_gusset(c):

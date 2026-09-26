@@ -177,9 +177,9 @@ as in the original receiver firmware.
 Host tests use CMake, a C/C++ compiler, and CTest (Linux/macOS or WSL):
 
 ```sh
-cmake -S apps/controller-esp32s3/test -B build-desk-tests
-cmake --build build-desk-tests
-ctest --test-dir build-desk-tests --output-on-failure
+cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake --build build/desk-tests
+ctest --test-dir build/desk-tests --output-on-failure
 ```
 
 They cover contact bounce/reversal/invalid encoder transitions, button debounce,

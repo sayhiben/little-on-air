@@ -4,6 +4,7 @@ deps/
 .zephyr-workspace/
 .zephyr-sdk/
 .tool-bin/
+.local/
 tmp*/
 
 # Build and test output

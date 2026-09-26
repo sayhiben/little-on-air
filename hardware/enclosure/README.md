@@ -17,6 +17,16 @@ The package preserves the earlier firmware 0.1.2 snapshot, which uses onboard RG
 
 ## Development files
 
-[REVISION-HISTORY.md](REVISION-HISTORY.md) preserves the prior revision notes and links. Versioned source folders and `output/` are retained as development history and regeneration inputs; several scripts depend on those exact paths. Use the curated release instead of selecting similarly named files from multiple historical packages.
+`v216/` contains the current CAD builder, wire-route checks, print preparation,
+validation and release tooling. `output/v216/` contains its current outputs.
+`build_rear_access.py` incorporates the completed iterative fixes; export meshes
+from a fresh import of its native archive using `roundtrip_mesh.py` before
+preparing print projects. Packaging starts from the preserved v2.15 release and
+replaces the changed housing/yoke and supporting guides.
 
-`v216/` contains the current CAD, wire-route, print, validation and release tooling. Its package script starts from the preserved v2.15 release, then replaces 05/06 and updates the guides/projects. `build_rear_access.py` is the complete CAD builder; export meshes from a fresh import of the resulting archive using `roundtrip_mesh.py` before preparing print projects. The `finish_*.py` scripts record one-time iterative fixes already incorporated in the builder. `v215/`, `v214/`, `release-docs/`, `package_current_release.py`, `audit_current_release.py` and `v213/` preserve preceding workflows. `archive/` holds older reports. No historical CAD or print iteration was deleted.
+Earlier versions, one-time patch/probe scripts, old root-level builders,
+references and superseded outputs now live in
+[the hardware archive](../archive/README.md). Current tools explicitly import
+several archived geometry and print-audit helpers; retain that dependency tree.
+[REVISION-HISTORY.md](REVISION-HISTORY.md) links to the archived manufacturing
+iterations. Published release bundles keep their existing paths and checksums.

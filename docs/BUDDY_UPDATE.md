@@ -1,5 +1,10 @@
 # Six moods and a quieter connection
 
+This is a historical bench record. The old build trees were removed during
+workspace cleanup; retained firmware snapshots, logs and simulation evidence
+are listed in the [workspace guide](WORKSPACE.md#preserved-local-work).
+Build commands below use the consolidated `build/` directory.
+
 This is the historical 0.3.0 bench record. The later
 [pairing and power-light update](PAIRING_POWER_UPDATE.md) supersedes its pairing
 recovery workaround and brightness settings while retaining the six moods.
@@ -49,7 +54,7 @@ are explicitly labeled as last known. A press during a background check queues
 the selected mood only until that read succeeds. Screens dim after 30 seconds
 and sleep after two minutes; background traffic leaves that timer alone.
 
-The preview at `build-buddy-ui/oled-preview.png` renders the actual firmware
+The preview at `build/buddy-ui/oled-preview.png` renders the actual firmware
 home-screen template using the pinned Adafruit GFX library and font. It checks
 12 home-screen variants for text bounds; it is not a photograph of the hardware.
 
@@ -59,13 +64,13 @@ Build the controller using the instructions in
 [its README](../apps/controller-esp32s3/README.md). For the receiver use:
 
 ```sh
-west build -b xiao_ble/nrf52840 apps/receiver -d build-receiver-buddy -- \
+west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-buddy -- \
   -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf" \
   -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
 ```
 
 Preserve the previously bench-tested image at
-`build-receiver-pixels-timing375/zephyr/zephyr.uf2`, SHA-256
+`build/receiver-pixels-timing375/zephyr/zephyr.uf2`, SHA-256
 `715533d41269dd5ee470e7927f0443ce59f2c09c5f74eae442ca52b9d7ffdc8b`.
 Update the receiver before using the new moods. Old firmware rejects states 4
 and 5; set Off before rolling back. Flashing retains bonds and saved state.
@@ -112,15 +117,15 @@ then returned to battery-only ON/RUN for optical tests.
   command/acknowledgment checks; the new moods and warmer color were also visually
   confirmed by the user.
 
-The local build bundle is `build-buddy-release/`, with SHA-256 hashes
+The local build bundle is `.local/firmware/previous/buddy-0.3.0/`, with SHA-256 hashes
 and validation records in `manifest.json`. Receiver SHA-256:
 `b7ab5fe5fe1b0a392d365a163f87f4d5a774559ed3f9ba87b59fb2cb359d2001`.
 Controller application SHA-256:
 `d4b020bba4dce74f7b9615e63f225f0fff4be919cf7ad98e093088b1277d48e7`.
-Flash/backup record: `tmp/buddy-flash-20260926T051530Z/flash-record.json`;
-controller backup: `tmp/controller-before-buddy-fullflash.bin`.
-Command and idle logs are `tmp/buddy-request.log`, `tmp/buddy-special.log`,
-`tmp/buddy-warn.log`, `tmp/buddy-idle-on-air.log`, and `tmp/buddy-final-states.log`.
+Flash/backup record: `.local/archive/2026-09-26/tmp/buddy-flash-20260926T051530Z/flash-record.json`;
+controller backup: `.local/archive/2026-09-26/tmp/controller-before-buddy-fullflash.bin`.
+Command and idle logs are `.local/archive/2026-09-26/tmp/buddy-request.log`, `.local/archive/2026-09-26/tmp/buddy-special.log`,
+`.local/archive/2026-09-26/tmp/buddy-warn.log`, `.local/archive/2026-09-26/tmp/buddy-idle-on-air.log`, and `.local/archive/2026-09-26/tmp/buddy-final-states.log`.
 
 ## Pairing recovery after Forget this sign
 
@@ -140,18 +145,18 @@ receiver was recovered using its diagnostic USB command.
   saved mood and opens a fresh pairing window.
 - Controller Pair succeeded with verified Off state. Receiver diagnostics then
   confirmed `bonded=1 saved=0 status=0`.
-- Restored the exact normal receiver image from `build-buddy-release/`.
+- Restored the exact normal receiver image from `.local/firmware/previous/buddy-0.3.0/`.
   A new Off command was acknowledged as `65139a58`, proving the fresh pairing
   survived the firmware restore. After the user unplugged receiver USB and
   returned it to battery-only ON/RUN, Sync read back the same `65139a58` / Off
   state with `bonded=1 verified=1`.
 
-Logs: `tmp/re-pair-controller-before.log`, `tmp/re-pair-receiver-before.log`,
-`tmp/re-pair-controller-pair.log`, `tmp/re-pair-receiver-after.log`, and
-`tmp/re-pair-normal-check.log`, and `tmp/re-pair-battery-sync.log`.
+Logs: `.local/archive/2026-09-26/tmp/re-pair-controller-before.log`, `.local/archive/2026-09-26/tmp/re-pair-receiver-before.log`,
+`.local/archive/2026-09-26/tmp/re-pair-controller-pair.log`, `.local/archive/2026-09-26/tmp/re-pair-receiver-after.log`, and
+`.local/archive/2026-09-26/tmp/re-pair-normal-check.log`, and `.local/archive/2026-09-26/tmp/re-pair-battery-sync.log`.
 Flash records/backups are under
-`tmp/re-pair-20260926T060821Z-diagnostic/` and
-`tmp/re-pair-20260926T061037Z-normal/`.
+`.local/archive/2026-09-26/tmp/re-pair-20260926T060821Z-diagnostic/` and
+`.local/archive/2026-09-26/tmp/re-pair-20260926T061037Z-normal/`.
 
 The older full controller backup predates this fresh bond; restoring that entire
 flash would restore its old keys. Ordinary application-only rollback preserves

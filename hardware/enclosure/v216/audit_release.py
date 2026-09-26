@@ -6,9 +6,10 @@ import xml.etree.ElementTree as E
 import numpy as np
 
 BASE=Path(__file__).resolve().parents[1]
+ARCHIVE=BASE.parent/'archive/enclosure'
 ROOT=BASE.parents[1]
 OUT=ROOT/'release/little-on-air-enclosure-v2.16'
-spec=importlib.util.spec_from_file_location('a',BASE/'audit_print_projects.py')
+spec=importlib.util.spec_from_file_location('a',ARCHIVE/'audit_print_projects.py')
 a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
 
 def md(node):return {m.get('key'):m.get('value') for m in node.findall('metadata') if m.get('key')}
