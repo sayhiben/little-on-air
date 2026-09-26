@@ -5,7 +5,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/pwm.h>
 #include <zephyr/drivers/led_strip.h>
-#include <little_on_air/status_output.h>
+#include "status_output.h"
 
 struct device fake_pixels;
 static uint32_t pwm[3];

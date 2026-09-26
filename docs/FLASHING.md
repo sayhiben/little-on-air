@@ -1,45 +1,94 @@
-# Flashing
+# Flash the current device pair
 
-For the **XIAO ESP32-S3 OLED/encoder controller**, use the
-[PlatformIO USB flashing instructions](../apps/controller-esp32s3/README.md#build-flash-and-inspect).
-The UF2 instructions below apply only to the legacy nRF52840 boards.
+The supported pair is a **XIAO ESP32-S3 OLED/encoder controller** and a
+**XIAO nRF52840 four-pixel sign**. Update them together. Firmware in old
+manufacturing bundles is historical; use the current CI/release firmware bundle
+or build the current source. No legacy controller UF2 is produced.
 
-For the assembled four-pixel nRF52840 display, use the optional receiver build
-and USB/battery connection sequence in [the paired bench guide](PAIRED_BENCH.md).
+## Identify the images
 
-## Release images
+Extract `little-on-air-v<version>.zip`. Its `manifest.json` records the source
+revision, board roles, controller offsets and file hashes. Check the ZIP's
+`.sha256` before extraction and `SHA256SUMS` inside the extracted directory.
+On Linux/WSL, run `sha256sum -c SHA256SUMS` from that directory. On PowerShell,
+use `Get-FileHash -Algorithm SHA256 <path>` and compare with the manifest.
 
-Download the controller and receiver UF2 files from the matching GitHub
-Release. Do not swap their roles.
+| Folder | Files | Device |
+| --- | --- | --- |
+| `controller/` | `bootloader.bin`, `partitions.bin`, `boot_app0.bin`, `firmware.bin`, `firmware.elf` | XIAO ESP32-S3 |
+| `receiver/` | `zephyr.uf2`, `zephyr.elf` | XIAO nRF52840 sign, four-pixel 375 ns configuration |
 
-For each board:
+ELF files are debugger symbols; they are not files to copy onto a UF2 drive.
+The normal receiver image has no USB console. The receiver debug image is a
+separate CI artifact and uses the same pixels, pins and application behavior.
 
-1. Connect USB-C.
-2. Double-tap reset quickly. A `XIAO-SENSE` mass-storage drive appears on the
-   factory Sense bootloader used by our test boards; other factory revisions
-   may label it `XIAO-BOOT`.
-3. Copy the appropriate `.uf2` file onto that drive.
-4. Wait for the board to program itself, eject, and restart.
+## Controller: ESP32-S3
 
-Application-only UF2 updates leave the bootloader, SoftDevice reservation,
-bond, and saved status partitions intact.
+The controller uses USB power normally. From a configured source checkout,
+PlatformIO builds and uploads all required images with the correct offsets:
 
-## Local images
+```sh
+python -m platformio run -d apps/controller-esp32s3
+python -m platformio device list
+python -m platformio run -d apps/controller-esp32s3 -t upload --upload-port COM4
+```
 
-After a local build, use:
+Replace COM4 with the actual controller port (`/dev/ttyACM0`, for example, on
+Linux). For a downloaded bundle, install the matching esptool in your Python
+environment and run from the extracted bundle directory:
 
-- `build/controller/zephyr/zephyr.uf2` for the remote.
-- `build/receiver/zephyr/zephyr.uf2` for the display.
+```sh
+python -m pip install esptool==4.9.0
+python -m esptool --chip esp32s3 --port COM4 --baud 460800 write_flash \
+  0x0 controller/bootloader.bin \
+  0x8000 controller/partitions.bin \
+  0xe000 controller/boot_app0.bin \
+  0x10000 controller/firmware.bin
+```
 
-The release workflow also publishes ELF files for an SWD debugger. SWD is not
-required for ordinary installation or recovery because v0 never repurposes the
-reset pin.
+The backslash continuation above is for a Linux shell; in PowerShell put the
+command on one line or use PowerShell's backtick continuation. If automatic
+upload cannot enter the ROM downloader, use the board's BOOT/RESET controls
+according to the XIAO ESP32-S3 procedure; do not erase flash as a first remedy.
 
-## Factory pairing reset
+These individual writes leave NVS/bond storage in the gaps intact. Do not use
+`erase_flash`, restore a historical full-flash backup, or substitute a merged
+image padded across the NVS region for an ordinary update. The normal physical
+knob is an application control, not the board's BOOT button.
 
-Five paced reset presses are an application gesture. Do the controller's five
-presses first, then the receiver's while the controller is trying to pair.
-Wait for the LED after each of the first four presses. A rapid double tap is
-intentionally still interpreted by the factory bootloader and will open
-`XIAO-BOOT` instead. If the 60-second pairing windows do not overlap, one more
-press on either unpaired board reopens its window.
+## Sign: nRF52840
+
+Before connecting **either** sign USB port, set POWER OFF. With both USB ports
+unplugged, select PROGRAM. Connect **XIAO USB only** for firmware service; leave
+charger USB unplugged. Never connect both ports or use receiver USB in RUN.
+
+1. With POWER OFF / PROGRAM, connect a data cable to XIAO USB.
+2. Rapidly double-tap RESET. Identify the removable factory boot volume, commonly
+   `XIAO-SENSE` or `XIAO-BOOT` depending on the installed bootloader.
+3. Copy `receiver/zephyr.uf2` to that volume. Wait for programming and restart.
+4. Unplug XIAO USB. With POWER still OFF, select RUN, then POWER ON.
+5. Check saved mood, pairing, all six moods and the independent red power light.
+
+A local normal build produces `build/receiver/zephyr/zephyr.uf2`:
+
+```sh
+west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
+```
+
+Application-only UF2 updates preserve the factory bootloader, reserved flash,
+settings, bond and saved mood. Keep nRESET as hardware reset; do not mass-erase
+or overwrite UICR. SWD is not required for normal installation or recovery.
+
+## Pairing recovery after an update
+
+A normal update should retain pairing. Check power and use **Check my sign**
+first. If pairing records are mismatched, use the controller's **Forget this
+sign** with the sign powered nearby. If necessary, reset the sign's pairing with
+five separate RESET presses about two seconds apart, then press the unpaired
+controller knob during the 60-second pairing window. This paced sequence is
+different from the rapid double tap used for UF2 recovery.
+
+See the [product manual](https://github.com/sayhiben/little-on-air/blob/main/README.md)
+and [developer guide](https://github.com/sayhiben/little-on-air/blob/main/CONTRIBUTING.md)
+for controls, commissioning, build setup and diagnostics. Flashing instructions
+in historical manufacturing snapshots describe their own old firmware.

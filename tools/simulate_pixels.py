@@ -96,33 +96,26 @@ def chunk_lengths(length, maximum):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--profile", choices=["padded", "timing375"], default="padded")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--compiler", default="cc")
     parser.add_argument("--devicetree-header", type=Path)
     parser.add_argument("--reference-encoder", type=Path,
                         help="Optional previously compiled encoder for byte-exact regression")
     args = parser.parse_args()
-    timing375 = args.profile == "timing375"
     if args.devicetree_header is None:
-        args.devicetree_header = ROOT / f"build/receiver-pixels-{args.profile}" / "zephyr/include/generated/zephyr/devicetree_generated.h"
-    output = (args.output or ROOT / ("build/pixel-simulation-timing375" if timing375
-                                    else "build/pixel-simulation")).resolve()
+        args.devicetree_header = ROOT / "build/receiver" / "zephyr/include/generated/zephyr/devicetree_generated.h"
+    output = (args.output or ROOT / "build/pixel-simulation").resolve()
     output.mkdir(parents=True, exist_ok=True)
     runner = output / "encode_frames"
-    defines = ["-DCONFIG_LOA_PIXELS_TIMING_375NS=1"] if timing375 else []
     subprocess.run([args.compiler, "-std=c11", "-O2", "-Wall", "-Wextra", "-Werror",
-                    *defines,
                     "-I", str(ROOT / "include"), str(ROOT / "src/ws2812_frame.c"),
                     str(ROOT / "tests/pixels/encode_frames.c"), "-o", str(runner)], check=True)
     subprocess.run([str(runner), "--self-test"], check=True)
     info = json.loads(subprocess.check_output([str(runner), "--info"]))
     generated = args.devicetree_header.read_text()
     build_config = (args.devicetree_header.parents[3] / ".config").read_text()
-    require(("CONFIG_LOA_PIXELS_TIMING_375NS=y" in build_config) == timing375,
-            "Host profile differs from the built firmware Kconfig")
-    require("CONFIG_LOA_PIXELS_PADDED_SPI=y" in build_config,
-            "Built firmware does not use the padded driver")
+    require("CONFIG_LED_STRIP=y" in build_config and "CONFIG_SPI=y" in build_config,
+            "Built firmware must enable the sign pixel transport")
     require("CONFIG_WS2812_STRIP_SPI=y" not in build_config,
             "Upstream eight-bit-symbol driver must be disabled")
     alias = re.search(r"#define DT_N_ALIAS_loa_pixels\s+(\S+)", generated)
@@ -176,9 +169,9 @@ def main():
     for boundary in range(255, length, 255):
         require(boundary < pad or boundary > length - pad,
                 "Payload crosses the optional stress-test boundary")
-    timing = [(375, 875), (750, 500)] if timing375 else [(250, 1000), (750, 500)]
-    require(info["spi_hz"] == (8_000_000 if timing375 else 4_000_000), "Unexpected clock")
-    require(length == (720 if timing375 else 360), "Unexpected transfer size")
+    timing = [(375, 875), (750, 500)]
+    require(info["spi_hz"] == 8_000_000, "Unexpected clock")
+    require(length == 720, "Unexpected transfer size")
     # Ranges from the older WS2812B reference, not a claim about the unknown IC.
     legacy_ranges = [(250, 550), (700, 1000), (650, 950), (300, 600)]
     margins = []
@@ -214,7 +207,7 @@ def main():
     (output / "pixel-1-red.spi.bin").write_bytes(red)
     (output / "all-off.spi.bin").write_bytes(saved["all-off"])
     report = {
-        "result": "PASS", "profile": args.profile, "config": info, "frame_vectors": len(cases),
+        "result": "PASS", "profile": "timing375", "config": info, "frame_vectors": len(cases),
         "nominal_high_low_ns": {"zero": timing[0], "one": timing[1]},
         "nominal_bit_period_ns": sum(timing[0]),
         "nominal_pulse_pairs_checked": len(cases) * 96,

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 #include <zephyr/kernel.h>
-#include <little_on_air/status_output.h>
+#include "status_output.h"
 #include "device_indicator.h"
 
 static enum loa_device_state mode;
@@ -28,9 +28,6 @@ void loa_device_indicator_init(void)
 }
 void loa_device_indicator_set(enum loa_device_state state)
 {
-	if (!IS_ENABLED(CONFIG_LOA_RECEIVER_POWER_LED)) {
-		return;
-	}
 	k_mutex_lock(&device_lock, K_FOREVER);
 	if (mode != state) {
 		mode = state;

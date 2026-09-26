@@ -11,11 +11,11 @@ current instructions and preserve unrelated work.
 - `apps/controller-esp32s3/`: current OLED/encoder controller; Arduino and
   PlatformIO. Package pins are in `platformio.ini`.
 - `apps/receiver/`: Zephyr nRF52840 receiver. The assembled sign uses the padded
-  375 ns four-pixel profile documented in CONTRIBUTING.md.
-- `apps/controller/`: supported legacy Zephyr reset-button controller.
-- `src/`, `include/little_on_air/`: shared protocol, status, state machines,
+  375 ns four-pixel configuration by default. There are no legacy firmware targets.
+- `src/`, `include/little_on_air/`: portable protocol, status, receiver processing,
   persistence, reset handling and output behavior.
-- `boards/`, `cmake/`: board overlays and shared Zephyr build configuration.
+- `boards/`: the receiver board overlay and optional USB diagnostic overlay.
+- `tests/host/`: host checks for both devices; `tests/unit/`: Zephyr core checks.
 - `tests/`, `tools/`: host/core regressions, serial helpers and display/pixel checks.
 - `hardware/enclosure/v215/`, `hardware/enclosure/output/v215/`: current receiver CAD
   tooling and outputs. `hardware/controller/igor-measured-v4/` is the current
@@ -83,18 +83,18 @@ matrix; complete required checks before merging.
 Commands below run from the repository root in a configured environment:
 
 ```sh
-cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake -S tests/host -B build/desk-tests
 cmake --build build/desk-tests
 ctest --test-dir build/desk-tests --output-on-failure
 python -m platformio run -d apps/controller-esp32s3
-west twister -T tests -v --inline-logs --integration --outdir build/twister
+west twister -T tests/unit -v --inline-logs --integration --outdir build/twister
 ```
 
-For receiver/shared-code changes, build the default receiver, legacy controller
-and relevant pixel profiles using CONTRIBUTING.md and CI commands. For pixel
-timing changes, run `tools/simulate_pixels.py` against the actual generated header from
-the matching firmware build. For OLED changes, run `tools/render_buddy_ui.py`
-after PlatformIO dependencies are installed and inspect the generated preview.
+For receiver/shared-code changes, build the normal receiver and its USB diagnostic
+configuration using CONTRIBUTING.md and CI commands. For pixel changes, run
+`tools/simulate_pixels.py` against the actual generated header from that build.
+For OLED changes, run `tools/render_buddy_ui.py` after PlatformIO dependencies
+are installed and inspect the generated preview.
 
 C sources and headers follow the pinned Zephyr tree's `.clang-format`; use that
 style when checking changed code. Keep package pins unless an upgrade is part of

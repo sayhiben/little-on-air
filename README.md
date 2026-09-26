@@ -293,9 +293,9 @@ heading and text to judge connection state.
 
 This manual describes the **ESP32-S3 controller firmware 0.4.0** with the current
 matching four-pixel nRF52840 receiver firmware, **Igor measured v4 controller**
-and **v2.15 sign case** with open-backed frame wire channels. Older reset-button
-controllers have different controls. Older receiver firmware may not support
-Request, Special or unlinking both devices through Forget.
+and **v2.15 sign case** with open-backed frame wire channels. This project
+maintains this one device pair; install the current controller and receiver
+firmware together when updating.
 
 Manufacturing ZIPs preserve the firmware that shipped with their design snapshot;
 that may be older than this manual. Use the [developer firmware guide](CONTRIBUTING.md#build-and-flash)

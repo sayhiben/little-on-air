@@ -5,12 +5,12 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/settings/settings.h>
 
-#include <little_on_air/indicator.h>
 #include <little_on_air/reset_input.h>
 #include <little_on_air/store.h>
 
 #include "ble_server.h"
 #include "device_indicator.h"
+#include "mood_indicator.h"
 #include "pair_reset.h"
 
 #if defined(CONFIG_UART_CONSOLE)
@@ -79,7 +79,7 @@ int main(void)
 	};
 	int err;
 
-	err = loa_indicator_init();
+	err = loa_mood_indicator_init();
 	if (err != 0) {
 		return err;
 	}
