@@ -1,12 +1,17 @@
 # Little On Air enclosure
 
-## v2.16 — rearward LED wiring
+**Current case: [v2.15](../../release/little-on-air-enclosure-v2.15/README.md).**
+The user retained the case with open-backed frame channels and selected it again
+on September 26, 2026. Its original housing and yoke are current along with the
+frame. See [the current enclosure guide](README.md).
 
-Use the [complete v2.16 release](../../release/little-on-air-enclosure-v2.16/README.md). Replace **05 rear housing and 06 electronics yoke**; reuse the v2.15 front and all other parts. Shallow housing reliefs, reinforced open yoke grooves and one relocated charger contact let separate LED leads turn rearward behind the optical mounts. The [upgrade project](../../release/little-on-air-enclosure-v2.16/bambu-studio/on-air-v216-X1C-upgrade-parts.3mf) prints both parts in black PLA+, about 3 h 06 min / 40.51 g, without supports. All 12 modeled wire paths, their 66 pairwise separations, rigid assembly checks and both sliced projects pass; actual pad exits, solder and print fit remain physical checks. Read [the illustrated routing guide](../../release/little-on-air-enclosure-v2.16/guides/FRONT-WIRING.md).
+## Historical v2.16 — rearward LED wiring
+
+The preserved [v2.16 release](../../release/little-on-air-enclosure-v2.16/README.md) changed **05 rear housing and 06 electronics yoke**, reusing the v2.15 front and all other parts. Shallow housing reliefs, reinforced open yoke grooves and one relocated charger contact let separate LED leads turn rearward behind the optical mounts. The [upgrade project](../../release/little-on-air-enclosure-v2.16/bambu-studio/on-air-v216-X1C-upgrade-parts.3mf) prints both parts in black PLA+, about 3 h 06 min / 40.51 g, without supports. Its recorded checks cover all 12 modeled wire paths, their 66 pairwise separations, rigid assembly and both sliced projects; actual pad exits, solder and print fit remain physical checks. This revision is archived rather than selected for the current case.
 
 ## v2.15 and v2.14 — wider perimeter wire channels
 
-[v2.14](../../release/little-on-air-enclosure-v2.14/README.md) widened the front to 129 × 69 mm and added perimeter passages. Their roofs failed the user's physical bridge print. [v2.15](../../release/little-on-air-enclosure-v2.15/README.md) opened those channels toward the rear. Its frame remains current in v2.16, but the deeper LED paths now replace the awkward perimeter turns at the pads.
+[v2.14](../../release/little-on-air-enclosure-v2.14/README.md) widened the front to 129 × 69 mm and added perimeter passages. Their roofs failed the user's physical bridge print. [v2.15](../../release/little-on-air-enclosure-v2.15/README.md) opened those channels toward the rear, retaining the other parts. The complete v2.15 case is the current selection.
 
 ## Historical v2.13 complete Bambu Studio project
 

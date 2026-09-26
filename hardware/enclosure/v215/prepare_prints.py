@@ -2,6 +2,7 @@
 from pathlib import Path
 import copy,importlib.util,json,zipfile,xml.etree.ElementTree as E,subprocess
 BASE=Path(__file__).resolve().parents[1];OUT=BASE/'output/v215'
+ARCHIVE=BASE.parent/'archive/enclosure'
 CORE='http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
 PROD='http://schemas.microsoft.com/3dmanufacturing/production/2015/06'
 E.register_namespace('',CORE);E.register_namespace('p',PROD)
@@ -17,7 +18,7 @@ def xml(o):return E.tostring(o,encoding='utf-8',xml_declaration=True)
 
 def main():
     orient=load('orient214',BASE/'v215/prepare_meshes.py');orient.OUT=OUT;orient.main()
-    a=load('bambu214',BASE/'v28/make_bambu.py')
+    a=load('bambu214',ARCHIVE/'v28/make_bambu.py')
     src=BASE.parents[1]/'release/little-on-air-enclosure-v2.13/bambu-studio/on-air-v213-X1C-all-plates.3mf'
     with zipfile.ZipFile(src) as z:entries={n:z.read(n) for n in z.namelist()}
     config=E.fromstring(entries['Metadata/model_settings.config']);root=E.fromstring(entries['3D/3dmodel.model'])

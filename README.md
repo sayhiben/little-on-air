@@ -13,7 +13,7 @@ sign's four corner lights.
 | Part | Hardware and firmware | Design files |
 | --- | --- | --- |
 | Desk controller | USB-powered XIAO ESP32-S3, 128×64 SSD1306 OLED, rotary push encoder and one NeoPixel; Arduino/PlatformIO | [Measured Igor v4](hardware/controller/igor-measured-v4/README.md) · [Complete ZIP](release/little-on-air-igor-controller-v4.zip) |
-| Status sign | XIAO nRF52840, four external NeoPixels and an independent onboard power/status LED; Zephyr | [Enclosure v2.16](release/little-on-air-enclosure-v2.16/README.md) · [Complete ZIP](release/little-on-air-enclosure-v2.16.zip) |
+| Status sign | XIAO nRF52840, four external NeoPixels and an independent onboard power/status LED; Zephyr | [Enclosure v2.15](release/little-on-air-enclosure-v2.15/README.md) · [Complete ZIP](release/little-on-air-enclosure-v2.15.zip) |
 
 The current controller firmware is `esp32s3-0.4.0`. Its matching receiver profile
 uses padded SPI transmission with 375 ns zero pulses. The paired hardware has
@@ -21,7 +21,7 @@ been tested through all six moods, battery operation, pairing recovery and
 online Forget; details and image hashes are in the
 [pairing and power-light record](docs/PAIRING_POWER_UPDATE.md).
 
-The latest enclosure and controller CAD have digital fit and manufacturing
+The current enclosure and controller CAD have digital fit and manufacturing
 checks. Physical print fit remains a separate validation step documented in
 their assembly guides.
 
