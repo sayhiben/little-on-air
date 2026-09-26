@@ -2,14 +2,15 @@
 from pathlib import Path
 import importlib.util,json
 BASE=Path(__file__).resolve().parents[1];OUT=BASE/'output/v215'
-s=importlib.util.spec_from_file_location('sections214',BASE/'v214/inspect_sections.py')
+ARCHIVE=BASE.parent/'archive/enclosure'
+s=importlib.util.spec_from_file_location('sections214',ARCHIVE/'v214/inspect_sections.py')
 m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 
 def main():
     tri=m.a.stl(OUT/'meshes-assembly-coordinates/01-front-optical-bezel.stl')
     edges=m.segments(tri,5)
     path=' '.join(f'M{p[0]:.4f},{p[1]:.4f} L{q[0]:.4f},{q[1]:.4f}' for p,q in edges)
-    report=json.loads((BASE/'output/v214/native-build.json').read_text())
+    report=json.loads((ARCHIVE/'output/v214/native-build.json').read_text())
     svg=['<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1020" viewBox="0 0 1400 1020">',
          '<rect width="1400" height="1020" fill="#f4f6f8"/>',
          '<g font-family="Arial, sans-serif" fill="#17283b">',

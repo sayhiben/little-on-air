@@ -16,7 +16,7 @@ current instructions and preserve unrelated work.
   persistence, reset handling and output behavior.
 - `boards/`, `cmake/`: board overlays and shared Zephyr build configuration.
 - `tests/`, `tools/`: host/core regressions, serial helpers and display/pixel checks.
-- `hardware/enclosure/v216/`, `hardware/enclosure/output/v216/`: current receiver CAD
+- `hardware/enclosure/v215/`, `hardware/enclosure/output/v215/`: current receiver CAD
   tooling and outputs. `hardware/controller/igor-measured-v4/` is the current
   controller design.
 - `hardware/archive/`: preserved historical designs and some helpers still

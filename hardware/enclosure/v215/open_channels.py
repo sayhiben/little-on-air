@@ -3,7 +3,8 @@ import adsk.core as C,adsk.fusion as F,adsk
 import importlib.util,json
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1];OUT=BASE/'output/v215'
-s=importlib.util.spec_from_file_location('open215',BASE/'build_enclosure.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
+ARCHIVE=BASE.parent/'archive/enclosure'
+s=importlib.util.spec_from_file_location('open215',ARCHIVE/'build_enclosure.py');b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
 def fingerprint(q):
  return {'volume':q.volume,'area':q.area,'faces':q.faces.count,'edges':q.edges.count,'bounds':[q.boundingBox.minPoint.asArray(),q.boundingBox.maxPoint.asArray()]}
 def run(_context:str):
@@ -16,7 +17,7 @@ def run(_context:str):
  b.rounded(sk,-2.9,-2.9,125.8,65.8,8.1);b.rounded(sk,1.3,1.3,117.4,57.4,3.9)
  profile=next(p for p in sk.profiles if p.profileLoops.count==2)
  b.extrude(c,sk,-1.4,'Remove continuous cable channel roof',F.FeatureOperations.CutFeatureOperation,profile)
- prior=json.loads((BASE/'output/v214/native-build.json').read_text())
+ prior=json.loads((ARCHIVE/'output/v214/native-build.json').read_text())
  for q in prior['led_access_windows']:
   b.cutbox(c,'Open LED wiring access from rear',q['x'],q['y'],8.1,q['width'],q['height'],1.4)
  for x in (1.2,117):

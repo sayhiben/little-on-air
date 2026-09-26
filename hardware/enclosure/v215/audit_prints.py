@@ -3,11 +3,12 @@ from pathlib import Path
 import importlib.util,json,collections,hashlib,zipfile,re
 import numpy as np
 BASE=Path(__file__).resolve().parents[1]
+ARCHIVE=BASE.parent/'archive/enclosure'
 OUT=BASE/'output/v215'
 def load(name,path):
     s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
-a=load('mesh',BASE/'audit_print_projects.py')
-c=load('complete',BASE/'v213/audit_complete_project.py')
+a=load('mesh',ARCHIVE/'audit_print_projects.py')
+c=load('complete',ARCHIVE/'v213/audit_complete_project.py')
 def md(o):return {m.get('key'):m.get('value') for m in o.findall('metadata') if m.get('key')}
 
 def main():

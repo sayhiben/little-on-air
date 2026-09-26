@@ -8,8 +8,8 @@ Start with [the project README](../README.md) for firmware behavior and
 | `apps/`, `src/`, `include/`, `boards/`, `cmake/` | Firmware applications, shared code and board configuration |
 | `tests/`, `tools/`, `.github/` | Tests, development helpers and CI |
 | `docs/` | Setup instructions, architecture and dated bench records |
-| `hardware/enclosure/v216/` | Current receiver enclosure tooling |
-| `hardware/enclosure/output/v216/` | Current enclosure CAD and manufacturing evidence |
+| `hardware/enclosure/v215/` | Current receiver enclosure tooling |
+| `hardware/enclosure/output/v215/` | Current enclosure CAD and manufacturing evidence |
 | `hardware/controller/igor-measured-v4/` | Current controller CAD, source, guides and print projects |
 | `hardware/archive/` | Earlier hardware designs and intermediate work |
 | `release/` | Published manufacturing bundles, including versioned historical releases |

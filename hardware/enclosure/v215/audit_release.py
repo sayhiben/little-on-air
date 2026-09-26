@@ -6,9 +6,10 @@ import xml.etree.ElementTree as E
 import numpy as np
 
 BASE=Path(__file__).resolve().parents[1]
+ARCHIVE=BASE.parent/'archive/enclosure'
 ROOT=BASE.parents[1]
 OUT=ROOT/'release/little-on-air-enclosure-v2.15'
-spec=importlib.util.spec_from_file_location('a',BASE/'audit_print_projects.py')
+spec=importlib.util.spec_from_file_location('a',ARCHIVE/'audit_print_projects.py')
 a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
 
 def md(node):return {m.get('key'):m.get('value') for m in node.findall('metadata') if m.get('key')}
@@ -40,7 +41,10 @@ def main():
     manifest=json.loads((OUT/'MANIFEST.json').read_text(encoding='utf-8'))
     for rel,record in manifest['provenance'].items():
         if 'source_sha256' in record:
-            source=ROOT/record['source'];assert sha(source)==record['source_sha256'],rel
+            source=ROOT/record['source']
+            if not source.exists() and source.is_relative_to(BASE):
+                source=ARCHIVE/source.relative_to(BASE)
+            assert sha(source)==record['source_sha256'],rel
             if record['exact_copy']:assert sha(OUT/rel)==record['source_sha256'],rel
     parts=list(csv.DictReader((OUT/'PARTS.csv').open(encoding='utf-8',newline='')))
     prints=[p for p in parts if p['Release file'].endswith('.stl')]
