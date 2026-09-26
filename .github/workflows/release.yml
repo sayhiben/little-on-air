@@ -23,12 +23,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up Zephyr 4.3 toolchain
-        uses: zephyrproject-rtos/action-zephyr-setup@v1
-        with:
-          app-path: little-on-air
-          toolchains: arm-zephyr-eabi
-          ccache-cache-key: little-on-air-v0-release
+      - name: Set up cached Zephyr workspace
+        uses: ./little-on-air/.github/actions/setup-zephyr
 
       - name: Verify release version
         working-directory: little-on-air

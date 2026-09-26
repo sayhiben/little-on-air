@@ -21,6 +21,16 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Cache PlatformIO dependencies
+        uses: actions/cache@v6
+        with:
+          # Keep build output fresh; cache only downloads and installed packages.
+          path: |
+            ~/.platformio/.cache
+            ~/.platformio/packages
+            ~/.platformio/platforms
+            apps/controller-esp32s3/.pio/libdeps
+          key: platformio-v1-${{ runner.os }}-${{ runner.arch }}-6.1.18-${{ hashFiles('apps/controller-esp32s3/platformio.ini') }}
       - name: Install PlatformIO
         run: python -m pip install platformio==6.1.18
       - name: Configure host tests
@@ -61,12 +71,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up Zephyr 4.3 toolchain
-        uses: zephyrproject-rtos/action-zephyr-setup@v1
-        with:
-          app-path: little-on-air
-          toolchains: arm-zephyr-eabi
-          ccache-cache-key: little-on-air-v0
+      - name: Set up cached Zephyr workspace
+        uses: ./little-on-air/.github/actions/setup-zephyr
 
       - name: Check whitespace
         working-directory: little-on-air
