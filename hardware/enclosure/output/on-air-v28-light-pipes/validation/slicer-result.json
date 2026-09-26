@@ -1,0 +1,179 @@
+{
+    "error_string": "Success.",
+    "export_time": 335,
+    "layer_height": 0.10000000149011612,
+    "plate_index": 0,
+    "prepare_time": 64,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 14.38196086883545,
+                "Custom": 902.67333984375,
+                "Flush": 29.0,
+                "Gap infill": 21.819692611694336,
+                "Internal solid infill": 187.6964111328125,
+                "Outer wall": 312.2737731933594,
+                "Sparse infill": 197.67645263671875,
+                "Travel": 70.5383529663086,
+                "Undefined": 55.18341064453125
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFG99",
+                    "id": 1,
+                    "main_used_g": 0.9825229048728943,
+                    "total_used_g": 0.9825229048728943
+                }
+            ],
+            "generate_support_material_time": 3,
+            "id": 1,
+            "infill_time": 10,
+            "layer_filament_change": 0,
+            "main_predication": 775.4049682617188,
+            "make_perimeters_time": 20,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 4.199283599853516,
+                        "height": 2.799999237060547,
+                        "width": 18.30000114440918,
+                        "x": 98.8499984741211,
+                        "y": 109.90036010742188,
+                        "z": -1.8530274203953923e-08
+                    },
+                    "id": 5,
+                    "name": "08-front-rgb-2.95mm.stl",
+                    "triangle_count": 1502
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.30000114440918,
+                        "x": 126.8499984741211,
+                        "y": 110.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 9,
+                    "name": "09-charger-2.95mm.stl",
+                    "triangle_count": 1388
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.299993515014648,
+                        "x": 140.85000610351563,
+                        "y": 110.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 13,
+                    "name": "09-charger-2.95mm.stl",
+                    "triangle_count": 1388
+                },
+                {
+                    "bbox": {
+                        "depth": 4.199283599853516,
+                        "height": 2.799999237060547,
+                        "width": 18.30000114440918,
+                        "x": 98.8499984741211,
+                        "y": 123.90036010742188,
+                        "z": -1.8530274203953923e-08
+                    },
+                    "id": 17,
+                    "name": "08-front-rgb-3.05mm.stl",
+                    "triangle_count": 1502
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.30000114440918,
+                        "x": 126.8499984741211,
+                        "y": 124.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 21,
+                    "name": "09-charger-3.05mm.stl",
+                    "triangle_count": 1392
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.299993515014648,
+                        "x": 140.85000610351563,
+                        "y": 124.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 25,
+                    "name": "09-charger-3.05mm.stl",
+                    "triangle_count": 1392
+                },
+                {
+                    "bbox": {
+                        "depth": 4.199283599853516,
+                        "height": 2.799999237060547,
+                        "width": 18.30000114440918,
+                        "x": 98.8499984741211,
+                        "y": 137.90036010742188,
+                        "z": -1.8530274203953923e-08
+                    },
+                    "id": 29,
+                    "name": "08-front-rgb-3.15mm.stl",
+                    "triangle_count": 1518
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.30000114440918,
+                        "x": 126.8499984741211,
+                        "y": 138.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 33,
+                    "name": "09-charger-3.15mm.stl",
+                    "triangle_count": 1404
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.299993515014648,
+                        "x": 140.85000610351563,
+                        "y": 138.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 37,
+                    "name": "09-charger-3.15mm.stl",
+                    "triangle_count": 1404
+                }
+            ],
+            "sliced_time": 773,
+            "sliced_time_with_cache": 722,
+            "total_predication": 1720.69287109375,
+            "triangle_count": 12890,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 100.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 1
+}

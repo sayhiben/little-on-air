@@ -1,0 +1,24 @@
+{
+  "document": "Little ON AIR v2.7 - 24 mm final revision",
+  "units": "mm",
+  "items": [
+    {
+      "name": "R1 inline resistor and bypass wires",
+      "min_mm": [
+        35.5,
+        4.8,
+        11
+      ],
+      "max_mm": [
+        48,
+        10.5,
+        16.6
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "Wire envelopes are clearance reservations, not a circuit simulation. Component and solder pad shapes remain measured-fit items.",
+  "passed": true
+}

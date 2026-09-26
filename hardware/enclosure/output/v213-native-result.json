@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": true,\n  \"static\": [],\n  \"failed_motion\": [],\n  \"failed_retention\": [],\n  \"failed_access\": []\n}\n",
+  "success": true
+}

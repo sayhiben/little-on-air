@@ -1,0 +1,93 @@
+{
+    "error_string": "Success.",
+    "export_time": 436,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 61,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 902.8075561523438,
+                "Bridge": 645.0852661132813,
+                "Brim": 233.8296356201172,
+                "Custom": 492.2327575683594,
+                "Flush": 29.0,
+                "Gap infill": 11.444111824035645,
+                "Inner wall": 2796.36376953125,
+                "Internal solid infill": 1808.3837890625,
+                "Outer wall": 2010.1448974609375,
+                "Overhang wall": 46.87407302856445,
+                "Sparse infill": 589.4226684570313,
+                "Top surface": 514.400146484375,
+                "Travel": 1076.425537109375,
+                "Undefined": 1061.1854248046875
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL03",
+                    "id": 1,
+                    "main_used_g": 40.51460266113281,
+                    "total_used_g": 40.51460266113281
+                }
+            ],
+            "generate_support_material_time": 23,
+            "id": 1,
+            "infill_time": 277,
+            "layer_filament_change": 0,
+            "main_predication": 10605.833984375,
+            "make_perimeters_time": 249,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 60.0,
+                        "height": 14.5,
+                        "width": 120.0,
+                        "x": 68.0,
+                        "y": 75.0,
+                        "z": 0.0
+                    },
+                    "id": 5,
+                    "name": "05-rear-electronics-housing.stl",
+                    "triangle_count": 5164
+                },
+                {
+                    "bbox": {
+                        "depth": 25.95000648498535,
+                        "height": 8.600000381469727,
+                        "width": 99.44999694824219,
+                        "x": 78.2750015258789,
+                        "y": 146.02499389648438,
+                        "z": 9.265137101976961e-09
+                    },
+                    "id": 9,
+                    "name": "06-electronics-retaining-yoke.stl",
+                    "triangle_count": 1396
+                }
+            ],
+            "sliced_time": 1671,
+            "sliced_time_with_cache": 1029,
+            "total_predication": 11140.7958984375,
+            "triangle_count": 6560,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 4
+}

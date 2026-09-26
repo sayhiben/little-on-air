@@ -1,0 +1,32 @@
+{
+  "little-on-air-X1C-PETG-AMS-ready.3mf": {
+    "objects": 12,
+    "plates": 4,
+    "walls": "4",
+    "layer_height": "0.2",
+    "custom_layer": {
+      "top_z": "1.8",
+      "type": "2",
+      "extruder": "2",
+      "color": "#FFFFFF",
+      "extra": "",
+      "gcode": "tool_change"
+    },
+    "different_settings_saved": true
+  },
+  "little-on-air-X1C-PETG-manual-swap-ready.3mf": {
+    "objects": 12,
+    "plates": 4,
+    "walls": "4",
+    "layer_height": "0.2",
+    "custom_layer": {
+      "top_z": "1.8",
+      "type": "1",
+      "extruder": "1",
+      "color": "",
+      "extra": "Load white PETG and purge, then resume",
+      "gcode": "M400 U1"
+    },
+    "different_settings_saved": true
+  }
+}

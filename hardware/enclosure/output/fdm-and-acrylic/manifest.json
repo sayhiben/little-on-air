@@ -1,0 +1,182 @@
+{
+  "parts": [
+    {
+      "file": "stl/01-body-and-front-frame.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        120.0,
+        60.0,
+        30.0
+      ],
+      "watertight": true,
+      "orientation": "Front face down",
+      "supports": "Support internal ledges, the reset guide, and USB/slider opening roofs where needed.",
+      "sha256": "4aefc74f746120b42a32b52d9d575180f59a0ac280a2b9338f4f2bdba65bdf48"
+    },
+    {
+      "file": "stl/03-black-and-white-backing.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        104.0,
+        38.0,
+        2.0
+      ],
+      "watertight": true,
+      "orientation": "Flat black back down; letters up",
+      "supports": "No supports. Black through Z=1.6 mm; white from Z=1.6 to 2.0 mm.",
+      "sha256": "7dc29ffcdcb80acd69206a1cafdcf25968a5959ac9c54e6161737cdb78f4cef7"
+    },
+    {
+      "file": "stl/04-optical-and-electronics-tray.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        111.0,
+        53.65,
+        22.9
+      ],
+      "watertight": true,
+      "orientation": "LED fingers toward bed; board mounts up",
+      "supports": "Support beneath the optical partition, which begins about 2.925 mm above the bed, and beneath projecting latches. Clean the latch slots.",
+      "sha256": "a949f8d748014efcc76adeb879ce36ca6c763d9342d55072491d10e00d124562"
+    },
+    {
+      "file": "stl/05-charger-keeper.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        20.35,
+        24.0,
+        3.95
+      ],
+      "watertight": true,
+      "orientation": "Broad U clip face down; locating pegs up",
+      "supports": "Normally no supports; inspect the retaining tabs in preview.",
+      "sha256": "1698ad9572374af52c4c6b118c8a98da1794286c687d7642468d1e097dd016e6"
+    },
+    {
+      "file": "stl/06-xiao-keeper.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        16.5,
+        22.7,
+        4.3
+      ],
+      "watertight": true,
+      "orientation": "Outer fork face down; locating pegs up",
+      "supports": "Normally no supports; use a brim if the narrow fingers lift.",
+      "sha256": "2eb11207ed948f455c63f541c2d8de676c1d0c6dab281b375c1fba160de406ed"
+    },
+    {
+      "file": "stl/07-captive-reset-plunger.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        5.5995,
+        5.5997,
+        6.4
+      ],
+      "watertight": true,
+      "orientation": "Wide finger stem end down; narrow contact tip up",
+      "supports": "Use a small brim and selective support under the flange rim. Keep support off the sliding stem and contact tip.",
+      "sha256": "93b3e8a8f2d44852bcbe5f941de1a490c95fb748b656ea41823abc69d496550c"
+    },
+    {
+      "file": "stl/08-captive-power-slider.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        9.0,
+        5.2,
+        5.6
+      ],
+      "watertight": true,
+      "orientation": "External finger pad down",
+      "supports": "Selective supports under the projecting internal flange; keep the switch socket clear.",
+      "sha256": "7da19ee2cba12522197bce5c8c909c9ddd6ed1dc99b40988ab9af62349b7298d"
+    },
+    {
+      "file": "stl/09-switch-keeper.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        11.6,
+        5.0,
+        5.0
+      ],
+      "watertight": true,
+      "orientation": "Rear bridge face down; locating legs up",
+      "supports": "Normally no supports; inspect the leg transitions.",
+      "sha256": "25161c140808e32af8815336266b08bca49a08fda2528b2af78e49d384e349ed"
+    },
+    {
+      "file": "stl/10-wall-back-plate.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        116.4,
+        56.4,
+        14.45
+      ],
+      "watertight": true,
+      "orientation": "Flat wall-facing surface down; nut blocks up",
+      "supports": "Inspect the short roofs over nut-loading slots. Avoid trapped supports in blind nut/screw pockets.",
+      "sha256": "afcd2c87c4ba7a5059eb95c95c1e2ee21d9b9b1dac8c2ac1f2281ddcab68075d"
+    },
+    {
+      "file": "fit-samples/90-m3-head-and-nut-fit-sample.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        20.0,
+        16.0,
+        10.0
+      ],
+      "watertight": true,
+      "orientation": "As supplied, on Z=0",
+      "supports": "Check slot roofs and use the same settings as the mating part.",
+      "sha256": "152de0fedda3bfd3119f8ab380ed37fe7e76c0d30f2bfcc42d955cf49830d6ab"
+    },
+    {
+      "file": "fit-samples/91-led-and-acrylic-fit-sample.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        24.0,
+        22.0,
+        7.0
+      ],
+      "watertight": true,
+      "orientation": "As supplied, on Z=0",
+      "supports": "Check slot roofs and use the same settings as the mating part.",
+      "sha256": "ae5471880802b684e31fc44d2287a3358a50c121997bad18cf878660f74626e9"
+    },
+    {
+      "file": "fit-samples/92-reset-guide-fit-sample.stl",
+      "quantity": 1,
+      "units": "mm",
+      "bounds_mm": [
+        16.0,
+        16.0,
+        2.4
+      ],
+      "watertight": true,
+      "orientation": "As supplied, on Z=0",
+      "supports": "Check slot roofs and use the same settings as the mating part.",
+      "sha256": "29b2616c45704838e429fcbf1bd7187756da53f70aea01e0a54c01f3e9b5c71c"
+    }
+  ],
+  "acrylic": {
+    "file": "acrylic/02-acrylic-rear-engrave-and-cut.svg",
+    "size_mm": [
+      104,
+      38
+    ],
+    "nominal_thickness_mm": 3.175,
+    "rear_face_already_mirrored": true,
+    "kerf_compensated": false
+  }
+}

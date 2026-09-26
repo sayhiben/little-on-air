@@ -1,0 +1,130 @@
+[
+  {
+    "type": "Closure screw",
+    "xy": [
+      6,
+      6
+    ],
+    "bearing_depth": 6.6,
+    "nut_depth": [
+      11.6,
+      14.0
+    ],
+    "shaft_depth": [
+      6.6,
+      14.6
+    ]
+  },
+  {
+    "type": "Closure screw",
+    "xy": [
+      114,
+      6
+    ],
+    "bearing_depth": 6.6,
+    "nut_depth": [
+      11.6,
+      14.0
+    ],
+    "shaft_depth": [
+      6.6,
+      14.6
+    ]
+  },
+  {
+    "type": "Closure screw",
+    "xy": [
+      6,
+      54
+    ],
+    "bearing_depth": 6.6,
+    "nut_depth": [
+      11.6,
+      14.0
+    ],
+    "shaft_depth": [
+      6.6,
+      14.6
+    ]
+  },
+  {
+    "type": "Closure screw",
+    "xy": [
+      96,
+      54
+    ],
+    "bearing_depth": 6.6,
+    "nut_depth": [
+      11.6,
+      14.0
+    ],
+    "shaft_depth": [
+      6.6,
+      14.6
+    ]
+  },
+  {
+    "type": "Optical screw",
+    "xy": [
+      60,
+      6
+    ],
+    "bearing_depth": 9.075,
+    "nut_depth": [
+      3.3,
+      5.699999999999999
+    ],
+    "shaft_depth": [
+      9.075,
+      1.0749999999999993
+    ]
+  },
+  {
+    "type": "Optical screw",
+    "xy": [
+      60,
+      54
+    ],
+    "bearing_depth": 9.075,
+    "nut_depth": [
+      3.3,
+      5.699999999999999
+    ],
+    "shaft_depth": [
+      9.075,
+      1.0749999999999993
+    ]
+  },
+  {
+    "type": "Yoke screw",
+    "xy": [
+      35,
+      38
+    ],
+    "bearing_depth": 9.65,
+    "nut_depth": [
+      13.9,
+      16.3
+    ],
+    "shaft_depth": [
+      9.65,
+      17.65
+    ]
+  },
+  {
+    "type": "Yoke screw",
+    "xy": [
+      103,
+      38
+    ],
+    "bearing_depth": 9.65,
+    "nut_depth": [
+      13.9,
+      16.3
+    ],
+    "shaft_depth": [
+      9.65,
+      17.65
+    ]
+  }
+]

@@ -1,0 +1,336 @@
+[
+  {
+    "file": "stl/01-front-optical-bezel.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      11.0
+    ],
+    "volume_mm3": 15117.9218,
+    "triangles": 2970,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 3647.308,
+    "horizontal_undersides_by_height_mm2": {
+      "6.0": 61.317,
+      "9.1": 40.6,
+      "3.2": 104.366
+    },
+    "sha256": "68cd9abc58b1ac317187026026c9289769ff6743fe529e2cf522a1f92c5fc4a2"
+  },
+  {
+    "file": "stl/03-registered-graphic-backing.stl",
+    "bounds_mm": [
+      104.0,
+      38.0,
+      2.5
+    ],
+    "volume_mm3": 6693.1653,
+    "triangles": 1504,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 3947.5,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05"
+  },
+  {
+    "file": "stl/04-optical-retainer.stl",
+    "bounds_mm": [
+      104.0,
+      54.0,
+      4.475
+    ],
+    "volume_mm3": 1588.6965,
+    "triangles": 528,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 999.73,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879"
+  },
+  {
+    "file": "stl/05-rear-electronics-housing.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      24.5
+    ],
+    "volume_mm3": 47567.8545,
+    "triangles": 4776,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 7192.194,
+    "horizontal_undersides_by_height_mm2": {
+      "21.05": 8.4,
+      "2.3": 0.016,
+      "13.5": 0.88,
+      "20.4": 60.306,
+      "20.2": 1.435,
+      "6.55": 2.363,
+      "9.4": 122.634
+    },
+    "sha256": "43b53f836c0461acb68775b4db38d3df16bb6e87999cfd9d6b050f940c891d08"
+  },
+  {
+    "file": "stl/06-electronics-retaining-yoke.stl",
+    "bounds_mm": [
+      104.55,
+      29.25,
+      13.6
+    ],
+    "volume_mm3": 4061.5487,
+    "triangles": 1176,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 1021.33,
+    "horizontal_undersides_by_height_mm2": {
+      "1.9": 4.1,
+      "2.7": 0.028,
+      "2.95": 8.933,
+      "3.02": 0.407,
+      "0.25": 38.704,
+      "3.35": 10.5,
+      "3.4": 6.84
+    },
+    "sha256": "165e3b60f627fcd161ceb87a49089fa6354c4aa8bbaffc9e2caacd9f99c7cf88"
+  },
+  {
+    "file": "stl/07-guided-rounded-reset-button.stl",
+    "bounds_mm": [
+      4.2,
+      4.2,
+      7.0
+    ],
+    "volume_mm3": 45.5877,
+    "triangles": 60,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 7.235,
+    "horizontal_undersides_by_height_mm2": {
+      "4.45": 10.405
+    },
+    "sha256": "51bb5d58ada890bcbd6821621f43c392b615c59132aa098eca735bbedb09f90b"
+  },
+  {
+    "file": "optional-laminate/81-laminate-front-spacer.stl",
+    "bounds_mm": [
+      104.0,
+      38.0,
+      0.5
+    ],
+    "volume_mm3": 207.375,
+    "triangles": 40,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 414.75,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a"
+  },
+  {
+    "file": "optional-laminate/82-laminate-rear-shim.stl",
+    "bounds_mm": [
+      104.0,
+      38.0,
+      0.4
+    ],
+    "volume_mm3": 165.9,
+    "triangles": 40,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 414.75,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6"
+  },
+  {
+    "file": "fit-samples/90-rear-nut-boss-section.stl",
+    "bounds_mm": [
+      12.0,
+      12.0,
+      24.5
+    ],
+    "volume_mm3": 2495.8717,
+    "triangles": 1672,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 142.064,
+    "horizontal_undersides_by_height_mm2": {
+      "9.4": 30.621
+    },
+    "sha256": "865f577f5475fa514e818782074718ea63bf56f1172311a5c4fef2d8ec439563"
+  },
+  {
+    "file": "fit-samples/91-front-screw-recess-section.stl",
+    "bounds_mm": [
+      12.0,
+      12.0,
+      9.5
+    ],
+    "volume_mm3": 922.2934,
+    "triangles": 458,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 105.823,
+    "horizontal_undersides_by_height_mm2": {
+      "3.2": 26.095
+    },
+    "sha256": "dcc55cff93aecacfeeb0ebd2c83904232c30bccc8b4e59b1c90bc2a05187e563"
+  },
+  {
+    "file": "fit-samples/92-charger-fit-section.stl",
+    "bounds_mm": [
+      24.0,
+      33.0,
+      24.5
+    ],
+    "volume_mm3": 4182.3642,
+    "triangles": 296,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 792.0,
+    "horizontal_undersides_by_height_mm2": {
+      "20.2": 1.358,
+      "20.4": 2.702,
+      "9.4": 7.2
+    },
+    "sha256": "f24a49a5c6b32d6e915e711fc1fde8222dea0cfdd97fcc2c5174f1a7a1dc61ef"
+  },
+  {
+    "file": "fit-samples/93-XIAO-and-reset-fit-section.stl",
+    "bounds_mm": [
+      14.5,
+      27.0,
+      24.5
+    ],
+    "volume_mm3": 4903.4194,
+    "triangles": 706,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 389.563,
+    "horizontal_undersides_by_height_mm2": {
+      "20.4": 1.61,
+      "21.05": 8.4,
+      "2.3": 0.016
+    },
+    "sha256": "ba4cd8980b7764cee890de5adcef6ec2948b39bfc50c455876e3312f31cb56a9"
+  },
+  {
+    "file": "fit-samples/94-DPDT-fit-section.stl",
+    "bounds_mm": [
+      18.0,
+      14.0,
+      24.5
+    ],
+    "volume_mm3": 1685.7938,
+    "triangles": 176,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 252.0,
+    "horizontal_undersides_by_height_mm2": {
+      "13.5": 0.88
+    },
+    "sha256": "5396d49add9c12f16721a3fd1102a560d7552716e576c2f552869d8c00a2514a"
+  },
+  {
+    "file": "fit-samples/95-optical-bezel-section.stl",
+    "bounds_mm": [
+      31.0,
+      13.0,
+      9.5
+    ],
+    "volume_mm3": 1557.2989,
+    "triangles": 700,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 403.0,
+    "horizontal_undersides_by_height_mm2": {
+      "6.0": 30.623
+    },
+    "sha256": "71ddd9fde93f01e52643fe06af971f66b41cec7d1f2f9f54249f534d016d934d"
+  },
+  {
+    "file": "fit-samples/96-optical-retainer-section.stl",
+    "bounds_mm": [
+      31.0,
+      11.0,
+      4.475
+    ],
+    "volume_mm3": 292.915,
+    "triangles": 368,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 167.433,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "629eefd8854f63b7e283a39ec7af12617336ba37d17fa1d5cb35de20a03a2aa5"
+  },
+  {
+    "file": "fit-samples/97-optical-spacing-section.stl",
+    "bounds_mm": [
+      31.0,
+      6.0,
+      2.5
+    ],
+    "volume_mm3": 305.16,
+    "triangles": 28,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 186.0,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "cf8a9bd4cfeae40bc4d27eb24f5aec635f702c5398284d0f107e7162ad1ff2f7"
+  },
+  {
+    "file": "fit-samples/98-SPDT-power-fit-section.stl",
+    "bounds_mm": [
+      26.0,
+      14.0,
+      24.5
+    ],
+    "volume_mm3": 2553.3085,
+    "triangles": 208,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 364.0,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "05a6778440026f65fc6dab275c5efa2b41dbfdb873be15e319eaaaed134bd3be"
+  },
+  {
+    "file": "fit-samples/99-upper-housing-complete-fit-section.stl",
+    "bounds_mm": [
+      120.0,
+      34.0,
+      24.5
+    ],
+    "volume_mm3": 27487.8526,
+    "triangles": 3024,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 4076.097,
+    "horizontal_undersides_by_height_mm2": {
+      "21.05": 8.4,
+      "2.3": 0.016,
+      "13.5": 0.88,
+      "20.4": 60.306,
+      "20.2": 1.435,
+      "6.55": 2.363,
+      "9.4": 61.317
+    },
+    "sha256": "ffda24670e93cb3115b7faf6cc13c98ddbaed2408b2f62a92a7b3358993e4f6c"
+  }
+]

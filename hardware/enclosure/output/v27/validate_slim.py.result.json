@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": false,\n  \"features\": [],\n  \"static\": [\n    {\n      \"one\": \"REF M3 screws\",\n      \"two\": \"06 Electronics retaining yoke\",\n      \"volume_mm3\": 9.76763\n    },\n    {\n      \"one\": \"REF M3 nuts\",\n      \"two\": \"05 Rear electronics housing\",\n      \"volume_mm3\": 0.03542\n    }\n  ],\n  \"failed_motion\": [],\n  \"failed_clearance\": []\n}\n",
+  "success": true
+}

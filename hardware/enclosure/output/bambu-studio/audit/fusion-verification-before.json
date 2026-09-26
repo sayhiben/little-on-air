@@ -1,0 +1,975 @@
+{
+  "document": "Little On Air - Enclosure v1",
+  "units": "mm",
+  "components": [
+    {
+      "name": "01 Body and front frame",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Rounded outer shell",
+          "solid": true,
+          "volume_mm3": 33320.8533,
+          "min_mm": [
+            -0.0,
+            0.0,
+            -30.0
+          ],
+          "max_mm": [
+            120.0,
+            60.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 Engraved acrylic",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Clear acrylic blank",
+          "solid": true,
+          "volume_mm3": 12426.0282,
+          "min_mm": [
+            8.0,
+            11.0,
+            -4.775
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -1.6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03 Black and white backing",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Black substrate",
+          "solid": true,
+          "volume_mm3": 6602.0915,
+          "min_mm": [
+            8.0,
+            11.0,
+            -7.275
+          ],
+          "max_mm": [
+            112.0,
+            49.0,
+            -5.275
+          ]
+        }
+      ]
+    },
+    {
+      "name": "10 Wall back plate",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Flat adhesive back",
+          "solid": true,
+          "volume_mm3": 15951.1059,
+          "min_mm": [
+            1.8,
+            1.8,
+            -30.0
+          ],
+          "max_mm": [
+            118.2,
+            58.2,
+            -15.55
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04 Optical and electronics tray",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Optical support partition",
+          "solid": true,
+          "volume_mm3": 9824.8758,
+          "min_mm": [
+            4.5,
+            5.0,
+            -27.25
+          ],
+          "max_mm": [
+            115.5,
+            58.65,
+            -4.35
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05 Charger keeper",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Keeper side arm",
+          "solid": true,
+          "volume_mm3": 136.24,
+          "min_mm": [
+            11.05,
+            30.0,
+            -15.4
+          ],
+          "max_mm": [
+            31.4,
+            54.0,
+            -11.45
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06 XIAO keeper",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "XIAO keeper bridge",
+          "solid": true,
+          "volume_mm3": 108.312,
+          "min_mm": [
+            109.9,
+            33.6,
+            -26.7
+          ],
+          "max_mm": [
+            114.2,
+            56.3,
+            -10.2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "09 Switch keeper",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Switch rear retaining bridge",
+          "solid": true,
+          "volume_mm3": 45.6,
+          "min_mm": [
+            54.2,
+            50.8,
+            -22.15
+          ],
+          "max_mm": [
+            65.8,
+            55.8,
+            -17.15
+          ]
+        }
+      ]
+    },
+    {
+      "name": "07 Captive reset plunger",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Finger stem",
+          "solid": true,
+          "volume_mm3": 55.5057,
+          "min_mm": [
+            114.1,
+            51.9,
+            -15.1
+          ],
+          "max_mm": [
+            120.5,
+            57.5,
+            -9.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "08 Captive power slider",
+      "reference": false,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Outside finger pad",
+          "solid": true,
+          "volume_mm3": 110.212,
+          "min_mm": [
+            55.5,
+            55.8,
+            -21.9
+          ],
+          "max_mm": [
+            64.5,
+            61.4,
+            -16.7
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Battery 52x21x10",
+      "reference": true,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Battery pouch envelope",
+          "solid": true,
+          "volume_mm3": 10920.0,
+          "min_mm": [
+            34.5,
+            7.0,
+            -19.375
+          ],
+          "max_mm": [
+            86.5,
+            28.0,
+            -9.375
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF TP4056 charger",
+      "reference": true,
+      "body_count": 3,
+      "bodies": [
+        {
+          "name": "Charger PCB",
+          "solid": true,
+          "volume_mm3": 412.5,
+          "min_mm": [
+            13.0,
+            32.5,
+            -14.2
+          ],
+          "max_mm": [
+            29.5,
+            57.5,
+            -13.2
+          ]
+        },
+        {
+          "name": "Charger USB C envelope",
+          "solid": true,
+          "volume_mm3": 207.36,
+          "min_mm": [
+            17.0,
+            53.0,
+            -17.8
+          ],
+          "max_mm": [
+            26.0,
+            59.4,
+            -14.2
+          ]
+        },
+        {
+          "name": "Charger IC envelope",
+          "solid": true,
+          "volume_mm3": 177.1,
+          "min_mm": [
+            18.0,
+            36.0,
+            -16.5
+          ],
+          "max_mm": [
+            25.0,
+            47.0,
+            -14.2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF XIAO nRF52840",
+      "reference": true,
+      "body_count": 4,
+      "bodies": [
+        {
+          "name": "XIAO PCB",
+          "solid": true,
+          "volume_mm3": 373.8,
+          "min_mm": [
+            111.5,
+            35.5,
+            -27.1
+          ],
+          "max_mm": [
+            112.5,
+            56.5,
+            -9.3
+          ]
+        },
+        {
+          "name": "XIAO USB C envelope",
+          "solid": true,
+          "volume_mm3": 190.08,
+          "min_mm": [
+            112.5,
+            52.0,
+            -24.5
+          ],
+          "max_mm": [
+            115.8,
+            58.4,
+            -15.5
+          ]
+        },
+        {
+          "name": "XIAO component envelope",
+          "solid": true,
+          "volume_mm3": 243.0,
+          "min_mm": [
+            112.5,
+            41.5,
+            -22.8
+          ],
+          "max_mm": [
+            115.5,
+            50.5,
+            -13.8
+          ]
+        },
+        {
+          "name": "XIAO reset target",
+          "solid": true,
+          "volume_mm3": 5.4,
+          "min_mm": [
+            112.5,
+            53.7,
+            -13.2
+          ],
+          "max_mm": [
+            114.0,
+            55.7,
+            -11.4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF DPDT switch and leads",
+      "reference": true,
+      "body_count": 8,
+      "bodies": [
+        {
+          "name": "DPDT switch body",
+          "solid": true,
+          "volume_mm3": 71.982,
+          "min_mm": [
+            55.7,
+            53.0,
+            -20.9
+          ],
+          "max_mm": [
+            64.3,
+            55.7,
+            -17.8
+          ]
+        },
+        {
+          "name": "DPDT actuator tongue",
+          "solid": true,
+          "volume_mm3": 4.928,
+          "min_mm": [
+            58.4,
+            55.7,
+            -19.8
+          ],
+          "max_mm": [
+            61.6,
+            57.1,
+            -18.7
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            56.8,
+            50.0,
+            -18.6
+          ],
+          "max_mm": [
+            57.2,
+            53.0,
+            -18.25
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg (1)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            56.8,
+            50.0,
+            -20.4
+          ],
+          "max_mm": [
+            57.2,
+            53.0,
+            -20.05
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg (2)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            59.8,
+            50.0,
+            -18.6
+          ],
+          "max_mm": [
+            60.2,
+            53.0,
+            -18.25
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg (3)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            59.8,
+            50.0,
+            -20.4
+          ],
+          "max_mm": [
+            60.2,
+            53.0,
+            -20.05
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg (4)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            62.8,
+            50.0,
+            -18.6
+          ],
+          "max_mm": [
+            63.2,
+            53.0,
+            -18.25
+          ]
+        },
+        {
+          "name": "DPDT clipped solder leg (5)",
+          "solid": true,
+          "volume_mm3": 0.42,
+          "min_mm": [
+            62.8,
+            50.0,
+            -20.4
+          ],
+          "max_mm": [
+            63.2,
+            53.0,
+            -20.05
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF Four side emitting LEDs",
+      "reference": true,
+      "body_count": 4,
+      "bodies": [
+        {
+          "name": "Side-emitting LED module",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            36.0,
+            2.8,
+            -4.1875
+          ],
+          "max_mm": [
+            44.0,
+            10.8,
+            -2.1875
+          ]
+        },
+        {
+          "name": "Side-emitting LED module (1)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            36.0,
+            49.2,
+            -4.1875
+          ],
+          "max_mm": [
+            44.0,
+            57.2,
+            -2.1875
+          ]
+        },
+        {
+          "name": "Side-emitting LED module (2)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            76.0,
+            2.8,
+            -4.1875
+          ],
+          "max_mm": [
+            84.0,
+            10.8,
+            -2.1875
+          ]
+        },
+        {
+          "name": "Side-emitting LED module (3)",
+          "solid": true,
+          "volume_mm3": 128.0,
+          "min_mm": [
+            76.0,
+            49.2,
+            -4.1875
+          ],
+          "max_mm": [
+            84.0,
+            57.2,
+            -2.1875
+          ]
+        }
+      ]
+    },
+    {
+      "name": "REF M3 screws and nuts",
+      "reference": true,
+      "body_count": 12,
+      "bodies": [
+        {
+          "name": "M3 hex nut envelope",
+          "solid": true,
+          "volume_mm3": 44.759,
+          "min_mm": [
+            2.82457,
+            3.25,
+            -27.2
+          ],
+          "max_mm": [
+            9.17543,
+            8.75,
+            -24.8
+          ]
+        },
+        {
+          "name": "M3 hex nut envelope (1)",
+          "solid": true,
+          "volume_mm3": 44.759,
+          "min_mm": [
+            110.82457,
+            3.25,
+            -27.2
+          ],
+          "max_mm": [
+            117.17543,
+            8.75,
+            -24.8
+          ]
+        },
+        {
+          "name": "M3 hex nut envelope (2)",
+          "solid": true,
+          "volume_mm3": 44.759,
+          "min_mm": [
+            2.82457,
+            51.25,
+            -27.2
+          ],
+          "max_mm": [
+            9.17543,
+            56.75,
+            -24.8
+          ]
+        },
+        {
+          "name": "M3 hex nut envelope (3)",
+          "solid": true,
+          "volume_mm3": 44.759,
+          "min_mm": [
+            92.82457,
+            51.25,
+            -27.2
+          ],
+          "max_mm": [
+            99.17543,
+            56.75,
+            -24.8
+          ]
+        },
+        {
+          "name": "M3 socket head",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            3.25,
+            3.25,
+            -3.2
+          ],
+          "max_mm": [
+            8.75,
+            8.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "M3 x 25 shaft",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            4.5,
+            4.5,
+            -28.2
+          ],
+          "max_mm": [
+            7.5,
+            7.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "M3 socket head (1)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            111.25,
+            3.25,
+            -3.2
+          ],
+          "max_mm": [
+            116.75,
+            8.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "M3 x 25 shaft (1)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            112.5,
+            4.5,
+            -28.2
+          ],
+          "max_mm": [
+            115.5,
+            7.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "M3 socket head (2)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            3.25,
+            51.25,
+            -3.2
+          ],
+          "max_mm": [
+            8.75,
+            56.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "M3 x 25 shaft (2)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            4.5,
+            52.5,
+            -28.2
+          ],
+          "max_mm": [
+            7.5,
+            55.5,
+            -3.2
+          ]
+        },
+        {
+          "name": "M3 socket head (3)",
+          "solid": true,
+          "volume_mm3": 71.2749,
+          "min_mm": [
+            93.25,
+            51.25,
+            -3.2
+          ],
+          "max_mm": [
+            98.75,
+            56.75,
+            -0.2
+          ]
+        },
+        {
+          "name": "M3 x 25 shaft (3)",
+          "solid": true,
+          "volume_mm3": 176.7146,
+          "min_mm": [
+            94.5,
+            52.5,
+            -28.2
+          ],
+          "max_mm": [
+            97.5,
+            55.5,
+            -3.2
+          ]
+        }
+      ]
+    }
+  ],
+  "feature_issues": [],
+  "interferences": [],
+  "timeline_features": 687,
+  "all_occurrences_at_assembly_origin": true,
+  "visual_style": 2,
+  "parameters": [
+    {
+      "name": "case_w",
+      "expression": "120.0000000 mm",
+      "comment": "Overall width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "case_h",
+      "expression": "60.0000000 mm",
+      "comment": "Overall height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "case_d",
+      "expression": "30.0000000 mm",
+      "comment": "Overall depth; excludes adhesive strips; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "wall",
+      "expression": "2.4000000 mm",
+      "comment": "PETG wall thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "front_lip",
+      "expression": "1.6000000 mm",
+      "comment": "Front retaining lip; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "window_w",
+      "expression": "100.0000000 mm",
+      "comment": "Visible opening width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "window_h",
+      "expression": "34.0000000 mm",
+      "comment": "Visible opening height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "panel_w",
+      "expression": "104.0000000 mm",
+      "comment": "Keyed optical panel width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "panel_h",
+      "expression": "38.0000000 mm",
+      "comment": "Keyed optical panel height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "acrylic_t",
+      "expression": "3.1750000 mm",
+      "comment": "MEASURE: actual sheet thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "air_gap",
+      "expression": "0.5000000 mm",
+      "comment": "Clearance from engraving to raised white letters; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "backing_base",
+      "expression": "1.6000000 mm",
+      "comment": "Black backing base thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "letter_relief",
+      "expression": "0.4000000 mm",
+      "comment": "White final two 0.2 mm layers; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "tray_t",
+      "expression": "1.6000000 mm",
+      "comment": "Optical support and electronics tray base; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "fit",
+      "expression": "0.2500000 mm",
+      "comment": "Sliding fit allowance per side; verify with coupon; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "led_w",
+      "expression": "8.0000000 mm",
+      "comment": "MEASURE: individual LED PCB width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "led_h",
+      "expression": "8.0000000 mm",
+      "comment": "MEASURE: individual LED PCB length; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "led_t",
+      "expression": "2.0000000 mm",
+      "comment": "MEASURE: LED assembly depth; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "led_face_gap",
+      "expression": "0.2000000 mm",
+      "comment": "Emitter to acrylic edge gap; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "led_optical_offset",
+      "expression": "1.0000000 mm",
+      "comment": "MEASURE: emitter centre from frontmost module surface; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "battery_w",
+      "expression": "52.0000000 mm",
+      "comment": "Supplied battery width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "battery_h",
+      "expression": "21.0000000 mm",
+      "comment": "Supplied battery height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "battery_t",
+      "expression": "10.0000000 mm",
+      "comment": "Supplied battery thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "charger_w",
+      "expression": "16.5000000 mm",
+      "comment": "Listed board width; confirm physical board; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "charger_h",
+      "expression": "25.0000000 mm",
+      "comment": "Listed board length; confirm physical board; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "charger_pcb_t",
+      "expression": "1.0000000 mm",
+      "comment": "MEASURE: charging PCB thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "charger_component_t",
+      "expression": "4.5000000 mm",
+      "comment": "RESERVED: component-side envelope; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "xiao_length",
+      "expression": "21.0000000 mm",
+      "comment": "Seeed PCB length along case height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "xiao_width",
+      "expression": "17.8000000 mm",
+      "comment": "Seeed PCB width along case depth; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "xiao_pcb_t",
+      "expression": "1.0000000 mm",
+      "comment": "MEASURE: XIAO PCB thickness; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "reset_y",
+      "expression": "54.7000000 mm",
+      "comment": "MEASURE: reset centre height in installed orientation; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "reset_depth",
+      "expression": "12.3000000 mm",
+      "comment": "MEASURE: reset centre depth in installed orientation; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "reset_tip_x",
+      "expression": "114.1000000 mm",
+      "comment": "MEASURE: resting contact tip; tune using coupon; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "reset_stroke",
+      "expression": "0.5000000 mm",
+      "comment": "PROVISIONAL: total plunger travel including free play; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "switch_w",
+      "expression": "8.6000000 mm",
+      "comment": "DPDT body length; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "switch_h",
+      "expression": "3.1000000 mm",
+      "comment": "DPDT body width; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "switch_t",
+      "expression": "2.7000000 mm",
+      "comment": "DPDT body depth; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "switch_throw",
+      "expression": "2.0000000 mm",
+      "comment": "MEASURE: lateral DPDT throw; 1.4 mm is actuator height; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "m3_hole",
+      "expression": "3.4000000 mm",
+      "comment": "M3 clearance diameter"
+    },
+    {
+      "name": "head_d",
+      "expression": "6.4000000 mm",
+      "comment": "Socket head pocket diameter"
+    },
+    {
+      "name": "head_depth",
+      "expression": "3.2000000 mm",
+      "comment": "Screw head pocket depth; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "nut_af",
+      "expression": "5.8000000 mm",
+      "comment": "M3 hex pocket across flats; update builder and regenerate coordinated layout"
+    },
+    {
+      "name": "text_h",
+      "expression": "18.0000000 mm",
+      "comment": "Native Fusion text height; same master for both optical layers"
+    },
+    {
+      "name": "upper_right_screw_x",
+      "expression": "96.0000000 mm",
+      "comment": "Layout datum: upper-right fastener moved inward to clear XIAO; regenerate to relocate"
+    }
+  ]
+}

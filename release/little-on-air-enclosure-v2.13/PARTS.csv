@@ -1,0 +1,11 @@
+Part,Description,Quantity,Material,Bambu plate,Geometry provenance,Release file
+01,Front frame,1,Black PLA+,1,v2.13,stl/01-front-optical-bezel.stl
+03,Registered display backing,1,Black and white PLA+,2,v2.8 unchanged,stl/03-registered-graphic-backing.stl
+04,Optical retainer,1,Black PLA+,1,v2.8 unchanged,stl/04-optical-retainer.stl
+05,Rear electronics housing,1,Black PLA+,1,v2.13,stl/05-rear-electronics-housing.stl
+06,Electronics yoke,1,Black PLA+,1,v2.8 unchanged,stl/06-electronics-retaining-yoke.stl
+07,Front reset button,1,Black PLA+,1,v2.8 unchanged,stl/07-front-guided-reset-button.stl
+08,Captive front RGB guide,1,Transparent PETG,3,v2.13,stl/08-captive-front-rgb-guide.stl
+09,Rear charger guide,2,Transparent PETG,3,v2.13 release; identical pair,stl/09-charger-light-guide.stl
+11,Rear guide keeper,1,Black PLA+,1,v2.13,stl/11-rear-light-guide-keeper.stl
+02,Rear-engraved acrylic panel,1,Clear PMMA measured 3.00-3.45 mm,Laser,Shared artwork unchanged since v2.8,laser/02-acrylic-REAR-engrave-and-cut.svg

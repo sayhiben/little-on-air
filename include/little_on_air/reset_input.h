@@ -10,5 +10,7 @@ struct loa_boot_input {
 };
 
 struct loa_boot_input loa_reset_input_capture(void);
+/* Call once after settings_load(), before acting on factory_reset. */
+int loa_reset_input_resolve(struct loa_boot_input *input);
 
 #endif /* LITTLE_ON_AIR_RESET_INPUT_H_ */

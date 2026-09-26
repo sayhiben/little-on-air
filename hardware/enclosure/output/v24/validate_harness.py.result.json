@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": false,\n  \"failed\": [\n    {\n      \"name\": \"XIAO lower solder approach\",\n      \"min_mm\": [\n        106.8,\n        39.4,\n        20.2\n      ],\n      \"max_mm\": [\n        109.8,\n        44,\n        26.0\n      ],\n      \"collision_bounds\": [\n        {\n          \"obstacle\": \"05 Rear electronics housing\",\n          \"min\": [\n            106.8,\n            39.4,\n            -26.0\n          ],\n          \"max\": [\n            107.2,\n            42.2,\n            -20.2\n          ]\n        }\n      ],\n      \"collisions\": {\n        \"05 Rear electronics housing\": 6.496\n      },\n      \"passed\": false\n    }\n  ]\n}\n",
+  "success": true
+}

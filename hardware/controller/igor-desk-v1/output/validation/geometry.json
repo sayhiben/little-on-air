@@ -1,0 +1,152 @@
+{
+  "source_sha256": "9645738bee23f74ca35bc64abd22047e27ce61a9ba0c0e83864a13e755bd8c33",
+  "base_extension_mm": 14.0,
+  "weight_pocket_mm": [
+    40.0,
+    48.0,
+    10.0
+  ],
+  "weight_pocket_bounds": [
+    -20,
+    9,
+    -12,
+    20,
+    57,
+    -2
+  ],
+  "original_shell_bounds": [
+    -24.5,
+    0.0,
+    0.0,
+    24.5,
+    67.26537,
+    60.04294
+  ],
+  "parts": [
+    {
+      "name": "01-weighted-shell",
+      "valid_native_solid": true,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "triangles": 36828,
+      "assembly_bounds": [
+        -24.56714,
+        -0.00154,
+        -14.06714,
+        24.56284,
+        67.26683,
+        60.0444
+      ],
+      "print_size_mm": [
+        48.9999999,
+        74.04285255999275,
+        67.26528920664063
+      ],
+      "volume_mm3": 73237.20343270148,
+      "print_min_z": 0.0,
+      "sha256": "e706914eea2f7ece95bb43ca06992153874f617712c8f48a6aa37c5854daf07c"
+    },
+    {
+      "name": "02-igor-faceplate",
+      "valid_native_solid": true,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "triangles": 9576,
+      "assembly_bounds": [
+        -23.30657,
+        -0.00947,
+        1.19343,
+        23.30657,
+        3.50609,
+        36.80657
+      ],
+      "print_size_mm": [
+        46.59999847412109,
+        35.59999847412109,
+        3.5
+      ],
+      "volume_mm3": 2255.4724275319154,
+      "print_min_z": 0.0,
+      "sha256": "e02af8c1215870e14c7ed9563b3a07496bfed51368e2a7628b0311fdaec1a732"
+    },
+    {
+      "name": "03-igor-hat",
+      "valid_native_solid": true,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "triangles": 4752,
+      "assembly_bounds": [
+        -19.28728,
+        2.72077,
+        40.08123,
+        19.28728,
+        45.62549,
+        76.19118
+      ],
+      "print_size_mm": [
+        38.56535256374627,
+        38.56535256374627,
+        19.999999900000034
+      ],
+      "volume_mm3": 21578.409679963283,
+      "print_min_z": 0.0,
+      "sha256": "a417a74bce2ee2b65a27b3bef8e82cbddd5f1668927f056215705cdaef727c6f"
+    },
+    {
+      "name": "04-ballast-cover",
+      "valid_native_solid": true,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "triangles": 7020,
+      "assembly_bounds": [
+        -22.80039,
+        1.29961,
+        -14.00614,
+        22.80039,
+        64.70039,
+        -11.2
+      ],
+      "print_size_mm": [
+        45.599998139514355,
+        63.40000119127217,
+        2.8000000319443643
+      ],
+      "volume_mm3": 6030.310262884631,
+      "print_min_z": 0.0,
+      "sha256": "4e255abec9ebe67dd8d1b1a12fdf7d9d6896a9f64832679c8cb994300701ae1e"
+    },
+    {
+      "name": "05-led-diffuser",
+      "valid_native_solid": true,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "triangles": 1260,
+      "assembly_bounds": [
+        -3.4,
+        -0.00048,
+        -9.40067,
+        3.4,
+        2.00067,
+        -2.59933
+      ],
+      "print_size_mm": [
+        6.798655771533959,
+        6.800000190734863,
+        2.0
+      ],
+      "volume_mm3": 51.68234074420569,
+      "print_min_z": 0.0,
+      "sha256": "42243a1d75e0f21e60bc8065162cd9ed1a9e56868511ce940f38bc439a8b10bf"
+    }
+  ],
+  "physical_fit_verified": false,
+  "part_collisions": [],
+  "faceplate_source_volume_delta_mm3": 0.0,
+  "hat_source_volume_delta_mm3": 1.0913936421275139e-11,
+  "printable_geometry_passed": true
+}

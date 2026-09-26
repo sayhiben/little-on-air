@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": true,\n  \"free_play_mm\": 0.1,\n  \"projection_at_rest_mm\": 3.0,\n  \"projection_at_stop_mm\": 2.6,\n  \"stop_travel_mm\": 0.4,\n  \"nominal_switch_depression_mm\": 0.3,\n  \"samples\": 17,\n  \"failures\": [],\n  \"note\": \"The compliant reset target is excluded from rigid interference; 0.3 mm nominal actuation must be confirmed by the physical fit test.\"\n}\n",
+  "success": true
+}

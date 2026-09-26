@@ -1,0 +1,943 @@
+{
+  "document": "Little ON AIR v2.11 - clean top seam",
+  "units": "mm",
+  "items": [
+    {
+      "name": "H1 front pigtail to LED1",
+      "radius_mm": 1.15,
+      "route_length_mm": 40.96,
+      "path": [
+        [
+          20,
+          20,
+          15.7
+        ],
+        [
+          22,
+          11,
+          13.8
+        ],
+        [
+          47.5,
+          6.8,
+          13.8
+        ],
+        [
+          47.5,
+          6.8,
+          6.5
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H2 LED1 to LED2",
+      "radius_mm": 1.15,
+      "route_length_mm": 78.61,
+      "path": [
+        [
+          32.5,
+          6.8,
+          6.5
+        ],
+        [
+          32.5,
+          4.1,
+          6.5
+        ],
+        [
+          32.5,
+          4.1,
+          17.2
+        ],
+        [
+          87.5,
+          4.1,
+          17.2
+        ],
+        [
+          87.5,
+          4.1,
+          6.5
+        ],
+        [
+          87.5,
+          6.8,
+          6.5
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H3 LED2 to LED3",
+      "radius_mm": 1.15,
+      "route_length_mm": 94.68,
+      "path": [
+        [
+          72.5,
+          6.8,
+          6.5
+        ],
+        [
+          72.5,
+          6.8,
+          10.5
+        ],
+        [
+          92,
+          6.8,
+          10.5
+        ],
+        [
+          98,
+          8,
+          10.5
+        ],
+        [
+          98,
+          30,
+          10.5
+        ],
+        [
+          98,
+          30,
+          14.5
+        ],
+        [
+          84,
+          36,
+          14.5
+        ],
+        [
+          80,
+          45,
+          14.5
+        ],
+        [
+          84,
+          50.3,
+          14.5
+        ],
+        [
+          84,
+          50.3,
+          8.2
+        ],
+        [
+          87.5,
+          50.3,
+          8.2
+        ],
+        [
+          87.5,
+          53.2,
+          8.2
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "H4 LED3 to LED4",
+      "radius_mm": 1.15,
+      "route_length_mm": 79.24,
+      "path": [
+        [
+          72.5,
+          53.2,
+          6.5
+        ],
+        [
+          70,
+          53.2,
+          6.5
+        ],
+        [
+          70,
+          50.3,
+          6.5
+        ],
+        [
+          70,
+          50.3,
+          18.8
+        ],
+        [
+          70,
+          49,
+          18.8
+        ],
+        [
+          36,
+          49,
+          18.8
+        ],
+        [
+          36,
+          49,
+          13.85
+        ],
+        [
+          25.8,
+          49,
+          13.85
+        ],
+        [
+          25.8,
+          52.9,
+          13.85
+        ],
+        [
+          25.8,
+          52.9,
+          8
+        ],
+        [
+          32.5,
+          53.2,
+          8
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "B1 battery pair to charger",
+      "radius_mm": 0.9,
+      "route_length_mm": 142.88,
+      "path": [
+        [
+          88.1,
+          26,
+          15.5
+        ],
+        [
+          92.5,
+          26,
+          15.5
+        ],
+        [
+          95,
+          12,
+          15.5
+        ],
+        [
+          92,
+          6.7,
+          20.3
+        ],
+        [
+          12,
+          6.7,
+          20.3
+        ],
+        [
+          12,
+          12.5,
+          20.3
+        ],
+        [
+          8.5,
+          12.5,
+          20.3
+        ],
+        [
+          8.5,
+          26.5,
+          20.3
+        ],
+        [
+          20,
+          26.5,
+          13.5
+        ],
+        [
+          20,
+          31.8,
+          13.5
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "F0 internal power ground and DATA trunk",
+      "radius_mm": 1.15,
+      "route_length_mm": 67.87,
+      "path": [
+        [
+          68,
+          45.8,
+          16.2
+        ],
+        [
+          36,
+          45.8,
+          16.2
+        ],
+        [
+          36,
+          45.8,
+          13.85
+        ],
+        [
+          25,
+          45.8,
+          13.85
+        ],
+        [
+          25,
+          26.5,
+          13.85
+        ],
+        [
+          20,
+          24.5,
+          15.5
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P1 charger OUT plus to POWER",
+      "radius_mm": 0.5,
+      "route_length_mm": 49.66,
+      "path": [
+        [
+          28.5,
+          32.3,
+          13.8
+        ],
+        [
+          28.5,
+          30.8,
+          11.2
+        ],
+        [
+          22.7,
+          30.8,
+          11.2
+        ],
+        [
+          22.7,
+          30.8,
+          13.85
+        ],
+        [
+          22.7,
+          41,
+          13.85
+        ],
+        [
+          22.7,
+          43,
+          11.2
+        ],
+        [
+          25.8,
+          43,
+          11.2
+        ],
+        [
+          27,
+          43,
+          13.85
+        ],
+        [
+          41,
+          43,
+          13.85
+        ],
+        [
+          41,
+          47,
+          13.85
+        ],
+        [
+          41,
+          49.8,
+          17
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "G1 charger OUT minus to ground trunk",
+      "radius_mm": 0.5,
+      "route_length_mm": 16.02,
+      "path": [
+        [
+          13.5,
+          32.3,
+          14
+        ],
+        [
+          13.5,
+          32.3,
+          11.2
+        ],
+        [
+          25,
+          32.3,
+          11.2
+        ],
+        [
+          25,
+          32.3,
+          13.85
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P2 POWER switched output to junction",
+      "radius_mm": 0.5,
+      "route_length_mm": 28.82,
+      "path": [
+        [
+          42,
+          49.8,
+          17
+        ],
+        [
+          45.5,
+          49.8,
+          14
+        ],
+        [
+          48,
+          46.8,
+          14
+        ],
+        [
+          60,
+          44.2,
+          14
+        ],
+        [
+          68,
+          45.8,
+          16.2
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P3 junction to MODE MCU branch",
+      "radius_mm": 0.5,
+      "route_length_mm": 7.03,
+      "path": [
+        [
+          68,
+          45.8,
+          16.2
+        ],
+        [
+          63,
+          50.6,
+          17.4
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "C1 inline capacitor pair",
+      "radius_mm": 0.9,
+      "route_length_mm": 67.19,
+      "path": [
+        [
+          68,
+          45.8,
+          16.2
+        ],
+        [
+          80,
+          44,
+          20.3
+        ],
+        [
+          80,
+          36,
+          20.3
+        ],
+        [
+          80,
+          33.4,
+          16.8
+        ],
+        [
+          95.5,
+          33.4,
+          16.8
+        ],
+        [
+          96,
+          30,
+          20
+        ],
+        [
+          96,
+          12.5,
+          20
+        ],
+        [
+          103,
+          12.5,
+          16
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "P4 MODE and ground to MCU underside fanout",
+      "radius_mm": 0.85,
+      "route_length_mm": 29.39,
+      "path": [
+        [
+          63,
+          51,
+          17.4
+        ],
+        [
+          63,
+          51.4,
+          17.4
+        ],
+        [
+          68,
+          51.4,
+          20.45
+        ],
+        [
+          68,
+          54,
+          20.45
+        ],
+        [
+          85,
+          54,
+          20.45
+        ],
+        [
+          85,
+          48.6,
+          20.45
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "BAT underside single lead",
+      "radius_mm": 0.5,
+      "route_length_mm": 8.59,
+      "path": [
+        [
+          85,
+          48.6,
+          20.45
+        ],
+        [
+          88,
+          47.64,
+          20.45
+        ],
+        [
+          93.445,
+          47.64,
+          20.45
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "GND underside single lead",
+      "radius_mm": 0.5,
+      "route_length_mm": 8.58,
+      "path": [
+        [
+          85,
+          48.6,
+          20.45
+        ],
+        [
+          88,
+          49.545,
+          20.45
+        ],
+        [
+          93.445,
+          49.545,
+          20.45
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D1 XIAO data to MODE",
+      "radius_mm": 0.5,
+      "route_length_mm": 42.63,
+      "path": [
+        [
+          88.5,
+          49,
+          18
+        ],
+        [
+          88.5,
+          43,
+          18
+        ],
+        [
+          68,
+          43,
+          17.4
+        ],
+        [
+          67.5,
+          43,
+          13.5
+        ],
+        [
+          67.5,
+          51,
+          13.5
+        ],
+        [
+          60,
+          51,
+          14.45
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "D2 MODE isolated DATA to trunk",
+      "radius_mm": 0.5,
+      "route_length_mm": 14.97,
+      "path": [
+        [
+          57,
+          51,
+          14.45
+        ],
+        [
+          57,
+          46.5,
+          14.3
+        ],
+        [
+          68,
+          45.8,
+          16.2
+        ]
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "R1 inline resistor and bypass wires",
+      "min_mm": [
+        35.5,
+        4.8,
+        11
+      ],
+      "max_mm": [
+        48,
+        10.5,
+        16.6
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Front connector service space",
+      "min_mm": [
+        12,
+        14,
+        12
+      ],
+      "max_mm": [
+        25,
+        24,
+        19.5
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Capacitor body and insulated lead space",
+      "min_mm": [
+        98.5,
+        14.5,
+        11.5
+      ],
+      "max_mm": [
+        107.5,
+        27,
+        20.5
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Lower charger termination space",
+      "min_mm": [
+        12,
+        30.3,
+        10.3
+      ],
+      "max_mm": [
+        30,
+        33.2,
+        14.8
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "Central insulated junctions",
+      "min_mm": [
+        60,
+        43.5,
+        13.5
+      ],
+      "max_mm": [
+        71,
+        48,
+        20.8
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "SPDT solder ends",
+      "min_mm": [
+        36.4,
+        48.4,
+        14.6
+      ],
+      "max_mm": [
+        45.6,
+        50.2,
+        19.4
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "DPDT solder ends",
+      "min_mm": [
+        56,
+        49,
+        13.3
+      ],
+      "max_mm": [
+        64.4,
+        51.8,
+        18.6
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "MCU underside fanout",
+      "min_mm": [
+        82,
+        46.5,
+        19.8
+      ],
+      "max_mm": [
+        88,
+        51,
+        21.2
+      ],
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 6.8 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 6.8 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 80 53.2 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane-1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane0",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    },
+    {
+      "name": "LED exit 40 53.2 -1 lane1",
+      "wire_OD_max_mm": 0.9,
+      "collision_bounds": [],
+      "collisions": {},
+      "passed": true
+    }
+  ],
+  "note": "All existing wire routes, component bays and LED pigtail reservations checked against conservative enclosing boxes of the three restored top notches. Unchanged geometry retains the previous full harness validation.",
+  "passed": true
+}

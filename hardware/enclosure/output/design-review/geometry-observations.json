@@ -1,0 +1,135 @@
+{
+  "method": "Sum downward-facing horizontal STL triangle areas by height in supplied print orientation. Does not classify bridge reach or compute required support volume.",
+  "observations": [
+    {
+      "part": "01-body-and-front-frame.stl",
+      "sha256": "4aefc74f746120b42a32b52d9d575180f59a0ac280a2b9338f4f2bdba65bdf48",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 3661.333,
+        "3.2": 92.18,
+        "9.1": 1.755,
+        "9.15": 8.28,
+        "9.9": 62.48,
+        "10.2": 4.48,
+        "15.6": 1.423,
+        "15.8": 9.36,
+        "18.0": 29.76,
+        "20.6": 18.24,
+        "26.0": 19.5,
+        "27.8": 52.466
+      }
+    },
+    {
+      "part": "03-black-and-white-backing.stl",
+      "sha256": "7dc29ffcdcb80acd69206a1cafdcf25968a5959ac9c54e6161737cdb78f4cef7",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 3947.5
+      }
+    },
+    {
+      "part": "04-optical-and-electronics-tray.stl",
+      "sha256": "a949f8d748014efcc76adeb879ce36ca6c763d9342d55072491d10e00d124562",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 66.6,
+        "2.925": 4140.1,
+        "3.65": 39.4,
+        "4.525": 32.37,
+        "4.95": 33.12,
+        "6.65": 1.33,
+        "7.25": 3.91,
+        "12.2": 25.76,
+        "20.05": 2.47,
+        "22.55": 2.56
+      }
+    },
+    {
+      "part": "05-charger-keeper.stl",
+      "sha256": "1698ad9572374af52c4c6b118c8a98da1794286c687d7642468d1e097dd016e6",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 118.54
+      }
+    },
+    {
+      "part": "06-xiao-keeper.stl",
+      "sha256": "2eb11207ed948f455c63f541c2d8de676c1d0c6dab281b375c1fba160de406ed",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 71.4
+      }
+    },
+    {
+      "part": "07-captive-reset-plunger.stl",
+      "sha256": "93b3e8a8f2d44852bcbe5f941de1a490c95fb748b656ea41823abc69d496550c",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 11.337,
+        "3.6": 13.287
+      }
+    },
+    {
+      "part": "08-captive-power-slider.stl",
+      "sha256": "7da19ee2cba12522197bce5c8c909c9ddd6ed1dc99b40988ab9af62349b7298d",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 46.8,
+        "4.05": 33.04
+      }
+    },
+    {
+      "part": "09-switch-keeper.stl",
+      "sha256": "25161c140808e32af8815336266b08bca49a08fda2528b2af78e49d384e349ed",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 37.76
+      }
+    },
+    {
+      "part": "10-wall-back-plate.stl",
+      "sha256": "afcd2c87c4ba7a5059eb95c95c1e2ee21d9b9b1dac8c2ac1f2281ddcab68075d",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 6270.604,
+        "2.3": 50.426,
+        "5.2": 119.573
+      }
+    },
+    {
+      "part": "90-m3-head-and-nut-fit-sample.stl",
+      "sha256": "152de0fedda3bfd3119f8ab380ed37fe7e76c0d30f2bfcc42d955cf49830d6ab",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 310.93,
+        "3.4": 80.897
+      }
+    },
+    {
+      "part": "91-led-and-acrylic-fit-sample.stl",
+      "sha256": "ae5471880802b684e31fc44d2287a3358a50c121997bad18cf878660f74626e9",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 457.44,
+        "4.812": 69.72,
+        "5.4": 244.84
+      }
+    },
+    {
+      "part": "92-reset-guide-fit-sample.stl",
+      "sha256": "29b2616c45704838e429fcbf1bd7187756da53f70aea01e0a54c01f3e9b5c71c",
+      "downward_horizontal_area_mm2_by_height": {
+        "0.0": 241.488
+      }
+    }
+  ],
+  "calculations": {
+    "air_gap_parallax_at_45_deg_mm": {
+      "gap_0.5": 0.5,
+      "gap_0.3": 0.3
+    },
+    "acrylic_104mm_expansion_for_30C_mm": 0.22464,
+    "conservative_depth_stack_mm": {
+      "front_lip": 1.6,
+      "acrylic": 3.175,
+      "air_gap": 0.3,
+      "printed_graphic": 2.0,
+      "retainer": 1.6,
+      "separation": 0.5,
+      "edge_on_xiao": 17.8,
+      "rear_seat_allowance": 0.8,
+      "rear_skin": 2.4
+    },
+    "conservative_depth_stack_total_mm": 30.175
+  }
+}

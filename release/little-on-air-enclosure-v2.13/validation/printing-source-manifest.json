@@ -1,0 +1,574 @@
+{
+  "original_sha256": "d4132729db648c6af7fbf6e5e8094494f6c6f001c83e854af4fef2e73599990a",
+  "changed_filament_settings": {
+    "filament_dev_drying_cooling_temperature": {
+      "before": [
+        "45",
+        "55",
+        "55"
+      ],
+      "after": [
+        "45",
+        "45",
+        "55"
+      ]
+    },
+    "filament_flow_ratio": {
+      "before": [
+        "0.98",
+        "0.95",
+        "0.95"
+      ],
+      "after": [
+        "0.98",
+        "0.98",
+        "0.95"
+      ]
+    },
+    "close_additional_fan_first_x_layers": {
+      "before": [
+        "1",
+        "3",
+        "3"
+      ],
+      "after": [
+        "1",
+        "1",
+        "3"
+      ]
+    },
+    "filament_dev_ams_drying_ams_limitations": {
+      "before": [
+        "1",
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "after": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "filament_settings_id": {
+      "before": [
+        "ON AIR black PLA+ - eSUN baseline(on-air-v213-X1C-all-plates.3mf)",
+        "Generic PETG",
+        "Generic PETG"
+      ],
+      "after": [
+        "ON AIR black PLA+ - eSUN baseline",
+        "ON AIR white PLA+ - eSUN baseline",
+        "ON AIR clear PETG - calibrate actual spool"
+      ]
+    },
+    "eng_plate_temp_initial_layer": {
+      "before": [
+        "0",
+        "70",
+        "70"
+      ],
+      "after": [
+        "0",
+        "0",
+        "70"
+      ]
+    },
+    "overhang_fan_threshold": {
+      "before": [
+        "50%",
+        "10%",
+        "10%"
+      ],
+      "after": [
+        "50%",
+        "50%",
+        "10%"
+      ]
+    },
+    "textured_plate_temp_initial_layer": {
+      "before": [
+        "55",
+        "70",
+        "70"
+      ],
+      "after": [
+        "55",
+        "55",
+        "70"
+      ]
+    },
+    "filament_dev_drying_softening_temperature": {
+      "before": [
+        "50",
+        "60",
+        "60"
+      ],
+      "after": [
+        "50",
+        "50",
+        "60"
+      ]
+    },
+    "filament_cost": {
+      "before": [
+        "22.99",
+        "30",
+        "30"
+      ],
+      "after": [
+        "22.99",
+        "22.99",
+        "30"
+      ]
+    },
+    "filament_start_gcode": {
+      "before": [
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >55)||(bed_temperature_initial_layer[current_extruder] >55)}M106 P3 S200\n{elsif(bed_temperature[current_extruder] >50)||(bed_temperature_initial_layer[current_extruder] >50)}M106 P3 S150\n{elsif(bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S50\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}",
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >80)||(bed_temperature_initial_layer[current_extruder] >80)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}",
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >80)||(bed_temperature_initial_layer[current_extruder] >80)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
+      ],
+      "after": [
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >55)||(bed_temperature_initial_layer[current_extruder] >55)}M106 P3 S200\n{elsif(bed_temperature[current_extruder] >50)||(bed_temperature_initial_layer[current_extruder] >50)}M106 P3 S150\n{elsif(bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S50\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}",
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >55)||(bed_temperature_initial_layer[current_extruder] >55)}M106 P3 S200\n{elsif(bed_temperature[current_extruder] >50)||(bed_temperature_initial_layer[current_extruder] >50)}M106 P3 S150\n{elsif(bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S50\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}",
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >80)||(bed_temperature_initial_layer[current_extruder] >80)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
+      ]
+    },
+    "filament_type": {
+      "before": [
+        "PLA",
+        "PETG",
+        "PETG"
+      ],
+      "after": [
+        "PLA",
+        "PLA",
+        "PETG"
+      ]
+    },
+    "fan_min_speed": {
+      "before": [
+        "100",
+        "40",
+        "40"
+      ],
+      "after": [
+        "100",
+        "100",
+        "10"
+      ]
+    },
+    "filament_dev_ams_drying_temperature": {
+      "before": [
+        "45",
+        "65",
+        "65",
+        "55",
+        "55",
+        "65",
+        "65",
+        "55",
+        "55"
+      ],
+      "after": [
+        "45",
+        "45",
+        "65"
+      ]
+    },
+    "overhang_fan_speed": {
+      "before": [
+        "100",
+        "90",
+        "90"
+      ],
+      "after": [
+        "100",
+        "100",
+        "30"
+      ]
+    },
+    "additional_cooling_fan_speed": {
+      "before": [
+        "70",
+        "0",
+        "0"
+      ],
+      "after": [
+        "70",
+        "70",
+        "0"
+      ]
+    },
+    "supertack_plate_temp_initial_layer": {
+      "before": [
+        "45",
+        "70",
+        "70"
+      ],
+      "after": [
+        "45",
+        "45",
+        "70"
+      ]
+    },
+    "hot_plate_temp_initial_layer": {
+      "before": [
+        "55",
+        "70",
+        "70"
+      ],
+      "after": [
+        "55",
+        "55",
+        "70"
+      ]
+    },
+    "nozzle_temperature": {
+      "before": [
+        "220",
+        "255",
+        "255"
+      ],
+      "after": [
+        "220",
+        "220",
+        "255"
+      ]
+    },
+    "filament_colour": {
+      "before": [
+        "#161616",
+        "#C1C1C1",
+        "#C1C1C1"
+      ],
+      "after": [
+        "#161616",
+        "#FFFFFF",
+        "#D8EDF0"
+      ]
+    },
+    "close_fan_the_first_x_layers": {
+      "before": [
+        "1",
+        "3",
+        "3"
+      ],
+      "after": [
+        "1",
+        "1",
+        "3"
+      ]
+    },
+    "filament_ids": {
+      "before": [
+        "GFL03",
+        "GFG99",
+        "GFG99"
+      ],
+      "after": [
+        "GFL03",
+        "GFL03",
+        "GFG99"
+      ]
+    },
+    "filament_vendor": {
+      "before": [
+        "eSUN",
+        "Generic",
+        "Generic"
+      ],
+      "after": [
+        "eSUN",
+        "eSUN",
+        "Generic"
+      ]
+    },
+    "fan_cooling_layer_time": {
+      "before": [
+        "100",
+        "30",
+        "30"
+      ],
+      "after": [
+        "100",
+        "100",
+        "30"
+      ]
+    },
+    "cool_plate_temp": {
+      "before": [
+        "35",
+        "0",
+        "0"
+      ],
+      "after": [
+        "35",
+        "35",
+        "0"
+      ]
+    },
+    "slow_down_layer_time": {
+      "before": [
+        "6",
+        "12",
+        "12"
+      ],
+      "after": [
+        "6",
+        "6",
+        "12"
+      ]
+    },
+    "filament_scarf_gap": {
+      "before": [
+        "15%",
+        "0%",
+        "0%"
+      ],
+      "after": [
+        "15%",
+        "15%",
+        "0%"
+      ]
+    },
+    "textured_plate_temp": {
+      "before": [
+        "55",
+        "70",
+        "70"
+      ],
+      "after": [
+        "55",
+        "55",
+        "70"
+      ]
+    },
+    "hot_plate_temp": {
+      "before": [
+        "55",
+        "70",
+        "70"
+      ],
+      "after": [
+        "55",
+        "55",
+        "70"
+      ]
+    },
+    "filament_dev_ams_drying_time": {
+      "before": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "after": [
+        "12",
+        "12",
+        "12"
+      ]
+    },
+    "nozzle_temperature_initial_layer": {
+      "before": [
+        "220",
+        "255",
+        "255"
+      ],
+      "after": [
+        "220",
+        "220",
+        "255"
+      ]
+    },
+    "filament_metal_stickiness": {
+      "before": [
+        "None",
+        "High",
+        "High"
+      ],
+      "after": [
+        "None",
+        "None",
+        "High"
+      ]
+    },
+    "filament_multi_colour": {
+      "before": [
+        "#161616",
+        "#C1C1C1",
+        "#C1C1C1"
+      ],
+      "after": [
+        "#161616",
+        "#FFFFFF",
+        "#D8EDF0"
+      ]
+    },
+    "temperature_vitrification": {
+      "before": [
+        "45",
+        "70",
+        "70"
+      ],
+      "after": [
+        "45",
+        "45",
+        "70"
+      ]
+    },
+    "filament_density": {
+      "before": [
+        "1.25",
+        "1.27",
+        "1.27"
+      ],
+      "after": [
+        "1.25",
+        "1.25",
+        "1.27"
+      ]
+    },
+    "nozzle_temperature_range_high": {
+      "before": [
+        "240",
+        "270",
+        "270"
+      ],
+      "after": [
+        "240",
+        "240",
+        "270"
+      ]
+    },
+    "filament_preheat_temperature_delta": {
+      "before": [
+        "10",
+        "0",
+        "0"
+      ],
+      "after": [
+        "10",
+        "10",
+        "0"
+      ]
+    },
+    "filament_dev_chamber_drying_bed_temperature": {
+      "before": [
+        "70",
+        "80",
+        "80"
+      ],
+      "after": [
+        "70",
+        "70",
+        "80"
+      ]
+    },
+    "cool_plate_temp_initial_layer": {
+      "before": [
+        "35",
+        "0",
+        "0"
+      ],
+      "after": [
+        "35",
+        "35",
+        "0"
+      ]
+    },
+    "filament_adhesiveness_category": {
+      "before": [
+        "100",
+        "300",
+        "300"
+      ],
+      "after": [
+        "100",
+        "100",
+        "300"
+      ]
+    },
+    "supertack_plate_temp": {
+      "before": [
+        "45",
+        "70",
+        "70"
+      ],
+      "after": [
+        "45",
+        "45",
+        "70"
+      ]
+    },
+    "filament_max_volumetric_speed": {
+      "before": [
+        "16",
+        "12",
+        "12"
+      ],
+      "after": [
+        "16",
+        "16",
+        "4"
+      ]
+    },
+    "nozzle_temperature_range_low": {
+      "before": [
+        "190",
+        "220",
+        "220"
+      ],
+      "after": [
+        "190",
+        "190",
+        "220"
+      ]
+    },
+    "fan_max_speed": {
+      "before": [
+        "100",
+        "90",
+        "90"
+      ],
+      "after": [
+        "100",
+        "100",
+        "30"
+      ]
+    },
+    "eng_plate_temp": {
+      "before": [
+        "0",
+        "70",
+        "70"
+      ],
+      "after": [
+        "0",
+        "0",
+        "70"
+      ]
+    },
+    "filament_dev_ams_drying_heat_distortion_temperature": {
+      "before": [
+        "45",
+        "75",
+        "75"
+      ],
+      "after": [
+        "45",
+        "45",
+        "75"
+      ]
+    }
+  },
+  "model_files_unchanged": true,
+  "spare_keeper_removed_from_insert_plate": true,
+  "black_to_white_flush_mm3": 700
+}

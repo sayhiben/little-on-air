@@ -1,0 +1,458 @@
+{
+  "ASSEMBLY.md": {
+    "bytes": 5554,
+    "sha256": "7fde47c74b1d21de20282b31eccc6f5f027ed4eded7a28f6964c0023f55c56ee"
+  },
+  "BOM.csv": {
+    "bytes": 1860,
+    "sha256": "c004fbf75b2b0ae7714d6484fea329a91aeaf1b7d036b9184f16af51e79232b2"
+  },
+  "build.py": {
+    "bytes": 8471,
+    "sha256": "36643fdbff5b12a98719bafdca0620e1fe18d7f10f1db9a94205cdb0692aa0f7"
+  },
+  "components.py": {
+    "bytes": 6212,
+    "sha256": "d57d0b1d56a7cfe7fd3da120851fce1ff80974a0f02ed0445dd6c49d69137d6b"
+  },
+  "FIRMWARE.md": {
+    "bytes": 3075,
+    "sha256": "016b79248717522d31240664d427e23dd692dca3dd8855cc7a176c251b4d00ca"
+  },
+  "FIT-REPORT.md": {
+    "bytes": 5685,
+    "sha256": "8158b73c15efe412149cf488f530eacd5e15dbc7a7842b1d995e9ee38c7b5160"
+  },
+  "LICENSE.txt": {
+    "bytes": 1069,
+    "sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec"
+  },
+  "MEASUREMENTS.json": {
+    "bytes": 2671,
+    "sha256": "e28813e8a8d5a4f3e817184be45a68c348057ae2d9534f7024339ab6d4a7bf63"
+  },
+  "output/assembly-meshes/01-igor-measured-shell.stl": {
+    "bytes": 1577984,
+    "sha256": "50f5092c11d7151939174837c76ac0958ccb0272539d59e9fcb096e9208fe75e"
+  },
+  "output/assembly-meshes/02-igor-measured-faceplate.stl": {
+    "bytes": 250584,
+    "sha256": "dccf23bd067c1f07070fd84a27f02c9288a59768080f8eeb6cd433e69491c7fb"
+  },
+  "output/assembly-meshes/03-igor-measured-hat.stl": {
+    "bytes": 302084,
+    "sha256": "992c420dadc1bbe580fc8aae410929bb84d11ea2a239d1d56f618ca5254c9e4a"
+  },
+  "output/assembly-meshes/04-igor-small-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "b085aabd9c8b607fc60f2b9aca38def37c3d7048e98b253cc34a5d07700e0f9d"
+  },
+  "output/assembly-meshes/05-igor-large-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "a94ce4b6466517d37f70d0ccbe66795c696fca825c44f612e1cdb8d0f31b2fdd"
+  },
+  "output/assembly-meshes/06-front-diffuser-PETG.stl": {
+    "bytes": 63084,
+    "sha256": "838fe3cca926bdfcb0ca94fe152ee9ca52251b635d2b5f2c7f983634de287c9d"
+  },
+  "output/assembly-meshes/07-strip-cassette.stl": {
+    "bytes": 8084,
+    "sha256": "01bdd17ea061e925fea58eb22640da559b3cb7af66722686747458dc8680e64a"
+  },
+  "output/assembly-meshes/08-xiao-carrier.stl": {
+    "bytes": 3084,
+    "sha256": "5f186146ba12f61e75868325c0fc3e0d7d7a4f184430e217a39c9d9f737adb2d"
+  },
+  "output/assembly-meshes/auxiliary-envelope.stl": {
+    "bytes": 684,
+    "sha256": "f201c7a3f2d01302810f3a697f94a9e9798c613a8c18fa5f4b48a97699d9512b"
+  },
+  "output/assembly-meshes/capacitor-envelope.stl": {
+    "bytes": 31484,
+    "sha256": "f47bc2b1c1e2d2037e50a430b1b5585aec9ff50a027c2a8df12b6da63e0b7b50"
+  },
+  "output/assembly-meshes/encoder-box.stl": {
+    "bytes": 684,
+    "sha256": "c1d43839cdbd70795a0318cb9dbb2d1ddd53cd5491c9ab6cff32691eb751ca30"
+  },
+  "output/assembly-meshes/encoder-collar.stl": {
+    "bytes": 31484,
+    "sha256": "b326277876e62dcb0f3a7d59dabd05e1fb7cc989c9d241f9a51297c7dd3f3194"
+  },
+  "output/assembly-meshes/encoder-connector-envelope.stl": {
+    "bytes": 684,
+    "sha256": "ea7482e214294cd8f7371d18de6d91a1b92e02c06b6b4eb9ccd40703c4c0c288"
+  },
+  "output/assembly-meshes/encoder-header.stl": {
+    "bytes": 684,
+    "sha256": "401504d191a974d67596dfffd1ceb8ed8413a18cf921424d6832b550b2b30504"
+  },
+  "output/assembly-meshes/encoder-pcb.stl": {
+    "bytes": 64284,
+    "sha256": "c5f1ab83c9e694edc61fcdbff4f61b083f4c6f1eab2ecf3431df64877eccdede"
+  },
+  "output/assembly-meshes/encoder-pins.stl": {
+    "bytes": 314084,
+    "sha256": "6792f0f75a1dec18725f1e3a69e7a6b76f6c72b92b460884a3816d40f242ae47"
+  },
+  "output/assembly-meshes/encoder-shaft.stl": {
+    "bytes": 20484,
+    "sha256": "fc9a9c9f4d42fed240623ce6c8ada4c241431c1f002df12e84d3a7c2b998595b"
+  },
+  "output/assembly-meshes/encoder-solder-envelope.stl": {
+    "bytes": 684,
+    "sha256": "9d7f16ba86ee34f04c43f68a3efbb8cbd143ae5df314c04d1bb914664f67f6fc"
+  },
+  "output/assembly-meshes/encoder-tab-envelope.stl": {
+    "bytes": 684,
+    "sha256": "c8c68a6850ae8e063f1b36391cef380c017efa7eb5f4e17f26bc96038013e40d"
+  },
+  "output/assembly-meshes/oled-active-area.stl": {
+    "bytes": 684,
+    "sha256": "2823d6c221765db6a1ae8b89d6596d42b3350adb324dc8a9c3b9023292dec471"
+  },
+  "output/assembly-meshes/oled-connector-envelope.stl": {
+    "bytes": 684,
+    "sha256": "b69e1b279484e1f1dcd6f7179ffd585ce0e29c566bd091e5b10d4e621d1d71e8"
+  },
+  "output/assembly-meshes/oled-front-solder-envelope.stl": {
+    "bytes": 684,
+    "sha256": "80fa5bd8efe82f7b3e2739625d313a83f731022dd6c22ea3418a95b16724b6a0"
+  },
+  "output/assembly-meshes/oled-glass.stl": {
+    "bytes": 684,
+    "sha256": "6fca3b368cfa5698549faff2a968e2df26adfeb99a353851cfb694b08a2688a6"
+  },
+  "output/assembly-meshes/oled-header.stl": {
+    "bytes": 684,
+    "sha256": "4cfea8a46550e1d993bb6528834adc7c68c3640623638f08209ec80fcd675f82"
+  },
+  "output/assembly-meshes/oled-pcb.stl": {
+    "bytes": 128684,
+    "sha256": "2a58f0deb911a4089771be315d433d6fff35334c3b9dded2c2dee1bee48a9329"
+  },
+  "output/assembly-meshes/oled-pins.stl": {
+    "bytes": 125684,
+    "sha256": "744a23556bcf8d5681be08033f08fbddee107f9b2b5cb4cc91bcdf98faa54abf"
+  },
+  "output/assembly-meshes/oled-ribbon-envelope.stl": {
+    "bytes": 1884,
+    "sha256": "2bb50517894e85477d4793c177f59ad8f6e22d710608e86197b67390468b6d92"
+  },
+  "output/assembly-meshes/original-faceplate-reference.stl": {
+    "bytes": 478884,
+    "sha256": "df7094ebffbe1e903fd1342d1c82ad9c264002b86762bbc484304574aa799515"
+  },
+  "output/assembly-meshes/original-hat-reference.stl": {
+    "bytes": 237684,
+    "sha256": "f297bce2e376a435c7ccf6cf3e7690a2f3d10be1d91abf020439d09918e07add"
+  },
+  "output/assembly-meshes/original-shell-reference.stl": {
+    "bytes": 1511884,
+    "sha256": "c3ec89ac064f0162fb153f602f742fc7e85fefb28745808ecc9f839b04de9af9"
+  },
+  "output/assembly-meshes/pixel-mount-tape.stl": {
+    "bytes": 684,
+    "sha256": "a7bebc91e12a740611c2f4b7d92808e0bb8839c09a2420e5caf0b08aea8166c0"
+  },
+  "output/assembly-meshes/pixel-strip-envelope.stl": {
+    "bytes": 684,
+    "sha256": "a48c2c1c3c32a2d1a3ddf015c6686b8dd70698f830a7cdab2d1fbcd3717d8aee"
+  },
+  "output/assembly-meshes/weight-left.stl": {
+    "bytes": 684,
+    "sha256": "9812753255445624ed95e8534c8a096d8836377b4715de117cd18bc2893ce09c"
+  },
+  "output/assembly-meshes/weight-right.stl": {
+    "bytes": 684,
+    "sha256": "5f18509443d12b5937fa14e00f8689c23015eff7c8f406f0ffcc249cf16ce6b8"
+  },
+  "output/assembly-meshes/xiao.stl": {
+    "bytes": 5834484,
+    "sha256": "43f43569ca7759a47242991d9aadd599ad8ad9678a1ed12b41d1c72ad2120cf6"
+  },
+  "output/bambu-studio/igor-measured-v4-X1C-PLA-face-cassette-inlays.3mf": {
+    "bytes": 89057,
+    "sha256": "7b78cd683479b8abab9f101134b3f3613bae91a999011fe6ae824eda0db25c0a"
+  },
+  "output/bambu-studio/igor-measured-v4-X1C-PLA-shell-hat-carrier.3mf": {
+    "bytes": 489157,
+    "sha256": "6c749c608efad797391cc9d8b51dc305535bcd2ddc0509ff5172c6832f715a5f"
+  },
+  "output/bambu-studio/igor-measured-v4-X1C-transparent-PETG-diffuser.3mf": {
+    "bytes": 25356,
+    "sha256": "bbbe5c6d85ca9fae4bd8000e20234852994120f8369bace99e1b56e0bbf37364"
+  },
+  "output/cad/01-igor-measured-shell.step": {
+    "bytes": 439502,
+    "sha256": "9e13640aebc8acf458e126cfe9d9f9da0fa690a76f436634a8eaecb9af6784b9"
+  },
+  "output/cad/02-igor-measured-faceplate.step": {
+    "bytes": 545128,
+    "sha256": "b216f84e355d9a36dc17a1566d43a73109d885e48cc049512a586413dc9467ae"
+  },
+  "output/cad/03-igor-measured-hat.step": {
+    "bytes": 939501,
+    "sha256": "a3457aaca5ede8662f7c0b1e69bf7beb793f6250f51df0be4e0aa9e867f33e06"
+  },
+  "output/cad/04-igor-small-inlay-original.step": {
+    "bytes": 10282,
+    "sha256": "efbc23e24ecd2c7396378b46d913206e2195cb4231f277fccf0802a16f425449"
+  },
+  "output/cad/05-igor-large-inlay-original.step": {
+    "bytes": 10291,
+    "sha256": "4545771cd3c3043b8acaa8dbc976334d56bfcbf4736f35352f2128f5c99b968f"
+  },
+  "output/cad/06-front-diffuser-PETG.step": {
+    "bytes": 10087,
+    "sha256": "77f74c5e9969973d6b623738236fe597e3043dfd6fc5fe4c9b7de641cdc0ae30"
+  },
+  "output/cad/07-strip-cassette.step": {
+    "bytes": 139606,
+    "sha256": "25adc499edc989231a63563bdc6551903d3ca964f34883530bbf9171ac23ddd8"
+  },
+  "output/cad/08-xiao-carrier.step": {
+    "bytes": 57412,
+    "sha256": "123b1d62136da6ad04ee32c3a73a7d4fa015c7107b8c06800cfe6dd22785a091"
+  },
+  "output/cad/igor-measured-v4.step": {
+    "bytes": 2215975,
+    "sha256": "fb4c977ccc316f5eb93530fbbe40faf5682fcc92c6c05afbbdae073cb5933109"
+  },
+  "output/reference-components/auxiliary-envelope.step": {
+    "bytes": 15500,
+    "sha256": "b4d77ff650c80957dae988f7b27b28e78bd3c3ef639418ad596802081f8d22cf"
+  },
+  "output/reference-components/capacitor-envelope.step": {
+    "bytes": 5652,
+    "sha256": "ce392c94416902669a6ddc36a6c69c578fda1386f674ffb19e8ad30b1cfa9e3d"
+  },
+  "output/reference-components/encoder-box.step": {
+    "bytes": 15870,
+    "sha256": "fee37a6e2305e8902963b4713241570a833fc86c449f08e98ecf12d020d7c2fd"
+  },
+  "output/reference-components/encoder-collar.step": {
+    "bytes": 5748,
+    "sha256": "3759e18ee59623e9e95b92583c9567845d0b321a0daf3a4436da1c9df63a5954"
+  },
+  "output/reference-components/encoder-connector-envelope.step": {
+    "bytes": 15640,
+    "sha256": "e5d6b25ab492a0ec2b6c082720377d9feaaa01601579918528a09f2a08d77df3"
+  },
+  "output/reference-components/encoder-header.step": {
+    "bytes": 15932,
+    "sha256": "51140cc9bf1185fc1e88749d0daa16f5f5f975cffd50216296542015d0a8f1ff"
+  },
+  "output/reference-components/encoder-pcb.step": {
+    "bytes": 23381,
+    "sha256": "a96e499795586651b6f935b3d91a79bce4045dd65889bc9f1982b927a19aa8e7"
+  },
+  "output/reference-components/encoder-pins.step": {
+    "bytes": 61029,
+    "sha256": "ab693e21b5c650a2f2866bee6d4bcf7aef55b79a709c54c0e2be8cb21d99d0ae"
+  },
+  "output/reference-components/encoder-shaft.step": {
+    "bytes": 13203,
+    "sha256": "03466321dc55b7c73790f2f83a2905e3cdf22b3298bbb57b8f050dff6b5b238c"
+  },
+  "output/reference-components/encoder-solder-envelope.step": {
+    "bytes": 15898,
+    "sha256": "29cfe124878ef945be86f300b631b17379219e8f2e263827bd53b63f55c489da"
+  },
+  "output/reference-components/encoder-tab-envelope.step": {
+    "bytes": 15872,
+    "sha256": "69902f484d9fe957597204630966db746263dc3762a911f58a9cd4edb6862de1"
+  },
+  "output/reference-components/measured-hardware.step": {
+    "bytes": 3962886,
+    "sha256": "ae652a9e8a9fd258bf9363b7d1f11dcb6c33e48648a688d7a901cb756ee0401c"
+  },
+  "output/reference-components/oled-active-area.step": {
+    "bytes": 16455,
+    "sha256": "f02018dd30eb92166b0f8488aed39ba551d66f18917641ee43f3ecf525da59dd"
+  },
+  "output/reference-components/oled-connector-envelope.step": {
+    "bytes": 16368,
+    "sha256": "368c4494dd415369ff2f6224e91a04a4b0da1b90183d23031cc1a1b685ca5e39"
+  },
+  "output/reference-components/oled-front-solder-envelope.step": {
+    "bytes": 16352,
+    "sha256": "a1acb1b4c3e5412db8fbe9acf4ee773023b16b5d0072b01754e1cb4961adea4b"
+  },
+  "output/reference-components/oled-glass.step": {
+    "bytes": 16323,
+    "sha256": "edf8319c81aaf1f08037c0477c7a149518390c421565360b89839d518a0157c4"
+  },
+  "output/reference-components/oled-header.step": {
+    "bytes": 16340,
+    "sha256": "6ac215e500a414a3128ed9786cc90064e7a38ebbc6e841084720e68534b26cef"
+  },
+  "output/reference-components/oled-pcb.step": {
+    "bytes": 46007,
+    "sha256": "6095e40321e8622a1c5e07740100924e8e1f33d78350dcf8fa12e2d3095baa13"
+  },
+  "output/reference-components/oled-pins.step": {
+    "bytes": 25884,
+    "sha256": "0a912576922d483544d34bdf58728c5b9af1add9fcfd7dd5c2d816fc2d3f53ba"
+  },
+  "output/reference-components/oled-ribbon-envelope.step": {
+    "bytes": 51033,
+    "sha256": "b654c163c2eecaf3745039095ca02b905ed78866397b3d5eec6ab1b9259f6b32"
+  },
+  "output/reference-components/pixel-mount-tape.step": {
+    "bytes": 16370,
+    "sha256": "e2fbe819f3fd4253d0040775224968d38015320de2ce37c4901ddfb1fb3c04b3"
+  },
+  "output/reference-components/pixel-strip-envelope.step": {
+    "bytes": 16362,
+    "sha256": "5d2dab0ff8f11ac15ffa2fa6054d17e68744aa3452ce67e988a9d73842ce9b72"
+  },
+  "output/reference-components/weight-left.step": {
+    "bytes": 15638,
+    "sha256": "51e5752bd59e7bce8ccac9a37e983275438e0a22e41b4cf2eb36cadd0f759d92"
+  },
+  "output/reference-components/weight-right.step": {
+    "bytes": 15604,
+    "sha256": "6b3419bb64ff8b4e731f5fbef3790e20d60b1c85b3b3530f48965b34e22166f8"
+  },
+  "output/reference-components/xiao.step": {
+    "bytes": 3557617,
+    "sha256": "c43f3124f6bacfd83e887003598595a698762b8987706618def7ec86ee3d7144"
+  },
+  "output/stl/01-igor-measured-shell.stl": {
+    "bytes": 1577984,
+    "sha256": "6b92a6142d068a1ad439b39372ab1f99549ab990202947a582f211770d8b0be8"
+  },
+  "output/stl/02-igor-measured-faceplate.stl": {
+    "bytes": 250584,
+    "sha256": "043597f83f0710b5f6daeaab1eb92d80e56c33a832bf367c2ae0a017de8039f9"
+  },
+  "output/stl/03-igor-measured-hat.stl": {
+    "bytes": 302084,
+    "sha256": "9e60725aa5c986cb607a4883eea08471b4c888f159bfdf2a1d01faccbfff59f1"
+  },
+  "output/stl/04-igor-small-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "42ecc9cc8a89be99bb47447e1697bc7f86265ea0c786273d36084ccb5309f7e9"
+  },
+  "output/stl/05-igor-large-inlay-original.stl": {
+    "bytes": 63284,
+    "sha256": "9d53c792ad48c781b51e3cc70e5534287f0cf6914fe4c9ac1cb8ac684b019611"
+  },
+  "output/stl/06-front-diffuser-PETG.stl": {
+    "bytes": 63084,
+    "sha256": "a24ffb35a40eba198fc800eb552d9daa644de792fc0a029ec24992ecf35a0cd0"
+  },
+  "output/stl/07-strip-cassette.stl": {
+    "bytes": 8084,
+    "sha256": "bc6e7e683408441d5bfdace917d90fa2f0cef049a0167fcb98274c7223711e71"
+  },
+  "output/stl/08-xiao-carrier.stl": {
+    "bytes": 3084,
+    "sha256": "a0cc65f3bacdb172309c5d53424beeb9feb7c4db0495e18c33d19fc3173505b5"
+  },
+  "output/validation/fit.json": {
+    "bytes": 3041,
+    "sha256": "925686d7bf1321e757bff065afca1fbaa4a58dc7190a07c5e29e3c1f941b6409"
+  },
+  "output/validation/geometry.json": {
+    "bytes": 3369,
+    "sha256": "84b5de5f981bfb52a8f2c9e1a5501eca82839e5cf0a91cd1fb0e5db1932e4f6e"
+  },
+  "output/validation/package-audit.json": {
+    "bytes": 601,
+    "sha256": "51bf42be29688aca86e19bd6ed536678d57040d4669c0a12a33ae0ec7bbcd251"
+  },
+  "output/validation/slicing.json": {
+    "bytes": 15625,
+    "sha256": "5d13883c4607e97c68d50f0b11e43c934e702571e6d72b02dbe83b7e84b01057"
+  },
+  "output/views/assembled.png": {
+    "bytes": 92432,
+    "sha256": "8bf065d305c2102cf1480ed434d1c5378cfbfaf811f3c9c9125eb59371532759"
+  },
+  "output/views/cutaway.png": {
+    "bytes": 89040,
+    "sha256": "1d15deb152d17c24361043b44de6632309b821deec74497a46d583a730d5dd22"
+  },
+  "output/views/diffuser-detail-raw.png": {
+    "bytes": 36639,
+    "sha256": "b18853ab5d8d314617270ecced08bcdc43b32e1ec4e9780d5c2ad20744137b68"
+  },
+  "output/views/diffuser-detail.png": {
+    "bytes": 70694,
+    "sha256": "c78734d4d3d2d9711ba9284f22bcd1fcee99580b068922fc857a91b3dc5782a1"
+  },
+  "output/views/measured-fit-overview.png": {
+    "bytes": 318294,
+    "sha256": "cc9dc5fffd6dce9d06d5475d08701277c048d2a9d318498560b91f96c360eea0"
+  },
+  "output/views/original-vs-measured.png": {
+    "bytes": 313895,
+    "sha256": "1bd6e4dae7e8d13062d0ed0f7c36cdc814cda5184842010b54e8c09f67ad4a4e"
+  },
+  "output/views/original.png": {
+    "bytes": 114650,
+    "sha256": "70ddadddf39e2c9da0081397e478e83daa7c75a706712a77a623e4b117e4782a"
+  },
+  "output/views/print-plate.png": {
+    "bytes": 10170,
+    "sha256": "9c69dedf1ac56044fac0b183ccec78fdaa1464dd9ddca4a786ff3a02f68c3e8c"
+  },
+  "package.py": {
+    "bytes": 4076,
+    "sha256": "fe109ca3a6ae3149d50993b5c8ef8c9350afbca962c7f035b5f33040f9ef7d92"
+  },
+  "prepare_prints.py": {
+    "bytes": 8071,
+    "sha256": "ab60f3cc5c2372941defd0d083fc53432350c8f70b30449aac236af73167620b"
+  },
+  "print-profiles.json": {
+    "bytes": 120155,
+    "sha256": "fed75673a0841e3db76fc96e85f5b44b84982adfe9bd39321d21e44586bed75f"
+  },
+  "README.md": {
+    "bytes": 4199,
+    "sha256": "e65b3682d6bc9cfec9b19ca080867b5f2c2ac20e528466d0efa9ad1622210f59"
+  },
+  "reference/xiao-esp32s3-seeed.step": {
+    "bytes": 1335902,
+    "sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd"
+  },
+  "render_views.py": {
+    "bytes": 7340,
+    "sha256": "213ab5a0b99148998f0dbc61984f9036931340d188324d91f2be214fad2f4130"
+  },
+  "requirements.txt": {
+    "bytes": 109,
+    "sha256": "213c3d44de7d9e2ff0252c111cc3d04085f87f9f33d5e2371a4c08056151f3c2"
+  },
+  "run_cad.py": {
+    "bytes": 931,
+    "sha256": "3a3392f7e31f352ba9fd04c9b476b2a2a26c0de3e16ce058de0e6bb65eddd676"
+  },
+  "SOURCES.md": {
+    "bytes": 3266,
+    "sha256": "3166ecf6f4468d8b0142534132485f0b550cd53561744ae4afbcfc7b8d0c8618"
+  },
+  "upstream/igor-v1.3mf": {
+    "bytes": 157784,
+    "sha256": "bcb8dca8bdacedaecb269dfc912eb03bc336b9debc88b6f716f300ba4d47eac9"
+  },
+  "upstream/igor-v1.step": {
+    "bytes": 570378,
+    "sha256": "9645738bee23f74ca35bc64abd22047e27ce61a9ba0c0e83864a13e755bd8c33"
+  },
+  "upstream/LICENSE": {
+    "bytes": 1090,
+    "sha256": "80476d4452d46daa8b16e7c7ee54887ab30f8e2618457d2ecbb28005036a3c7e"
+  },
+  "validate_fit.py": {
+    "bytes": 9342,
+    "sha256": "78d8eec7021e72d2b8b3a4b56001f0f00478f36b0f0f5d2c90fa4c68befa0e32"
+  },
+  "WIRING.md": {
+    "bytes": 3234,
+    "sha256": "becd27647dc5d3c9a5487ce0036c5030c6a963b7999715798beb8f9f0785add2"
+  }
+}

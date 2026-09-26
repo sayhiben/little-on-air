@@ -1,0 +1,101 @@
+{
+    "error_string": "Success.",
+    "export_time": 310,
+    "layer_height": 0.10000000149011612,
+    "plate_index": 0,
+    "prepare_time": 40,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 5.411088466644287,
+                "Custom": 902.619140625,
+                "Flush": 29.0,
+                "Gap infill": 11.380415916442871,
+                "Internal solid infill": 62.68796157836914,
+                "Outer wall": 103.35260772705078,
+                "Sparse infill": 64.71714782714844,
+                "Travel": 40.667198181152344,
+                "Undefined": 25.37140655517578
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFG99",
+                    "id": 1,
+                    "main_used_g": 0.5501180291175842,
+                    "total_used_g": 0.5501180291175842
+                }
+            ],
+            "generate_support_material_time": 1,
+            "id": 1,
+            "infill_time": 6,
+            "layer_filament_change": 0,
+            "main_predication": 259.241455078125,
+            "make_perimeters_time": 10,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 4.399051666259766,
+                        "height": 2.9000015258789063,
+                        "width": 17.60000228881836,
+                        "x": 101.19999694824219,
+                        "y": 125.80047607421875,
+                        "z": 3.7060548407907845e-08
+                    },
+                    "id": 5,
+                    "name": "08-captive-front-rgb-guide.stl",
+                    "triangle_count": 1656
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.299993515014648,
+                        "x": 129.85000610351563,
+                        "y": 126.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 9,
+                    "name": "09-charger-light-guide.stl",
+                    "triangle_count": 1392
+                },
+                {
+                    "bbox": {
+                        "depth": 3.8999295234680176,
+                        "height": 2.7997665405273438,
+                        "width": 6.299993515014648,
+                        "x": 141.85000610351563,
+                        "y": 126.05003356933594,
+                        "z": 2.9736327178397914e-08
+                    },
+                    "id": 13,
+                    "name": "09-charger-light-guide.stl",
+                    "triangle_count": 1392
+                }
+            ],
+            "sliced_time": 251,
+            "sliced_time_with_cache": 225,
+            "total_predication": 1204.5343017578125,
+            "triangle_count": 4440,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 100.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 1
+}

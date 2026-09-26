@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "eight_STLs_match_three_sliced_projects": true,
+  "source_geometry": "UrbanCircles/igor@7543085fe11f102f121f08aabd8f6c25c38bdf60",
+  "native_geometry": true,
+  "source_hat_exterior_preserved": true,
+  "shell_and_faceplate_changes_bounded": true,
+  "correct_desk_orientation_checked": true,
+  "measured_component_fit_and_loading_checked": true,
+  "sliced_without_warnings": true,
+  "physical_print_or_electronics_test": false,
+  "esp32_firmware_port_complete": false,
+  "total_estimated_minutes": 261.644243367513,
+  "total_estimated_filament_g": 73.64057856798172
+}

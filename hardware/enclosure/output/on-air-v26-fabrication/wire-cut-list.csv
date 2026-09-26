@@ -1,0 +1,14 @@
+Route,CAD route length mm,Starting wire length mm,Note
+H1 front connector to LED1,43.33,80,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+H2 LED1 to LED2,75.73,115,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+H3 LED2 to LED3,72.66,110,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+H4 LED3 to LED4,65.84,105,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+B1 battery to charger,71.48,110,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+P1 charger OUT plus to SPDT,38.16,75,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+P2 SPDT switched plus to DPDT RUN branch,18.17,55,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+P3 switched plus and protected ground distribution,17.27,55,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+P4 DPDT common A and ground to XIAO,79.12,115,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+G1 charger OUT minus to ground distribution,98.62,135,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+D1 XIAO data to DPDT RUN B,94.4,130,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+D2 DPDT common B to LED harness junction,33.73,70,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly
+H0 LED harness junction to front connector,37.2,75,Per conductor; solder XIAO outside case; retain slack for 8 mm slide; trim after dry assembly

@@ -1,5 +1,10 @@
 # Power notes
 
+These measurements and battery targets apply to the existing nRF52840 v0
+firmware. The new [ESP32-S3 desk controller](../hardware/controller/igor-measured-v4/WIRING.md)
+is powered from computer USB and has no controller battery; the receiver's
+power design remains as documented below.
+
 The firmware uses the board's DC/DC mode, hardware PWM, kernel idle sleep,
 disabled application USB/console logging, and disabled UART, I2C, SPI, QSPI,
 and IEEE 802.15.4 peripherals. The controller scans only for a command,

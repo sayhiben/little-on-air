@@ -10,6 +10,8 @@ enum loa_status {
 	LOA_STATUS_WARN = 1,
 	LOA_STATUS_ON_AIR = 2,
 	LOA_STATUS_OKAY = 3,
+	LOA_STATUS_REQUEST = 4,
+	LOA_STATUS_SPECIAL = 5,
 	LOA_STATUS_COUNT,
 };
 
@@ -22,6 +24,11 @@ struct loa_rgb {
 bool loa_status_is_valid(enum loa_status status);
 enum loa_status loa_status_next(enum loa_status status);
 struct loa_rgb loa_status_rgb(enum loa_status status);
+/* Raw color before brightness limiting. Corner order: lower-left, lower-right,
+ * upper-right, upper-left, viewed from the front. Time is elapsed since selection.
+ */
+struct loa_rgb loa_status_color_at(enum loa_status status, uint32_t elapsed_ms, uint8_t pixel);
+uint16_t loa_status_animation_interval_ms(enum loa_status status);
 const char *loa_status_name(enum loa_status status);
 
 #endif /* LITTLE_ON_AIR_STATUS_H_ */

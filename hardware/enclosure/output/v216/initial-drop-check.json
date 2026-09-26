@@ -1,0 +1,598 @@
+{
+  "passed": false,
+  "completed": 24,
+  "total": 24,
+  "results": [
+    {
+      "name": "Drop 40,6.8 side-1 lane-2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,6.8 side-1 lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,6.8 side-1 lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,6.8 side1 lane-2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,6.8 side1 lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,6.8 side1 lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 40,53.2 side-1 lane-2",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 4.319689898685949
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              30.95,
+              50.2,
+              -12.4
+            ],
+            "hi": [
+              31.95,
+              52.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 40,53.2 side-1 lane0",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 4.319689898685949
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              30.95,
+              52.2,
+              -12.4
+            ],
+            "hi": [
+              31.95,
+              54.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 40,53.2 side-1 lane2",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 4.319689898685948
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              30.95,
+              54.2,
+              -12.4
+            ],
+            "hi": [
+              31.95,
+              56.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 40,53.2 side1 lane-2",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 8.34500398904138
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              47.2,
+              50.2,
+              -12.4
+            ],
+            "hi": [
+              49.05,
+              52.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 40,53.2 side1 lane0",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 8.34500398904138
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              47.2,
+              52.2,
+              -12.4
+            ],
+            "hi": [
+              49.05,
+              54.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 40,53.2 side1 lane2",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 8.639379797371564
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              47.05,
+              54.2,
+              -12.4
+            ],
+            "hi": [
+              49.05,
+              56.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 80,6.8 side-1 lane-2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,6.8 side-1 lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,6.8 side-1 lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,6.8 side1 lane-2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,6.8 side1 lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,6.8 side1 lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,53.2 side-1 lane-2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,53.2 side-1 lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,53.2 side-1 lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Drop 80,53.2 side1 lane-2",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 8.639379797371564
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              87.05,
+              50.2,
+              -12.4
+            ],
+            "hi": [
+              89.05,
+              52.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 80,53.2 side1 lane0",
+      "passed": false,
+      "collisions_mm3": {
+        "01 Front optical bezel": 2.3704776484845853,
+        "06 Electronics retaining yoke": 9.011677804832328
+      },
+      "locations": {
+        "01 Front optical bezel": [
+          {
+            "lo": [
+              88.515,
+              52.659,
+              -4.644
+            ],
+            "hi": [
+              88.656,
+              53.741,
+              -4.338
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -5.006
+            ],
+            "hi": [
+              88.793,
+              53.915,
+              -4.649
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -5.345
+            ],
+            "hi": [
+              88.901,
+              54.004,
+              -4.973
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -5.666
+            ],
+            "hi": [
+              88.981,
+              54.052,
+              -5.307
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -5.976
+            ],
+            "hi": [
+              89.03,
+              54.077,
+              -5.649
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.702,
+              -5.298
+            ],
+            "hi": [
+              88.648,
+              53.698,
+              -4.302
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -5.698
+            ],
+            "hi": [
+              88.769,
+              53.866,
+              -4.366
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -6.0
+            ],
+            "hi": [
+              88.869,
+              53.963,
+              -4.511
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -6.0
+            ],
+            "hi": [
+              88.948,
+              54.024,
+              -4.7
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -6.0
+            ],
+            "hi": [
+              89.004,
+              54.06,
+              -4.919
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -6.0
+            ],
+            "hi": [
+              89.038,
+              54.078,
+              -5.159
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              52.6,
+              -6.0
+            ],
+            "hi": [
+              89.004,
+              54.033,
+              -5.415
+            ]
+          }
+        ],
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              87.05,
+              52.2,
+              -13.0
+            ],
+            "hi": [
+              89.05,
+              54.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drop 80,53.2 side1 lane2",
+      "passed": false,
+      "collisions_mm3": {
+        "01 Front optical bezel": 2.4660839540876127,
+        "06 Electronics retaining yoke": 9.066236320664384
+      },
+      "locations": {
+        "01 Front optical bezel": [
+          {
+            "lo": [
+              88.515,
+              54.659,
+              -4.644
+            ],
+            "hi": [
+              88.656,
+              55.741,
+              -4.338
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.485,
+              -5.006
+            ],
+            "hi": [
+              88.793,
+              55.915,
+              -4.649
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.396,
+              -5.345
+            ],
+            "hi": [
+              88.901,
+              56.004,
+              -4.973
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.348,
+              -5.666
+            ],
+            "hi": [
+              88.981,
+              56.052,
+              -5.307
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.323,
+              -5.976
+            ],
+            "hi": [
+              89.03,
+              56.077,
+              -5.649
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.702,
+              -5.298
+            ],
+            "hi": [
+              88.648,
+              55.698,
+              -4.302
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.534,
+              -5.698
+            ],
+            "hi": [
+              88.769,
+              55.866,
+              -4.366
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.437,
+              -6.0
+            ],
+            "hi": [
+              88.869,
+              55.963,
+              -4.511
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.376,
+              -6.0
+            ],
+            "hi": [
+              88.948,
+              56.024,
+              -4.7
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.34,
+              -6.0
+            ],
+            "hi": [
+              89.004,
+              56.06,
+              -4.919
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.322,
+              -6.0
+            ],
+            "hi": [
+              89.038,
+              56.078,
+              -5.159
+            ]
+          },
+          {
+            "lo": [
+              88.515,
+              54.367,
+              -6.0
+            ],
+            "hi": [
+              89.004,
+              56.033,
+              -5.415
+            ]
+          }
+        ],
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              87.05,
+              54.2,
+              -13.0
+            ],
+            "hi": [
+              89.05,
+              56.2,
+              -9.65
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

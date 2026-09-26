@@ -1,0 +1,122 @@
+{
+  "source": "User supplied hand measurements; no inferred vendor CAD for these modules",
+  "weight": {
+    "size_mm": [
+      20,
+      33.5,
+      6.5
+    ],
+    "height_includes_foam_adhesive": true,
+    "count": 2,
+    "single_layer": true
+  },
+  "encoder": {
+    "pcb_mm": [
+      19.25,
+      26.4,
+      1.5
+    ],
+    "solder_below_pcb_mm": 2,
+    "box_mm": [
+      12,
+      12,
+      7
+    ],
+    "box_offsets_from_non_header_short_edge_and_opposite_holes_edge_mm": [
+      5,
+      2.4
+    ],
+    "tab_height_above_box_mm": 1.2,
+    "tab_reserved_plan_mm": [
+      12,
+      3
+    ],
+    "collar_diameter_height_mm": [
+      6.8,
+      7
+    ],
+    "shaft_diameter_length_mm": [
+      6,
+      13.25
+    ],
+    "flat_face_chord_mm": 5.4,
+    "header_plastic_mm": [
+      12.45,
+      2.5,
+      2.45
+    ],
+    "header_pin_extra_up_mm": 2.4,
+    "header_pin_overhang_mm": 4.7,
+    "pin_diameter_mm": 0.64,
+    "header_edge_offsets_mm": [
+      1.5,
+      1.2,
+      5.75
+    ],
+    "hole_diameter_mm": 2.75,
+    "hole_inner_edge_spacing_mm": 13.85,
+    "hole_edge_clearances_mm": [
+      1.16,
+      3.43,
+      3.2
+    ],
+    "push_travel_reserved_mm": 1.0
+  },
+  "pixel": {
+    "strip_mm": [
+      5,
+      17.6,
+      1.4
+    ],
+    "centered_led": true,
+    "additional_mount_tape_mm": 0.2
+  },
+  "oled": {
+    "pcb_mm": [
+      27.6,
+      27.9,
+      1.25
+    ],
+    "front_solder_height_mm": 1.85,
+    "active_mm": [
+      25.5,
+      14.5
+    ],
+    "active_offsets_top_left_mm": [
+      5,
+      0.75
+    ],
+    "glass_mm": [
+      26.6,
+      19.2,
+      2
+    ],
+    "glass_top_offset_mm": 4.2,
+    "ribbon_notch_mm": [
+      14.5,
+      2.5
+    ],
+    "ribbon_height_mm": 2,
+    "hole_diameter_mm": 2,
+    "hole_edge_clearance_mm": [
+      1,
+      1.15
+    ],
+    "header_mm": [
+      10,
+      2,
+      2
+    ],
+    "header_pin_length_mm": 5.8,
+    "header_top_edge_clearance_mm": 0.5,
+    "pin_diameter_mm": 0.64,
+    "pin_gap_mm": 1.9
+  },
+  "assumptions": [
+    "Approximate mounting-hole offsets are edge clearances, not centers; no printed locating pins depend on them.",
+    "Encoder 1.9 mm pin spacing is conservatively treated as clear gap, or 2.54 mm pitch; no mating connector is fabricated.",
+    "Encoder tab plan dimensions and push travel were not supplied; reserve 12 x 3 mm and 1 mm travel.",
+    "Connector housings were not supplied; modeled clear envelopes are stated separately from measured pin fit.",
+    "Glass height means its front is 2 mm above PCB front; the entire 2 mm volume is reserved."
+  ]
+}

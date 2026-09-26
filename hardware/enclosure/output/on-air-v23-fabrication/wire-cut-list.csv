@@ -1,0 +1,14 @@
+Route,CAD path length mm,Starting wire length mm,Note
+H1 front connector to LED1,42.63,80,Per conductor; trim only after dry routing; allow pigtail and solder length
+H2 LED1 to LED2,75.73,115,Per conductor; trim only after dry routing; allow pigtail and solder length
+H3 LED2 to LED3,71.26,110,Per conductor; trim only after dry routing; allow pigtail and solder length
+H4 LED3 to LED4,64.52,100,Per conductor; trim only after dry routing; allow pigtail and solder length
+B1 battery to charger,71.48,110,Per conductor; trim only after dry routing; allow pigtail and solder length
+P1 charger OUT plus to SPDT,38.16,75,Per conductor; trim only after dry routing; allow pigtail and solder length
+P2 SPDT switched plus to DPDT RUN branch,18.17,55,Per conductor; trim only after dry routing; allow pigtail and solder length
+P3 switched plus and protected ground distribution,17.27,55,Per conductor; trim only after dry routing; allow pigtail and solder length
+P4 DPDT common A and ground to XIAO,83.19,120,Per conductor; trim only after dry routing; allow pigtail and solder length
+G1 charger OUT minus to ground distribution,73.87,110,Per conductor; trim only after dry routing; allow pigtail and solder length
+D1 XIAO data to DPDT RUN B,89.46,125,Per conductor; trim only after dry routing; allow pigtail and solder length
+D2 DPDT common B to LED harness junction,33.73,70,Per conductor; trim only after dry routing; allow pigtail and solder length
+H0 LED harness junction to front connector,37.9,75,Per conductor; trim only after dry routing; allow pigtail and solder length

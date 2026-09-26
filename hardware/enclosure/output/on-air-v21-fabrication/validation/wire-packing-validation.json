@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "approaches": [
+    {
+      "one": "P4 switch to XIAO",
+      "two": "P3 protected feed and MOSFET gate",
+      "distance_mm": 0.009,
+      "required_compact_diameter_sum_mm": 1.77,
+      "at_one": [
+        63.0,
+        44.5,
+        24.0
+      ],
+      "at_two": [
+        62.991,
+        44.5,
+        24.0
+      ],
+      "shared_termination_or_trunk": "DPDT insulated solder bay",
+      "passed": true
+    },
+    {
+      "one": "P5 boost VIN VOUT and ground",
+      "two": "P3 protected feed and MOSFET gate",
+      "distance_mm": 1.5,
+      "required_compact_diameter_sum_mm": 1.94,
+      "at_one": [
+        76.0,
+        43.0,
+        24.0
+      ],
+      "at_two": [
+        76.0,
+        44.5,
+        24.0
+      ],
+      "shared_termination_or_trunk": "SIGNAL and CAPACITOR envelope",
+      "passed": true
+    },
+    {
+      "one": "D1 XIAO data and ground",
+      "two": "P3 protected feed and MOSFET gate",
+      "distance_mm": 1.118,
+      "required_compact_diameter_sum_mm": 1.77,
+      "at_one": [
+        77.0,
+        44.0,
+        24.0
+      ],
+      "at_two": [
+        76.0,
+        44.5,
+        24.0
+      ],
+      "shared_termination_or_trunk": "SIGNAL and CAPACITOR envelope",
+      "passed": true
+    },
+    {
+      "one": "D1 XIAO data and ground",
+      "two": "P4 switch to XIAO",
+      "distance_mm": 0.0,
+      "required_compact_diameter_sum_mm": 1.6,
+      "at_one": [
+        97.0,
+        33.0,
+        18.0
+      ],
+      "at_two": [
+        97.0,
+        33.0,
+        18.0
+      ],
+      "shared_termination_or_trunk": "shared four-wire XIAO trunk; OD<=0.8, packed diameter1.94 inside2.4 corridor",
+      "passed": true
+    },
+    {
+      "one": "D1 XIAO data and ground",
+      "two": "P5 boost VIN VOUT and ground",
+      "distance_mm": 1.075,
+      "required_compact_diameter_sum_mm": 1.77,
+      "at_one": [
+        77.0,
+        43.177,
+        23.647
+      ],
+      "at_two": [
+        76.0,
+        43.0,
+        24.0
+      ],
+      "shared_termination_or_trunk": "SIGNAL and CAPACITOR envelope",
+      "passed": true
+    },
+    {
+      "one": "H0 signal board to front connector",
+      "two": "H1 front connector to LED1",
+      "distance_mm": 0.0,
+      "required_compact_diameter_sum_mm": 1.94,
+      "at_one": [
+        68.0,
+        24.0,
+        13.7
+      ],
+      "at_two": [
+        68.0,
+        24.0,
+        13.7
+      ],
+      "shared_termination_or_trunk": "FRONT connector service space",
+      "passed": true
+    }
+  ],
+  "note": "Compact wire cross sections with 0.2 placement allowance. Connections spread within marked termination bays. Dress actual wires to these routes."
+}

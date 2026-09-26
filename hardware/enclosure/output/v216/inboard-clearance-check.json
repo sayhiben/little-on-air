@@ -1,0 +1,222 @@
+{
+  "passed": false,
+  "completed": 18,
+  "total": 18,
+  "results": [
+    {
+      "name": "Upper rear-emerging lead 37.3,50.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 37.3,52.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 37.3,54.8",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 7.591855590697874
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              36.3,
+              54.0,
+              -13.0
+            ],
+            "hi": [
+              38.3,
+              55.8,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Upper rear-emerging lead 44.6,50.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 44.6,52.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 44.6,54.8",
+      "passed": false,
+      "collisions_mm3": {
+        "06 Electronics retaining yoke": 7.672854172818435
+      },
+      "locations": {
+        "06 Electronics retaining yoke": [
+          {
+            "lo": [
+              43.6,
+              54.0,
+              -13.0
+            ],
+            "hi": [
+              45.6,
+              55.8,
+              -9.65
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Upper rear-emerging lead 74.8,50.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 74.8,52.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 74.8,54.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 85.3,50.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 85.3,52.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper rear-emerging lead 85.3,54.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper under-mount cross-run y48.3",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Upper under-mount cross-run y50.3",
+      "passed": false,
+      "collisions_mm3": {
+        "05 Rear electronics housing": 0.06542833510836293
+      },
+      "locations": {
+        "05 Rear electronics housing": [
+          {
+            "lo": [
+              46.1,
+              51.15,
+              -14.027
+            ],
+            "hi": [
+              51.1,
+              51.254,
+              -13.8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Upper under-mount cross-run y52.3",
+      "passed": false,
+      "collisions_mm3": {
+        "REF DPDT": 0.5199843380251153,
+        "05 Rear electronics housing": 4.894375294963427
+      },
+      "locations": {
+        "REF DPDT": [
+          {
+            "lo": [
+              57.1,
+              52.24,
+              -14.5
+            ],
+            "hi": [
+              57.8,
+              53.1,
+              -14.1
+            ]
+          },
+          {
+            "lo": [
+              59.65,
+              52.24,
+              -14.5
+            ],
+            "hi": [
+              60.35,
+              53.1,
+              -14.1
+            ]
+          },
+          {
+            "lo": [
+              62.2,
+              52.24,
+              -14.5
+            ],
+            "hi": [
+              62.9,
+              53.1,
+              -14.1
+            ]
+          }
+        ],
+        "05 Rear electronics housing": [
+          {
+            "lo": [
+              46.1,
+              51.346,
+              -14.5
+            ],
+            "hi": [
+              51.1,
+              53.254,
+              -13.8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lower under-mount cross-run y4.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Lower under-mount cross-run y6.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "Lower under-mount cross-run y8.8",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    }
+  ]
+}

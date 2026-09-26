@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "changed_components": [
+    "01 Front optical bezel"
+  ],
+  "outer_bevel_mm": 1.4,
+  "aperture_bevel_mm": 0.8,
+  "angle_deg": 45,
+  "selected_edge_counts": {
+    "outer": 8,
+    "opening": 4
+  },
+  "removed_volume_mm3": 431.32172138929513,
+  "added_volume_mm3": 0.0,
+  "maximum_changed_depth_mm": 1.4,
+  "all_geometry_deeper_than_1_4_mm_identical": true,
+  "unchanged_control_and_screw_regions": [
+    {
+      "region": "reset running guide and front stop",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "RGB aperture and pipe collar seat",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "closure screw head 6 6",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "closure screw head 6 54",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "closure screw head 114 6",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "closure screw head 114 54",
+      "removed_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "acrylic_seat_depth_mm": 1.6,
+  "remaining_straight_aperture_wall_mm": 0.8,
+  "front_bed_contact_area_mm2": 2922.412755698005,
+  "all_other_component_volumes_unchanged": true,
+  "validation_basis": "Exact native old/new solid subtraction confines the change to cosmetic front edge material removal. Existing deeper seats and wire paths are identical."
+}

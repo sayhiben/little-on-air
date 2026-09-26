@@ -2,3 +2,20 @@
 
 *.elf binary
 *.uf2 binary
+
+# Preserve manufacturing artifacts and their recorded SHA-256 source hashes.
+/hardware/enclosure/** -text whitespace=cr-at-eol
+/hardware/controller/** -text whitespace=cr-at-eol
+/release/** -text whitespace=cr-at-eol
+
+# Keep exported manufacturing snapshots and upstream references byte-for-byte.
+/hardware/enclosure/output/** -whitespace
+/hardware/enclosure/references/** -whitespace
+
+# CAD and machine toolpaths are generated data, not useful line-based diffs.
+*.stl binary
+*.step binary
+*.gcode binary
+*.f3d binary
+*.3mf binary
+*.dxf binary

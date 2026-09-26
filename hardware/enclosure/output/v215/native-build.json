@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "only_changed_component": "01 Front optical bezel",
+  "unchanged_component_native_fingerprints": [
+    "02 Clear acrylic",
+    "03 Registered graphic backing",
+    "04 Optical retainer",
+    "81 Laminate front spacer",
+    "82 Laminate rear shim",
+    "REF Four LEDs",
+    "REF Charger",
+    "REF SPDT power switch",
+    "REF SPDT moving lever",
+    "REF DPDT",
+    "REF DPDT moving actuator",
+    "REF XIAO",
+    "05 Rear electronics housing",
+    "06 Electronics retaining yoke",
+    "07 Front guided reset button",
+    "REF Battery",
+    "REF Capacitor",
+    "REF M3 screws",
+    "REF M3 nuts",
+    "09 Upper charger light guide",
+    "10 Lower charger light guide",
+    "08 Front RGB light guide",
+    "REF Guide keeper hardware",
+    "11 Rear light guide keeper"
+  ],
+  "added_mm3": 0.0,
+  "removed_mm3": 2203.9834776372977,
+  "removed_depth_range_mm": [
+    8.100000000000001,
+    9.5
+  ],
+  "all_geometry_in_front_of_depth_8_1_mm_unchanged": true,
+  "interface_guards": [
+    {
+      "region": "Reset bearing",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "RGB bearing",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical stack",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw seat 6,6",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw seat 6,54",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw seat 114,6",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Closure screw seat 114,54",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical-retainer boss 6",
+      "removed_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Optical-retainer boss 54",
+      "removed_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "feature_health_failures": [],
+  "prior_collision_checks_remain_valid": "Only solid removal; all other geometry and positions unchanged. Therefore previous collision-free wire passages, front closing motion and reset travel cannot gain interference.",
+  "channel_nominal_width_mm": 4.2,
+  "channel_open_depth_mm": 7.7,
+  "front_floor_mm": 1.8,
+  "minimum_outer_wall_mm": 1.6,
+  "front_bounds_mm": [
+    129,
+    69,
+    11
+  ],
+  "wires_retain_by": "Small hot-glue anchors; open toward wall outside the original rear housing."
+}

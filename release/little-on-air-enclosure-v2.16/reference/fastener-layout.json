@@ -1,0 +1,186 @@
+{
+  "units": "mm",
+  "view": "Front; x right, y up; depth measured behind front face",
+  "fasteners": [
+    {
+      "type": "Closure screw",
+      "xy": [
+        6,
+        6
+      ],
+      "head_depth": [
+        4.949999999999999,
+        6.6
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.6
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        114,
+        6
+      ],
+      "head_depth": [
+        4.949999999999999,
+        6.6
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.6
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        6,
+        54
+      ],
+      "head_depth": [
+        4.949999999999999,
+        6.6
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.6
+    },
+    {
+      "type": "Closure screw",
+      "xy": [
+        114,
+        54
+      ],
+      "head_depth": [
+        4.949999999999999,
+        6.6
+      ],
+      "shaft_depth": [
+        6.6,
+        14.6
+      ],
+      "nut_depth": [
+        11.6,
+        14.0
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.6
+    },
+    {
+      "type": "Optical screw",
+      "xy": [
+        60,
+        6
+      ],
+      "head_depth": [
+        9.075,
+        10.725
+      ],
+      "shaft_depth": [
+        1.0749999999999993,
+        9.075
+      ],
+      "nut_depth": [
+        3.3,
+        5.7
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.425
+    },
+    {
+      "type": "Optical screw",
+      "xy": [
+        60,
+        54
+      ],
+      "head_depth": [
+        9.075,
+        10.725
+      ],
+      "shaft_depth": [
+        1.0749999999999993,
+        9.075
+      ],
+      "nut_depth": [
+        3.3,
+        5.7
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.425
+    },
+    {
+      "type": "Keeper screw",
+      "xy": [
+        35,
+        38
+      ],
+      "head_depth": [
+        8.0,
+        9.65
+      ],
+      "shaft_depth": [
+        9.65,
+        17.65
+      ],
+      "nut_depth": [
+        13.9,
+        16.3
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.55
+    },
+    {
+      "type": "Keeper screw",
+      "xy": [
+        73,
+        38
+      ],
+      "head_depth": [
+        8.0,
+        9.65
+      ],
+      "shaft_depth": [
+        9.65,
+        17.65
+      ],
+      "nut_depth": [
+        13.9,
+        16.3
+      ],
+      "engagement_mm": 2.4,
+      "tip_clearance_mm": 0.55
+    },
+    {
+      "type": "Rear light-guide keeper screw",
+      "xy": [
+        6.5,
+        42.3
+      ],
+      "screw": "M3x8 button head",
+      "nut": "M3, 5.5 mm AF x 2.4 mm",
+      "nut_loading": "Lower into bay; slide 7.8 mm toward top under roof before fitting keeper",
+      "nut_roof_mm": 2,
+      "note": "See current Fusion/STEP for complete depth geometry; current native clamp/access audit is included."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "baseline": "v2.12",
+  "changed_existing": [
+    "01",
+    "05",
+    "08"
+  ],
+  "added": [
+    "11",
+    "REF Guide keeper hardware"
+  ],
+  "all_other_component_volumes_unchanged": true,
+  "front_axial_play_mm": 0.25,
+  "rear_axial_play_mm": 0.2,
+  "minimum_front_LED_gap_mm": 0.45,
+  "minimum_rear_LED_gap_mm": 0.3,
+  "front_collar_well_diametral_clearance_mm": 0.3,
+  "rear_collar_well_diametral_clearance_mm": 0.3
+}

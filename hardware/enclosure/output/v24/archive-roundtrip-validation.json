@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "archive": "little-on-air-v24.f3d",
+  "component_volume_signatures_match": true,
+  "static_interferences": [],
+  "roof_clearance_point_outside": true
+}

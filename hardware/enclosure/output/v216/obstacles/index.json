@@ -1,0 +1,94 @@
+[
+  {
+    "file": "00.stl",
+    "name": "01 Front optical bezel"
+  },
+  {
+    "file": "01.stl",
+    "name": "02 Clear acrylic"
+  },
+  {
+    "file": "02.stl",
+    "name": "03 Registered graphic backing"
+  },
+  {
+    "file": "03.stl",
+    "name": "04 Optical retainer"
+  },
+  {
+    "file": "06.stl",
+    "name": "REF Four LEDs"
+  },
+  {
+    "file": "07.stl",
+    "name": "REF Charger"
+  },
+  {
+    "file": "08.stl",
+    "name": "REF SPDT power switch"
+  },
+  {
+    "file": "09.stl",
+    "name": "REF SPDT moving lever"
+  },
+  {
+    "file": "10.stl",
+    "name": "REF DPDT"
+  },
+  {
+    "file": "11.stl",
+    "name": "REF DPDT moving actuator"
+  },
+  {
+    "file": "12.stl",
+    "name": "REF XIAO"
+  },
+  {
+    "file": "13.stl",
+    "name": "05 Rear electronics housing"
+  },
+  {
+    "file": "14.stl",
+    "name": "06 Electronics retaining yoke"
+  },
+  {
+    "file": "15.stl",
+    "name": "07 Front guided reset button"
+  },
+  {
+    "file": "16.stl",
+    "name": "REF Battery"
+  },
+  {
+    "file": "17.stl",
+    "name": "REF Capacitor"
+  },
+  {
+    "file": "18.stl",
+    "name": "REF M3 screws"
+  },
+  {
+    "file": "19.stl",
+    "name": "REF M3 nuts"
+  },
+  {
+    "file": "20.stl",
+    "name": "09 Upper charger light guide"
+  },
+  {
+    "file": "21.stl",
+    "name": "10 Lower charger light guide"
+  },
+  {
+    "file": "22.stl",
+    "name": "08 Front RGB light guide"
+  },
+  {
+    "file": "23.stl",
+    "name": "REF Guide keeper hardware"
+  },
+  {
+    "file": "24.stl",
+    "name": "11 Rear light guide keeper"
+  }
+]

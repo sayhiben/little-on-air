@@ -1,0 +1,20 @@
+Ref,Quantity,Item,Specification,Location,Status
+P01-P07,6,Printed parts 01 03 04 05 06 07,PLA / calibrated PLA+ / PETG,Supplied STL and 3MF,Make
+AC1,1,Clear PMMA panel,104 x 38 nominal; measured 3.00-3.45 thick,Rear-engrave shared SVG,Owned stock
+BT1,1,Single-cell LiPo,1000 mAh; 52 x 21 x 10; verify protection and cell charge rating,Battery cradle,Owned
+MCU1,1,Seeed XIAO nRF52840,PCB21 x17.8 x1.2; USB8.97 x3.17 centered across width; overhang1.75; reset1.8 from PCB back; no headers,2 mm inboard; open pad-edge channels and underside BAT/GND notch,Owned
+CH1,1,HiLetgo TP4056 USB-C with protection,Measured PCB 28.1 x17.5; USB 8.85 x3.1; overhang1.25; PCB thickness provisional1.0,Flipped component face toward back; rear LED holes clear of adhesive strips,Owned
+S2,1,WMYCONGCONG DPDT B07F7PNDGM,Body9.1 x3.72 x3.36; six legs0.7 wide x3.25 projection; 1.85 clear gaps; actuator1.5 square x1.87; travel2.4; no flange,9.5 mm body-width pocket; .15 mm total retained depth clearance,Owned; confirm MCU branch current
+S1,1,Tnuocke SPDT SS12F15-G5 B099N3HFPG,Measured body10.6 x6 x5.05; flange19.73; terminals2.6; actuator2.95 square x5 high; travel2.85,New integrated POWER nest; retained by yoke,Owned; successful body fit retained; combined sample99 first
+LED1-4,4,Adafruit side-light RGB NeoPixel segments,Measured nominal 8 x 8 x 2; verify cut outline; keep SMD capacitors,Front seats,Owned; fit check first
+C1,1,680 uF aluminium electrolytic,>=6.3 V; body <=8 diameter x11.5 long; polarity marked,Insulated right landing; across VBAT_SW and protected ground,Selected addition; body fit check
+R1,1,330 ohm data series resistor,1/8 W compact axial or SMD; insulated assembly <=3.2 diameter,H1 near LED1,Additional
+J1,1,User pigtail disconnects,Mated envelope <=13 x10 x7.5 reserved; verify pinout and actual bends,Front service space,User supplied
+W1,3 m total,Flexible stranded 28 AWG wire,Insulated OD <=0.9; three colors; cut from routing list,LEDs and power,Additional
+W2,1 m total,Flexible stranded 30 AWG wire,Insulated OD <=0.8; signal/XIAO low-current branch,XIAO access corridor,Additional
+H1,8,M3 x8 button-head screws,Head <=5.7 diameter x1.65 high; 8 mm under-head length; no washers,"4 closure, 2 optical retainer, 2 electronics yoke",Hardware
+H4,8,M3 nuts,Standard 5.5 across flats x2.4 thick,Captive side-entry pockets,Hardware
+I1,As needed,Insulating adhesive and compressible shims,Measured stack; no conductive foam; do not cover ICs,PCBs optical retainer battery,Assembly
+I2,As needed,Heat shrink / insulating sleeves,DPDT finished OD <=1.2; no bare joints,Terminations,Assembly
+T1,3,Narrow nonconductive straps,2.5 wide; battery loose; anchors clear,Battery and two harness anchors,Assembly
+A1,As needed,Removable wall strips,Sized for actual assembled mass,Flat rear,Assembly

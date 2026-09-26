@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "solder_envelopes": 16,
+  "sampled_poses": 1312,
+  "failures": [],
+  "note": "Power solder projection<=1.25mm fromPCB back; local joint envelope1.4mm alongY x2.4mm depth. Edge joints exit component side with1mm square wire margin. Free flexible leads must be kept forward of the yoke boss during insertion, then dressed into the final routes."
+}

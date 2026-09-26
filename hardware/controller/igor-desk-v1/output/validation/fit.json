@@ -1,0 +1,240 @@
+{
+  "passed": true,
+  "xiao_model_source": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip",
+  "xiao_model_sha256": "870ad45c7af5d92324cec4c6ae65fbf86e3b049d5a97ab9ffd9039ebd73455dd",
+  "xiao_native_collision_mm3": 0.0,
+  "xiao_front_insertion": [
+    {
+      "front_offset_mm": -80,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -78,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -76,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -74,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -72,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -70,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -68,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -66,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -64,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -62,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -60,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -58,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -56,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -54,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -52,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -50,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -48,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -46,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -44,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -42,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -40,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -38,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -36,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -34,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -32,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -30,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -28,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -26,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -24,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -22,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -20,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -18,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -16,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -14,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -12,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -10,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -8,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -6,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -4,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": -2,
+      "collision_mm3": 0.0
+    },
+    {
+      "front_offset_mm": 0,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 1.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 1.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 1.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 1,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 0.75,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 0.5,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 0.25,
+      "collision_mm3": 0.0
+    },
+    {
+      "lowering_z_mm": 0,
+      "collision_mm3": 0.0
+    }
+  ],
+  "usb_overmould_envelope_mm": [
+    12,
+    7
+  ],
+  "usb_outer_tip_local_y_mm": 70.63,
+  "pixel_pcb_mm": [
+    10,
+    10,
+    1.6
+  ],
+  "pixel_led_mm": [
+    5,
+    5,
+    1.6
+  ],
+  "auxiliary_envelope_mm": [
+    18,
+    12,
+    4
+  ],
+  "capacitor_envelope_mm": {
+    "diameter": 6.3,
+    "length": 8.5
+  },
+  "weight_segment_max_mm": [
+    19,
+    11.5,
+    4
+  ],
+  "weight_segment_count": 16,
+  "ballast_target_g_if_5g_segments": 80,
+  "weight_pocket_clearance_above_stack_mm": 2,
+  "weight_roof_min_mm": 2,
+  "minimum_front_bay_separator_mm": 1.7,
+  "physical_fit_verified": false,
+  "oled_and_encoder": "Original Igor interfaces retained; purchased modules require first-article fit."
+}

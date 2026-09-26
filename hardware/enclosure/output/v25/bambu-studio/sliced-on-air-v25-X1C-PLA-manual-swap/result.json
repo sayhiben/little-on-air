@@ -1,0 +1,227 @@
+{
+    "error_string": "Success.",
+    "export_time": 861,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 44,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 530.2714233398438,
+                "Bridge": 712.943359375,
+                "Brim": 175.2759246826172,
+                "Custom": 485.4770812988281,
+                "Flush": 29.0,
+                "Gap infill": 9.958866119384766,
+                "Inner wall": 4360.12890625,
+                "Internal solid infill": 2194.9697265625,
+                "Outer wall": 3229.015380859375,
+                "Overhang wall": 72.70208740234375,
+                "Sparse infill": 645.614013671875,
+                "Top surface": 699.3604125976563,
+                "Travel": 1274.909423828125,
+                "Undefined": 1259.9837646484375
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 71.87610626220703,
+                    "total_used_g": 71.87610626220703
+                }
+            ],
+            "generate_support_material_time": 49,
+            "id": 1,
+            "infill_time": 453,
+            "layer_filament_change": 0,
+            "main_predication": 13878.111328125,
+            "make_perimeters_time": 488,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 60.0,
+                        "height": 11.0,
+                        "width": 120.0,
+                        "x": 68.0,
+                        "y": 54.0,
+                        "z": 0.0
+                    },
+                    "id": 5,
+                    "name": "01-front-optical-bezel.stl",
+                    "triangle_count": 2970
+                },
+                {
+                    "bbox": {
+                        "depth": 60.0,
+                        "height": 24.5,
+                        "width": 120.0,
+                        "x": 68.0,
+                        "y": 144.0,
+                        "z": 0.0
+                    },
+                    "id": 9,
+                    "name": "05-rear-electronics-housing.stl",
+                    "triangle_count": 4844
+                }
+            ],
+            "sliced_time": 2345,
+            "sliced_time_with_cache": 1159,
+            "total_predication": 14406.6328125,
+            "triangle_count": 7814,
+            "warning_message": ""
+        },
+        {
+            "feature_type_times": {
+                "Bottom surface": 7.302363395690918,
+                "Bridge": 1.672324299812317,
+                "Brim": 126.03467559814453,
+                "Custom": 485.9822692871094,
+                "Flush": 29.0,
+                "Gap infill": 2.4190263748168945,
+                "Inner wall": 748.0452270507813,
+                "Internal solid infill": 89.29225158691406,
+                "Outer wall": 569.2225952148438,
+                "Overhang wall": 4.809000492095947,
+                "Sparse infill": 36.99173355102539,
+                "Support": 13.659035682678223,
+                "Support interface": 0.8596814274787903,
+                "Support transition": 0.3438405394554138,
+                "Top surface": 105.39510345458984,
+                "Travel": 320.1938781738281,
+                "Undefined": 304.7560119628906
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 7.228164196014404,
+                    "total_used_g": 7.228164196014404
+                }
+            ],
+            "generate_support_material_time": 13,
+            "id": 2,
+            "infill_time": 83,
+            "layer_filament_change": 0,
+            "main_predication": 1997.0650634765625,
+            "make_perimeters_time": 70,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 54.0,
+                        "height": 4.474999904632568,
+                        "width": 103.99998474121094,
+                        "x": 383.20001220703125,
+                        "y": 137.0,
+                        "z": 4.7683716530855236e-08
+                    },
+                    "id": 13,
+                    "name": "04-optical-retainer.stl",
+                    "triangle_count": 528
+                },
+                {
+                    "bbox": {
+                        "depth": 29.25,
+                        "height": 13.350000381469727,
+                        "width": 104.55001068115234,
+                        "x": 382.92498779296875,
+                        "y": 88.375,
+                        "z": 9.265137101976961e-09
+                    },
+                    "id": 17,
+                    "name": "06-electronics-retaining-yoke.stl",
+                    "triangle_count": 1216
+                },
+                {
+                    "bbox": {
+                        "depth": 3.5,
+                        "height": 10.300003051757813,
+                        "width": 4.1999921798706055,
+                        "x": 433.1000061035156,
+                        "y": 61.25,
+                        "z": -2.587890612915089e-08
+                    },
+                    "id": 21,
+                    "name": "07-guided-rounded-reset-button.stl",
+                    "triangle_count": 68
+                }
+            ],
+            "sliced_time": 629,
+            "sliced_time_with_cache": 417,
+            "total_predication": 2525.578857421875,
+            "triangle_count": 1812,
+            "warning_message": ""
+        },
+        {
+            "feature_type_times": {
+                "Bottom surface": 199.887451171875,
+                "Brim": 46.46514892578125,
+                "Custom": 485.9199523925781,
+                "Flush": 29.0,
+                "Gap infill": 3.9538371562957764,
+                "Inner wall": 230.4097900390625,
+                "Internal solid infill": 1274.3363037109375,
+                "Outer wall": 157.32455444335938,
+                "Top surface": 233.2490234375,
+                "Travel": 93.92765045166016,
+                "Undefined": 78.55139923095703
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL99",
+                    "id": 1,
+                    "main_used_g": 8.593108177185059,
+                    "total_used_g": 8.593108177185059
+                }
+            ],
+            "generate_support_material_time": 7,
+            "id": 3,
+            "infill_time": 76,
+            "layer_filament_change": 0,
+            "main_predication": 2210.504638671875,
+            "make_perimeters_time": 40,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 37.999996185302734,
+                        "height": 2.5,
+                        "width": 104.0,
+                        "x": 76.0,
+                        "y": -198.1999969482422,
+                        "z": 0.0
+                    },
+                    "id": 25,
+                    "name": "03-registered-graphic-backing.stl",
+                    "triangle_count": 1504
+                }
+            ],
+            "sliced_time": 285,
+            "sliced_time_with_cache": 151,
+            "total_predication": 2739.017822265625,
+            "triangle_count": 1504,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 4
+}

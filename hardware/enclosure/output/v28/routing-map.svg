@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="820" viewBox="0 0 1240 820">
+<rect width="1240" height="820" fill="#f4f6f8"/>
+<g font-family="Arial, sans-serif" fill="#152536">
+<text x="64" y="40" font-size="25" font-weight="bold">ON AIR v2.8 · parallel PCBs · 120 × 60 × 24 mm</text>
+<text x="64" y="65" font-size="15">Open housing, viewed from the front. Depth is measured behind the display face.</text>
+<rect x="64" y="96" width="960" height="480" rx="5" fill="#dfe5eb" stroke="#526777" stroke-width="2" />
+<rect x="83.2" y="115.19999999999999" width="921.6" height="441.6" rx="5" fill="#fff" stroke="#526777" stroke-width="2" />
+<circle cx="112" cy="528" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<circle cx="976" cy="528" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<circle cx="112" cy="144" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<circle cx="976" cy="144" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<circle cx="344" cy="272" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<circle cx="648" cy="272" r="15" fill="#b8c4cd" stroke="#526777" stroke-width="2"/>
+<rect x="344" y="320" width="416" height="168" rx="5" fill="#e2d2ef" stroke="#526777" stroke-width="2" />
+<text x="552" y="392" text-anchor="middle" font-size="19">52 × 21 × 10 battery</text>
+<text x="552" y="424" text-anchor="middle" font-size="15">depth 10.9–20.9</text>
+<rect x="162.0" y="108.79999999999998" width="140.0" height="224.8" rx="5" fill="#b8dfc5" stroke="#526777" stroke-width="2" />
+<text x="232" y="240" text-anchor="middle" font-size="14">CHARGER</text>
+<text x="232" y="272" text-anchor="middle" font-size="12">rear facing</text>
+<rect x="776" y="113.60000000000002" width="142.4" height="168" rx="5" fill="#b8dfc5" stroke="#526777" stroke-width="2" />
+<text x="847.2" y="208" text-anchor="middle" font-size="16">XIAO</text>
+<text x="847.2" y="240" text-anchor="middle" font-size="12">front facing</text>
+<rect x="192.6" y="98.8" width="70.8" height="51.2" rx="5" fill="#a9b6bf" stroke="#526777" stroke-width="2" />
+<rect x="811.32" y="99.60000000000001" width="71.76" height="51.2" rx="5" fill="#a9b6bf" stroke="#526777" stroke-width="2" />
+<rect x="349.6" y="108.79999999999998" width="84.8" height="40.4" rx="5" fill="#f4ce83" stroke="#526777" stroke-width="2" />
+<rect x="507.6" y="105.19999999999999" width="72.8" height="26.88" rx="5" fill="#f4ce83" stroke="#526777" stroke-width="2" />
+<text x="392" y="176" text-anchor="middle" font-size="15">POWER</text>
+<text x="544" y="160" text-anchor="middle" font-size="15">MODE</text>
+<rect x="160" y="384" width="104" height="80" rx="5" fill="#f8e4a7" stroke="#526777" stroke-width="2" />
+<text x="212.0" y="432" text-anchor="middle" font-size="12">Disconnect</text>
+<rect x="856" y="364.0" width="64" height="92.0" rx="5" fill="#bfd7ef" stroke="#526777" stroke-width="2" />
+<text x="888" y="476.0" text-anchor="middle" font-size="12">C1 inline</text>
+<rect x="544" y="192.0" width="88" height="36.0" rx="5" fill="none" stroke="#b35568" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="592" y="256" text-anchor="middle" font-size="12">Insulated junctions</text>
+<rect x="348.0" y="492.0" width="100.0" height="45.6" rx="5" fill="none" stroke="#b35568" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="400" y="560" text-anchor="middle" font-size="12">R1 inline</text>
+<rect x="352" y="489.6" width="64" height="64" rx="5" fill="none" stroke="#bd8290" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="672" y="489.6" width="64" height="64" rx="5" fill="none" stroke="#bd8290" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="352" y="118.39999999999998" width="64" height="64" rx="5" fill="none" stroke="#bd8290" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="672" y="118.39999999999998" width="64" height="64" rx="5" fill="none" stroke="#bd8290" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="176" cy="180.8" r="4" fill="#d35454"/>
+<circle cx="176" cy="218.8" r="4" fill="#d35454"/>
+<polyline points="224.0,416.0 240.0,488.0 444.0,521.6 444.0,521.6" fill="none" stroke="#da8332" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<polyline points="324.0,521.6 324.0,543.2 324.0,543.2 764.0,543.2 764.0,543.2 764.0,521.6" fill="none" stroke="#da8332" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<polyline points="644.0,521.6 644.0,521.6 800.0,521.6 848.0,512.0 848.0,336.0 848.0,336.0 736.0,288.0 704.0,216.0 736.0,173.6 736.0,173.6 764.0,173.6 764.0,150.4" fill="none" stroke="#da8332" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<polyline points="644.0,150.4 624.0,150.4 624.0,173.6 624.0,173.6 624.0,184.0 352.0,184.0 352.0,184.0 270.4,184.0 270.4,152.8 270.4,152.8 324.0,150.4" fill="none" stroke="#da8332" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<polyline points="608.0,209.6 352.0,209.6 352.0,209.6 264.0,209.6 264.0,364.0 224.0,380.0" fill="none" stroke="#456fa5" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<polyline points="568.0,168.0 568.0,164.8 608.0,164.8 608.0,144.0 744.0,144.0 744.0,187.2" fill="none" stroke="#8652a1" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+<text x="1050" y="134" font-size="15" font-weight="bold">Top USB ports</text>
+<text x="1050" y="166" font-size="13">Reset + RGB</text>
+<text x="1050" y="186" font-size="13">on front frame</text>
+<text x="1050" y="260" font-size="13">Orange: LED harness</text>
+<text x="1050" y="283" font-size="13">Blue: service trunk</text>
+<text x="1050" y="306" font-size="13">Purple: underside</text>
+<text x="1050" y="325" font-size="13">power fanout</text>
+<text x="64" y="615" font-size="18" font-weight="bold">10 mm thinner · same display and optical stack</text>
+<rect x="64" y="639" width="408" height="58" fill="#fff" stroke="#8796a6" stroke-dasharray="6 4"/>
+<rect x="64" y="639" width="288" height="58" fill="#d9e8f1" stroke="#34516b"/>
+<rect x="64" y="639" width="114" height="58" fill="#9dbbce"/>
+<text x="115" y="675" text-anchor="middle" font-size="13">Front 9.5</text>
+<text x="262" y="675" text-anchor="middle" font-size="14">Rear 14.5</text>
+<text x="408" y="675" text-anchor="middle" font-size="13">Removed 10</text>
+<text x="510" y="655" font-size="15">Both boards mount flat with open solder access.</text>
+<text x="510" y="679" font-size="15">Route around the battery; leave its pouch free of wire bundles.</text>
+<text x="64" y="737" font-size="14">Lines crossing in this front view may occupy different depths. Follow routing-coordinates.json and assembly instructions.</text>
+<text x="64" y="762" font-size="14">Use the fit plate before the full case. Board thickness, solder shape and printer fit still require physical confirmation.</text>
+</g></svg>

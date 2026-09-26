@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="40mm" height="30mm" viewBox="0 0 40 30">
+  <title>KERF TEST: 20 mm plug and opening. Cut at zero offset; measure both.</title>
+  <path d="M 10,5 L 30,5 L 30,25 L 10,25 Z" fill="none" stroke="#ff0000" stroke-width=".02" />
+  <path d="M 0,0 L 40,0 L 40,30 L 0,30 Z" fill="none" stroke="#ff0000" stroke-width=".02" />
+</svg>

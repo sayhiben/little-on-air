@@ -1,0 +1,799 @@
+{
+  "enclosure_version": "2.13",
+  "firmware_version": "0.1.2",
+  "firmware_commit": "ce3745f0ddc3b3d8bd56da88aaa2f05fe750a1ab",
+  "packaged_date": "2026-09-14",
+  "production_stl_count": 9,
+  "production_print_instances": 10,
+  "bambu_plates": 3,
+  "provenance": {
+    "README.md": {
+      "source": "hardware/enclosure/release-docs/README.md",
+      "source_sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
+      "exact_copy": true
+    },
+    "guides/BUILD-AND-ASSEMBLY.md": {
+      "source": "hardware/enclosure/release-docs/BUILD-AND-ASSEMBLY.md",
+      "source_sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
+      "exact_copy": true
+    },
+    "guides/LASER.md": {
+      "source": "hardware/enclosure/release-docs/LASER.md",
+      "source_sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "exact_copy": true
+    },
+    "guides/FIRMWARE-STATUS.md": {
+      "source": "hardware/enclosure/release-docs/FIRMWARE-STATUS.md",
+      "source_sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "exact_copy": true
+    },
+    "guides/PRINTING.md": {
+      "source": "hardware/enclosure/release-docs/PRINTING.md",
+      "source_sha256": "855cc9cf5e61e1664564fdbbd76e1e6543c6255de6d10a8f07c4eb006808d5fe",
+      "exact_copy": true
+    },
+    "guides/WIRING.md": {
+      "source": "hardware/enclosure/release-docs/WIRING.md",
+      "source_sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "exact_copy": true
+    },
+    "guides/CAPACITOR-AND-RESISTOR.md": {
+      "source": "hardware/enclosure/release-docs/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "exact_copy": true
+    },
+    "reference/capacitor-resistor-wiring.svg": {
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "exact_copy": true
+    },
+    "reference/previews/capacitor-resistor-wiring.png": {
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "exact_copy": true
+    },
+    "alternatives/laminate/README.md": {
+      "source": "hardware/enclosure/release-docs/LAMINATE-ALTERNATIVE.md",
+      "source_sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "exact_copy": true
+    },
+    "LICENSE": {
+      "source": "LICENSE",
+      "source_sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "exact_copy": true
+    },
+    "stl/01-front-optical-bezel.stl": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/01-front-optical-bezel.stl",
+      "source_sha256": "f750efdc9998c7aa701249295caf441e0886bd8c9ac04d6b9c592db7780c3746",
+      "exact_copy": true
+    },
+    "stl/03-registered-graphic-backing.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/03-registered-graphic-backing.stl",
+      "source_sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "exact_copy": true
+    },
+    "stl/04-optical-retainer.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/04-optical-retainer.stl",
+      "source_sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "exact_copy": true
+    },
+    "stl/05-rear-electronics-housing.stl": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/05-rear-electronics-housing.stl",
+      "source_sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "exact_copy": true
+    },
+    "stl/06-electronics-retaining-yoke.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/06-electronics-retaining-yoke.stl",
+      "source_sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "exact_copy": true
+    },
+    "stl/07-front-guided-reset-button.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/07-front-guided-reset-button.stl",
+      "source_sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "exact_copy": true
+    },
+    "stl/08-captive-front-rgb-guide.stl": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/08-captive-front-rgb-guide.stl",
+      "source_sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "exact_copy": true
+    },
+    "stl/09-charger-light-guide.stl": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/09-charger-light-guide.stl",
+      "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "exact_copy": true
+    },
+    "stl/11-rear-light-guide-keeper.stl": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/11-rear-light-guide-keeper.stl",
+      "source_sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "exact_copy": true
+    },
+    "PARTS.csv": {
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    "cad/little-on-air-v213-assembly.step": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/cad/little-on-air-v213-assembly.step",
+      "source_sha256": "d2b11d82b793dbf7e1e865f51ca67a6c12181f76c89ab987da5bc6357e9495b5",
+      "exact_copy": true
+    },
+    "cad/little-on-air-v213.f3d": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/cad/little-on-air-v213.f3d",
+      "source_sha256": "ef6496c23b3baf03ee4b76afdd4dd5dc5e20dad0105124e1fae3c9c38df66ea8",
+      "exact_copy": true
+    },
+    "bambu-studio/on-air-v213-X1C-all-plates.3mf": {
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/final-sliced/on-air-v213-X1C-all-plates.3mf",
+      "source_sha256": "caab49ea22a1c5eb545c967487bc135c3b4be3c6d99b228e2879d2f9a29eaf35",
+      "exact_copy": true
+    },
+    "validation/printing.json": {
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/user-layout-validation.json",
+      "source_sha256": "83cb0daa3589388dcb7b5a8a704b13e5d81b40b8aa18cb1cad209fbfc698aeca",
+      "exact_copy": true
+    },
+    "validation/printing-source-manifest.json": {
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/material-corrections.json",
+      "source_sha256": "49066f3a13bc12cbb179ea8d284534209d84960e3696f945f226aaadb0fbc2f1",
+      "exact_copy": false
+    },
+    "validation/cad-v213/native-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/native-validation.json",
+      "source_sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "exact_copy": true
+    },
+    "validation/cad-v213/harness-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/harness-validation.json",
+      "source_sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "exact_copy": true
+    },
+    "validation/cad-v213/perimeter-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/perimeter-validation.json",
+      "source_sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "exact_copy": true
+    },
+    "validation/cad-v213/mesh-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/mesh-validation.json",
+      "source_sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "exact_copy": true
+    },
+    "validation/cad-v213/build-record.json": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/build-record.json",
+      "source_sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/wire-packing-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/wire-packing-validation.json",
+      "source_sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/usb-and-optical-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/usb-and-optical-validation.json",
+      "source_sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/nut-access-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/nut-access-validation.json",
+      "source_sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "exact_copy": true
+    },
+    "validation/unchanged-v28/changed-interface-validation.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/changed-interface-validation.json",
+      "source_sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "exact_copy": true
+    },
+    "reference/views/complete-assembly.png": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/complete-assembly.png",
+      "source_sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "exact_copy": true
+    },
+    "reference/views/front-captive-guide.png": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/front-captive-guide.png",
+      "source_sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "exact_copy": true
+    },
+    "reference/views/front-guide-shape.png": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/front-guide-shape.png",
+      "source_sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "exact_copy": true
+    },
+    "reference/views/rear-guide-keeper.png": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/rear-guide-keeper.png",
+      "source_sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "exact_copy": true
+    },
+    "reference/views/rear-housing-with-retention.png": {
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/rear-housing-with-retention.png",
+      "source_sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "exact_copy": true
+    },
+    "laser/02-acrylic-REAR-engrave-and-cut.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "source_sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "exact_copy": true
+    },
+    "laser/02-acrylic-REVIEW-ONLY.lbrn2": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "source_sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "exact_copy": true
+    },
+    "alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "source_sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "exact_copy": true
+    },
+    "laser/calibration/90-fit-strip-CUT-ONLY.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/90-fit-strip-CUT-ONLY.svg",
+      "source_sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "exact_copy": true
+    },
+    "laser/calibration/91-kerf-plug-and-frame-CUT.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/91-kerf-plug-and-frame-CUT.svg",
+      "source_sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "exact_copy": true
+    },
+    "laser/calibration/92-engraving-quality-nine-samples-FILL.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/92-engraving-quality-nine-samples-FILL.svg",
+      "source_sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "exact_copy": true
+    },
+    "alternatives/laminate/81-laminate-front-spacer.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/optional-laminate/81-laminate-front-spacer.stl",
+      "source_sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "exact_copy": true
+    },
+    "alternatives/laminate/82-laminate-rear-shim.stl": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/optional-laminate/82-laminate-rear-shim.stl",
+      "source_sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "exact_copy": true
+    },
+    "reference/routing-coordinates.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/routing-coordinates.json",
+      "source_sha256": "873abe72bdcaf4ae3c9788f50af8e6c926f16b0de17a22b8a24877d1dcffc22e",
+      "exact_copy": true
+    },
+    "reference/harness-length-guide.csv": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/harness-length-guide.csv",
+      "source_sha256": "8c89ede55d45720998ea66cd290d0cc29bb1e1ae0a470ea8767bba657565fd19",
+      "exact_copy": true
+    },
+    "reference/routing-map.svg": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/routing-map.svg",
+      "source_sha256": "f6ac9727571b47463a1a1ddf015b8fe4713c1341bc2f09e19fe803aabcfcd964",
+      "exact_copy": false
+    },
+    "reference/fastener-layout.json": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/hardware-layout.json",
+      "source_sha256": "0299b320d9f3bc3ffea5f2c43ea1f63697e0241bdc78990e20c8d0a7ae6e18fd",
+      "exact_copy": false
+    },
+    "BOM.csv": {
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/BOM.csv",
+      "source_sha256": "d7b8b548c635f7d9805837f1fcf671b6a0da937774ce656866fd75965cfeaeb8",
+      "exact_copy": false
+    },
+    "guides/COMMISSIONING.csv": {
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    "firmware/little-on-air-firmware-v0.1.2-source.zip": {
+      "source": "Git tracked source snapshot",
+      "git_commit": "ce3745f0ddc3b3d8bd56da88aaa2f05fe750a1ab",
+      "firmware_version": "0.1.2",
+      "exact_copy": true
+    },
+    "firmware/README.md": {
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    "validation/README.md": {
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    "RELEASE-NOTES.md": {
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    }
+  },
+  "files": [
+    {
+      "path": "alternatives/laminate/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "bytes": 7364,
+      "sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "source_sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/81-laminate-front-spacer.stl",
+      "bytes": 2084,
+      "sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/optional-laminate/81-laminate-front-spacer.stl",
+      "source_sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/82-laminate-rear-shim.stl",
+      "bytes": 2084,
+      "sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/optional-laminate/82-laminate-rear-shim.stl",
+      "source_sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6",
+      "exact_copy": true
+    },
+    {
+      "path": "alternatives/laminate/README.md",
+      "bytes": 1136,
+      "sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "source": "hardware/enclosure/release-docs/LAMINATE-ALTERNATIVE.md",
+      "source_sha256": "a4dc36b99242ee973e622ee53c3aceb6f8d9d90683c678bb16efd8359f687f83",
+      "exact_copy": true
+    },
+    {
+      "path": "bambu-studio/on-air-v213-X1C-all-plates.3mf",
+      "bytes": 2906586,
+      "sha256": "caab49ea22a1c5eb545c967487bc135c3b4be3c6d99b228e2879d2f9a29eaf35",
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/final-sliced/on-air-v213-X1C-all-plates.3mf",
+      "source_sha256": "caab49ea22a1c5eb545c967487bc135c3b4be3c6d99b228e2879d2f9a29eaf35",
+      "exact_copy": true
+    },
+    {
+      "path": "BOM.csv",
+      "bytes": 4226,
+      "sha256": "49434beb475f776f39fcff94d80eedb51f7a6f4ebe6b82b5892b534c063d45c1",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/BOM.csv",
+      "source_sha256": "d7b8b548c635f7d9805837f1fcf671b6a0da937774ce656866fd75965cfeaeb8",
+      "exact_copy": false
+    },
+    {
+      "path": "cad/little-on-air-v213-assembly.step",
+      "bytes": 2495451,
+      "sha256": "d2b11d82b793dbf7e1e865f51ca67a6c12181f76c89ab987da5bc6357e9495b5",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/cad/little-on-air-v213-assembly.step",
+      "source_sha256": "d2b11d82b793dbf7e1e865f51ca67a6c12181f76c89ab987da5bc6357e9495b5",
+      "exact_copy": true
+    },
+    {
+      "path": "cad/little-on-air-v213.f3d",
+      "bytes": 3914025,
+      "sha256": "ef6496c23b3baf03ee4b76afdd4dd5dc5e20dad0105124e1fae3c9c38df66ea8",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/cad/little-on-air-v213.f3d",
+      "source_sha256": "ef6496c23b3baf03ee4b76afdd4dd5dc5e20dad0105124e1fae3c9c38df66ea8",
+      "exact_copy": true
+    },
+    {
+      "path": "firmware/little-on-air-firmware-v0.1.2-source.zip",
+      "bytes": 52484,
+      "sha256": "d49763eb2411a710a5b5eecc0226f35331757cf315a8dd89830378236affa5a2",
+      "source": "Git tracked source snapshot",
+      "git_commit": "ce3745f0ddc3b3d8bd56da88aaa2f05fe750a1ab",
+      "firmware_version": "0.1.2",
+      "exact_copy": true
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 410,
+      "sha256": "d4ca5ee65bade3349bc7f8d66c7c56cefd4773c7161cda2a880b238e518c7493",
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    {
+      "path": "guides/BUILD-AND-ASSEMBLY.md",
+      "bytes": 12035,
+      "sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
+      "source": "hardware/enclosure/release-docs/BUILD-AND-ASSEMBLY.md",
+      "source_sha256": "5bdc7cdf3af22666696355b3e0ba75788dc10da7faa671033ed842b9e8274217",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/CAPACITOR-AND-RESISTOR.md",
+      "bytes": 6705,
+      "sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "source": "hardware/enclosure/release-docs/CAPACITOR-AND-RESISTOR.md",
+      "source_sha256": "c693e389cfd16781b9846b16668ddd18c00e33de4b57aa167199f1d6eb07366f",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/COMMISSIONING.csv",
+      "bytes": 3652,
+      "sha256": "232094f8ee4f2795306ba6704da0fc3cbef01de545ef1c1187bbf202c7fbb3f7",
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    {
+      "path": "guides/FIRMWARE-STATUS.md",
+      "bytes": 1816,
+      "sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "source": "hardware/enclosure/release-docs/FIRMWARE-STATUS.md",
+      "source_sha256": "128fcd941cdef3e87e3027006769b1a9a9a98bcdc59b41c5aa5a0e34345e07fb",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/LASER.md",
+      "bytes": 5680,
+      "sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "source": "hardware/enclosure/release-docs/LASER.md",
+      "source_sha256": "076bd5468f6a317f6cc4039dc9ea58040b097210eb5015637fd655be93efe185",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/PRINTING.md",
+      "bytes": 4945,
+      "sha256": "855cc9cf5e61e1664564fdbbd76e1e6543c6255de6d10a8f07c4eb006808d5fe",
+      "source": "hardware/enclosure/release-docs/PRINTING.md",
+      "source_sha256": "855cc9cf5e61e1664564fdbbd76e1e6543c6255de6d10a8f07c4eb006808d5fe",
+      "exact_copy": true
+    },
+    {
+      "path": "guides/WIRING.md",
+      "bytes": 8625,
+      "sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "source": "hardware/enclosure/release-docs/WIRING.md",
+      "source_sha256": "edb082a1ffd2bef94d94b38c7ea2c75d6e8c4df6bc38b81aa8f378c3448e1a5c",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "bytes": 7383,
+      "sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "source_sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "bytes": 20115,
+      "sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "source_sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/90-fit-strip-CUT-ONLY.svg",
+      "bytes": 381,
+      "sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/90-fit-strip-CUT-ONLY.svg",
+      "source_sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/91-kerf-plug-and-frame-CUT.svg",
+      "bytes": 412,
+      "sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/91-kerf-plug-and-frame-CUT.svg",
+      "source_sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948",
+      "exact_copy": true
+    },
+    {
+      "path": "laser/calibration/92-engraving-quality-nine-samples-FILL.svg",
+      "bytes": 60932,
+      "sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/laser/92-engraving-quality-nine-samples-FILL.svg",
+      "source_sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084",
+      "exact_copy": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "source": "LICENSE",
+      "source_sha256": "8b168f415f400345a253e71616fe423f0f08dc697e6dc587562cb05b186668ec",
+      "exact_copy": true
+    },
+    {
+      "path": "PARTS.csv",
+      "bytes": 1026,
+      "sha256": "0d303c66b5072f49dfffae0188deb741d132402c338d97c411ecf8a9bbae75b2",
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 4101,
+      "sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
+      "source": "hardware/enclosure/release-docs/README.md",
+      "source_sha256": "d7e2c12eb62cb323bdefd28fb4930fbc62e02d14e669af9a7e31189c6e64647e",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/capacitor-resistor-wiring.svg",
+      "bytes": 5720,
+      "sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.svg",
+      "source_sha256": "e253d82a47a569e9b6c5e6b83a77c472d828693e5c6a3df47f831feecf79ac10",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/fastener-layout.json",
+      "bytes": 3181,
+      "sha256": "b1607b3a98b8fc4248c73ae857059d3b56a2ab31b50bd5023aa19ee6cb569fc6",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/hardware-layout.json",
+      "source_sha256": "0299b320d9f3bc3ffea5f2c43ea1f63697e0241bdc78990e20c8d0a7ae6e18fd",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/harness-length-guide.csv",
+      "bytes": 2109,
+      "sha256": "8c89ede55d45720998ea66cd290d0cc29bb1e1ae0a470ea8767bba657565fd19",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/harness-length-guide.csv",
+      "source_sha256": "8c89ede55d45720998ea66cd290d0cc29bb1e1ae0a470ea8767bba657565fd19",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/02-acrylic-REAR-engrave-and-cut.png",
+      "bytes": 15699,
+      "sha256": "9a908d0232b3e2372574e233f30035ff2d0abe90ab6d442cd3b2d479027cacbc",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/previews/91-kerf-plug-and-frame-CUT.png",
+      "bytes": 6802,
+      "sha256": "b4556d1b1bb21512dbe13ec37bd73e3b728943843ea991281f8a18c6291e0dee",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/previews/92-engraving-quality-nine-samples-FILL.png",
+      "bytes": 35164,
+      "sha256": "1d985afea200640b6212d8e1018c18ab1380136811fe450b12753e391259abf8",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/previews/capacitor-resistor-wiring.png",
+      "bytes": 157147,
+      "sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "source": "hardware/enclosure/release-docs/assets/capacitor-resistor-wiring.png",
+      "source_sha256": "4f43dc89518fe7cad7a060e34a1b68f288326d83e5d08e1ce301c6e4463e747f",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/previews/routing-map.png",
+      "bytes": 105759,
+      "sha256": "d40bd424ddf9e6ebf8d09dbeda8225ba77ebed60880cead6a685d053e7c08147",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/routing-coordinates.json",
+      "bytes": 9912,
+      "sha256": "873abe72bdcaf4ae3c9788f50af8e6c926f16b0de17a22b8a24877d1dcffc22e",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/routing-coordinates.json",
+      "source_sha256": "873abe72bdcaf4ae3c9788f50af8e6c926f16b0de17a22b8a24877d1dcffc22e",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/routing-map.svg",
+      "bytes": 6247,
+      "sha256": "fa8c11f5d92313f05cc68542d766122beebc97f8942a6820a0c6cfcd22a4f8df",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/routing-map.svg",
+      "source_sha256": "f6ac9727571b47463a1a1ddf015b8fe4713c1341bc2f09e19fe803aabcfcd964",
+      "exact_copy": false
+    },
+    {
+      "path": "reference/views/complete-assembly.png",
+      "bytes": 193349,
+      "sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/complete-assembly.png",
+      "source_sha256": "e5fd02bbc6ff7b8d24ffa152902f2c6e0600b3befac8b6690eb63579b759d6a6",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/front-captive-guide.png",
+      "bytes": 129427,
+      "sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/front-captive-guide.png",
+      "source_sha256": "1d9c7d58754a3c390ea084b557f4073687b143b22fefa144800330ea5d34b1ad",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/front-guide-shape.png",
+      "bytes": 79878,
+      "sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/front-guide-shape.png",
+      "source_sha256": "0818b889b63b084749f0213ec25d0274f4485020e4093bd92a0f64c23e68bc52",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/rear-guide-keeper.png",
+      "bytes": 125017,
+      "sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/rear-guide-keeper.png",
+      "source_sha256": "145827a015c174dbad881020d1e3bf60a4ee0f05fcf20bc374ad3d26367addf4",
+      "exact_copy": true
+    },
+    {
+      "path": "reference/views/rear-housing-with-retention.png",
+      "bytes": 233298,
+      "sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/views/rear-housing-with-retention.png",
+      "source_sha256": "03804e6cf1cb575bebc6317b8743096a8dc8e3d7d733021042e4e945ecc8007b",
+      "exact_copy": true
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "bytes": 1294,
+      "sha256": "bf83583200958a07944a392bd7f3d57ba92d79a0907bc6cce136d12e795e68e9",
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    {
+      "path": "stl/01-front-optical-bezel.stl",
+      "bytes": 172184,
+      "sha256": "f750efdc9998c7aa701249295caf441e0886bd8c9ac04d6b9c592db7780c3746",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/01-front-optical-bezel.stl",
+      "source_sha256": "f750efdc9998c7aa701249295caf441e0886bd8c9ac04d6b9c592db7780c3746",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/03-registered-graphic-backing.stl",
+      "bytes": 75284,
+      "sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/03-registered-graphic-backing.stl",
+      "source_sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/04-optical-retainer.stl",
+      "bytes": 26484,
+      "sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/04-optical-retainer.stl",
+      "source_sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/05-rear-electronics-housing.stl",
+      "bytes": 256084,
+      "sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/05-rear-electronics-housing.stl",
+      "source_sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/06-electronics-retaining-yoke.stl",
+      "bytes": 64884,
+      "sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/06-electronics-retaining-yoke.stl",
+      "source_sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/07-front-guided-reset-button.stl",
+      "bytes": 82684,
+      "sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/stl/07-front-guided-reset-button.stl",
+      "source_sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/08-captive-front-rgb-guide.stl",
+      "bytes": 82884,
+      "sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/08-captive-front-rgb-guide.stl",
+      "source_sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/09-charger-light-guide.stl",
+      "bytes": 69684,
+      "sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/09-charger-light-guide.stl",
+      "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+      "exact_copy": true
+    },
+    {
+      "path": "stl/11-rear-light-guide-keeper.stl",
+      "bytes": 98684,
+      "sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/stl/11-rear-light-guide-keeper.stl",
+      "source_sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/build-record.json",
+      "bytes": 441,
+      "sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/build-record.json",
+      "source_sha256": "b6eb4ec892ea15f03fb21314aab6ae782ba2ff002597d775956e94ebcdcc3099",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/harness-validation.json",
+      "bytes": 16659,
+      "sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/harness-validation.json",
+      "source_sha256": "2bf12a7b707515fde6feddc966f3e2cae56aa1243b79b05aa790ae685fd42cc2",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/mesh-validation.json",
+      "bytes": 2330,
+      "sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/mesh-validation.json",
+      "source_sha256": "1072360e7c62d6c8a9ff07c956cde2a4f2aff366bc7648be58bf8a632b691c60",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/native-validation.json",
+      "bytes": 5048,
+      "sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/native-validation.json",
+      "source_sha256": "4a19653af1544be81fe2260ddb80281cdba2198127100b3628b9f4ff7c3af6c9",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/cad-v213/perimeter-validation.json",
+      "bytes": 1236,
+      "sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "source": "hardware/enclosure/output/on-air-v213-captive-light-guides/validation/perimeter-validation.json",
+      "source_sha256": "f38c25e7314a3fcd73bf4c9761f03701689a2328895e50fa902e415ab649c73c",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/printing-source-manifest.json",
+      "bytes": 11672,
+      "sha256": "9080116415d225aa169cdade8c65009f2972cb236994f70898a0d908648c4461",
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/material-corrections.json",
+      "source_sha256": "49066f3a13bc12cbb179ea8d284534209d84960e3696f945f226aaadb0fbc2f1",
+      "exact_copy": false
+    },
+    {
+      "path": "validation/printing.json",
+      "bytes": 6728,
+      "sha256": "83cb0daa3589388dcb7b5a8a704b13e5d81b40b8aa18cb1cad209fbfc698aeca",
+      "source": "hardware/enclosure/output/v213-complete/user-layout-release-check/user-layout-validation.json",
+      "source_sha256": "83cb0daa3589388dcb7b5a8a704b13e5d81b40b8aa18cb1cad209fbfc698aeca",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 830,
+      "sha256": "7756e6684abd06c7b0dfa15f19326cb7a8908a708164666d70682168e4407706",
+      "source": "Consolidated for the current release",
+      "exact_copy": false
+    },
+    {
+      "path": "validation/release-audit.json",
+      "bytes": 3660,
+      "sha256": "10c44aee2d4c8d24aa2605058950e8a361e6d639a9148615fc54f48b659b1b93",
+      "source": "Generated validation or preview in this release",
+      "exact_copy": false
+    },
+    {
+      "path": "validation/unchanged-v28/changed-interface-validation.json",
+      "bytes": 1515,
+      "sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/changed-interface-validation.json",
+      "source_sha256": "b99f3e943023c3a1f30d0466c7f6a32c6da960aa505d2ab4035ffe1583a765d8",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/nut-access-validation.json",
+      "bytes": 2375,
+      "sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/nut-access-validation.json",
+      "source_sha256": "578486f2c3854e2e80afc406cd173a24e036c6e4746a541671b3cda969909b90",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/usb-and-optical-validation.json",
+      "bytes": 978,
+      "sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/usb-and-optical-validation.json",
+      "source_sha256": "247d81cfff1bfd53690d32f88797b54cf3080402141035b85bf3f2fc65e57303",
+      "exact_copy": true
+    },
+    {
+      "path": "validation/unchanged-v28/wire-packing-validation.json",
+      "bytes": 6651,
+      "sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "source": "hardware/enclosure/output/on-air-v28-fabrication/validation/wire-packing-validation.json",
+      "source_sha256": "1e94607e56c78644b2483490be1fac8c602f3713b2ab16a405ead5fda8ec5eb0",
+      "exact_copy": true
+    }
+  ],
+  "validated": true,
+  "files_excluded_from_self_hash": [
+    "MANIFEST.json",
+    "SHA256SUMS.txt"
+  ]
+}

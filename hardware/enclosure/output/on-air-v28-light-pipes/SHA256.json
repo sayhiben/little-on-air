@@ -1,0 +1,22 @@
+{
+  "bambu-studio/on-air-v28-clear-PETG-light-pipes.3mf": "1d04597ea7da539269cb2f2c9062ab9de7543d4e075ea065f4d30d7638873017",
+  "BOM.csv": "fa2223c464f9c2f1838bc12a94f5569dd68f12226c22264a99a0398f0dd48105",
+  "cad/little-on-air-v28-light-pipes.f3d": "14f36522fa835cc4cd2e3e9f420be556b3c7b54a4b6b22cf844816fcd230826e",
+  "cad/little-on-air-v28-light-pipes.step": "dae3e41f629c657f37be4e3010390bca59e0d44c636fa6ca33842ec344062648",
+  "README.md": "38989c14a09ec0e5c70815ee3bba463cde7bfc0ad678231da3e8224347387016",
+  "stl/08-front-rgb-2.95mm.stl": "c77981d5574eb2b553647430ca73a5bb677a0d4e39edeb5f44085c46ee7bfc91",
+  "stl/08-front-rgb-3.05mm.stl": "a2901338a2bffafb60c27e2aca51995f6fde79fd41d32977cdf187601839ec16",
+  "stl/08-front-rgb-3.15mm.stl": "0fd9b508f694abd261b38710a682315c1761471b06bea2fb294eb0bdcfa52431",
+  "stl/09-charger-2.95mm.stl": "f84f3ce4c7f11971096f91db6b12933cd36d9618c994d1ece3e4e32f0b7fb352",
+  "stl/09-charger-3.05mm.stl": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+  "stl/09-charger-3.15mm.stl": "230b26a0e6e792fcff4ed1c04d8a081f29cf005fa2f4023b79dc08433046ff90",
+  "validation/harness-validation.json": "1078b5a75c6531866e3857001c21215b6647e94140d55e6c5c612efb1eff3a6a",
+  "validation/mesh-validation.json": "05d012f3038e188544bab0947986cb00406458d2914fc45736d795db51d2fb45",
+  "validation/native-validation.json": "05e2cd8063325ee5578e8245214097985f20ececcfe18843157229ffeceb5d8c",
+  "validation/plate-manifest.json": "16b9598e801f2250bae88855c3d70f7f85da6d170053344f44f552fd00165021",
+  "validation/slicer-result.json": "0c9805c85f921e67ee2d35c2ffa5d58612bfd5517b7eb8f35c7d8317d768fdb5",
+  "validation/slicing-validation.json": "3ff84f63e59222cc8b3f682e2ed479d9a8cda635d51b6d74218612180f21642f",
+  "views/front-guide-and-USB-clearance.png": "0bf4800712726c54039985c02fbee962d047504b3405fafe0fbcc0cb95fbda41",
+  "views/front-guide-shape.png": "db10ecc5747122ec2ebcb64977a82fc642568554afc031eb0402aded7ab66949",
+  "views/separate-charger-guides.png": "eaa35b6a2d4cb84a35b79108363e4a6798963fcccd496f06cff7345fc7214a66"
+}

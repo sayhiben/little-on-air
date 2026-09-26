@@ -1,0 +1,478 @@
+[
+  {
+    "project": "igor-measured-v4-X1C-PLA-shell-hat-carrier.3mf",
+    "objects": [
+      {
+        "file": "01-igor-measured-shell.stl",
+        "sha256": "6b92a6142d068a1ad439b39372ab1f99549ab990202947a582f211770d8b0be8",
+        "support": true,
+        "center_xy": [
+          100,
+          95
+        ]
+      },
+      {
+        "file": "03-igor-measured-hat.stl",
+        "sha256": "9e60725aa5c986cb607a4883eea08471b4c888f159bfdf2a1d01faccbfff59f1",
+        "support": true,
+        "center_xy": [
+          170,
+          95
+        ]
+      },
+      {
+        "file": "08-xiao-carrier.stl",
+        "sha256": "a0cc65f3bacdb172309c5d53424beeb9feb7c4db0495e18c33d19fc3173505b5",
+        "support": false,
+        "center_xy": [
+          130,
+          175
+        ]
+      }
+    ],
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 1010,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 198,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 95.04878234863281,
+            "Bridge": 154.18499755859375,
+            "Brim": 109.67372131347656,
+            "Custom": 503.3800964355469,
+            "Flush": 29.0,
+            "Gap infill": 5.7438225746154785,
+            "Inner wall": 3798.530029296875,
+            "Internal solid infill": 740.1676025390625,
+            "Outer wall": 3373.062255859375,
+            "Overhang wall": 40.65644836425781,
+            "Sparse infill": 1176.1236572265625,
+            "Support": 1566.619384765625,
+            "Support interface": 891.2347412109375,
+            "Support transition": 36.09543228149414,
+            "Top surface": 144.6207275390625,
+            "Travel": 874.2996215820312,
+            "Undefined": 858.93017578125
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 69.40508270263672,
+              "total_used_g": 69.40508270263672
+            }
+          ],
+          "generate_support_material_time": 627,
+          "id": 1,
+          "infill_time": 562,
+          "layer_filament_change": 0,
+          "main_predication": 12975.873046875,
+          "make_perimeters_time": 782,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 60.0528564453125,
+                "height": 72.01528930664062,
+                "width": 49.0,
+                "x": 75.5,
+                "y": 64.97357177734375,
+                "z": 4.6679687670803105e-08
+              },
+              "id": 5,
+              "name": "01-igor-measured-shell.stl",
+              "triangle_count": 31558
+            },
+            {
+              "bbox": {
+                "depth": 38.56535339355469,
+                "height": 20.0,
+                "width": 38.56536102294922,
+                "x": 150.71731567382812,
+                "y": 75.71732330322266,
+                "z": 0.0
+              },
+              "id": 9,
+              "name": "03-igor-measured-hat.stl",
+              "triangle_count": 6040
+            },
+            {
+              "bbox": {
+                "depth": 21.39999771118164,
+                "height": 3.700000047683716,
+                "width": 44.0,
+                "x": 108.0,
+                "y": 164.3000030517578,
+                "z": -2.3841858265427618e-08
+              },
+              "id": 13,
+              "name": "08-xiao-carrier.stl",
+              "triangle_count": 60
+            }
+          ],
+          "sliced_time": 3915,
+          "sliced_time_with_cache": 1669,
+          "total_predication": 13521.853515625,
+          "triangle_count": 37658,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "profile_overrides": {
+      "print_settings_id": "igor-measured-v4-X1C-PLA-shell-hat-carrier",
+      "scan_first_layer": "0",
+      "layer_height": ".2",
+      "initial_layer_print_height": ".2",
+      "wall_loops": "4",
+      "sparse_infill_density": "25%",
+      "sparse_infill_pattern": "gyroid",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "5",
+      "enable_support": "1",
+      "support_type": "normal(auto)",
+      "support_style": "snug",
+      "support_on_build_plate_only": "0",
+      "support_threshold_angle": "30",
+      "support_top_z_distance": ".2",
+      "support_object_xy_distance": ".35",
+      "support_interface_top_layers": "2",
+      "brim_type": "outer_only",
+      "brim_width": "3",
+      "brim_object_gap": ".15",
+      "enable_prime_tower": "0",
+      "outer_wall_speed": "50",
+      "inner_wall_speed": "100",
+      "bridge_speed": "25",
+      "initial_layer_speed": "25",
+      "initial_layer_infill_speed": "35"
+    }
+  },
+  {
+    "project": "igor-measured-v4-X1C-PLA-face-cassette-inlays.3mf",
+    "objects": [
+      {
+        "file": "02-igor-measured-faceplate.stl",
+        "sha256": "043597f83f0710b5f6daeaab1eb92d80e56c33a832bf367c2ae0a017de8039f9",
+        "support": false,
+        "center_xy": [
+          100,
+          100
+        ]
+      },
+      {
+        "file": "04-igor-small-inlay-original.stl",
+        "sha256": "42ecc9cc8a89be99bb47447e1697bc7f86265ea0c786273d36084ccb5309f7e9",
+        "support": false,
+        "center_xy": [
+          160,
+          85
+        ]
+      },
+      {
+        "file": "05-igor-large-inlay-original.stl",
+        "sha256": "9d53c792ad48c781b51e3cc70e5534287f0cf6914fe4c9ac1cb8ac684b019611",
+        "support": false,
+        "center_xy": [
+          160,
+          135
+        ]
+      },
+      {
+        "file": "07-strip-cassette.stl",
+        "sha256": "bc6e7e683408441d5bfdace917d90fa2f0cef049a0167fcb98274c7223711e71",
+        "support": true,
+        "center_xy": [
+          100,
+          165
+        ]
+      }
+    ],
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 366,
+      "layer_height": 0.20000000298023224,
+      "plate_index": 0,
+      "prepare_time": 64,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 49.57294845581055,
+            "Bridge": 2.599623918533325,
+            "Brim": 95.98918914794922,
+            "Custom": 503.4806213378906,
+            "Flush": 29.0,
+            "Gap infill": 1.5213981866836548,
+            "Inner wall": 118.17804718017578,
+            "Internal solid infill": 170.3909454345703,
+            "Outer wall": 288.4139404296875,
+            "Overhang wall": 15.132704734802246,
+            "Support interface": 13.69528865814209,
+            "Top surface": 65.40966033935547,
+            "Travel": 88.44085693359375,
+            "Undefined": 72.97274780273438
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFL03",
+              "id": 1,
+              "main_used_g": 3.8160226345062256,
+              "total_used_g": 3.8160226345062256
+            }
+          ],
+          "generate_support_material_time": 10,
+          "id": 1,
+          "infill_time": 38,
+          "layer_filament_change": 0,
+          "main_predication": 880.4132690429688,
+          "make_perimeters_time": 99,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 35.60000228881836,
+                "height": 7.199999809265137,
+                "width": 46.60000228881836,
+                "x": 76.69999694824219,
+                "y": 82.19999694824219,
+                "z": -4.632568550988481e-09
+              },
+              "id": 5,
+              "name": "02-igor-measured-faceplate.stl",
+              "triangle_count": 5010
+            },
+            {
+              "bbox": {
+                "depth": 21.595731735229492,
+                "height": 0.7999991774559021,
+                "width": 21.60000228881836,
+                "x": 149.1999969482422,
+                "y": 74.20213317871094,
+                "z": 1.127204907191981e-08
+              },
+              "id": 9,
+              "name": "04-igor-small-inlay-original.stl",
+              "triangle_count": 1264
+            },
+            {
+              "bbox": {
+                "depth": 26.594741821289062,
+                "height": 0.7999991774559021,
+                "width": 26.60000228881836,
+                "x": 146.6999969482422,
+                "y": 121.70262908935547,
+                "z": 1.127204907191981e-08
+              },
+              "id": 13,
+              "name": "05-igor-large-inlay-original.stl",
+              "triangle_count": 1264
+            },
+            {
+              "bbox": {
+                "depth": 19.60000228881836,
+                "height": 3.6000001430511475,
+                "width": 6.19999885559082,
+                "x": 96.9000015258789,
+                "y": 155.1999969482422,
+                "z": 2.847442637232689e-08
+              },
+              "id": 17,
+              "name": "07-strip-cassette.stl",
+              "triangle_count": 160
+            }
+          ],
+          "sliced_time": 533,
+          "sliced_time_with_cache": 357,
+          "total_predication": 1426.3951416015625,
+          "triangle_count": 7698,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 25.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 4
+    },
+    "profile_overrides": {
+      "print_settings_id": "igor-measured-v4-X1C-PLA-face-cassette-inlays",
+      "scan_first_layer": "0",
+      "layer_height": ".2",
+      "initial_layer_print_height": ".2",
+      "wall_loops": "4",
+      "sparse_infill_density": "25%",
+      "sparse_infill_pattern": "gyroid",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "5",
+      "enable_support": "1",
+      "support_type": "normal(auto)",
+      "support_style": "snug",
+      "support_on_build_plate_only": "0",
+      "support_threshold_angle": "30",
+      "support_top_z_distance": ".2",
+      "support_object_xy_distance": ".35",
+      "support_interface_top_layers": "2",
+      "brim_type": "outer_only",
+      "brim_width": "3",
+      "brim_object_gap": ".15",
+      "enable_prime_tower": "0",
+      "outer_wall_speed": "50",
+      "inner_wall_speed": "100",
+      "bridge_speed": "25",
+      "initial_layer_speed": "25",
+      "initial_layer_infill_speed": "35"
+    }
+  },
+  {
+    "project": "igor-measured-v4-X1C-transparent-PETG-diffuser.3mf",
+    "objects": [
+      {
+        "file": "06-front-diffuser-PETG.stl",
+        "sha256": "a24ffb35a40eba198fc800eb552d9daa644de792fc0a029ec24992ecf35a0cd0",
+        "support": false,
+        "center_xy": [
+          128,
+          128
+        ]
+      }
+    ],
+    "slicer": {
+      "error_string": "Success.",
+      "export_time": 295,
+      "layer_height": 0.11999999731779099,
+      "plate_index": 0,
+      "prepare_time": 68,
+      "return_code": 0,
+      "sliced_plates": [
+        {
+          "feature_type_times": {
+            "Bottom surface": 0.5615672469139099,
+            "Brim": 7.730698108673096,
+            "Custom": 643.47998046875,
+            "Flush": 29.0,
+            "Inner wall": 21.23120880126953,
+            "Internal solid infill": 21.94791030883789,
+            "Outer wall": 15.593120574951172,
+            "Overhang wall": 2.103058338165283,
+            "Top surface": 3.338024377822876,
+            "Travel": 20.740095138549805,
+            "Undefined": 5.420536041259766
+          },
+          "filament_change_times": 0,
+          "filaments": [
+            {
+              "filament_id": "GFG99",
+              "id": 1,
+              "main_used_g": 0.41947323083877563,
+              "total_used_g": 0.41947323083877563
+            }
+          ],
+          "generate_support_material_time": 3,
+          "id": 1,
+          "infill_time": 6,
+          "layer_filament_change": 0,
+          "main_predication": 64.27606201171875,
+          "make_perimeters_time": 12,
+          "obj_cached_cnt": 0,
+          "objects": [
+            {
+              "bbox": {
+                "depth": 6.399996757507324,
+                "height": 2.3999998569488525,
+                "width": 6.398738861083984,
+                "x": 124.80062866210938,
+                "y": 124.80000305175781,
+                "z": -2.847442637232689e-08
+              },
+              "id": 5,
+              "name": "06-front-diffuser-PETG.stl",
+              "triangle_count": 1260
+            }
+          ],
+          "sliced_time": 152,
+          "sliced_time_with_cache": 118,
+          "total_predication": 750.4059448242188,
+          "triangle_count": 1260,
+          "warning_message": ""
+        }
+      ],
+      "sparse_infill_density": 100.0,
+      "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+      ],
+      "wall_loops": 3
+    },
+    "profile_overrides": {
+      "print_settings_id": "igor-measured-v4-X1C-transparent-PETG-diffuser",
+      "scan_first_layer": "0",
+      "layer_height": ".12",
+      "initial_layer_print_height": ".2",
+      "wall_loops": "3",
+      "sparse_infill_density": "100%",
+      "sparse_infill_pattern": "zig-zag",
+      "top_shell_layers": "5",
+      "bottom_shell_layers": "5",
+      "enable_support": "1",
+      "support_type": "normal(auto)",
+      "support_style": "snug",
+      "support_on_build_plate_only": "0",
+      "support_threshold_angle": "30",
+      "support_top_z_distance": ".2",
+      "support_object_xy_distance": ".35",
+      "support_interface_top_layers": "2",
+      "brim_type": "outer_only",
+      "brim_width": "3",
+      "brim_object_gap": ".15",
+      "enable_prime_tower": "0",
+      "outer_wall_speed": "35",
+      "inner_wall_speed": "40",
+      "bridge_speed": "25",
+      "initial_layer_speed": "25",
+      "initial_layer_infill_speed": "35"
+    }
+  }
+]

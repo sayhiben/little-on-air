@@ -1,0 +1,17 @@
+Corridor,Nominal polyline length mm,Suggested dressed length including 25 mm slack,Notes
+H1 front pigtail to LED1,43,70,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+H2 LED1 to LED2,Measure after dry routing,Cut generously; trim after fitting,v2.15 open-backed perimeter; original deep-cavity route/length superseded. Each conductor may differ.
+H3 LED2 to LED3,Measure after dry routing,Cut generously; trim after fitting,v2.15 open-backed perimeter; original deep-cavity route/length superseded. Each conductor may differ.
+H4 LED3 to LED4,Measure after dry routing,Cut generously; trim after fitting,v2.15 open-backed perimeter; original deep-cavity route/length superseded. Each conductor may differ.
+B1 battery pair to charger,148,175,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+F0 internal power ground and DATA trunk,70,100,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+P1 charger OUT plus to POWER,53,80,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+G1 charger OUT minus to ground trunk,17,45,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+P2 POWER switched output to junction,29,55,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+P3 junction to MODE MCU branch,7,35,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+C1 inline capacitor pair,71,100,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+P4 MODE and ground to MCU underside fanout,31,60,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+BAT underside single lead,9,35,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+GND underside single lead,9,35,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+D1 XIAO data to MODE,46,75,Routing segment; measure actual terminations. Split trunks by electrical connection table.
+D2 MODE isolated DATA to trunk,16,45,Routing segment; measure actual terminations. Split trunks by electrical connection table.

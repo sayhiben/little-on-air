@@ -1,0 +1,96 @@
+[
+  {
+    "file": "stl/01-front-optical-bezel.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      11.0
+    ],
+    "volume_mm3": 14567.4656,
+    "triangles": 3442,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 2922.794,
+    "horizontal_undersides_by_height_mm2": {
+      "6.6": 104.366,
+      "6.0": 61.317,
+      "9.1": 40.6
+    },
+    "sha256": "f750efdc9998c7aa701249295caf441e0886bd8c9ac04d6b9c592db7780c3746"
+  },
+  {
+    "file": "stl/05-rear-electronics-housing.stl",
+    "bounds_mm": [
+      120.0,
+      60.0,
+      14.5
+    ],
+    "volume_mm3": 31984.0168,
+    "triangles": 5120,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 7176.19,
+    "horizontal_undersides_by_height_mm2": {
+      "3.7": 28.285,
+      "2.31": 2.581,
+      "3.62": 0.485,
+      "10.2": 61.317,
+      "12.5": 122.634
+    },
+    "sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e"
+  },
+  {
+    "file": "stl/08-captive-front-rgb-guide.stl",
+    "bounds_mm": [
+      17.6,
+      4.3991,
+      2.9
+    ],
+    "volume_mm3": 98.0419,
+    "triangles": 1656,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 45.499,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329"
+  },
+  {
+    "file": "stl/09-charger-light-guide.stl",
+    "bounds_mm": [
+      6.3,
+      3.8999,
+      2.7998
+    ],
+    "volume_mm3": 40.4053,
+    "triangles": 1392,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 18.355,
+    "horizontal_undersides_by_height_mm2": {},
+    "sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c"
+  },
+  {
+    "file": "stl/11-rear-light-guide-keeper.stl",
+    "bounds_mm": [
+      14.95,
+      14.65,
+      5.0
+    ],
+    "volume_mm3": 250.692,
+    "triangles": 1972,
+    "watertight": true,
+    "connected_solids": 1,
+    "min_z": 0,
+    "bed_contact_mm2": 18.09,
+    "horizontal_undersides_by_height_mm2": {
+      "1.2": 50.342,
+      "3.55": 3.564,
+      "2.8": 35.308
+    },
+    "sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f"
+  }
+]

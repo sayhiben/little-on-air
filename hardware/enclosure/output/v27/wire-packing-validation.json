@@ -1,0 +1,295 @@
+{
+  "passed": true,
+  "pairs_checked": 120,
+  "approaches": [
+    {
+      "one": "G1 charger OUT minus to ground trunk",
+      "two": "F0 internal power ground and DATA trunk",
+      "distance_mm": 0.025,
+      "required_mm": 1.62,
+      "at_one": [
+        25.0,
+        32.3,
+        13.85
+      ],
+      "at_two": [
+        25.0,
+        32.325,
+        13.85
+      ],
+      "shared_junction_bay": "Lower charger termination space",
+      "passed": true
+    },
+    {
+      "one": "P2 POWER switched output to junction",
+      "two": "F0 internal power ground and DATA trunk",
+      "distance_mm": 0.0,
+      "required_mm": 1.62,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "P2 POWER switched output to junction",
+      "two": "P1 charger OUT plus to POWER",
+      "distance_mm": 1.0,
+      "required_mm": 1.1,
+      "at_one": [
+        42.0,
+        49.8,
+        17.0
+      ],
+      "at_two": [
+        41.0,
+        49.8,
+        17.0
+      ],
+      "shared_junction_bay": "SPDT solder ends",
+      "passed": true
+    },
+    {
+      "one": "P3 junction to MODE MCU branch",
+      "two": "F0 internal power ground and DATA trunk",
+      "distance_mm": 0.0,
+      "required_mm": 1.62,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "P3 junction to MODE MCU branch",
+      "two": "P2 POWER switched output to junction",
+      "distance_mm": 0.0,
+      "required_mm": 1.1,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "C1 inline capacitor pair",
+      "two": "F0 internal power ground and DATA trunk",
+      "distance_mm": 0.0,
+      "required_mm": 1.97,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "C1 inline capacitor pair",
+      "two": "P2 POWER switched output to junction",
+      "distance_mm": 0.0,
+      "required_mm": 1.45,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "C1 inline capacitor pair",
+      "two": "P3 junction to MODE MCU branch",
+      "distance_mm": 0.0,
+      "required_mm": 1.45,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "P4 MODE and ground to MCU underside fanout",
+      "two": "P3 junction to MODE MCU branch",
+      "distance_mm": 0.4,
+      "required_mm": 1.45,
+      "at_one": [
+        63.0,
+        51.0,
+        17.4
+      ],
+      "at_two": [
+        63.0,
+        50.6,
+        17.4
+      ],
+      "shared_junction_bay": "DPDT solder ends",
+      "passed": true
+    },
+    {
+      "one": "BAT underside single lead",
+      "two": "P4 MODE and ground to MCU underside fanout",
+      "distance_mm": 0.0,
+      "required_mm": 1.45,
+      "at_one": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "at_two": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "shared_junction_bay": "MCU underside fanout",
+      "passed": true
+    },
+    {
+      "one": "GND underside single lead",
+      "two": "P4 MODE and ground to MCU underside fanout",
+      "distance_mm": 0.0,
+      "required_mm": 1.45,
+      "at_one": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "at_two": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "shared_junction_bay": "MCU underside fanout",
+      "passed": true
+    },
+    {
+      "one": "GND underside single lead",
+      "two": "BAT underside single lead",
+      "distance_mm": 0.0,
+      "required_mm": 1.1,
+      "at_one": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "at_two": [
+        85.0,
+        48.6,
+        20.45
+      ],
+      "shared_junction_bay": "MCU underside fanout",
+      "passed": true
+    },
+    {
+      "one": "D2 MODE isolated DATA to trunk",
+      "two": "F0 internal power ground and DATA trunk",
+      "distance_mm": 0.0,
+      "required_mm": 1.62,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "D2 MODE isolated DATA to trunk",
+      "two": "P2 POWER switched output to junction",
+      "distance_mm": 0.0,
+      "required_mm": 1.1,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "D2 MODE isolated DATA to trunk",
+      "two": "P3 junction to MODE MCU branch",
+      "distance_mm": 0.0,
+      "required_mm": 1.1,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    },
+    {
+      "one": "D2 MODE isolated DATA to trunk",
+      "two": "C1 inline capacitor pair",
+      "distance_mm": 0.0,
+      "required_mm": 1.45,
+      "at_one": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "at_two": [
+        68.0,
+        45.8,
+        16.2
+      ],
+      "shared_junction_bay": "Central insulated junctions",
+      "passed": true
+    }
+  ],
+  "basis": "Three OD0.9 wires fit inside radius0.97; pairs use OD0.8 radius0.8; singles OD0.9 radius0.45. Add0.2 placement allowance. Connections spread in the validated junction bays plus1mm terminal dressing margin."
+}

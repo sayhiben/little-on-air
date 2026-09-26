@@ -1,0 +1,7 @@
+__pycache__/
+output/progress.json
+
+# Downloaded vendor KiCad cache/history, not project source or a submodule.
+references/**/.history/
+references/**/logs/
+references/**/*.kicad_prl

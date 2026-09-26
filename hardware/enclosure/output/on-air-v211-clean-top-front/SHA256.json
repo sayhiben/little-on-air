@@ -1,0 +1,15 @@
+{
+  "bambu-studio/on-air-v211-X1C-eSUN-PLA-plus-clean-top-front.3mf": "d0d395ede75bf94b3fe72bfbd7ec28d0d582165fc9880325e8debde0aefecbbb",
+  "bambu-studio/on-air-v211-X1C-PETG-clean-top-front.3mf": "b242ef90681ed3f33068c81895fda94a16d094837419afeb4c30cd4a754809d0",
+  "cad/little-on-air-v211-assembly.step": "db94b20a680a3602e9e73cdf78cd4c5ef10889863e40054a72a3ec0702976853",
+  "cad/little-on-air-v211.f3d": "62c53ce36afc7d094238d175e17749f1ddf80869d8939c728102a0bcf80bd363",
+  "README.md": "0ef788d00567f6beda003e1ed160e42882dfa145e13840c06cf9cc8ed606d893",
+  "stl/01-front-optical-bezel.stl": "407c640cc00f062e9aa7be8afa3a5364d39e30c4cbd7eb9584db5e4db4f0a07e",
+  "validation/mesh-validation.json": "2e9af0f76345a2363670a28c0517c55771b25351733989872d71fd9e0f0ac811",
+  "validation/native-validation.json": "845274f0cd901bb24c5a5a42a9f415c456839b6cc3ac916575f877e3a7206e90",
+  "validation/seam-wire-clearance.json": "8d2f22ead140580d2146f1b8a2f1b5a89e8f84a9350fbc47cc9b4518ab9d4ceb",
+  "validation/slicing-validation.json": "5793aac92c04b9c3b1cb82234366bd9b17f7a74063d0a01acbeb6dd727068621",
+  "views/clean-assembly.png": "b42ec56db0b883b0820b3b4a813eb61623eedec94a08bedc8710b68965375bbf",
+  "views/clean-frame.png": "a78098527443c77c92d02554d48689cfd682b64a5db1982f6e30332a75a01f50",
+  "views/clean-top-seam.png": "2bcb0fd354b6bb4814db3cb677685a8c898b0ac80f3e3075f9ec612a34f6428d"
+}

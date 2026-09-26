@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "interior_keepout_min_mm": [
+    111.75,
+    52.85,
+    15.665
+  ],
+  "interior_keepout_max_mm": [
+    115.47,
+    57.35,
+    25.235
+  ],
+  "samples": 130,
+  "checks": 261,
+  "failures": [],
+  "note": "This supplements the measured PCB/socket model with extra assembly space for connector tabs and solder. Actual physical test still required.",
+  "final_geometry_note": "After this passing check, only0.25mm was removed from the yoke front face. Contact tips, stops, ports and nut pockets stay fixed. Yoke screw heads/shafts move0.25mm deeper; static assembly rechecked."
+}

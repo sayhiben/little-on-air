@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "document": "Little ON AIR v2.12 - complete perimeter cleanup",
+  "changed_components": [
+    "01 Front optical bezel"
+  ],
+  "filled_notches": [
+    {
+      "name": "Old right-side reset notch",
+      "lo": [
+        118.2,
+        52.55,
+        9.15
+      ],
+      "hi": [
+        120,
+        56.85,
+        9.5
+      ]
+    }
+  ],
+  "floor_areas_mm2": [
+    7.739999999999983
+  ],
+  "added_volume_mm3": 2.708999999999996,
+  "removed_volume_mm3": 0.0,
+  "change_confined_to_notches": true,
+  "remaining_obsolete_side_floor_count": 0,
+  "outer_bevel_mm": 1.4,
+  "aperture_bevel_mm": 0.8,
+  "retainer_front_depth_mm": 9.65,
+  "normal_seam_clearance_mm": 0.15000000000000036,
+  "static_added_material_collisions": [],
+  "motion_checks": [
+    {
+      "name": "Old right-side reset notch complete front closure",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "name": "02 Clear acrylic rear insertion past restored rim",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "name": "03 Registered graphic backing rear insertion past restored rim",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "name": "04 Optical retainer rear insertion past restored rim",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "name": "07 Front guided reset button rear insertion past restored rim",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    },
+    {
+      "name": "08 Front RGB light guide rear insertion past restored rim",
+      "continuous_stroke_mm": 20,
+      "method": "Conservative full swept rectangular envelope",
+      "failures": [],
+      "passed": true
+    }
+  ],
+  "feature_issues": [],
+  "all_other_components_unchanged": true,
+  "validation_basis": "Exact old/new native solid subtraction and conservative continuous swept envelopes for the added material. Existing assembly validation remains applicable outside the corrected region.",
+  "full_perimeter_audit_passed": true
+}

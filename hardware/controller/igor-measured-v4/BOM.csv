@@ -1,0 +1,23 @@
+Item,Quantity,Specification,Notes
+XIAO ESP32-S3,1,Standard board without Sense expansion,Computer USB-C power; direct-soldered wires
+Monochrome OLED,1,27.6 x 27.9 x 1.25 mm PCB,User measured four-pin I2C module; retain header
+Rotary push encoder,1,19.25 x 26.4 x 1.5 mm PCB,User measured module with right-angle five-pin header
+Mini NeoPixel strip segment,1,17.6 x 5 x 1.4 mm,Adafruit mini strip; centered single LED; retain full segment
+Adhesive wheel weight,2,20 x 33.5 x 6.5 mm,Height includes supplied foam adhesive; mass not specified
+Printed shell,1,01-igor-measured-shell.stl,PLA
+Printed faceplate,1,02-igor-measured-faceplate.stl,PLA
+Printed knob,1,03-igor-measured-hat.stl,PLA; measured D socket
+Printed small inlay,1,04-igor-small-inlay-original.stl,Optional original decoration
+Printed large inlay,1,05-igor-large-inlay-original.stl,Optional original decoration
+Printed diffuser,1,06-front-diffuser-PETG.stl,Transparent PETG; 100 percent infill
+Printed strip holder,1,07-strip-cassette.stl,PLA
+Printed XIAO carrier,1,08-xiao-carrier.stl,PLA
+AHCT level shifter,1,SN74AHCT1G125 or suitable small board,Insulated assembly at most 18 x 12 x 4 mm
+Data resistor,1,330 ohm,Near strip DIN
+Input pulldown,1,100 kohm,AHCT input to ground
+Bypass capacitor,2,100 nF,One at pixel and one at buffer; count existing fitted bypass if suitable
+Bulk capacitor,1,47 uF at least 10 V,Prototype allowance; body within diameter 6.3 x 8.5 mm; verify on bench
+Wire and insulation,As needed,Thin flexible insulated hookup wire,Keep joints and strain relief outside LED channel
+Mounting tape,As needed,Approximately 0.2 mm strip and 0.3 mm XIAO,Do not add foam under wheel weights
+Hot glue or suitable adhesive,As needed,Small corner fillets,Keep clear of glass ribbon buttons and moving shaft
+USB-C data cable,1,Computer connection,Check actual plug housing at rear opening

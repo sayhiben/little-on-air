@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "min_mm": [
+        56.9,
+        52.04,
+        19.9
+      ],
+      "max_mm": [
+        63.1,
+        55.49,
+        21.0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "min_mm": [
+        56.9,
+        52.04,
+        22.92
+      ],
+      "max_mm": [
+        63.1,
+        55.49,
+        24.020000000000003
+      ],
+      "collisions": [],
+      "passed": true
+    }
+  ],
+  "note": "Entire terminal rows reserved, not just the measured pin positions; 0.2 mm allowance around bare 0.7 mm legs."
+}

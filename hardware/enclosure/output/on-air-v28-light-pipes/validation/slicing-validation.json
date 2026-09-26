@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "project": "on-air-v28-clear-PETG-light-pipes.3mf",
+      "stage": "bambu-studio",
+      "objects": 9,
+      "mesh_match": true
+    },
+    {
+      "project": "on-air-v28-clear-PETG-light-pipes.3mf",
+      "stage": "sliced",
+      "objects": 9,
+      "mesh_match": true
+    }
+  ],
+  "long_fill_runs_by_role": {
+    "Bottom surface": {
+      "aligned": 25
+    },
+    "Internal solid infill": {
+      "aligned": 670
+    },
+    "Sparse infill": {
+      "aligned": 273
+    }
+  },
+  "long_fill_runs_by_layer": {
+    "0.1": {
+      "aligned": 25
+    },
+    "0.2": {
+      "aligned": 50
+    },
+    "0.3": {
+      "aligned": 53
+    },
+    "0.4": {
+      "aligned": 54
+    },
+    "0.5": {
+      "aligned": 54
+    },
+    "0.6": {
+      "aligned": 60
+    },
+    "0.7": {
+      "aligned": 60
+    },
+    "0.8": {
+      "aligned": 60
+    },
+    "0.9": {
+      "aligned": 60
+    },
+    "1.0": {
+      "aligned": 54
+    },
+    "1.1": {
+      "aligned": 54
+    },
+    "1.2": {
+      "aligned": 53
+    },
+    "1.3": {
+      "aligned": 50
+    },
+    "1.4": {
+      "aligned": 47
+    },
+    "1.5": {
+      "aligned": 44
+    },
+    "1.6": {
+      "aligned": 41
+    },
+    "1.7": {
+      "aligned": 42
+    },
+    "1.8": {
+      "aligned": 35
+    },
+    "1.9": {
+      "aligned": 36
+    },
+    "2.0": {
+      "aligned": 30
+    },
+    "2.1": {
+      "aligned": 6
+    }
+  },
+  "aligned_axis": "bed X, the long axis of every guide",
+  "threshold": "Extruding straight infill runs longer than 1 mm; short connections and perimeter turns excluded.",
+  "first_layer_inspection_disabled": true,
+  "no_pauses": true,
+  "bed_leveling_present": true,
+  "shutdown_present": true,
+  "off_axis_segments": [],
+  "passed": true
+}

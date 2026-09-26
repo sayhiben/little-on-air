@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "completed": 12,
+  "total": 12,
+  "results": [
+    {
+      "name": "H2 lower inner-pad connection lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H2 lower inner-pad connection lane1",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H2 lower inner-pad connection lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H3 left interior connection lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H3 left interior connection lane1",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H3 left interior connection lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H4 upper interior connection lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H4 upper interior connection lane1",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H4 upper interior connection lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H1 input to lower-right pixel lane0",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H1 input to lower-right pixel lane1",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    },
+    {
+      "name": "H1 input to lower-right pixel lane2",
+      "passed": true,
+      "collisions_mm3": {},
+      "locations": {}
+    }
+  ],
+  "final_cleanup": "Final 0.09 mm MODE lip removed only. Native subtraction proves no added material; all previously clear routes and motions remain clear.",
+  "contact_gusset": "Added gusset is entirely X17.9..20.3,Y53.7..54.65,D11.4..12.35. The only adjacent wire envelopes begin at D12.85; all other wire paths lie outside its XY bounds."
+}

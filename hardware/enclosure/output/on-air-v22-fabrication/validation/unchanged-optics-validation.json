@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "items": [
+    {
+      "new": "01-front-optical-bezel.stl",
+      "prior": "01-front-optical-bezel.stl",
+      "geometry_identical": true
+    },
+    {
+      "new": "03-registered-graphic-backing.stl",
+      "prior": "03-registered-graphic-backing.stl",
+      "geometry_identical": true
+    },
+    {
+      "new": "04-optical-retainer.stl",
+      "prior": "04-optical-retainer.stl",
+      "geometry_identical": true
+    },
+    {
+      "new": "07-captive-reset-plunger.stl",
+      "prior": "07-captive-reset-plunger.stl",
+      "geometry_identical": true
+    },
+    {
+      "new": "08-captive-run-program-slider.stl",
+      "prior": "08-captive-dpdt-power-slider.stl",
+      "geometry_identical": true
+    },
+    {
+      "laser": "02-acrylic-REAR-engrave-and-cut.svg",
+      "byte_identical": true,
+      "sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa"
+    },
+    {
+      "laser": "02-acrylic-REVIEW-ONLY.lbrn2",
+      "byte_identical": true,
+      "sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c"
+    },
+    {
+      "laser": "03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "byte_identical": true,
+      "sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf"
+    },
+    {
+      "laser": "90-fit-strip-CUT-ONLY.svg",
+      "byte_identical": true,
+      "sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd"
+    },
+    {
+      "laser": "91-kerf-plug-and-frame-CUT.svg",
+      "byte_identical": true,
+      "sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948"
+    },
+    {
+      "laser": "92-engraving-quality-nine-samples-FILL.svg",
+      "byte_identical": true,
+      "sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084"
+    }
+  ]
+}

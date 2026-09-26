@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "production_unique_stls": 9,
+  "production_print_instances": 10,
+  "optional_laminate_stls": 2,
+  "bambu_plates": 3,
+  "bambu_project_matches_validated_three_plate_source": true,
+  "production_STLs_match_embedded_meshes": true,
+  "all_STLs": {
+    "stl/01-front-optical-bezel.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 3442,
+      "volume_mm3": 14567.4667,
+      "bounds_mm": [
+        120.0,
+        60.0,
+        11.0
+      ]
+    },
+    "stl/03-registered-graphic-backing.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1504,
+      "volume_mm3": 6693.1653,
+      "bounds_mm": [
+        104.0,
+        38.0,
+        2.5
+      ]
+    },
+    "stl/04-optical-retainer.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 528,
+      "volume_mm3": 1588.6965,
+      "bounds_mm": [
+        104.0,
+        54.0,
+        4.475
+      ]
+    },
+    "stl/05-rear-electronics-housing.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 5120,
+      "volume_mm3": 31984.0168,
+      "bounds_mm": [
+        120.0,
+        60.0,
+        14.5
+      ]
+    },
+    "stl/06-electronics-retaining-yoke.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1296,
+      "volume_mm3": 3736.3105,
+      "bounds_mm": [
+        99.45,
+        25.95,
+        8.6
+      ]
+    },
+    "stl/07-front-guided-reset-button.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1652,
+      "volume_mm3": 182.1423,
+      "bounds_mm": [
+        5.2,
+        5.2,
+        20.15
+      ]
+    },
+    "stl/08-captive-front-rgb-guide.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1656,
+      "volume_mm3": 98.0419,
+      "bounds_mm": [
+        17.6,
+        4.39906,
+        2.9
+      ]
+    },
+    "stl/09-charger-light-guide.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1392,
+      "volume_mm3": 40.4053,
+      "bounds_mm": [
+        6.3,
+        3.89993,
+        2.79977
+      ]
+    },
+    "stl/11-rear-light-guide-keeper.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 1972,
+      "volume_mm3": 250.692,
+      "bounds_mm": [
+        14.95,
+        14.65,
+        5.0
+      ]
+    },
+    "alternatives/laminate/81-laminate-front-spacer.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 40,
+      "volume_mm3": 207.375,
+      "bounds_mm": [
+        104.0,
+        38.0,
+        0.5
+      ]
+    },
+    "alternatives/laminate/82-laminate-rear-shim.stl": {
+      "closed_shells": 1,
+      "consistent_winding": true,
+      "triangles": 40,
+      "volume_mm3": 165.9,
+      "bounds_mm": [
+        104.0,
+        38.0,
+        0.4
+      ]
+    }
+  },
+  "acrylic_to_printed_backing": {
+    "ENGRAVE": {
+      "maximum_contour_error_mm": 1.0000000003174137e-05,
+      "closed_contours": 8
+    },
+    "CUT": {
+      "maximum_contour_error_mm": 0.0,
+      "closed_contours": 1
+    }
+  },
+  "laser_review_outputs_disabled": true,
+  "guide_links_checked": 41,
+  "firmware_version": "0.1.2",
+  "firmware_onboard_RGB_only": true,
+  "no_geometry_or_machine_jobs_performed": true,
+  "zip_integrity_checked": true,
+  "native_CAD_archive_integrity": {
+    "little-on-air-v213.f3d": {
+      "all_member_lengths_and_CRCs_valid": true,
+      "zstandard_members": 64
+    }
+  }
+}

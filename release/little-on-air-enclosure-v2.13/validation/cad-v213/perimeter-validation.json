@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "method": "Exact native Boolean of a continuous 1 mm-wide perimeter ring at depths 8.5 to 9.5 mm, against the actual front. Includes all four straight sides and all four R3 corners. Normal front bevels and internal fitting clearances lie outside this test band.",
+  "missing_volume_mm3": 0.0,
+  "regions": [
+    {
+      "region": "Top straight",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Bottom straight",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Left straight",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Right straight",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Top left corner",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Top right corner",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Bottom left corner",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "region": "Bottom right corner",
+      "missing_volume_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "exterior_recess_floor_faces": []
+}

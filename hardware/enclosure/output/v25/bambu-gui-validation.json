@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "project": "on-air-v25-X1C-eSUN-PLA-plus-fit-checks.3mf",
+  "gui_loaded_without_configuration_warning": true,
+  "gui_slice_completed": true,
+  "gui_saved_copy_meshes_match_STLs": true,
+  "gui_preserved_process_and_inspection_settings": true,
+  "gui_standard_nozzle_filament_settings_match": true,
+  "fit_plate_minutes_shown": 141,
+  "fit_plate_grams_shown": 38.79,
+  "support_grams_shown": 0.03,
+  "all_nine_project_variant_arrays_and_object_settings_checked": true
+}

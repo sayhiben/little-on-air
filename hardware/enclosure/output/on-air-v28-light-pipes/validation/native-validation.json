@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "original_components_unchanged": true,
+  "checks": [
+    {
+      "part": "08 Front RGB light guide",
+      "obstacles": 57,
+      "largest_diameter_mm": 3.15
+    },
+    {
+      "part": "09 Upper charger light guide",
+      "obstacles": 57,
+      "largest_diameter_mm": 3.15
+    },
+    {
+      "part": "10 Lower charger light guide",
+      "obstacles": 57,
+      "largest_diameter_mm": 3.15
+    },
+    {
+      "part": "08 Front RGB light guide",
+      "stop_probe_mm3": 0.36242481639462465,
+      "passed": true
+    },
+    {
+      "part": "09 Upper charger light guide",
+      "stop_probe_mm3": 0.32223175226767226,
+      "passed": true
+    },
+    {
+      "part": "10 Lower charger light guide",
+      "stop_probe_mm3": 0.32223175226767226,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "nominal_hole_diameter_mm": 3.2,
+  "guide_fit_diameters_mm": [
+    2.95,
+    3.05,
+    3.15
+  ],
+  "diametral_clearances_mm": [
+    0.25,
+    0.15,
+    0.05
+  ],
+  "front_LED_gap_mm": 0.4,
+  "charger_LED_gap_mm": 0.5,
+  "front_projection_mm": 0.8,
+  "rear_outlet_recess_mm": 0.1,
+  "flat_offset_from_axis_mm": 0.7,
+  "front_pickup_diameter_mm": 1.8,
+  "USB_side_clearance_mm": 0.32,
+  "charger_fence_clearance_mm": 0.25,
+  "retention": "Close sliding/friction fit with insertion stop collars. Not a positive latch; removable adhesive at collar is optional if axial retention is loose.",
+  "limitation": "As-built bore size and optical transmission require physical checks; nominal reference LED heights are not measured optical package tolerances."
+}

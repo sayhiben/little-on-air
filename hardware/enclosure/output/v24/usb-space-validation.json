@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "interior_keepout_min_mm": [
+    111.55,
+    52.65,
+    16.85
+  ],
+  "interior_keepout_max_mm": [
+    115.5,
+    57.35,
+    27.45
+  ],
+  "samples": 130,
+  "checks": 261,
+  "failures": [],
+  "note": "This supplements the measured PCB/socket model with extra assembly space for connector tabs and solder. Actual physical test still required."
+}

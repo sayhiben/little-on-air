@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "free_play_mm": 0.1,
+  "projection_at_rest_mm": 3.0,
+  "projection_at_stop_mm": 2.6,
+  "stop_travel_mm": 0.4,
+  "nominal_switch_depression_mm": 0.3,
+  "samples": 17,
+  "failures": [],
+  "note": "The compliant reset target is excluded from rigid interference; 0.3 mm nominal actuation must be confirmed by the physical fit test.",
+  "final_geometry_note": "After this passing check, only0.25mm was removed from the yoke front face. Contact tips, stops, ports and nut pockets stay fixed. Yoke screw heads/shafts move0.25mm deeper; static assembly rechecked."
+}

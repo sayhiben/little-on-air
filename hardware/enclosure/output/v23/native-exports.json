@@ -1,0 +1,42 @@
+[
+  {
+    "name": "01 Front optical bezel",
+    "slug": "01-front-optical-bezel",
+    "bodies": 1
+  },
+  {
+    "name": "03 Registered graphic backing",
+    "slug": "03-registered-graphic-backing",
+    "bodies": 1
+  },
+  {
+    "name": "04 Optical retainer",
+    "slug": "04-optical-retainer",
+    "bodies": 1
+  },
+  {
+    "name": "81 Laminate front spacer",
+    "slug": "81-laminate-front-spacer",
+    "bodies": 1
+  },
+  {
+    "name": "82 Laminate rear shim",
+    "slug": "82-laminate-rear-shim",
+    "bodies": 1
+  },
+  {
+    "name": "05 Rear electronics housing",
+    "slug": "05-rear-electronics-housing",
+    "bodies": 1
+  },
+  {
+    "name": "06 Electronics retaining yoke",
+    "slug": "06-electronics-retaining-yoke",
+    "bodies": 1
+  },
+  {
+    "name": "07 Guided rounded reset button",
+    "slug": "07-guided-rounded-reset-button",
+    "bodies": 1
+  }
+]

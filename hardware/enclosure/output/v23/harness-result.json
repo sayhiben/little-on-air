@@ -1,0 +1,4 @@
+{
+  "message": "{\n  \"passed\": false,\n  \"failed\": [\n    {\n      \"name\": \"P4 DPDT common A and ground to XIAO\",\n      \"radius_mm\": 1.2,\n      \"route_length_mm\": 83.19,\n      \"path\": [\n        [\n          63,\n          51,\n          24\n        ],\n        [\n          64.8,\n          44.5,\n          18\n        ],\n        [\n          64.8,\n          30,\n          18\n        ],\n        [\n          97,\n          30,\n          18\n        ],\n        [\n          97,\n          43.5,\n          18\n        ],\n        [\n          109.5,\n          43.5,\n          18\n        ],\n        [\n          109.5,\n          43.5,\n          24\n        ]\n      ],\n      \"collisions\": {\n        \"05 Rear electronics housing\": 0.0489\n      },\n      \"passed\": false\n    }\n  ]\n}\n",
+  "success": true
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "project": "on-air-v28-X1C-PLA-AMS.3mf",
+    "filament_type": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle": [
+      "220",
+      "220"
+    ],
+    "textured_bed": [
+      "55",
+      "55"
+    ],
+    "max_volume": [
+      "12",
+      "12"
+    ]
+  },
+  {
+    "project": "on-air-v28-X1C-PLA-fit-checks.3mf",
+    "filament_type": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle": [
+      "220",
+      "220"
+    ],
+    "textured_bed": [
+      "55",
+      "55"
+    ],
+    "max_volume": [
+      "12",
+      "12"
+    ]
+  },
+  {
+    "project": "on-air-v28-X1C-PLA-manual-swap.3mf",
+    "filament_type": [
+      "PLA",
+      "PLA"
+    ],
+    "nozzle": [
+      "220",
+      "220"
+    ],
+    "textured_bed": [
+      "55",
+      "55"
+    ],
+    "max_volume": [
+      "12",
+      "12"
+    ]
+  }
+]

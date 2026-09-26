@@ -1,0 +1,10 @@
+{
+  "letters": {
+    "actual_STL_to_shared_laser_master_error_mm": 8.737663972760685e-06,
+    "passed": true
+  },
+  "outline": {
+    "actual_STL_to_shared_laser_master_error_mm": 0.0,
+    "passed": true
+  }
+}

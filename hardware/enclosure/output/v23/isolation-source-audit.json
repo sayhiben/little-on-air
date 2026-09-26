@@ -1,0 +1,27 @@
+{
+  "source_document": "Little On Air - Enclosure v2.3 - measured fits",
+  "source_feature_issues": [],
+  "source_timeline_features": 1229,
+  "components": {
+    "01 Front optical bezel": 1,
+    "02 Clear acrylic": 1,
+    "03 Registered graphic backing": 1,
+    "04 Optical retainer": 1,
+    "81 Laminate front spacer": 1,
+    "82 Laminate rear shim": 1,
+    "05 Rear electronics housing": 1,
+    "REF Battery": 1,
+    "REF Four LEDs": 4,
+    "REF M3 screws": 16,
+    "REF M3 nuts": 8,
+    "REF Capacitor": 1,
+    "06 Electronics retaining yoke": 1,
+    "07 Guided rounded reset button": 1,
+    "REF Charger": 3,
+    "REF XIAO": 4,
+    "REF DPDT": 7,
+    "REF DPDT moving actuator": 1,
+    "REF SPDT power switch": 1,
+    "REF SPDT moving lever": 1
+  }
+}

@@ -1,0 +1,8 @@
+Part,Quantity,Material,Action
+01 Front optical bezel,1,PLA PLA+ or PETG,Replace with deep RGB bearing and captive collar pocket
+05 Rear electronics housing,1,PLA PLA+ or PETG,Replace with rear collar seats and keeper nut boss
+08 Captive front RGB light guide,1,Clear PETG,New internal-collar design; do not reuse old front guide
+09 Charger light guide,2,Clear PETG,Existing short guides may be reused if they fit freely
+11 Rear light guide keeper,1,PLA PLA+ or PETG,New rigid keeper; support under open arm during printing
+Additional M3x8 button-head screw,1,Steel,Same length as current case screws
+Additional M3 hex nut,1,Steel,5.5 mm across flats and about 2.4 mm thick

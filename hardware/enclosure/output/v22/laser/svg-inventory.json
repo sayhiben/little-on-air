@@ -1,0 +1,37 @@
+[
+  {
+    "file": "02-acrylic-REAR-engrave-and-cut.svg",
+    "width": "104mm",
+    "height": "38mm",
+    "path_count": 2,
+    "text_elements": 0
+  },
+  {
+    "file": "03-optional-laminate-FRONT-engrave-and-cut.svg",
+    "width": "104mm",
+    "height": "38mm",
+    "path_count": 2,
+    "text_elements": 0
+  },
+  {
+    "file": "90-fit-strip-CUT-ONLY.svg",
+    "width": "31mm",
+    "height": "6mm",
+    "path_count": 1,
+    "text_elements": 0
+  },
+  {
+    "file": "91-kerf-plug-and-frame-CUT.svg",
+    "width": "40mm",
+    "height": "30mm",
+    "path_count": 2,
+    "text_elements": 0
+  },
+  {
+    "file": "92-engraving-quality-nine-samples-FILL.svg",
+    "width": "84mm",
+    "height": "48mm",
+    "path_count": 9,
+    "text_elements": 0
+  }
+]

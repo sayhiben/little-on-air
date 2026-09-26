@@ -1,0 +1,80 @@
+{
+    "error_string": "Success.",
+    "export_time": 386,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 53,
+    "return_code": 0,
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 122.34331512451172,
+                "Bridge": 35.04291534423828,
+                "Brim": 85.66983795166016,
+                "Custom": 485.7295227050781,
+                "Flush": 29.0,
+                "Gap infill": 4.497941493988037,
+                "Inner wall": 1230.8514404296875,
+                "Internal solid infill": 592.1149291992188,
+                "Outer wall": 915.2710571289063,
+                "Overhang wall": 35.645267486572266,
+                "Sparse infill": 16.773908615112305,
+                "Top surface": 226.477294921875,
+                "Travel": 432.7950744628906,
+                "Undefined": 417.57073974609375
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFG99",
+                    "id": 1,
+                    "main_used_g": 17.687610626220703,
+                    "total_used_g": 17.687610626220703
+                }
+            ],
+            "generate_support_material_time": 20,
+            "id": 1,
+            "infill_time": 124,
+            "layer_filament_change": 0,
+            "main_predication": 3668.16162109375,
+            "make_perimeters_time": 159,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 60.0,
+                        "height": 11.0,
+                        "width": 120.0,
+                        "x": 68.0,
+                        "y": 98.0,
+                        "z": 0.0
+                    },
+                    "id": 5,
+                    "name": "01-front-optical-bezel.stl",
+                    "triangle_count": 3162
+                }
+            ],
+            "sliced_time": 751,
+            "sliced_time_with_cache": 408,
+            "total_predication": 4196.63623046875,
+            "triangle_count": 3162,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 25.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 4
+}

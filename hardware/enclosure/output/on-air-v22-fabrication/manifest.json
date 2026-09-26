@@ -1,0 +1,330 @@
+{
+  "revision": "v2.2",
+  "main_stls": 7,
+  "optional_stls": 2,
+  "fit_section_stls": 9,
+  "laser_svgs": 5,
+  "bambu_projects": 9,
+  "files": [
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PETG-AMS.3mf",
+      "bytes": 2802734,
+      "sha256": "66e2086d52fdeba4483cd82cb88a52047cd537735e36f8c8d2a27f85ac3c6560"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PETG-fit-checks.3mf",
+      "bytes": 1283743,
+      "sha256": "e0a1343de5907fa5cdda67b3484555cdc8825a3973e18a364930c0b2afe76cdc"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PETG-manual-swap.3mf",
+      "bytes": 2764624,
+      "sha256": "4f5f296c57e7be1f7b46eb5ff580ded758d6af9d2a62726496cd36404ca1e965"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-AMS.3mf",
+      "bytes": 2778453,
+      "sha256": "db665d1ff616ce8610bf42419b810cb400127ddfdd32fc78d7d59891409aa5b0"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-fit-checks.3mf",
+      "bytes": 1273426,
+      "sha256": "541d87587d3890361aa13b75b9663c111caa81e2b9d39b3c2d1c3912baa20894"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-manual-swap.3mf",
+      "bytes": 2740261,
+      "sha256": "830b024f7c262eb246792bad914b47f0f8c74b1abec36515eb802e285f3a1ad4"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-plus-starting-AMS.3mf",
+      "bytes": 2778464,
+      "sha256": "9c48fed4720806c9f0d33a998991b2d3004d7fca1f154144a1d83a295b85711e"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-plus-starting-fit-checks.3mf",
+      "bytes": 1273481,
+      "sha256": "f333cc4bd4a28aef3421d4f65daf815458278a1e93312efd89fe60fc843e8c6a"
+    },
+    {
+      "file": "bambu-studio/on-air-v22-X1C-PLA-plus-starting-manual-swap.3mf",
+      "bytes": 2740372,
+      "sha256": "49648416d9a6bc278ca8f97ae761963828f4f5128da3b389e42f1767cb7e29c7"
+    },
+    {
+      "file": "BOM.csv",
+      "bytes": 2621,
+      "sha256": "896fae4a8a1a45712baf7cc6dafb7c63da71c6ff6fb526c9fff201ef6f45c2d3"
+    },
+    {
+      "file": "BUILD-AND-ASSEMBLY.md",
+      "bytes": 28915,
+      "sha256": "aeb2033bea9dbfe03e37b09a9a53720a96611625573d22d3d7ac3783289c7beb"
+    },
+    {
+      "file": "cad/little-on-air-v22-assembly.step",
+      "bytes": 1999657,
+      "sha256": "f7f717689f274998d55755aea3e5f962887ef3d7c6d4b6ed78ba418c3572d810"
+    },
+    {
+      "file": "cad/little-on-air-v22.f3d",
+      "bytes": 5582004,
+      "sha256": "968a2f5de62244ead45b0d16e34b9f9438a281ea67c4f3d6ed7fcac37c2ed9b9"
+    },
+    {
+      "file": "cad/v22-production-fit-sections.f3d",
+      "bytes": 286601,
+      "sha256": "921b8230e88c98ed42763353fedafe9f7b057ad73e473a38b823d12bf8ced5d4"
+    },
+    {
+      "file": "COMMISSIONING.csv",
+      "bytes": 2448,
+      "sha256": "8cf067a14140b37861e676aa9aecce6f2d33f7b13d2aa2a92052d577e4cdc167"
+    },
+    {
+      "file": "fit-samples/90-rear-nut-boss-section.stl",
+      "bytes": 82284,
+      "sha256": "fca4863bd6f303b126fa6cd65505e9ee85ef3eadcf265ee954c282a6ef790b77"
+    },
+    {
+      "file": "fit-samples/91-front-screw-recess-section.stl",
+      "bytes": 22984,
+      "sha256": "dcc55cff93aecacfeeb0ebd2c83904232c30bccc8b4e59b1c90bc2a05187e563"
+    },
+    {
+      "file": "fit-samples/92-charger-fit-section.stl",
+      "bytes": 14284,
+      "sha256": "871dcb3cdbcc8a36c03fe9167a88e86472043ebed0bc0c3d7be11f8831bcdb34"
+    },
+    {
+      "file": "fit-samples/93-XIAO-and-reset-fit-section.stl",
+      "bytes": 25684,
+      "sha256": "9896bc8795fab2d515f6aa01f15d8de808c6328bd1cf552dde7d5272c94b241f"
+    },
+    {
+      "file": "fit-samples/94-DPDT-fit-section.stl",
+      "bytes": 6884,
+      "sha256": "984d185270c90155ba10cf6a9f0ee01cbd4c6ef543f1e046cac685713cf1349c"
+    },
+    {
+      "file": "fit-samples/95-optical-bezel-section.stl",
+      "bytes": 35084,
+      "sha256": "71ddd9fde93f01e52643fe06af971f66b41cec7d1f2f9f54249f534d016d934d"
+    },
+    {
+      "file": "fit-samples/96-optical-retainer-section.stl",
+      "bytes": 18484,
+      "sha256": "629eefd8854f63b7e283a39ec7af12617336ba37d17fa1d5cb35de20a03a2aa5"
+    },
+    {
+      "file": "fit-samples/97-optical-spacing-section.stl",
+      "bytes": 1484,
+      "sha256": "cf8a9bd4cfeae40bc4d27eb24f5aec635f702c5398284d0f107e7162ad1ff2f7"
+    },
+    {
+      "file": "fit-samples/98-SPDT-power-fit-section.stl",
+      "bytes": 7484,
+      "sha256": "b98c877ba14f2491817daf2baa5ae266d185846d03adf492c548622e96201745"
+    },
+    {
+      "file": "laser/02-acrylic-REAR-engrave-and-cut.svg",
+      "bytes": 7383,
+      "sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa"
+    },
+    {
+      "file": "laser/02-acrylic-REVIEW-ONLY.lbrn2",
+      "bytes": 20115,
+      "sha256": "083b834b3bf37a0bf92a7b23396d55efcc696165a046cdb51663cde0c983960c"
+    },
+    {
+      "file": "laser/03-optional-laminate-FRONT-engrave-and-cut.svg",
+      "bytes": 7364,
+      "sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf"
+    },
+    {
+      "file": "laser/90-fit-strip-CUT-ONLY.svg",
+      "bytes": 381,
+      "sha256": "7360f7aea0ec25925c5c2c0f67212050c3584d71e05c5b75050fcab20f4a05bd"
+    },
+    {
+      "file": "laser/91-kerf-plug-and-frame-CUT.svg",
+      "bytes": 412,
+      "sha256": "435fe10ff59bdb0f42eaad031439ab3b526d768b7cb5bf4014cf39d546c7f948"
+    },
+    {
+      "file": "laser/92-engraving-quality-nine-samples-FILL.svg",
+      "bytes": 60932,
+      "sha256": "dc5c2cb5dcb0bf94ed08a85933dcc8b2fab1291ba7f3ee8a0cd09f32561a8084"
+    },
+    {
+      "file": "optional-laminate/81-laminate-front-spacer.stl",
+      "bytes": 2084,
+      "sha256": "b72e7298642b6f0bcb8c60126855f380e65b53b1a07e10de6a7dbe2efd91027a"
+    },
+    {
+      "file": "optional-laminate/82-laminate-rear-shim.stl",
+      "bytes": 2084,
+      "sha256": "e4fe8f073b4ea6a027f05ed7e644a57e32a86a0f3a5402c8339b073deff7b8b6"
+    },
+    {
+      "file": "routing-map.png",
+      "bytes": 117666,
+      "sha256": "e2943cebbed27b81f142e8bd9cad95cdbdc17055937f17a7686febfdaaf92040"
+    },
+    {
+      "file": "routing-map.svg",
+      "bytes": 9079,
+      "sha256": "4a950bf3120e5ceb11e87607954f6103664d2ffbfc522db7a5c86978cd088d2d"
+    },
+    {
+      "file": "START-HERE.md",
+      "bytes": 2956,
+      "sha256": "a88c1d197eb5fc2a0e27b800c0faf666acccb4d2d97a016c50213351fdb9feb0"
+    },
+    {
+      "file": "stl/01-front-optical-bezel.stl",
+      "bytes": 148584,
+      "sha256": "68cd9abc58b1ac317187026026c9289769ff6743fe529e2cf522a1f92c5fc4a2"
+    },
+    {
+      "file": "stl/03-registered-graphic-backing.stl",
+      "bytes": 75284,
+      "sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05"
+    },
+    {
+      "file": "stl/04-optical-retainer.stl",
+      "bytes": 26484,
+      "sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879"
+    },
+    {
+      "file": "stl/05-rear-electronics-housing.stl",
+      "bytes": 192884,
+      "sha256": "9d38c8eb77be60bf9e16284fd69ca299c81c84acb043e90812cd80759c021ff9"
+    },
+    {
+      "file": "stl/06-electronics-retaining-yoke.stl",
+      "bytes": 52184,
+      "sha256": "5278ac750f2d87e54755457f7bd788ea92d1a7b1609885e6f99962e34a93f68b"
+    },
+    {
+      "file": "stl/07-captive-reset-plunger.stl",
+      "bytes": 2284,
+      "sha256": "23bc81138734eba7e97a21e08f768c6f761d3d99c7b95867eae42a17c50709ee"
+    },
+    {
+      "file": "stl/08-captive-run-program-slider.stl",
+      "bytes": 4484,
+      "sha256": "50505012d51290e3309977226d0baf8ee0f2a3ca123f7d15e830b3f1bc05f2a2"
+    },
+    {
+      "file": "validation/archive-roundtrip-validation.json",
+      "bytes": 179,
+      "sha256": "3514697931b1d9f8025dcfd46f819d50b11becba1414fbeeef343ab5d6ab010d"
+    },
+    {
+      "file": "validation/artwork-validation.json",
+      "bytes": 739,
+      "sha256": "6371995525acd23ca928b8181c369adbb197ed0f286e5ca245eefd0c059021ed"
+    },
+    {
+      "file": "validation/bambu-projects.json",
+      "bytes": 78707,
+      "sha256": "d4484225ce0aa2db075f530763ae56d1d2e27e937d0a3d1451fe5e7c13bab718"
+    },
+    {
+      "file": "validation/harness-validation.json",
+      "bytes": 11370,
+      "sha256": "97d28e20d1728b2e3d67611a9ffb3a76ae6b294119305b0bf0c56da9bc0f7f4b"
+    },
+    {
+      "file": "validation/mesh-validation.json",
+      "bytes": 8015,
+      "sha256": "e8ddf8c1cbe54735657c61f3af41387bc65a7e0b5b970ebfed287d5990039030"
+    },
+    {
+      "file": "validation/native-validation.json",
+      "bytes": 44281,
+      "sha256": "b569976295a3d53d6dd351e2762622ef065dd88778d0b3ef862291545948046f"
+    },
+    {
+      "file": "validation/optical-registration-validation.json",
+      "bytes": 217,
+      "sha256": "612faf3d1ac2b1ea79e2304f7bffa7d4dfe03ea4368687099ac5c3e8a0971937"
+    },
+    {
+      "file": "validation/shared-front-master.json",
+      "bytes": 24617,
+      "sha256": "f9f41c2bb1ccb5831e0b22ed0b0aab3d67a5a02e61d1e7e157461acc68e948ce"
+    },
+    {
+      "file": "validation/svg-inventory.json",
+      "bytes": 777,
+      "sha256": "0b21390de31493e5b5b02d9d3faea6ac135c81d50694c2ecb9fb55dd09669e72"
+    },
+    {
+      "file": "validation/unchanged-optics-validation.json",
+      "bytes": 1867,
+      "sha256": "657599609588b5a49458c11eb1584f02daf86b29eb429bfda5ee8b2c33fcb051"
+    },
+    {
+      "file": "validation/wire-packing-validation.json",
+      "bytes": 5220,
+      "sha256": "5f4dc2b155ff779c397c37579f816b813546cf5d587d7572b7fe84ee3d448e9c"
+    },
+    {
+      "file": "VALIDATION.md",
+      "bytes": 4135,
+      "sha256": "f60114dba84850b107065900877c2bc6aa4267d948a7ba5129e377b6d204731f"
+    },
+    {
+      "file": "views/assembled.png",
+      "bytes": 211187,
+      "sha256": "b1aad718f1828997de78410dd21bb8db8aef37947b25821708a02313bbb53336"
+    },
+    {
+      "file": "views/bezel-led-seats.png",
+      "bytes": 219297,
+      "sha256": "ffd122a4e73ce0a82a58e245e5d064dba67d15790f99f59f01a8c0385959beae"
+    },
+    {
+      "file": "views/exploded.png",
+      "bytes": 348458,
+      "sha256": "accbf3356e358b5bf31ab386a21849da88ac80ac4977e14eff2d8a5735d72601"
+    },
+    {
+      "file": "views/front.png",
+      "bytes": 82604,
+      "sha256": "0339342af0bfcc97ad0754742c8fcb8169bdba9f0b00583dcf79cc01d38f49e5"
+    },
+    {
+      "file": "views/integrated-rear-housing.png",
+      "bytes": 322677,
+      "sha256": "d4b3585cb1f840ca1589bf7d1aa558e70585060afb94203f0fdebd8e8fdb96c3"
+    },
+    {
+      "file": "views/native-harness-clearances.png",
+      "bytes": 345765,
+      "sha256": "265c0d465cbc4071e75b27a532ea11f6086627246073fbde377c30b78ab1d269"
+    },
+    {
+      "file": "views/rear-housing-layout.png",
+      "bytes": 168176,
+      "sha256": "915053fe36e2b3f6c4a7bd23b2ffc8c4b3279f2b02e91e77383695a7ff58b837"
+    },
+    {
+      "file": "views/registered-graphic.png",
+      "bytes": 92136,
+      "sha256": "226d2a211813be71dcc648acb6d7ac43dfdd4be5619ca57f6a3275a0afeb71b1"
+    },
+    {
+      "file": "views/retained-electronics.png",
+      "bytes": 357912,
+      "sha256": "74170865d9b3477c013ea0b80a65fbb4b9735f28c3148b33c38a0e9f57b16eea"
+    },
+    {
+      "file": "wire-cut-list.csv",
+      "bytes": 1900,
+      "sha256": "5dd9db53e66ffc83d3e1883b2d41b4d1379dc3425961c66ff915647284a4126a"
+    }
+  ]
+}

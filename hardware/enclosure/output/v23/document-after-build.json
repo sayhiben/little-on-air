@@ -1,0 +1,17 @@
+{
+  "message": "2 open document(s)",
+  "results": [
+    {
+      "isModified": false,
+      "isSaved": false,
+      "name": "Untitled"
+    },
+    {
+      "isActive": true,
+      "isModified": true,
+      "isSaved": false,
+      "name": "Little On Air - Enclosure v2.3 - measured fits"
+    }
+  ],
+  "success": true
+}

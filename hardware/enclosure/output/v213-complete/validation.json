@@ -1,0 +1,385 @@
+{
+  "passed": true,
+  "project": "on-air-v213-X1C-all-plates.3mf",
+  "physical_objects": 10,
+  "unique_parts": 9,
+  "plates": [
+    {
+      "plate": 1,
+      "name": "Black PLA+ - frame, rear housing, guide keeper",
+      "objects": [
+        {
+          "file": "01-front-optical-bezel.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/01-front-optical-bezel.stl",
+          "source_sha256": "f750efdc9998c7aa701249295caf441e0886bd8c9ac04d6b9c592db7780c3746",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            55.0,
+            54.0,
+            0.0
+          ],
+          "bed_max": [
+            175.0,
+            114.0,
+            11.0
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 3442,
+          "volume_mm3": 14567.4667,
+          "bounds_mm": [
+            120.0,
+            60.0,
+            11.0
+          ]
+        },
+        {
+          "file": "05-rear-electronics-housing.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/05-rear-electronics-housing.stl",
+          "source_sha256": "d46cf7862fe21c93f0e05ff0f604176ede6a3250f0cbb101f4de2a4a177d4e5e",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            55.0,
+            140.0,
+            0.0
+          ],
+          "bed_max": [
+            175.0,
+            200.0,
+            14.5
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 5120,
+          "volume_mm3": 31984.0168,
+          "bounds_mm": [
+            120.0,
+            60.0,
+            14.5
+          ]
+        },
+        {
+          "file": "11-rear-light-guide-keeper.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/11-rear-light-guide-keeper.stl",
+          "source_sha256": "ab816f05119d4e3f1479f7070c9067785ba54e262634fe48c7bd07c171e00b4f",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            199.52499962,
+            120.67499924,
+            -1.999999987845058e-08
+          ],
+          "bed_max": [
+            214.47500038,
+            135.32500076,
+            4.99999902
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1972,
+          "volume_mm3": 250.692,
+          "bounds_mm": [
+            14.95,
+            14.65,
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "plate": 2,
+      "name": "Black PLA+ - retainers and reset button",
+      "objects": [
+        {
+          "file": "04-optical-retainer.stl",
+          "source": "output/on-air-v28-fabrication/stl/04-optical-retainer.stl",
+          "source_sha256": "7436fcc841510383b836a645010c3072dd2361b05670a3fa74b623633a704879",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            76.0,
+            137.0,
+            4.999999969612645e-08
+          ],
+          "bed_max": [
+            180.0,
+            191.0,
+            4.47499995
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 528,
+          "volume_mm3": 1588.6965,
+          "bounds_mm": [
+            104.0,
+            54.0,
+            4.475
+          ]
+        },
+        {
+          "file": "06-electronics-retaining-yoke.stl",
+          "source": "output/on-air-v28-fabrication/stl/06-electronics-retaining-yoke.stl",
+          "source_sha256": "9f5da4b16a8ce57dc3355633b44e1aa466a95e7a3660032146ac208ca8cc177c",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            78.27500149999997,
+            90.0249996,
+            9.99999993922529e-09
+          ],
+          "bed_max": [
+            177.72499850000003,
+            115.9750004,
+            8.600000390000002
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1296,
+          "volume_mm3": 3736.3105,
+          "bounds_mm": [
+            99.45,
+            25.95,
+            8.6
+          ]
+        },
+        {
+          "file": "07-front-guided-reset-button.stl",
+          "source": "output/on-air-v28-fabrication/stl/07-front-guided-reset-button.stl",
+          "source_sha256": "4a03f37152e51be9ddcab4dde803566b71d3a83355a82d18eed1e60884d95a21",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            125.40000153,
+            60.40000153,
+            0.0
+          ],
+          "bed_max": [
+            130.59999847,
+            65.59999847,
+            20.1499996
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1652,
+          "volume_mm3": 182.1423,
+          "bounds_mm": [
+            5.2,
+            5.2,
+            20.15
+          ]
+        }
+      ]
+    },
+    {
+      "plate": 3,
+      "name": "PLA+ insert - black base, white letters",
+      "objects": [
+        {
+          "file": "03-registered-graphic-backing.stl",
+          "source": "output/on-air-v28-fabrication/stl/03-registered-graphic-backing.stl",
+          "source_sha256": "71ff2bee24e63abf1f0e53e183885409ff4890bce29c5cbdb231f6abaca9bd05",
+          "filament_slot": 1,
+          "exact_mesh_match": true,
+          "bed_min": [
+            76.0,
+            109.0,
+            0.0
+          ],
+          "bed_max": [
+            180.0,
+            147.0,
+            2.5
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1504,
+          "volume_mm3": 6693.1653,
+          "bounds_mm": [
+            104.0,
+            38.0,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "plate": 4,
+      "name": "Clear PETG - 1 front guide and 2 rear guides",
+      "objects": [
+        {
+          "file": "08-captive-front-rgb-guide.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/08-captive-front-rgb-guide.stl",
+          "source_sha256": "f89b560e69724a790e9b1c4276be7949e0a9166adb8d6bd8d4fd2124f2ed1329",
+          "filament_slot": 3,
+          "exact_mesh_match": true,
+          "bed_min": [
+            101.19999981000001,
+            125.80047225999999,
+            3.9999999978945766e-08
+          ],
+          "bed_max": [
+            118.80000018999999,
+            130.19952774,
+            2.9000015599999998
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1656,
+          "volume_mm3": 98.0419,
+          "bounds_mm": [
+            17.6,
+            4.39906,
+            2.9
+          ]
+        },
+        {
+          "file": "09-charger-light-guide.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/09-charger-light-guide.stl",
+          "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+          "filament_slot": 3,
+          "exact_mesh_match": true,
+          "bed_min": [
+            129.85000037999998,
+            126.05003690999999,
+            3.0000000039720476e-08
+          ],
+          "bed_max": [
+            136.14999962000002,
+            129.94996309,
+            2.79976657
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1392,
+          "volume_mm3": 40.4053,
+          "bounds_mm": [
+            6.3,
+            3.89993,
+            2.79977
+          ]
+        },
+        {
+          "file": "09-charger-light-guide.stl",
+          "source": "output/on-air-v213-captive-light-guides/stl/09-charger-light-guide.stl",
+          "source_sha256": "0878a99817a782eee9a2c06af67c47ca7db0b3b6915c9d1b83e98e11ba59611c",
+          "filament_slot": 3,
+          "exact_mesh_match": true,
+          "bed_min": [
+            141.85000037999998,
+            126.05003690999999,
+            3.0000000039720476e-08
+          ],
+          "bed_max": [
+            148.14999962000002,
+            129.94996309,
+            2.79976657
+          ],
+          "closed_shells": 1,
+          "consistent_winding": true,
+          "triangles": 1392,
+          "volume_mm3": 40.4053,
+          "bounds_mm": [
+            6.3,
+            3.89993,
+            2.79977
+          ]
+        }
+      ]
+    }
+  ],
+  "slicing": [
+    {
+      "plate": 1,
+      "seconds": 14542,
+      "filaments": [
+        {
+          "filament_id": "GFL03",
+          "id": 1,
+          "main_used_g": 53.869258880615234,
+          "total_used_g": 53.869258880615234
+        }
+      ],
+      "first_layer_inspection_disabled": true,
+      "no_manual_pause": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "warnings": [],
+      "support_only_on": "11 rear guide keeper"
+    },
+    {
+      "plate": 2,
+      "seconds": 3207,
+      "filaments": [
+        {
+          "filament_id": "GFL03",
+          "id": 1,
+          "main_used_g": 7.076559543609619,
+          "total_used_g": 7.076560020446777
+        }
+      ],
+      "first_layer_inspection_disabled": true,
+      "no_manual_pause": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "warnings": [],
+      "support_only_on": "07 reset button"
+    },
+    {
+      "plate": 3,
+      "seconds": 3891,
+      "filaments": [
+        {
+          "filament_id": "GFL03",
+          "id": 1,
+          "main_used_g": 8.15308666229248,
+          "total_used_g": 8.843635559082031
+        },
+        {
+          "filament_id": "GFL03",
+          "id": 2,
+          "main_used_g": 0.45313939452171326,
+          "total_used_g": 1.3095452785491943
+        }
+      ],
+      "first_layer_inspection_disabled": true,
+      "no_manual_pause": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "warnings": [],
+      "insert_colors": {
+        "black_base_mm": 1.6,
+        "first_white_layer_z_mm": 1.7,
+        "automatic_color_changes": 1,
+        "all_25_layers_correct": true,
+        "purge_tower_generated": true
+      }
+    },
+    {
+      "plate": 4,
+      "seconds": 805,
+      "filaments": [
+        {
+          "filament_id": "GFG99",
+          "id": 3,
+          "main_used_g": 0.5501180291175842,
+          "total_used_g": 0.5501180291175842
+        }
+      ],
+      "first_layer_inspection_disabled": true,
+      "no_manual_pause": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "warnings": [],
+      "optical_fill": {
+        "long_runs_parallel_to_guide_axis": 332,
+        "off_axis_runs": 0,
+        "first_layer_mm": 0.1,
+        "maximum_extrusion_speed_mm_s": 20,
+        "walls": 1,
+        "infill_percent": 100,
+        "support_and_brim": false
+      }
+    }
+  ],
+  "total_estimated_seconds": 22445,
+  "source_meshes_unchanged": true,
+  "printer_job_sent": false
+}

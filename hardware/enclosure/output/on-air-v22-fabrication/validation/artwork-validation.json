@@ -1,0 +1,30 @@
+[
+  {
+    "file": "02-acrylic-REAR-engrave-and-cut.svg",
+    "mm": [
+      104,
+      38
+    ],
+    "mirrored": true,
+    "cut_contours": 1,
+    "engrave_contours": 8,
+    "text_is_paths": true,
+    "kerf_offset_mm": 0,
+    "exact_shared_master_within_mm": 6e-06,
+    "sha256": "6c4b0fe0b812fbee860b1d5b50679550d71a6eb855374c4ec104ca552d768efa"
+  },
+  {
+    "file": "03-optional-laminate-FRONT-engrave-and-cut.svg",
+    "mm": [
+      104,
+      38
+    ],
+    "mirrored": false,
+    "cut_contours": 1,
+    "engrave_contours": 8,
+    "text_is_paths": true,
+    "kerf_offset_mm": 0,
+    "exact_shared_master_within_mm": 6e-06,
+    "sha256": "dfd93c0f794e4fa675aad8f24a46d36b312c68da89156a684fb8beb3fed42fcf"
+  }
+]

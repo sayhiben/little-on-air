@@ -1,0 +1,14 @@
+{
+  "project": "on-air-v28-X1C-eSUN-PLA-plus-fit-checks.3mf",
+  "opened_packaged_project": true,
+  "slice_ok_observed": true,
+  "printer": "Bambu Lab X1 Carbon",
+  "nozzle_mm": 0.4,
+  "flow": "Standard",
+  "plate": "Textured PEI",
+  "objects": ["99-upper-housing-complete-fit-section.stl", "07-front-guided-reset-button.stl"],
+  "total_filament_g": 22.40,
+  "prepare_time": "8m19s",
+  "total_time": "1h22m",
+  "print_sent": false
+}

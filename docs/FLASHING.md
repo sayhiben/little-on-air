@@ -1,5 +1,12 @@
 # Flashing
 
+For the **XIAO ESP32-S3 OLED/encoder controller**, use the
+[PlatformIO USB flashing instructions](../apps/controller-esp32s3/README.md#build-flash-and-inspect).
+The UF2 instructions below apply only to the legacy nRF52840 boards.
+
+For the assembled four-pixel nRF52840 display, use the optional receiver build
+and USB/battery connection sequence in [the paired bench guide](PAIRED_BENCH.md).
+
 ## Release images
 
 Download the controller and receiver UF2 files from the matching GitHub

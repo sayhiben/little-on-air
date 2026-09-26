@@ -111,6 +111,10 @@ int main(void)
 		return err;
 	}
 	LOG_INF("settings loaded");
+	err = loa_reset_input_resolve(&input);
+	if (err != 0) {
+		return err;
+	}
 
 	if (input.factory_reset) {
 		(void)loa_ble_client_unpair_all();

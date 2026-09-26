@@ -1,0 +1,377 @@
+{
+  "passed": true,
+  "projects": [
+    {
+      "name": "on-air-v213-X1C-eSUN-PLA-plus-retention-housings.3mf",
+      "objects": 3,
+      "source_and_sliced_meshes_match_STLs": true,
+      "first_layer_inspection_disabled": true,
+      "no_pauses": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "support_confined_to_keeper_11": true,
+      "support_xy_bounds_mm": [
+        [
+          197.775,
+          116.825
+        ],
+        [
+          216.618,
+          135.183
+        ]
+      ],
+      "slicer": {
+        "error_string": "Success.",
+        "export_time": 768,
+        "layer_height": 0.20000000298023224,
+        "plate_index": 0,
+        "prepare_time": 49,
+        "return_code": 0,
+        "sliced_plates": [
+          {
+            "feature_type_times": {
+              "Bottom surface": 493.9522399902344,
+              "Bridge": 667.5416259765625,
+              "Brim": 173.31842041015625,
+              "Custom": 485.2394714355469,
+              "Flush": 29.0,
+              "Gap infill": 11.47125244140625,
+              "Inner wall": 3018.63330078125,
+              "Internal solid infill": 2037.7930908203125,
+              "Outer wall": 2277.23095703125,
+              "Overhang wall": 92.2906265258789,
+              "Sparse infill": 310.39739990234375,
+              "Support": 27.925569534301758,
+              "Support interface": 8.208118438720703,
+              "Support transition": 7.499473571777344,
+              "Top surface": 686.4443969726562,
+              "Travel": 1010.41357421875,
+              "Undefined": 995.503173828125
+            },
+            "filament_change_times": 0,
+            "filaments": [
+              {
+                "filament_id": "GFL03",
+                "id": 1,
+                "main_used_g": 55.076839447021484,
+                "total_used_g": 55.076839447021484
+              }
+            ],
+            "generate_support_material_time": 41,
+            "id": 1,
+            "infill_time": 338,
+            "layer_filament_change": 0,
+            "main_predication": 10794.916015625,
+            "make_perimeters_time": 362,
+            "obj_cached_cnt": 0,
+            "objects": [
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 11.0,
+                  "width": 120.0,
+                  "x": 55.0,
+                  "y": 54.0,
+                  "z": 0.0
+                },
+                "id": 5,
+                "name": "01-front-optical-bezel.stl",
+                "triangle_count": 3442
+              },
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 14.5,
+                  "width": 120.0,
+                  "x": 55.0,
+                  "y": 140.0,
+                  "z": 0.0
+                },
+                "id": 9,
+                "name": "05-rear-electronics-housing.stl",
+                "triangle_count": 5120
+              },
+              {
+                "bbox": {
+                  "depth": 14.64999771118164,
+                  "height": 4.999999046325684,
+                  "width": 14.950006484985352,
+                  "x": 199.52499389648438,
+                  "y": 120.67500305175781,
+                  "z": -2.3162842310853193e-08
+                },
+                "id": 13,
+                "name": "11-rear-light-guide-keeper.stl",
+                "triangle_count": 1972
+              }
+            ],
+            "sliced_time": 1797,
+            "sliced_time_with_cache": 916,
+            "total_predication": 11323.21484375,
+            "triangle_count": 10534,
+            "warning_message": ""
+          }
+        ],
+        "sparse_infill_density": 25.0,
+        "upward_compatible_machine": [
+          "Bambu Lab P1S 0.4 nozzle",
+          "Bambu Lab P1P 0.4 nozzle",
+          "Bambu Lab X1 0.4 nozzle",
+          "Bambu Lab X1E 0.4 nozzle",
+          "Bambu Lab A1 0.4 nozzle",
+          "Bambu Lab H2D 0.4 nozzle",
+          "Bambu Lab H2D Pro 0.4 nozzle",
+          "Bambu Lab H2S 0.4 nozzle",
+          "Bambu Lab P2S 0.4 nozzle",
+          "Bambu Lab H2C 0.4 nozzle",
+          "Bambu Lab X2D 0.4 nozzle",
+          "Bambu Lab A2L 0.4 nozzle"
+        ],
+        "wall_loops": 4
+      }
+    },
+    {
+      "name": "on-air-v213-X1C-PETG-retention-housings.3mf",
+      "objects": 3,
+      "source_and_sliced_meshes_match_STLs": true,
+      "first_layer_inspection_disabled": true,
+      "no_pauses": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "support_confined_to_keeper_11": true,
+      "support_xy_bounds_mm": [
+        [
+          197.775,
+          116.825
+        ],
+        [
+          216.618,
+          135.183
+        ]
+      ],
+      "slicer": {
+        "error_string": "Success.",
+        "export_time": 589,
+        "layer_height": 0.20000000298023224,
+        "plate_index": 0,
+        "prepare_time": 42,
+        "return_code": 0,
+        "sliced_plates": [
+          {
+            "feature_type_times": {
+              "Bottom surface": 493.9522399902344,
+              "Bridge": 670.5291748046875,
+              "Brim": 173.31842041015625,
+              "Custom": 485.2394714355469,
+              "Flush": 29.0,
+              "Gap infill": 13.488598823547363,
+              "Inner wall": 3018.712890625,
+              "Internal solid infill": 2065.92724609375,
+              "Outer wall": 2277.231201171875,
+              "Overhang wall": 92.2906265258789,
+              "Sparse infill": 319.2649841308594,
+              "Support": 27.95172691345215,
+              "Support interface": 8.208111763000488,
+              "Support transition": 7.579049587249756,
+              "Top surface": 684.972412109375,
+              "Travel": 1040.785888671875,
+              "Undefined": 1025.875244140625
+            },
+            "filament_change_times": 0,
+            "filaments": [
+              {
+                "filament_id": "GFG99",
+                "id": 1,
+                "main_used_g": 54.25035095214844,
+                "total_used_g": 54.25034713745117
+              }
+            ],
+            "generate_support_material_time": 43,
+            "id": 1,
+            "infill_time": 365,
+            "layer_filament_change": 0,
+            "main_predication": 10866.03125,
+            "make_perimeters_time": 406,
+            "obj_cached_cnt": 0,
+            "objects": [
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 11.0,
+                  "width": 120.0,
+                  "x": 55.0,
+                  "y": 54.0,
+                  "z": 0.0
+                },
+                "id": 5,
+                "name": "01-front-optical-bezel.stl",
+                "triangle_count": 3442
+              },
+              {
+                "bbox": {
+                  "depth": 60.0,
+                  "height": 14.5,
+                  "width": 120.0,
+                  "x": 55.0,
+                  "y": 140.0,
+                  "z": 0.0
+                },
+                "id": 9,
+                "name": "05-rear-electronics-housing.stl",
+                "triangle_count": 5120
+              },
+              {
+                "bbox": {
+                  "depth": 14.64999771118164,
+                  "height": 4.999999046325684,
+                  "width": 14.950006484985352,
+                  "x": 199.52499389648438,
+                  "y": 120.67500305175781,
+                  "z": -2.3162842310853193e-08
+                },
+                "id": 13,
+                "name": "11-rear-light-guide-keeper.stl",
+                "triangle_count": 1972
+              }
+            ],
+            "sliced_time": 1847,
+            "sliced_time_with_cache": 901,
+            "total_predication": 11394.330078125,
+            "triangle_count": 10534,
+            "warning_message": ""
+          }
+        ],
+        "sparse_infill_density": 25.0,
+        "upward_compatible_machine": [
+          "Bambu Lab P1S 0.4 nozzle",
+          "Bambu Lab P1P 0.4 nozzle",
+          "Bambu Lab X1 0.4 nozzle",
+          "Bambu Lab X1E 0.4 nozzle",
+          "Bambu Lab A1 0.4 nozzle",
+          "Bambu Lab H2D 0.4 nozzle",
+          "Bambu Lab H2D Pro 0.4 nozzle",
+          "Bambu Lab H2S 0.4 nozzle",
+          "Bambu Lab P2S 0.4 nozzle",
+          "Bambu Lab H2C 0.4 nozzle",
+          "Bambu Lab X2D 0.4 nozzle",
+          "Bambu Lab A2L 0.4 nozzle"
+        ],
+        "wall_loops": 4
+      }
+    },
+    {
+      "name": "on-air-v213-clear-PETG-three-light-guides.3mf",
+      "objects": 3,
+      "source_and_sliced_meshes_match_STLs": true,
+      "first_layer_inspection_disabled": true,
+      "no_pauses": true,
+      "bed_leveling_and_heater_shutdown_present": true,
+      "long_straight_fill_runs_parallel_to_guide_axes": {
+        "Bottom surface": 9,
+        "Internal solid infill": 224,
+        "Sparse infill": 99
+      },
+      "off_axis_fill_runs": [],
+      "direction_audit_threshold_mm": 1,
+      "slicer": {
+        "error_string": "Success.",
+        "export_time": 310,
+        "layer_height": 0.10000000149011612,
+        "plate_index": 0,
+        "prepare_time": 40,
+        "return_code": 0,
+        "sliced_plates": [
+          {
+            "feature_type_times": {
+              "Bottom surface": 5.411088466644287,
+              "Custom": 902.619140625,
+              "Flush": 29.0,
+              "Gap infill": 11.380415916442871,
+              "Internal solid infill": 62.68796157836914,
+              "Outer wall": 103.35260772705078,
+              "Sparse infill": 64.71714782714844,
+              "Travel": 40.667198181152344,
+              "Undefined": 25.37140655517578
+            },
+            "filament_change_times": 0,
+            "filaments": [
+              {
+                "filament_id": "GFG99",
+                "id": 1,
+                "main_used_g": 0.5501180291175842,
+                "total_used_g": 0.5501180291175842
+              }
+            ],
+            "generate_support_material_time": 1,
+            "id": 1,
+            "infill_time": 6,
+            "layer_filament_change": 0,
+            "main_predication": 259.241455078125,
+            "make_perimeters_time": 10,
+            "obj_cached_cnt": 0,
+            "objects": [
+              {
+                "bbox": {
+                  "depth": 4.399051666259766,
+                  "height": 2.9000015258789062,
+                  "width": 17.60000228881836,
+                  "x": 101.19999694824219,
+                  "y": 125.80047607421875,
+                  "z": 3.7060548407907845e-08
+                },
+                "id": 5,
+                "name": "08-captive-front-rgb-guide.stl",
+                "triangle_count": 1656
+              },
+              {
+                "bbox": {
+                  "depth": 3.8999295234680176,
+                  "height": 2.7997665405273438,
+                  "width": 6.299993515014648,
+                  "x": 129.85000610351562,
+                  "y": 126.05003356933594,
+                  "z": 2.9736327178397914e-08
+                },
+                "id": 9,
+                "name": "09-charger-light-guide.stl",
+                "triangle_count": 1392
+              },
+              {
+                "bbox": {
+                  "depth": 3.8999295234680176,
+                  "height": 2.7997665405273438,
+                  "width": 6.299993515014648,
+                  "x": 141.85000610351562,
+                  "y": 126.05003356933594,
+                  "z": 2.9736327178397914e-08
+                },
+                "id": 13,
+                "name": "09-charger-light-guide.stl",
+                "triangle_count": 1392
+              }
+            ],
+            "sliced_time": 251,
+            "sliced_time_with_cache": 225,
+            "total_predication": 1204.5343017578125,
+            "triangle_count": 4440,
+            "warning_message": ""
+          }
+        ],
+        "sparse_infill_density": 100.0,
+        "upward_compatible_machine": [
+          "Bambu Lab P1S 0.4 nozzle",
+          "Bambu Lab P1P 0.4 nozzle",
+          "Bambu Lab X1 0.4 nozzle",
+          "Bambu Lab X1E 0.4 nozzle",
+          "Bambu Lab A1 0.4 nozzle",
+          "Bambu Lab H2D 0.4 nozzle",
+          "Bambu Lab H2D Pro 0.4 nozzle",
+          "Bambu Lab H2S 0.4 nozzle",
+          "Bambu Lab P2S 0.4 nozzle",
+          "Bambu Lab H2C 0.4 nozzle",
+          "Bambu Lab X2D 0.4 nozzle",
+          "Bambu Lab A2L 0.4 nozzle"
+        ],
+        "wall_loops": 1
+      }
+    }
+  ]
+}

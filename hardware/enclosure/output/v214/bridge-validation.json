@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "method": "Exact piecewise-linear path/mesh-section intersections; section depth 8.0 mm, roof bridge layer 8.3 mm. Restores X1C extruder Y offset. Unsupported centerline lengths do not subtract bead overlap. Arc connector paths excluded; longest such chord about 2 mm.",
+  "roof_G1_paths": 1250,
+  "max_extrusion_length_mm": 17.49947862080469,
+  "max_unsupported_centerline_mm": 14.477304238013387,
+  "longest_unsupported_paths": [
+    {
+      "a_cad": [
+        -2.7109999999999985,
+        7.5260000000000105
+      ],
+      "b_cad": [
+        7.525999999999996,
+        -2.7110000000000127
+      ],
+      "extrusion_length_mm": 14.477304238013387,
+      "max_unsupported_centerline_mm": 14.477304238013387
+    },
+    {
+      "a_cad": [
+        122.71100000000001,
+        52.479
+      ],
+      "b_cad": [
+        112.47900000000001,
+        62.711
+      ],
+      "extrusion_length_mm": 14.470233170201508,
+      "max_unsupported_centerline_mm": 14.470233170201508
+    },
+    {
+      "a_cad": [
+        6.992000000000004,
+        -2.7110000000000127
+      ],
+      "b_cad": [
+        -2.7109999999999985,
+        6.99199999999999
+      ],
+      "extrusion_length_mm": 13.722114195706146,
+      "max_unsupported_centerline_mm": 13.722114195706146
+    },
+    {
+      "a_cad": [
+        113.013,
+        62.711
+      ],
+      "b_cad": [
+        122.71100000000001,
+        53.013000000000005
+      ],
+      "extrusion_length_mm": 13.715043127894276,
+      "max_unsupported_centerline_mm": 13.715043127894276
+    },
+    {
+      "a_cad": [
+        -2.7109999999999985,
+        6.457999999999998
+      ],
+      "b_cad": [
+        6.457999999999998,
+        -2.7110000000000127
+      ],
+      "extrusion_length_mm": 12.966924153398914,
+      "max_unsupported_centerline_mm": 12.966924153398914
+    },
+    {
+      "a_cad": [
+        122.71100000000001,
+        53.547
+      ],
+      "b_cad": [
+        113.547,
+        62.711
+      ],
+      "extrusion_length_mm": 12.959853085587055,
+      "max_unsupported_centerline_mm": 12.959853085587055
+    },
+    {
+      "a_cad": [
+        5.924000000000007,
+        -2.7110000000000127
+      ],
+      "b_cad": [
+        -2.7109999999999985,
+        5.924000000000007
+      ],
+      "extrusion_length_mm": 12.211734111091692,
+      "max_unsupported_centerline_mm": 12.211734111091692
+    },
+    {
+      "a_cad": [
+        114.08099999999999,
+        62.711
+      ],
+      "b_cad": [
+        122.71100000000001,
+        54.081
+      ],
+      "extrusion_length_mm": 12.204663043279824,
+      "max_unsupported_centerline_mm": 12.204663043279824
+    },
+    {
+      "a_cad": [
+        -2.7109999999999985,
+        5.389999999999986
+      ],
+      "b_cad": [
+        5.390000000000001,
+        -2.7110000000000127
+      ],
+      "extrusion_length_mm": 11.456544068784442,
+      "max_unsupported_centerline_mm": 11.456544068784442
+    },
+    {
+      "a_cad": [
+        122.71100000000001,
+        54.614999999999995
+      ],
+      "b_cad": [
+        114.61500000000001,
+        62.711
+      ],
+      "extrusion_length_mm": 11.449473000972583,
+      "max_unsupported_centerline_mm": 11.449473000972583
+    }
+  ]
+}
