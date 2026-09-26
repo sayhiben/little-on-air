@@ -1,5 +1,10 @@
 # ESP32-S3 controller bench record
 
+> Historical bench record: commands, paths and build variants below describe
+> the recorded revision. Use the [current developer guide](../CONTRIBUTING.md)
+> for today's build/flash commands. See [firmware history](HISTORY.md) for the
+> retired source revision. Observations and image hashes below are retained.
+
 This is the initial controller-only record. The subsequent assembled-pair
 session is recorded in [the paired bench guide](PAIRED_BENCH.md).
 

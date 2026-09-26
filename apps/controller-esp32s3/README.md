@@ -135,10 +135,11 @@ application-only firmware updates preserve the bond.
 If the controller still holds an old bond after physically resetting the sign,
 choose **Forget this sign** there before pressing to connect. Recovery needs no
 computer or special firmware. See [the pairing/power update](../../docs/PAIRING_POWER_UPDATE.md)
-for the fix, build profiles, and hardware validation. Earlier receiver firmware
-still requires the [diagnostic USB recovery](../../docs/PAIRED_BENCH.md#diagnostic-receiver-usb-commands).
+for the recorded hardware validation. Use the
+[current build and service guide](../../CONTRIBUTING.md#build-and-flash) for
+this device pair; earlier firmware versions are not maintained.
 
-## Behavior and compatibility
+## Current behavior
 
 The shared C protocol/status implementations are built directly from the root
 `src/` directory. UUIDs and the six-byte version-1 payload are unchanged. The
@@ -177,7 +178,7 @@ as in the original receiver firmware.
 Host tests use CMake, a C/C++ compiler, and CTest (Linux/macOS or WSL):
 
 ```sh
-cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake -S tests/host -B build/desk-tests
 cmake --build build/desk-tests
 ctest --test-dir build/desk-tests --output-on-failure
 ```

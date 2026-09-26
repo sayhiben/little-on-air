@@ -1,5 +1,10 @@
 # Six moods and a quieter connection
 
+> Historical bench record: commands, paths and build variants below describe
+> the recorded revision. Use the [current developer guide](../CONTRIBUTING.md)
+> for today's build/flash commands. See [firmware history](HISTORY.md) for the
+> retired source revision. Observations and image hashes below are retained.
+
 This is a historical bench record. The old build trees were removed during
 workspace cleanup; retained firmware snapshots, logs and simulation evidence
 are listed in the [workspace guide](WORKSPACE.md#preserved-local-work).

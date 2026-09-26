@@ -9,8 +9,6 @@ project(little_on_air_unit_tests)
 
 target_sources(testbinary PRIVATE
   src/main.c
-  ../../src/controller_fsm.c
-  ../../src/patterns.c
   ../../src/protocol.c
   ../../src/receiver_processor.c
   ../../src/record.c

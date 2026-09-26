@@ -12,18 +12,16 @@
 
 #define PIXEL_NODE DT_ALIAS(loa_pixels)
 
-/* Keep this bench variant tied to the existing wiring, timing and GRB mapping.
+/* Keep the sign driver tied to the existing wiring, timing and GRB mapping.
  * Fail a build rather than silently encode a different strip configuration.
  */
-BUILD_ASSERT(DT_NODE_HAS_STATUS(PIXEL_NODE, okay), "The front pixel overlay is required");
+BUILD_ASSERT(DT_NODE_HAS_STATUS(PIXEL_NODE, okay), "The sign pixel configuration is required");
 BUILD_ASSERT(DT_PROP(PIXEL_NODE, chain_length) == LOA_WS2812_MAX_PIXELS);
 BUILD_ASSERT(DT_PROP(PIXEL_NODE, spi_max_frequency) == LOA_WS2812_SPI_HZ);
 BUILD_ASSERT(LOA_WS2812_SPI_HZ <= DT_PROP(DT_BUS(PIXEL_NODE), max_frequency),
 	     "SPI bus must support the requested clock without clamping");
-#if defined(CONFIG_LOA_PIXELS_TIMING_375NS)
 BUILD_ASSERT(DT_NODE_HAS_COMPAT(PIXEL_NODE, loa_padded_ws2812_spi),
 	     "Ten-bit symbols require the application-owned pixel binding");
-#endif
 BUILD_ASSERT(DT_PROP(PIXEL_NODE, reset_delay) == LOA_WS2812_RESET_US);
 BUILD_ASSERT(DT_PROP(PIXEL_NODE, bits_per_symbol) == LOA_WS2812_SYMBOL_BITS);
 BUILD_ASSERT(DT_PROP(PIXEL_NODE, spi_zero_frame) == LOA_WS2812_ZERO_SYMBOL);

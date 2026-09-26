@@ -1,5 +1,10 @@
 # Controller and four-pixel display bench setup
 
+> Historical bench record: commands, paths and build variants below describe
+> the recorded revision. Use the [current developer guide](../CONTRIBUTING.md)
+> for today's build/flash commands. See [firmware history](HISTORY.md) for the
+> retired source revision. Observations and image hashes below are retained.
+
 Current pairing recovery, independent red power indication, and brightness
 settings are documented in the [pairing/power update](PAIRING_POWER_UPDATE.md).
 The results below preserve the earlier firmware's test history.

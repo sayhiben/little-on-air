@@ -26,10 +26,9 @@ manual. [AGENTS.md](AGENTS.md) is the shared guidance for coding agents;
 | Component | Current implementation | Entry point |
 | --- | --- | --- |
 | Desk controller | USB-powered XIAO ESP32-S3, OLED, rotary push encoder, one NeoPixel; Arduino/PlatformIO; firmware `esp32s3-0.4.0` | [Application](apps/controller-esp32s3/README.md) |
-| Sign receiver | XIAO nRF52840, Zephyr 4.3.0, four external pixels, independent red power indicator | [Receiver source](apps/receiver/src/main.c) and [375 ns profile](docs/PIXEL_TIMING_375NS_BUILD.md) |
+| Sign receiver | XIAO nRF52840, Zephyr 4.3.0, four external pixels, independent red power indicator | [Receiver source](apps/receiver/src/main.c) and [default build](#four-pixel-nrf52840-receiver) |
 | Controller enclosure | Igor measured v4, including measured OLED/encoder/strip envelopes | [Design](hardware/controller/igor-measured-v4/README.md) |
 | Sign enclosure | v2.15, with open-backed frame wire channels and its original housing/yoke | [Tooling](hardware/enclosure/v215/README.md) and [manufacturing bundle](release/little-on-air-enclosure-v2.15/README.md) |
-| Legacy controller | XIAO nRF52840 reset-button controller; Zephyr; still built and tested | [Source](apps/controller/src/main.c) |
 
 Use current source and build configuration for implemented behavior, the current
 design guides for assembly, and dated bench records for physical observations.
@@ -45,17 +44,22 @@ but a fresh clone does not contain them. Check their manifests and hashes before
 reusing them. The [current pairing/power record](docs/PAIRING_POWER_UPDATE.md)
 identifies the physically checked application images and observations.
 
+This is one bespoke device pair. Only the current ESP32-S3 controller and
+four-pixel nRF52840 receiver are maintained. Retired firmware and comparison
+profiles are available through Git history, not active build targets; see
+[firmware history](docs/HISTORY.md). USB diagnostics instrument the same current
+receiver firmware.
+
 ## Repository map
 
 | Path | Responsibility |
 | --- | --- |
 | `apps/controller-esp32s3/` | Current Arduino application, pinned PlatformIO packages, host tests and build scripts |
 | `apps/receiver/` | Zephyr peripheral application, GATT server, reset intent and padded SPI transport |
-| `apps/controller/` | Legacy Zephyr central application and BLE adapter |
-| `include/little_on_air/`, `src/` | Shared C interfaces and implementation: protocol, status, persistence, reset, state machine and output |
-| `boards/` | Base nRF52840 overlay, pixel pin/timing overlays and USB debug overlay |
-| `cmake/loa-common.cmake` | Shared Zephyr sources and brightness/calibration definitions |
-| `tests/` | Zephyr core regressions and real-GFX OLED rendering harness |
+| `include/little_on_air/`, `src/` | Shared C interfaces and implementation: protocol, status, receiver processing, persistence, reset and pixel encoding |
+| `boards/` | Complete nRF52840 sign overlay and optional USB debug overlay |
+| `apps/receiver/CMakeLists.txt` | Receiver sources and brightness/calibration definitions |
+| `tests/` | Host checks for both devices, Zephyr core regressions and real-GFX OLED rendering harness |
 | `tools/` | Pixel simulations, OLED/manual rendering, serial helpers and paired bench runner |
 | `.github/workflows/`, `.github/actions/` | CI, release workflow and cached Zephyr setup |
 | `hardware/enclosure/v215/`, `hardware/enclosure/output/v215/` | Current receiver tooling and generated CAD/print evidence |
@@ -245,6 +249,8 @@ Unchanged reads must not wake the OLED, rewrite flash or restart animations.
 | [ble_server.c](apps/receiver/src/ble_server.c) | GATT permissions and callbacks, pairing windows, advertisement policy, indications and diagnostic commands |
 | [pair_reset.c](apps/receiver/src/pair_reset.c) | Persist paired reset intent and schedule restart |
 | [device_indicator.c](apps/receiver/src/device_indicator.c) | Independent red power/pairing indicator |
+| [mood_indicator.c](apps/receiver/src/mood_indicator.c) | Schedule current moods without restarting unchanged animations |
+| [status_output.c](apps/receiver/src/status_output.c) | Drive front pixels and independent onboard power light |
 | [padded_pixels.c](apps/receiver/src/padded_pixels.c) | SPI transfer of explicitly encoded WS2812 frames with low reset padding |
 
 The receiver owns the truth. Its readable state and acknowledgement reflect
@@ -260,22 +266,15 @@ is about once per second; the unpaired pairing window uses faster advertising.
 | `protocol.c` | Versioned wire encode/decode and validation |
 | `receiver_processor.c` | Validate, deduplicate, persist, apply and acknowledge |
 | `record.c`, `store.c` | Durable record encoding/CRC and Zephyr settings adapter |
-| `controller_fsm.c` | Legacy reset-driven controller's portable transaction state machine |
 | `reset_gesture.c`, `reset_input.c` | Paced reset counting, persistence and reset-reason handling |
-| `patterns.c`, `indicator.c` | Time-driven indicator patterns and scheduling |
-| `status_output_pwm.c` | Mood output, calibrated onboard PWM and external-pixel behavior |
 | `ws2812_frame.c` | SPI symbol encoding and leading/trailing reset padding |
 
-Public interfaces are in [include/little_on_air/](include/little_on_air/).
-[loa-common.cmake](cmake/loa-common.cmake) brings the shared implementation into
-the Zephyr applications. Platform-specific adapters stay in the applications;
-keep portable behavior in shared C where practical.
-
-The legacy Zephyr controller uses reset-pin boots as button presses: it advances
-from the last confirmed state and runs a transaction, then returns to its low
-power lifecycle. A battery boot reads without advancing. This behavior belongs
-to `apps/controller/`; it is not the current ESP32-S3 knob controller's startup
-behavior. See [the original architecture](docs/ARCHITECTURE.md).
+Portable interfaces are in [include/little_on_air/](include/little_on_air/).
+[The receiver CMake file](apps/receiver/CMakeLists.txt) compiles the portable core
+and its hardware adapters. Receiver-only output/scheduling code and private
+headers live under `apps/receiver/src/`. The ESP32-S3 application compiles shared
+status/protocol sources through its PlatformIO script. Keep portable behavior
+in shared C and hardware-specific behavior in its owning application.
 
 ### Output and timing
 
@@ -294,9 +293,9 @@ measurements. Older bench documents may describe an earlier brightness setting.
 The assembled sign uses the repository's padded SPI driver: 8 MHz SPI,
 10-bit symbols, `0x380` for zero and `0x3f0` for one. Each LED bit is 1.25 µs;
 zero is 375 ns high/875 ns low, one is 750 ns high/500 ns low. Leading and trailing
-low padding provide at least 300 µs reset time. The baseline padded profile uses
-4 MHz/5-bit symbols (`0x10`, `0x1c`). Validate the profile against its generated
-devicetree header, not only a hand-written timing table.
+low padding provide at least 300 µs reset time. This is the only supported
+transport configuration. Validate it against the generated devicetree header,
+not only a hand-written timing table.
 
 The independent red power light is steady when bonded, 250 ms on/250 ms off
 during pairing, and 1800 ms on/200 ms off when unpaired outside the window. Mood
@@ -313,7 +312,7 @@ All UUIDs share the suffix `-6b7e-4c80-9f2a-f9b9d7e2a601`:
 | `7f6c0000` | Service | Primary service |
 | `7f6c0001` | Command | Encrypted write with response; six-byte mood command |
 | `7f6c0002` | State | Encrypted read and indication; same six-byte layout |
-| `7f6c0003` | Pixel test | Pixel builds only; encrypted read/write of version, index, R, G, B |
+| `7f6c0003` | Pixel test | Encrypted read/write of version, index, R, G, B |
 | `7f6c0004` | Pairing control | Current bonded/encrypted peer only; six-byte Forget request |
 
 Version-1 mood messages:
@@ -326,8 +325,8 @@ Version-1 mood messages:
 
 For example, On Air with transaction `0x12345678` is
 `01 78 56 34 12 02`. Reject malformed lengths, unknown versions and unknown
-statuses. Request and Special extend the accepted values without changing the
-six-byte version-1 layout; both peers still need firmware that supports them.
+statuses. All six moods use this layout. Update the two devices as a matched pair; the
+project does not maintain compatibility with retired firmware versions.
 
 ~~~mermaid
 sequenceDiagram
@@ -391,7 +390,7 @@ encrypted connection, persists `loa_pair/pending`, then schedules a reboot after
 1.5 seconds. Startup removes bonds and saved mood, clears the durable intent,
 and opens a pairing window in Off. Interrupted cleanup is retried at boot. The
 controller disconnects before deleting its own keys. If the sign is unreachable
-or lacks pairing control, explicit Forget still clears the controller's keys
+or cannot confirm the reset intent, explicit Forget still clears the controller's keys
 and displays physical recovery instructions.
 
 Five physical reset-pin boots about two seconds apart trigger the same receiver
@@ -517,42 +516,27 @@ See [application flashing details](apps/controller-esp32s3/README.md#build-flash
 
 ### Four-pixel nRF52840 receiver
 
-This is the current assembled sign's normal firmware:
+The normal receiver build includes all four pixels, the 375 ns padded SPI
+transport, encrypted diagnostics and the independent red power indicator:
 
 ~~~sh
-west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-timing375 -- \
-  -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf" \
-  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
-~~~
-
-The order matters: the timing overlay overrides the baseline pixel settings.
-The application's CMake configuration already supplies the base board overlay;
-use `EXTRA_DTC_OVERLAY_FILE` for additions. The `.conf` files are resolved in
-`apps/receiver/`; the overlay paths above are absolute.
-
-### Default and baseline builds
-
-These remain part of CI and support legacy/reference behavior. The default
-receiver has no external-pixel chain; do not use it as the assembled sign's
-four-pixel firmware.
-
-~~~sh
-west build -b xiao_ble/nrf52840 apps/controller -d build/controller
 west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
-west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-padded -- \
-  -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf" \
-  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay"
 ~~~
+
+The complete pin map and timing live in `boards/xiao_ble_nrf52840.overlay`;
+`apps/receiver/prj.conf` enables the required drivers. There are no additional
+pixel fragments, alternative profiles or onboard-only firmware target. The
+driver asserts the actual devicetree timing, mapping and DMA limits at build time.
 
 ### USB diagnostic receiver
 
 Normal builds disable USB console/logging. To build the matching four-pixel
-profile with native USB CDC diagnostics, append both debug configurations:
+profile with native USB CDC diagnostics, add the debug configuration and overlay:
 
 ~~~sh
 west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-debug -- \
-  -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf;debug.conf" \
-  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay;$PWD/boards/xiao_ble_nrf52840_debug.overlay"
+  -DEXTRA_CONF_FILE=debug.conf \
+  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_debug.overlay"
 ~~~
 
 USB diagnostic operation in OFF/PROGRAM is not the same electrical setup as
@@ -577,8 +561,8 @@ for those paired tests and record the power arrangement.
 Follow [FLASHING.md](docs/FLASHING.md) for bootloader details and board variants.
 Preserve the factory bootloader, partition layout, reset pin and settings. Do not
 mass-erase, overwrite UICR or restore historical full-flash backups as a routine
-update. Backups can contain stale device identities and bond keys. The legacy
-nRF52840 controller UF2 is not firmware for the ESP32-S3 board.
+update. Backups can contain stale device identities and bond keys. The current
+controller takes ESP32 binary images; only the receiver takes UF2.
 
 ## Validation
 
@@ -589,28 +573,31 @@ dated observation with device configuration, not just a green CI badge.
 
 | Change | Required relevant checks |
 | --- | --- |
-| Shared protocol/state/persistence/reset | Host regressions, Zephyr unit suite, both Zephyr apps and affected pixel profiles; pairing/recovery bench checks if hardware behavior changes |
+| Shared protocol/state/persistence/reset | Host regressions, Zephyr unit suite, ESP32 build and normal/diagnostic receiver builds; pairing/recovery bench checks if hardware behavior changes |
 | ESP32 input/menu/BLE/bond handling | Host regressions, PlatformIO build; actual control/reconnect/Forget tests when behavior changes |
 | OLED layout/text | PlatformIO dependencies, actual-GFX renderer, bounds checks and visual inspection; refresh manual images when affected |
-| Pixel output/timing | Host output tests, padded and timing375 receiver builds, matching-header waveform simulation, optical/electrical bench observation |
+| Pixel output/timing | Host output tests, normal and diagnostic receiver builds, matching-header waveform simulation, optical/electrical bench observation |
 | CAD/wiring | Current design's native geometry, fit, mesh, slicer and release audits; physical assembly/commissioning separately |
-| Build/CI/dependencies | Both CI jobs from a clean setup; exercise cache miss/hit if cache behavior changed |
+| Build/CI/dependencies | All CI jobs from a clean setup; exercise cache miss/hit if cache behavior changed |
 
 ### Host and core regressions
 
 ~~~sh
-cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake -S tests/host -B build/desk-tests
 cmake --build build/desk-tests
 ctest --test-dir build/desk-tests --output-on-failure
-west twister -T tests -v --inline-logs --integration --outdir build/twister
+west twister -T tests/unit -v --inline-logs --integration --outdir build/twister
 ~~~
 
 The six host suites cover controls/protocol/state, real indicator scheduling,
 durable pairing reset and paced-reset counting, real output behavior,
 bond-store/private-address churn, and the pinned NimBLE guard. They include
 failure paths and repeated address rotation rather than only happy paths. The
-Zephyr suite currently has 24 core cases using its configured unit-test target.
-See [host test sources](apps/controller-esp32s3/test/) and [Zephyr tests](tests/).
+Zephyr suite currently has 14 core cases using its configured unit-test target.
+See the [host test configuration](tests/host/CMakeLists.txt), tests under `tests/`,
+and [Zephyr cases](tests/unit/). Retired-controller and obsolete blink-pattern
+cases were removed with their implementations; current ESP32 acknowledgement,
+receiver persistence, pairing, reset, animation and bond regressions remain.
 
 ### OLED and manual screenshots
 
@@ -632,19 +619,17 @@ and provenance are in [docs/images/manual/README.md](docs/images/manual/README.m
 
 ### Pixel waveform checks
 
-Build each receiver profile first, then point the simulation at that build's
-actual generated devicetree header:
+Build the receiver first, then point the simulation at that build's actual
+generated devicetree header:
 
 ~~~sh
 python tools/simulate_pixels.py \
-  --devicetree-header build/receiver-pixels-padded/zephyr/include/generated/zephyr/devicetree_generated.h
-python tools/simulate_pixels.py --profile timing375 \
-  --devicetree-header build/receiver-pixels-timing375/zephyr/include/generated/zephyr/devicetree_generated.h
+  --devicetree-header build/receiver/zephyr/include/generated/zephyr/devicetree_generated.h
 ~~~
 
 The simulation compiles the real shared encoder, exercises static and animated
 frames, checks channel/corner order, symbols, timing and low padding, and writes
-JSON plus SPI-byte evidence under `build/pixel-simulation*`. The current suite
+JSON plus SPI-byte evidence under `build/pixel-simulation/`. The current suite
 uses 3,359 frame vectors and 10,055 waveform checks. This verifies encoded output,
 not signal integrity, power wiring, color balance or physical pixel acceptance.
 
@@ -744,10 +729,9 @@ numeric values and the six-byte protocol unless making an explicit versioned
 change. Update validation/rotation and controller labels, taglines, expressions
 and menu/serial parsing as needed. Update the real OLED cases, shared status and
 receiver tests, pixel simulation expectations, user color table and screenshots.
-Build both controllers and the receiver profiles: shared status changes can
-affect the supported legacy controller too. Check persistence of the new value,
-old-peer rejection and downgrade behavior. An old receiver must not be presumed
-to support a new status merely because the packet length is unchanged.
+Build the current controller and receiver, check persistence of the new value,
+and update both devices together. Invalid/unknown values must still be rejected;
+removing legacy support does not remove protocol validation or recovery.
 
 ### Change OLED, input or settings behavior
 
@@ -772,12 +756,12 @@ a compatibility/versioning decision and coordinated firmware updates.
 
 ### Change brightness, pixels, pins or power behavior
 
-Zephyr brightness/calibration is in `cmake/loa-common.cmake`; ESP32 brightness and
+Zephyr brightness/calibration is in `apps/receiver/CMakeLists.txt`; ESP32 brightness and
 pins are in `platformio.ini`/`main.cpp`. Receiver pixel configuration spans
-`apps/receiver/pixels*.conf`, `Kconfig`, the board overlays, `padded_pixels.c` and
+`apps/receiver/prj.conf`, the receiver board overlay, `padded_pixels.c` and
 `ws2812_frame.c`. Check both generated configuration and hardware wiring. Preserve
 the independent power indicator and no-flash/no-phase-reset reconciliation.
-For timing changes, run both waveform profiles and measure the real hardware.
+For timing changes, run the current waveform simulation and measure the real hardware.
 For brightness changes, check electrical load and optical result; do not infer
 runtime or thermal safety from a numeric brightness limit. Update BOM/wiring
 and assembly guidance deliberately if a pin or component changes.
@@ -840,17 +824,20 @@ assembly and electrical commissioning remain separate from digital validation.
 
 ## CI, releases and contribution workflow
 
-[CI](.github/workflows/ci.yml) has two jobs:
+[CI](.github/workflows/ci.yml) has three jobs:
 
 - **ESP32-S3 controller:** six host suites, PlatformIO build, actual-GFX bounds
-  rendering, and upload of application/bootloader/partition/ELF files and preview.
-- **test-and-build:** whitespace and pinned-style C formatting, Zephyr core tests,
-  legacy controller, default receiver, padded receiver and 375 ns receiver builds,
-  both waveform simulations, then reports and firmware artifacts.
+  rendering, and upload of the controller's four flash images, ELF and preview.
+- **test-and-build:** whitespace and pinned-style C formatting, 14 Zephyr core
+  tests, normal and USB diagnostic receiver builds, current waveform simulation,
+  then reports and receiver images.
+- **Current firmware bundle:** after both builds pass, package the tested current
+  pair with a source-revision manifest, individual file checksums, flashing guide,
+  ZIP and ZIP checksum. This exercises release packaging on every PR.
 
-The required main-branch check is `test-and-build`; changes should leave both
-jobs green. PRs run the full matrix. Keep required check names stable and do not
-add path filters that leave a protected branch waiting for a skipped check.
+The required main-branch check remains `test-and-build`; all three jobs should
+pass before merging. PRs run the full matrix. Keep required check names stable
+and avoid path filters that leave a protected branch waiting for a skipped check.
 
 ### Caching
 
@@ -866,27 +853,43 @@ application build output is not cached. Builds/tests still run after cache resto
 a miss repopulates dependencies. When changing setup or pins, check cold and warm
 behavior rather than using old local dependencies as proof of reproducibility.
 
-### Versions, releases and rollback
+### Versions, releases and recovery
 
-The root [VERSION](VERSION) supplies the Zephyr application version. The ESP32
-version string is in `main.cpp`. Update version markers and compatibility notes
-deliberately when shipping behavior changes. Hardware revisions and application
-versions are separate; never rename an old bundle to imply new firmware.
+The root [VERSION](VERSION) is the **device-pair bundle version**, now `0.4.0`.
+The ESP32 version string is in `main.cpp`; packaging requires it to agree with
+VERSION. The receiver is identified by its source revision, configuration and
+image hash; VERSION is not automatically embedded as a Zephyr runtime string.
+Hardware revisions remain independent of the firmware bundle version.
 
-The [tagged release workflow](.github/workflows/release.yml) responds to `v*.*.*`
-tags and checks the tag against `VERSION`. It currently builds **the default
-nRF52840 controller and receiver**, publishes UF2/ELF images, flashing instructions
-and checksums. It does **not** publish the ESP32 controller or the assembled sign's
-four-pixel profile. Use matching CI artifacts or deliberate builds for those;
-extend the release workflow explicitly before promising a current paired-device
-release to users. Creating a tag publishes a release; it is not a local test.
+The [tagged release workflow](.github/workflows/release.yml) checks `v*.*.*` tags
+against VERSION and calls the same CI workflow. Only after every test/build and
+packaging job succeeds does it publish that already-tested ZIP and its checksum.
+The ZIP contains ESP32 bootloader, partition table, OTA initializer, application
+and ELF; the normal four-pixel receiver UF2/ELF; FLASHING.md; manifest.json; and
+SHA256SUMS. The USB diagnostic image is a separate CI artifact for servicing,
+not the normal release image. Published manufacturing ZIPs retain their old
+snapshots as historical artifacts and are not active firmware distributions.
 
-Before a firmware rollout, retain known-good application images and their hashes,
-record the source/profile, and check both peers' supported statuses and pairing
-control. Before downgrading to firmware that lacks newer statuses, set a compatible
-mood such as Off while the current pair still works. Do not restore old full-flash
-backups with stale keys to perform a routine rollback. Follow the same isolated
-USB sequence and check saved state and pairing after application-only flashing.
+`tools/package_firmware.py` packages without flashing or publishing. Its inputs
+are staged controller files (including the pinned framework's `boot_app0.bin`)
+and the receiver's `zephyr.uf2`/`zephyr.elf`. It rejects missing/empty images,
+version mismatch and reuse of an existing output bundle directory:
+
+~~~sh
+python tools/package_firmware.py \
+  --controller-dir build/controller-images \
+  --receiver-dir build/receiver-images \
+  --output build/firmware-release \
+  --revision "$(git rev-parse HEAD)"
+~~~
+
+See CI's staging steps for the exact source paths. Flash ESP32 images at their
+individual manifest offsets; a combined, padded image can overwrite NVS in the
+gaps. Keep known-good application images and source/configuration hashes for
+recovery, but do not maintain old product targets or restore stale full-flash
+bond records. After updating the pair, check saved state, pairing and all six
+moods using the proper USB isolation sequence. Creating a tag publishes a
+release; do not tag just to test packaging.
 
 ### Git review and handoff
 
@@ -905,11 +908,11 @@ commit. Keep the end-user manual and this guide aligned with the final change.
 ## Further references
 
 - [Workspace guide](docs/WORKSPACE.md): local toolchains, retained firmware and bench records.
-- [Original Zephyr architecture](docs/ARCHITECTURE.md): legacy lifecycle, protocol and storage detail.
+- [Architecture](docs/ARCHITECTURE.md): current device roles and implementation map.
 - [ESP32 controller guide](apps/controller-esp32s3/README.md): application wiring and command details.
 - [Pairing and power update](docs/PAIRING_POWER_UPDATE.md): current physical observations and hashes.
 - [Buddy/six-mood update](docs/BUDDY_UPDATE.md): UI, reconciliation and animation history.
 - [Power](docs/POWER.md), [debugging](docs/DEBUGGING.md), [flashing](docs/FLASHING.md).
-- [375 ns build](docs/PIXEL_TIMING_375NS_BUILD.md): timing rationale and profile evidence.
+- [Firmware history](docs/HISTORY.md): retired targets and dated bench evidence, including the 375 ns selection.
 - [Hardware index](hardware/README.md), [design archive](hardware/archive/README.md), [release index](release/README.md).
 - [MIT license](LICENSE); retain the upstream attribution shipped with hardware sources.

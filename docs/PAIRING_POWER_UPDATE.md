@@ -1,5 +1,10 @@
 # Pairing recovery, power indicator, and brightness
 
+> Historical bench record: commands, paths and build variants below describe
+> the recorded revision. Use the [current developer guide](../CONTRIBUTING.md)
+> for today's build/flash commands. See [firmware history](HISTORY.md) for the
+> retired source revision. Observations and image hashes below are retained.
+
 Controller `esp32s3-0.4.0` and the matching four-pixel receiver, built and tested
 2026-09-25/26 (local session / UTC logs). The successful padded 375 ns pixel
 transport and all six moods are retained.

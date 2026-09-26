@@ -21,6 +21,6 @@ runs:
       with:
         app-path: little-on-air
         toolchains: arm-zephyr-eabi
-        # Both Zephyr firmware targets are nRF52840; keep all non-HAL modules.
+        # The receiver is nRF52840; keep all non-HAL modules.
         west-project-filter: -hal_.*,+hal_nordic
         ccache-cache-key: little-on-air-v0

@@ -5,7 +5,6 @@
 #include <little_on_air/status.h>
 
 int loa_status_output_init(void);
-int loa_status_output_set_rgb(struct loa_rgb color);
 int loa_status_output_set_status(enum loa_status status, uint32_t elapsed_ms);
 /* Onboard LED only; never writes front pixels. */
 int loa_status_output_set_device_rgb(struct loa_rgb color);

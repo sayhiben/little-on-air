@@ -11,16 +11,16 @@
 #include <zephyr/logging/log.h>
 #include <zephyr/sys/atomic.h>
 
-#include <little_on_air/indicator.h>
 #include <little_on_air/protocol.h>
 #include <little_on_air/receiver_processor.h>
 #include <little_on_air/store.h>
-#include <little_on_air/status_output.h>
 #include <little_on_air/pairing_control.h>
 
 #include "ble_server.h"
 #include "device_indicator.h"
+#include "mood_indicator.h"
 #include "pair_reset.h"
+#include "status_output.h"
 
 #if !defined(CONFIG_BT_SMP_SC_PAIR_ONLY) || defined(CONFIG_BT_SMP_SC_ONLY)
 #error "Little On Air requires LE Secure Connections pairing with Just Works support"
@@ -65,12 +65,10 @@ static int apply_state(const struct loa_message *state, void *user_data)
 {
 	ARG_UNUSED(user_data);
 	LOG_INF("apply transaction=0x%08x status=%u", state->transaction_id, state->status);
-#if defined(CONFIG_LED_STRIP)
 	if (loa_status_output_test_active()) {
 		(void)loa_status_output_test_pixel(UINT8_MAX, (struct loa_rgb){0});
 	}
-#endif
-	loa_indicator_set(LOA_PATTERN_SOLID, state->status);
+	loa_mood_indicator_set(state->status);
 	return 0;
 }
 
@@ -156,8 +154,7 @@ static void state_ccc_changed(const struct bt_gatt_attr *attr, uint16_t value)
 	LOG_INF("CCC changed value=0x%04x indications=%u", value, indications_enabled);
 }
 
-#if defined(CONFIG_LED_STRIP)
-/* Optional, encrypted diagnostics: version, pixel index (255=end), R, G, B.
+/* Encrypted diagnostics: version, pixel index (255=end), R, G, B.
  * This characteristic leaves the six-byte status protocol and stored state alone. */
 static struct bt_uuid_128 pixel_uuid =
 	BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x7f6c0003, 0x6b7e, 0x4c80, 0x9f2a, 0xf9b9d7e2a601));
@@ -192,7 +189,6 @@ static ssize_t write_pixel(struct bt_conn *conn, const struct bt_gatt_attr *attr
 	LOG_INF("pixel test index=%u rgb=%u,%u,%u", data[1], data[2], data[3], data[4]);
 	return len;
 }
-#endif
 
 static struct bt_uuid_128 pairing_control_uuid =
 	BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x7f6c0004, 0x6b7e, 0x4c80, 0x9f2a, 0xf9b9d7e2a601));
@@ -220,14 +216,10 @@ BT_GATT_SERVICE_DEFINE(
 			       NULL, write_command, NULL),
 	BT_GATT_CHARACTERISTIC(&state_uuid.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_INDICATE,
 			       BT_GATT_PERM_READ_ENCRYPT, read_state, NULL, NULL),
-	BT_GATT_CCC(state_ccc_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE_ENCRYPT)
-#if defined(CONFIG_LED_STRIP)
-		,
+	BT_GATT_CCC(state_ccc_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE_ENCRYPT),
 	BT_GATT_CHARACTERISTIC(&pixel_uuid.uuid, BT_GATT_CHRC_WRITE | BT_GATT_CHRC_READ,
 			       BT_GATT_PERM_WRITE_ENCRYPT | BT_GATT_PERM_READ_ENCRYPT, read_pixel,
-			       write_pixel, NULL)
-#endif
-		,
+			       write_pixel, NULL),
 	BT_GATT_CHARACTERISTIC(&pairing_control_uuid.uuid, BT_GATT_CHRC_WRITE,
 			       BT_GATT_PERM_WRITE_ENCRYPT, NULL, write_pairing_control, NULL));
 
@@ -365,7 +357,7 @@ static void pairing_window_expired(struct k_work *work)
 		advertising = false;
 	}
 	if (bonded) {
-		loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
+		loa_mood_indicator_set(processor.current.status);
 		(void)start_advertising(false, true);
 	} else {
 		loa_device_indicator_set(LOA_DEVICE_UNPAIRED);
@@ -432,7 +424,7 @@ static void pairing_complete(struct bt_conn *conn, bool is_bonded)
 	pairing_window_open = false;
 	(void)k_work_cancel_delayable(&pairing_timeout_work);
 	loa_device_indicator_set(LOA_DEVICE_READY);
-	loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
+	loa_mood_indicator_set(processor.current.status);
 }
 
 static void pairing_failed(struct bt_conn *conn, enum bt_security_err reason)
@@ -483,7 +475,7 @@ int loa_ble_server_start(bool pairing_requested)
 	LOG_INF("server start pairing_requested=%u bonded=%u", pairing_requested, bonded);
 	if (bonded) {
 		loa_device_indicator_set(LOA_DEVICE_READY);
-		loa_indicator_set(LOA_PATTERN_SOLID, processor.current.status);
+		loa_mood_indicator_set(processor.current.status);
 		return start_advertising(false, true);
 	}
 
@@ -494,7 +486,7 @@ int loa_ble_server_start(bool pairing_requested)
 
 	pairing_window_open = true;
 	loa_device_indicator_set(LOA_DEVICE_PAIRING);
-	loa_indicator_set(LOA_PATTERN_SOLID, LOA_STATUS_OFF);
+	loa_mood_indicator_set(LOA_STATUS_OFF);
 	(void)k_work_reschedule(&pairing_timeout_work, PAIRING_WINDOW);
 	return start_advertising(true, false);
 }

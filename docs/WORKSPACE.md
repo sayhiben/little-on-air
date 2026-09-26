@@ -6,7 +6,7 @@ Start with [the product manual](../README.md) for using the devices,
 
 | Location | Contents |
 | --- | --- |
-| `apps/`, `src/`, `include/`, `boards/`, `cmake/` | Firmware applications, shared code and board configuration |
+| `apps/`, `src/`, `include/`, `boards/` | Firmware applications, shared code and board configuration |
 | `tests/`, `tools/`, `.github/` | Tests, development helpers and CI |
 | `docs/` | Setup instructions, architecture and dated bench records |
 | `hardware/enclosure/v215/` | Current receiver enclosure tooling |
@@ -24,16 +24,17 @@ absolute paths: configure a new directory rather than moving an old build tree.
 Examples, from the repository root in a configured development environment:
 
 ```sh
-cmake -S apps/controller-esp32s3/test -B build/desk-tests
+cmake -S tests/host -B build/desk-tests
 cmake --build build/desk-tests
 ctest --test-dir build/desk-tests --output-on-failure
 python tools/render_buddy_ui.py
 ```
 
 The OLED helper defaults to `build/buddy-ui/`. Pixel simulation defaults to
-`build/pixel-simulation/` or `build/pixel-simulation-timing375/`, reading the
-matching receiver build under `build/receiver-pixels-padded/` or
-`build/receiver-pixels-timing375/`. See the [pixel timing guide](PIXEL_TIMING_375NS_BUILD.md).
+`build/pixel-simulation/`, reading the normal receiver build's generated header
+under `build/receiver/`. The receiver always uses the current four-pixel 375 ns
+configuration; see the [build guide](../CONTRIBUTING.md#four-pixel-nrf52840-receiver).
+
 Host tests and rendering use Linux/WSL. PlatformIO manages its build output and
 downloaded libraries under `apps/controller-esp32s3/.pio/`.
 

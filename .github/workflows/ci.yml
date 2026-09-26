@@ -6,6 +6,8 @@ on:
       - main
       - "agent/**"
   pull_request:
+  workflow_call:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -34,7 +36,7 @@ jobs:
       - name: Install PlatformIO
         run: python -m pip install platformio==6.1.18
       - name: Configure host tests
-        run: cmake -S apps/controller-esp32s3/test -B build/desk-tests
+        run: cmake -S tests/host -B build/desk-tests
       - name: Build host tests
         run: cmake --build build/desk-tests
       - name: Run host tests
@@ -45,16 +47,22 @@ jobs:
         run: |
           python -m pip install Pillow==10.4.0
           python tools/render_buddy_ui.py
-      - name: Upload ESP32-S3 images
+      - name: Stage controller images
+        run: |
+          mkdir -p build/controller-images
+          cp apps/controller-esp32s3/.pio/build/xiao_esp32s3/{firmware.bin,firmware.elf,bootloader.bin,partitions.bin} build/controller-images/
+          cp ~/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin build/controller-images/
+      - name: Upload controller images
         uses: actions/upload-artifact@v6
         with:
-          name: little-on-air-esp32s3-${{ github.sha }}
-          path: |
-            apps/controller-esp32s3/.pio/build/xiao_esp32s3/firmware.bin
-            apps/controller-esp32s3/.pio/build/xiao_esp32s3/firmware.elf
-            apps/controller-esp32s3/.pio/build/xiao_esp32s3/bootloader.bin
-            apps/controller-esp32s3/.pio/build/xiao_esp32s3/partitions.bin
-            build/buddy-ui/oled-preview.png
+          name: little-on-air-controller-${{ github.sha }}
+          if-no-files-found: error
+          path: build/controller-images/
+      - name: Upload OLED preview
+        uses: actions/upload-artifact@v6
+        with:
+          name: little-on-air-oled-${{ github.sha }}
+          path: build/buddy-ui/oled-preview.png
 
   test-and-build:
     name: test-and-build
@@ -87,60 +95,84 @@ jobs:
 
       - name: Run unit tests
         working-directory: little-on-air
-        run: west twister -T tests -v --inline-logs --integration
-
-      - name: Build controller
-        working-directory: little-on-air
-        run: west build -b xiao_ble/nrf52840 apps/controller -d build/controller
+        run: west twister -T tests/unit -v --inline-logs --integration --outdir build/twister
 
       - name: Build receiver
         working-directory: little-on-air
         run: west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
 
-      - name: Build receiver with padded pixel transmission
+      - name: Build receiver USB diagnostics
         working-directory: little-on-air
         run: >-
-          west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-padded --
-          -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf"
-          -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay"
+          west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-debug --
+          -DEXTRA_CONF_FILE=debug.conf
+          -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_debug.overlay"
 
-      - name: Simulate padded pixel waveform
+      - name: Verify current receiver pixel waveform
         working-directory: little-on-air
         run: >-
           python tools/simulate_pixels.py
-          --devicetree-header build/receiver-pixels-padded/zephyr/include/generated/zephyr/devicetree_generated.h
+          --devicetree-header build/receiver/zephyr/include/generated/zephyr/devicetree_generated.h
 
-      - name: Build receiver with 375 ns pixel timing
-        working-directory: little-on-air
-        run: >-
-          west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-timing375 --
-          -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf"
-          -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
+      - name: Upload receiver images
+        uses: actions/upload-artifact@v6
+        with:
+          name: little-on-air-receiver-${{ github.sha }}
+          if-no-files-found: error
+          path: |
+            little-on-air/build/receiver/zephyr/zephyr.uf2
+            little-on-air/build/receiver/zephyr/zephyr.elf
 
-      - name: Verify 375 ns pixel waveform
-        working-directory: little-on-air
-        run: >-
-          python tools/simulate_pixels.py --profile timing375
-          --devicetree-header build/receiver-pixels-timing375/zephyr/include/generated/zephyr/devicetree_generated.h
-
-      - name: Upload test reports and firmware
+      - name: Upload receiver test reports and diagnostics
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: little-on-air-ci-${{ github.sha }}
+          name: little-on-air-receiver-checks-${{ github.sha }}
           if-no-files-found: warn
           path: |
-            little-on-air/twister-out/*.xml
-            little-on-air/twister-out/*.json
-            little-on-air/build/controller/zephyr/zephyr.uf2
-            little-on-air/build/controller/zephyr/zephyr.elf
-            little-on-air/build/receiver/zephyr/zephyr.uf2
-            little-on-air/build/receiver/zephyr/zephyr.elf
-            little-on-air/build/receiver-pixels-padded/zephyr/zephyr.uf2
-            little-on-air/build/receiver-pixels-padded/zephyr/zephyr.elf
+            little-on-air/build/twister/*.xml
+            little-on-air/build/twister/*.json
+            little-on-air/build/receiver-debug/zephyr/zephyr.uf2
+            little-on-air/build/receiver-debug/zephyr/zephyr.elf
             little-on-air/build/pixel-simulation/simulation.json
             little-on-air/build/pixel-simulation/*.spi.bin
-            little-on-air/build/receiver-pixels-timing375/zephyr/zephyr.uf2
-            little-on-air/build/receiver-pixels-timing375/zephyr/zephyr.elf
-            little-on-air/build/pixel-simulation-timing375/simulation.json
-            little-on-air/build/pixel-simulation-timing375/*.spi.bin
+
+  firmware-bundle:
+    name: Current firmware bundle
+    needs: [esp32-controller, test-and-build]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tools/package_firmware.py
+            /docs/FLASHING.md
+            /apps/controller-esp32s3/src/main.cpp
+            /VERSION
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v7
+        with:
+          name: little-on-air-controller-${{ github.sha }}
+          path: build/controller-images
+      - uses: actions/download-artifact@v7
+        with:
+          name: little-on-air-receiver-${{ github.sha }}
+          path: build/receiver-images
+      - name: Package the tested device pair
+        run: >-
+          python tools/package_firmware.py
+          --controller-dir build/controller-images
+          --receiver-dir build/receiver-images
+          --output build/firmware-release
+          --revision "$GITHUB_SHA"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: little-on-air-firmware-${{ github.sha }}
+          if-no-files-found: error
+          path: |
+            build/firmware-release/*.zip
+            build/firmware-release/*.zip.sha256

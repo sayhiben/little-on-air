@@ -9,10 +9,9 @@ import serial
 import serial.tools.list_ports
 
 
-USB_VID = 0x2FE3
-ROLE_BY_PID = {
-    0x0005: "CTRL",
-    0x0006: "RECV",
+ROLE_BY_USB_ID = {
+    (0x303A, 0x1001): "CTRL",  # ESP32-S3 native USB CDC
+    (0x2FE3, 0x0006): "RECV",  # Zephyr receiver diagnostic build
 }
 ANSI_ESCAPE = re.compile(r"\x1b\[[0-9;]*m")
 
@@ -29,9 +28,9 @@ def parse_args() -> argparse.Namespace:
 
 def visible_ports() -> dict[str, str]:
     return {
-        port.device: ROLE_BY_PID[port.pid]
+        port.device: ROLE_BY_USB_ID[(port.vid, port.pid)]
         for port in serial.tools.list_ports.comports()
-        if port.vid == USB_VID and port.pid in ROLE_BY_PID
+        if (port.vid, port.pid) in ROLE_BY_USB_ID
     }
 
 
@@ -47,8 +46,11 @@ def main() -> None:
                 if device in open_ports:
                     continue
                 try:
-                    port = serial.Serial(device, 115200, timeout=0)
+                    port = serial.Serial(port=None, baudrate=115200, timeout=0)
                     port.dtr = True
+                    port.rts = False
+                    port.port = device
+                    port.open()
                     open_ports[device] = (role, port)
                     print(f"{role} | connected {device}", flush=True)
                 except serial.SerialException:
