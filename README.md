@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml/badge.svg)](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml)
 
+[Workspace guide](docs/WORKSPACE.md) · [Current hardware](hardware/README.md) · [Hardware archive](hardware/archive/README.md)
+
 Little On Air is a paired controller and status light. The current controller
 hardware design is a **computer-powered XIAO ESP32-S3 desk unit**, with an OLED,
 rotary push encoder, one RGB pixel and a weighted Project IGOR enclosure.

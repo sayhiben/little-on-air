@@ -2,9 +2,10 @@ from pathlib import Path
 import importlib.util,json,zipfile,re,collections,xml.etree.ElementTree as E
 import numpy as np
 BASE=Path(__file__).resolve().parents[1];OUT=BASE/'output/v216';OLD=BASE.parents[1]/'release/little-on-air-enclosure-v2.15'
+ARCHIVE=BASE.parent/'archive/enclosure'
 def load(n,p):
  s=importlib.util.spec_from_file_location(n,p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
-a=load('audit216',BASE/'audit_print_projects.py');c=load('gcode216',BASE/'v213/audit_complete_project.py')
+a=load('audit216',ARCHIVE/'audit_print_projects.py');c=load('gcode216',ARCHIVE/'v213/audit_complete_project.py')
 def md(o):return {m.get('key'):m.get('value') for m in o.findall('metadata') if m.get('key')}
 def main():
  report={'passed':True,'changed_parts':['05','06'],'projects':[]}

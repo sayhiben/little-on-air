@@ -3,8 +3,9 @@ from pathlib import Path
 import importlib.util,json
 import numpy as np
 BASE=Path(__file__).resolve().parents[1]
+ARCHIVE=BASE.parent/'archive/enclosure'
 OUT=BASE/'output/v216';OUT.mkdir(exist_ok=True)
-s=importlib.util.spec_from_file_location('mesh_audit',BASE/'audit_print_projects.py')
+s=importlib.util.spec_from_file_location('mesh_audit',ARCHIVE/'audit_print_projects.py')
 a=importlib.util.module_from_spec(s);s.loader.exec_module(a)
 
 def segments(tri,d):
@@ -18,10 +19,10 @@ def segments(tri,d):
     return result
 
 def main():
-    specs=[('Frame',BASE/'output/v215/meshes-assembly-coordinates/01-front-optical-bezel.stl','#263342'),
-      ('Optical retainer',BASE/'output/v28/meshes-assembly-coordinates/04-optical-retainer.stl','#b78618'),
-      ('Electronics yoke',BASE/'output/v28/meshes-assembly-coordinates/06-electronics-retaining-yoke.stl','#c54865'),
-      ('Rear housing',BASE/'output/v213/meshes-assembly-coordinates/05-rear-electronics-housing.stl','#8d8fa3')]
+    specs=[('Frame',ARCHIVE/'output/v215/meshes-assembly-coordinates/01-front-optical-bezel.stl','#263342'),
+      ('Optical retainer',ARCHIVE/'output/v28/meshes-assembly-coordinates/04-optical-retainer.stl','#b78618'),
+      ('Electronics yoke',ARCHIVE/'output/v28/meshes-assembly-coordinates/06-electronics-retaining-yoke.stl','#c54865'),
+      ('Rear housing',ARCHIVE/'output/v213/meshes-assembly-coordinates/05-rear-electronics-housing.stl','#8d8fa3')]
     bodies=[(n,a.stl(p),c) for n,p,c in specs]
     print(json.dumps({n:{'min':t.reshape(-1,3).min(axis=0).tolist(),'max':t.reshape(-1,3).max(axis=0).tolist()} for n,t,c in bodies},indent=2))
     svg=['<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="1450" viewBox="0 0 1550 1450">',

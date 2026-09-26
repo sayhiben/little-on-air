@@ -69,7 +69,7 @@ only way to create a new pairing. See `nimble_guard.py`, `bond_store.cpp`, and
 
 ```sh
 python -m platformio run -d apps/controller-esp32s3
-west build -b xiao_ble/nrf52840 apps/receiver -d build-receiver-pairing-power -- \
+west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pairing-power -- \
   -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf" \
   -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
 ```
@@ -79,7 +79,7 @@ The final receiver image omits USB logging. Follow the
 [power/USB flashing sequence](FLASHING.md). Application-only updates preserve
 the current pairing unless a reset gesture or Forget explicitly clears it.
 
-Local artifacts are in `build-pairing-power-release/`:
+Local artifacts are in `.local/firmware/current/`:
 
 | Image | SHA-256 |
 | --- | --- |
@@ -89,8 +89,8 @@ Local artifacts are in `build-pairing-power-release/`:
 
 Receiver UF2 headers, family, sequential addresses, and application-only bounds
 were checked before copying; previous flash contents were backed up in
-`tmp/pairing-power-*/`. Controller upload verified written flash hashes.
-The earlier 0.3.0 artifacts in `build-buddy-release/` are preserved for rollback.
+`.local/archive/2026-09-26/tmp/pairing-power-*/`. Controller upload verified written flash hashes.
+The earlier 0.3.0 artifacts in `.local/firmware/previous/buddy-0.3.0/` are preserved for rollback.
 Do not restore an old full-flash controller backup: its pairing keys are stale.
 
 ## Validation
@@ -102,7 +102,7 @@ Do not restore an old full-flash controller backup: its pairing keys are stale.
   reset-intent failures, independent outputs, 1000 private-address cache rotations
   with failure cases, and rejection of unrecognized pinned-library patch targets.
 - Thirteen screens from the actual OLED renderer pass text-bound checks;
-  `build-pairing-ui/oled-preview.png` includes the recovery instructions.
+  `.local/bench/build-pairing-ui/oled-preview.png` includes the recovery instructions.
 - Online Forget was accepted by the receiver; both sides cleared and the user
   reconnected with the knob. User observed red blinking then steady red.
 - The user performed five paced physical presses twice. The first full USB
@@ -127,4 +127,4 @@ Do not restore an old full-flash controller backup: its pairing keys are stale.
 
 The physical reset test and the later missing-key regression test are separate
 observations; the final missing-key test used the diagnostic reset command.
-Detailed serial captures and flash records use `tmp/pairing-power-*` prefixes.
+Detailed serial captures and flash records use `.local/archive/2026-09-26/tmp/pairing-power-*` prefixes.

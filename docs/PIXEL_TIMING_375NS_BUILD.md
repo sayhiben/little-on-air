@@ -1,5 +1,10 @@
 # Receiver 375 ns timing comparison
 
+This is a historical bench record. The old build trees were removed during
+workspace cleanup; retained firmware snapshots, logs and simulation evidence
+are listed in the [workspace guide](WORKSPACE.md#preserved-local-work).
+Build commands below use the consolidated `build/` directory.
+
 Prepared 2026-09-24 for the XIAO nRF52840 receiver's four front pixels.
 This separate candidate changes the zero pulse width. It was flashed on
 2026-09-25 after the user's wiring work. The scoped physical checks below passed;
@@ -51,7 +56,7 @@ west build -b xiao_ble/nrf52840 little-on-air/apps/receiver -d build/receiver-pi
   -DEXTRA_DTC_OVERLAY_FILE="/path/to/little-on-air/boards/xiao_ble_nrf52840_pixels.overlay;/path/to/little-on-air/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
 ```
 
-Local image: `build-receiver-pixels-timing375/zephyr/zephyr.uf2`.
+Local image: `build/receiver-pixels-timing375/zephyr/zephyr.uf2`.
 Checksums and the validation record are stored alongside it in
 `SHA256SUMS.txt` and `build-record.json`.
 
@@ -62,8 +67,8 @@ Candidate SHA-256:
 
 The earlier images are preserved:
 
-- Installed baseline: `build-receiver-pixels/zephyr/zephyr.uf2`.
-- Padding-only candidate: `build-receiver-pixels-padded/zephyr/zephyr.uf2`.
+- Installed baseline: `build/receiver-pixels/zephyr/zephyr.uf2`.
+- Padding-only candidate: `build/receiver-pixels-padded/zephyr/zephyr.uf2`.
 
 Their original hashes were verified, and copies are also saved in the new
 build directory as `comparison-installed.uf2` and `comparison-padding-only.uf2`.
@@ -76,9 +81,9 @@ On Linux/WSL with a C compiler:
 python3 tools/simulate_pixels.py --profile timing375
 ```
 
-The default generated-header path is under `build-receiver-pixels-timing375`.
+The default generated-header path is under `build/receiver-pixels-timing375`.
 Use `--devicetree-header PATH` for another build directory. Results go to
-`build-pixel-simulation-timing375/simulation.json` unless `--output` overrides it.
+`build/pixel-simulation-timing375/simulation.json` unless `--output` overrides it.
 
 The tool compiles the firmware's actual C encoder. It verifies the generated
 firmware's Kconfig, devicetree, SPI clock limit and DMA capacity. It checks:
@@ -96,7 +101,7 @@ the preserved pre-change host executable byte for byte over all 3,359 frames.
 A separate negative test deliberately restored eight-bit symbol storage in
 a temporary host source; the nominal waveform checker rejected the corrupted
 output. That mutation is not included in the firmware. Its result is recorded
-in `build-pixel-simulation-timing375/truncation-regression.json`.
+in `.local/bench/build-pixel-simulation-timing375/truncation-regression.json`.
 
 The 255-byte DMA split is an extra hypothetical stress case, not this board's
 actual transfer. For this 720-byte profile its boundaries are at bytes 255
@@ -119,7 +124,7 @@ or confirmation that the first pixel is fixed.
 The user confirmed POWER OFF / MODE PROGRAM, XIAO USB only. Factory bootloader
 0.6.1 identified the target as `Seeed_XIAO_nRF52840_Sense` on `E:`. The source
 UF2 checksum matched the recorded candidate. A 1,908,736-byte `CURRENT.UF2`
-backup was saved under `tmp/receiver-flash-20260926T043752Z/` before copying.
+backup was saved under `.local/archive/2026-09-26/tmp/receiver-flash-20260926T043752Z/` before copying.
 The copy completed and the firmware drive disappeared. A subsequent BLE sync
 through controller COM4 succeeded with the existing bond and saved Off
 transaction `78b4dae0`. This confirms application operation, not optical output
@@ -143,7 +148,7 @@ received successful BLE confirmation, and the user reported:
 After the power cycle, read-only sync confirmed the same saved On Air transaction
 `04cf0874`. The final state was restored to Off, transaction `fa49507c`.
 Command logs, the prior firmware backup and the observation record are under
-`tmp/receiver-flash-20260926T043752Z/`. The pre-update backup's application bytes
+`.local/archive/2026-09-26/tmp/receiver-flash-20260926T043752Z/`. The pre-update backup's application bytes
 matched the preserved installed baseline.
 
 The reported green symptom did not recur in these tests. This session tested

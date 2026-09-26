@@ -6,6 +6,7 @@
 # Preserve manufacturing artifacts and their recorded SHA-256 source hashes.
 /hardware/enclosure/** -text whitespace=cr-at-eol
 /hardware/controller/** -text whitespace=cr-at-eol
+/hardware/archive/** -text -whitespace
 /release/** -text whitespace=cr-at-eol
 
 # Keep exported manufacturing snapshots and upstream references byte-for-byte.

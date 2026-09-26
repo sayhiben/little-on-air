@@ -105,9 +105,9 @@ def main():
     args = parser.parse_args()
     timing375 = args.profile == "timing375"
     if args.devicetree_header is None:
-        args.devicetree_header = ROOT / f"build-receiver-pixels-{args.profile}" / "zephyr/include/generated/zephyr/devicetree_generated.h"
-    output = (args.output or ROOT / ("build-pixel-simulation-timing375" if timing375
-                                    else "build-pixel-simulation")).resolve()
+        args.devicetree_header = ROOT / f"build/receiver-pixels-{args.profile}" / "zephyr/include/generated/zephyr/devicetree_generated.h"
+    output = (args.output or ROOT / ("build/pixel-simulation-timing375" if timing375
+                                    else "build/pixel-simulation")).resolve()
     output.mkdir(parents=True, exist_ok=True)
     runner = output / "encode_frames"
     defines = ["-DCONFIG_LOA_PIXELS_TIMING_375NS=1"] if timing375 else []

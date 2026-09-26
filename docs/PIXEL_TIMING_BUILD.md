@@ -1,5 +1,10 @@
 # Receiver pixel timing test build
 
+This is a historical bench record. The old build trees were removed during
+workspace cleanup; retained firmware snapshots, logs and simulation evidence
+are listed in the [workspace guide](WORKSPACE.md#preserved-local-work).
+Build commands below use the consolidated `build/` directory.
+
 A separate [375 ns zero-pulse comparison build](PIXEL_TIMING_375NS_BUILD.md)
 is now available. This page describes the earlier padding-only candidate,
 whose image remains preserved for comparison.
@@ -46,7 +51,7 @@ west build -b xiao_ble/nrf52840 little-on-air/apps/receiver -d build/receiver-pi
   -DEXTRA_DTC_OVERLAY_FILE=/path/to/little-on-air/boards/xiao_ble_nrf52840_pixels.overlay
 ```
 
-Local candidate image: `build-receiver-pixels-padded/zephyr/zephyr.uf2`.
+Local candidate image: `build/receiver-pixels-padded/zephyr/zephyr.uf2`.
 Candidate SHA-256:
 `494144f2415d9b36adc0d12e96015360f0f519aab6936112738dd224a9648840`.
 The production receiver build passed: 163,664 bytes flash and 29,604 bytes RAM.
@@ -54,10 +59,10 @@ Inspection of the linked ELF confirmed the padded driver and shared encoder are
 present and the default WS2812 SPI update function is absent.
 
 The standard `pixels.conf` profile remains available as the comparison image.
-The previously installed image is still `build-receiver-pixels/zephyr/zephyr.uf2`,
+The previously installed image is still `build/receiver-pixels/zephyr/zephyr.uf2`,
 SHA-256 `a16bb6e2d27a27406f7b4217680f1cea51fbb18cf5831abe971fc81f9928c78e`.
 Rebuilding that original profile produced the same checksum. A preserved copy is
-also at `build-receiver-pixels-padded/comparison-receiver.uf2`.
+also at `build/receiver-pixels-padded/comparison-receiver.uf2`.
 Use the normal application-only UF2 update; no pairing/state erase is needed.
 
 ## Simulation
@@ -68,7 +73,7 @@ On Linux or WSL with a C compiler, from this repository:
 python3 tools/simulate_pixels.py
 ```
 
-By default this checks the generated header in `build-receiver-pixels-padded`.
+By default this checks the generated header in `build/receiver-pixels-padded`.
 Use `--devicetree-header PATH` for another build directory and `--output PATH`
 for another report directory. The simulator compiles and runs the **same C frame
 encoder linked into the firmware**, then independently interprets its emitted
@@ -89,7 +94,7 @@ In the specific model where a one-microsecond startup delay stretches the first
 HIGH pulse into a one bit, a pixel-1 red request `(31, 0, 0)` decodes as
 `(31, 128, 0)` without padding and correctly as `(31, 0, 0)` with padding.
 
-Outputs are `build-pixel-simulation/simulation.json`, `pixel-1-red.spi.bin`, and
+Outputs are `build/pixel-simulation/simulation.json`, `pixel-1-red.spi.bin`, and
 `all-off.spi.bin`. CI builds the receiver variant and runs the same simulation.
 
 **Limits:** this is a digital pulse-width model, not a microcontroller emulator
