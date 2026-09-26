@@ -1,184 +1,314 @@
 # Little On Air
 
-[![CI](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml/badge.svg)](https://github.com/sayhiben/little-on-air/actions/workflows/ci.yml)
+A wireless status sign for your desk, door or studio. Choose a mood on the desk
+controller, press the knob, and the sign shows people whether you're available,
+on air, waiting or asking for a little help.
 
-A wireless desk controller and status sign. Turn the knob to choose a mood,
-press to send it, and see the confirmed state on the controller's OLED and the
-sign's four corner lights.
+The controller and sign communicate directly over Bluetooth. No phone app,
+Wi-Fi network or account is needed. You choose the status yourself; Little On
+Air does not automatically detect recording, calls or streaming software.
 
-[Workspace guide](docs/WORKSPACE.md) · [Hardware](hardware/README.md) · [Current bench results](docs/PAIRING_POWER_UPDATE.md) · [Design history](hardware/archive/README.md)
+**This is the product manual.** For assembly, parts, source code, builds and
+feature development, see the [developer guide](CONTRIBUTING.md).
 
-## Current system
+## In this guide
 
-| Part | Hardware and firmware | Design files |
+- [Meet your devices](#meet-your-devices)
+- [Quick start](#quick-start)
+- [Choose a mood](#choose-a-mood)
+- [Read the controller screen](#read-the-controller-screen)
+- [Controls and settings](#controls-and-settings)
+- [Connect or change a sign](#connect-or-change-a-sign)
+- [Power and charging](#power-and-charging)
+- [Understand the indicator lights](#understand-the-indicator-lights)
+- [Troubleshooting](#troubleshooting)
+- [Versions and further help](#versions-and-further-help)
+
+## Meet your devices
+
+![Controller and sign diagrams showing the knob, OLED, mood light, sign face, reset button and power indicator.](docs/images/manual/devices.svg)
+
+The **desk controller** has a rotary knob that also presses like a button, a
+small OLED screen and a round mood light beside the screen. Its rear USB-C port
+provides power from your computer or a USB supply. It has no battery.
+
+The **sign** has a lit front panel, a small rectangular **RESET** button and a
+separate round red power indicator. The top has the **POWER** switch, a smaller
+**RUN / PROGRAM** mode switch, a charger USB port and a separate XIAO USB port
+for servicing. Two light guides at the rear expose the charger indicators.
+
+The drawings are control maps, not assembly or dimensioned drawings. Locate the
+two different sign USB ports before connecting a cable; they have different jobs.
+
+## Quick start
+
+For an assembled, commissioned pair:
+
+1. With the sign's **POWER OFF** and both of its USB ports unplugged, select
+   **RUN**. Turn **POWER ON**. Leave both sign USB ports unplugged during use.
+2. Plug the controller into USB power. Keep the devices nearby for setup.
+3. If already paired, the controller checks the sign and displays its mood.
+   If it says **MEET YOUR SIGN**, tap the sign's **RESET** once, then press the
+   controller knob to connect during the 60-second pairing window.
+4. Turn the knob to choose a mood. **Press once to send it.** Wait for
+   **YOUR SIGN** and the selected mood to appear as confirmed.
+
+Turning alone is a preview: it does not change either device's mood light.
+The sign remembers its last accepted mood through a normal power cycle.
+
+## Choose a mood
+
+![Six real controller screens: Off, Warn, On Air, Okay, Request and Special.](docs/images/manual/moods.png)
+
+These screenshots use the controller's actual display code and font, enlarged
+without smoothing. The color strips are a guide to the lights, not part of the
+monochrome OLED. Colors on a monitor are approximate.
+
+| Mood | Sign and controller mood light | Suggested meaning |
 | --- | --- | --- |
-| Desk controller | USB-powered XIAO ESP32-S3, 128×64 SSD1306 OLED, rotary push encoder and one NeoPixel; Arduino/PlatformIO | [Measured Igor v4](hardware/controller/igor-measured-v4/README.md) · [Complete ZIP](release/little-on-air-igor-controller-v4.zip) |
-| Status sign | XIAO nRF52840, four external NeoPixels and an independent onboard power/status LED; Zephyr | [Enclosure v2.15](release/little-on-air-enclosure-v2.15/README.md) · [Complete ZIP](release/little-on-air-enclosure-v2.15.zip) |
+| **Off** | Dark | Taking a break; no illuminated status |
+| **Warn** | Steady warm amber | One moment; please wait |
+| **On Air** | Steady red | I'm live; please avoid interruptions |
+| **Okay** | Steady green | Come say hi; available |
+| **Request** | Green flashing on for 0.6 seconds, off for 0.6 seconds | A little help, please |
+| **Special** | A slow, flowing rainbow, repeating about every 20 seconds | Let's glow; a decorative or special status |
 
-The current controller firmware is `esp32s3-0.4.0`. Its matching receiver profile
-uses padded SPI transmission with 375 ns zero pulses. The paired hardware has
-been tested through all six moods, battery operation, pairing recovery and
-online Forget; details and image hashes are in the
-[pairing and power-light record](docs/PAIRING_POWER_UPDATE.md).
+Agree on the meanings with the people around you. The colors are signals you
+choose, not measurements of your activity.
 
-The current enclosure and controller CAD have digital fit and manufacturing
-checks. Physical print fit remains a separate validation step documented in
-their assembly guides.
+Turning forward cycles **Off → Warn → On Air → Okay → Request → Special → Off**.
+Turn the other way to go backward. Pressing a mood that is already confirmed
+shows **Already set!** and leaves the sign alone.
 
-**Choose firmware separately from the manufacturing ZIPs.** The enclosure ZIPs
-retain a firmware 0.1.2 snapshot that drives the onboard RGB LED only. Use the
-current four-pixel receiver build below for an assembled sign. Local validated
-firmware snapshots, when present, are under `.local/firmware/current/`; they are
-not included in a fresh clone.
+The sign's four corner lights blend across its face. In Special, different
+corners show different parts of the rainbow. The controller has one mood light;
+its animation and the sign's animation do not have to move in exact step.
 
-## Using the sign
+**Off turns off the mood lights, not the sign's power.** Its separate red power
+indicator remains on while the sign is powered and paired.
 
-| Mood | Light |
+## Read the controller screen
+
+![Real controller screens showing a preview, a command in progress, confirmation and an offline last-known value.](docs/images/manual/states.png)
+
+The large word is the mood currently selected on the knob. Read the heading
+and the smaller line to tell whether that mood has reached the sign. The six
+dots at the top show the selected mood's position in the cycle; they are not
+a battery gauge or signal-strength meter.
+
+| Screen or message | What it means | What to do |
+| --- | --- | --- |
+| **YOUR SIGN** | The displayed mood has been checked with the sign | Turn to choose another mood, or leave it as it is |
+| **PICK A MOOD** with **Sign: ON AIR**, for example | You are previewing a different mood; the smaller line is the confirmed sign state | Press to apply the large selection |
+| **ONE SEC…**, **Sharing your mood…**, **Waiting for the sign** | A foreground operation is in progress | Wait for confirmation or an error |
+| **All set!** | The sign confirmed the requested mood | No further action needed |
+| **SIGN IS OFFLINE** with **Last: …** | The stored value has not been verified in the current connection state | Check sign power and distance; use **Check my sign** |
+| **Last: not checked** | There is no confirmed saved value to show | Connect and check the sign |
+| **MEET YOUR SIGN** | The controller has no paired sign | Open the sign's pairing window and press the knob |
+
+A **Last:** value is a memory, not a live reading. When the controller cannot
+verify the sign, its own mood light is dim white. It returns to the mood color
+after a successful check. White is not a seventh mood.
+
+The controller checks the sign on startup and periodically while on the home
+screen. These background checks do not change the mood, restart the animations
+or wake the OLED. After a connection failure it makes a few read-only retries.
+If a send fails, it does not keep replaying that command later; check the screen
+and press again when the sign is available.
+
+## Controls and settings
+
+### The knob
+
+| Action | On the home screen | In settings |
+| --- | --- | --- |
+| **Turn** | Preview the next or previous mood | Move through choices |
+| **Press and release** | Send the selected mood; connect if unpaired | Choose the highlighted item |
+| **Hold for 1.2 seconds** | Open settings | Return to the home screen |
+
+Holding and releasing does not also count as a click. The controller also
+ignores a knob held down while it starts, so plugging it in with the knob
+pressed does not send a mood or erase pairing.
+
+### Settings menu
+
+Hold the knob, turn to an item and press to select it.
+
+| Item | What it does |
 | --- | --- |
-| Off | Dark |
-| Warn | Warm amber |
-| On Air | Red |
-| Okay | Steady green |
-| Request | Flashing green |
-| Special | Slowly flowing rainbow |
+| **Back to my sign** | Return to the home screen |
+| **Check my sign** | Read the sign's current mood without changing it |
+| **Connect a sign** | Pair an unpaired controller with a sign in its pairing window; an already paired controller says **Already connected!** |
+| **Light test** | Test the controller's small mood light; see below |
+| **Forget this sign** | Ask for confirmation, then remove the pairing; see [changing or reconnecting a sign](#changing-or-reconnecting-a-sign) |
 
-- **Turn** to preview a mood. The sign and controller pixel retain the confirmed
-  mood until you send a change.
-- **Press** to apply the selection, or to connect when the controller is unpaired.
-- **Hold for 1.2 seconds** to open the menu for connection checks, pairing, light
-  tests and **Forget this sign**.
+Settings and an unanswered Forget confirmation return home after 30 seconds
+without input. You can also hold the knob to leave them.
 
-The OLED distinguishes confirmed state from an unverified cached state. A BLE
-write alone is not confirmation: the receiver must acknowledge the exact mood
-and transaction. Background checks leave the lights and animations undisturbed.
+### Light test
 
-For first pairing, power the sign and reset an unpaired receiver once to open
-its 60-second pairing window. Press the unpaired controller's knob to connect.
-The receiver's onboard LED blinks red during pairing and stays red when paired,
-including when the front lights are Off.
+**Light test** affects only the controller's round light. It does not change the
+sign or its saved mood. The screen says **LIGHT CHECK** and shows the test color
+and counts of turns and clicks.
 
-To pair again, keep the sign on and choose **Forget this sign → Forget sign**.
-After **Ready to connect**, press the knob. If the sign was unavailable, follow
-the displayed recovery steps: five receiver reset presses about two seconds
-apart clear its bond and saved mood. Rapid double-reset still enters the UF2
-bootloader.
+The test starts red. Turn or click to cycle through **Off, Red, Green, Blue,
+White and Yellow**. Hold to finish, or let it exit after 60 seconds without
+input. The controller then resumes its usual confirmed-mood or offline light.
 
-See the [controller wiring and controls](apps/controller-esp32s3/README.md) for
-complete setup and [pairing recovery](apps/controller-esp32s3/README.md#reconnecting-after-forget-this-sign).
+### Screen sleep
 
-## Build the firmware
+The OLED dims after 30 seconds without activity and turns off after two minutes.
+The first turn, click or hold while it is asleep **only wakes it**. Make the
+gesture again to select, send or open settings. The mood light continues to work
+while the screen sleeps.
 
-The commands below use a Linux/WSL shell. Host checks need a C/C++ compiler and
-CMake. Receiver builds also need Git, Python, Ninja, west and the Zephyr host
-dependencies. Reuse an existing configured workspace and toolchain when available;
-the [workspace guide](docs/WORKSPACE.md) describes this checkout's local setup.
+If your computer removes USB power during sleep, the controller turns off.
+The battery-powered sign keeps its saved mood. When USB power returns, the
+controller reads the sign; startup does not advance or send a new mood.
 
-### ESP32-S3 controller
+## Connect or change a sign
 
-From the repository root:
+### First connection
 
-```sh
-python -m pip install platformio==6.1.18
-python -m platformio run -d apps/controller-esp32s3
-```
+1. Power the sign in **RUN** on its battery, with both sign USB ports unplugged.
+2. Tap the unpaired sign's **RESET** once. Its red indicator blinks quickly for
+   the **60-second pairing window**.
+3. Press the unpaired controller's knob, or choose **Connect a sign**. Keep the
+   devices nearby and allow the search to finish; it can take several seconds.
+4. Look for **YOUR SIGN** and a confirmed mood. The sign's red power light becomes
+   steady after it is paired.
 
-Dependencies are pinned in [platformio.ini](apps/controller-esp32s3/platformio.ini).
-Outputs are in `apps/controller-esp32s3/.pio/build/xiao_esp32s3/`. Use the
-[PlatformIO upload instructions](apps/controller-esp32s3/README.md#build-flash-and-inspect)
-to flash the controller's bootloader, partition table and application.
+There is no PIN to type. Each controller/sign pairing is for one partner.
+If the pairing window expires, tap RESET once to open it again on an unpaired
+sign. Ordinary power cycles keep an existing pairing.
 
-### Four-pixel nRF52840 receiver
+### Changing or reconnecting a sign
 
-For a fresh Zephyr workspace, install the pinned dependencies from
-[west.yml](west.yml):
+Keep the old sign powered and nearby. Hold the controller knob and choose
+**Forget this sign**. The confirmation starts on **Keep my sign**; turn to
+**Forget sign** and press to proceed. Hold to cancel instead.
 
-```sh
-mkdir little-on-air-workspace && cd little-on-air-workspace
-git clone https://github.com/sayhiben/little-on-air.git little-on-air
-west init -l little-on-air
-west update
-west zephyr-export
-west packages pip --install
-west sdk install -t arm-zephyr-eabi
-cd little-on-air
-```
+With matching current firmware and a reachable sign, this unlinks both devices.
+The sign restarts, clears its saved mood to Off and opens its pairing window.
+When the controller says **Ready to connect!**, press to pair again, or open the
+pairing window on the replacement sign you want to use. Only put the intended
+sign into pairing mode nearby.
 
-Then, from the repository root within that workspace:
+If the old sign cannot be reached, the controller still forgets its own pairing
+and displays the recovery instructions below. The old sign retains its keys
+until you reset its pairing locally.
 
-```sh
-west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver-pixels-timing375 -- \
-  -DEXTRA_CONF_FILE="pixels.conf;pixels-padded.conf;pixels-timing375.conf" \
-  -DEXTRA_DTC_OVERLAY_FILE="$PWD/boards/xiao_ble_nrf52840_pixels.overlay;$PWD/boards/xiao_ble_nrf52840_pixels_timing375.overlay"
-```
+### Five-reset recovery
 
-Flash `build/receiver-pixels-timing375/zephyr/zephyr.uf2` using the
-[UF2 instructions](docs/FLASHING.md) and the assembled sign's
-[USB/battery connection sequence](docs/PAIRED_BENCH.md#connections).
-The factory bootloader, reset pin, bond storage and saved state are preserved by
-ordinary application-only updates.
+![Actual first-connection and recovery screens. The recovery screen says to tap the sign's RESET five times, two seconds apart.](docs/images/manual/pairing.png)
 
-### Legacy controller and default receiver
+Use this if a sign still remembers an old controller, online Forget could not
+reach it, or the devices have mismatched pairing records.
 
-`apps/controller/` retains the reset-button nRF52840 controller. The default
-receiver build uses the onboard power/status LED; external sign pixels require
-the profile above. Both applications remain covered by CI:
+1. If the controller still has an old pairing, use **Forget this sign** first.
+2. With the sign powered in RUN, press and release its **RESET five times**, about
+   **two seconds apart**. Let the application start between presses.
+3. After the fifth reset, the sign forgets its pairing and saved mood, returns
+   to Off and opens a 60-second pairing window.
+4. Press the unpaired controller's knob to connect.
 
-```sh
-west build -b xiao_ble/nrf52840 apps/controller -d build/controller
-west build -b xiao_ble/nrf52840 apps/receiver -d build/receiver
-```
+This is five separate presses, not a long hold. A gap of six seconds of normal
+running clears an incomplete count; if you lose count, wait and start again.
+A power cycle also clears an incomplete count. Avoid a rapid double tap: that
+enters the firmware bootloader instead. If you accidentally do that, a normal
+power cycle returns to the application when valid firmware is installed.
 
-The [tagged release workflow](.github/workflows/release.yml) publishes nRF52840
-UF2/ELF images. Those controller UF2 files are not ESP32-S3 firmware.
+## Power and charging
 
-## Test and inspect
+**Before connecting either USB port on the sign: set POWER OFF and select
+PROGRAM. Connect only one sign USB port at a time.** The sign does not have an
+automatic USB/battery power selector. Do not charge it while using it in RUN.
 
-From the repository root, with the corresponding toolchains configured:
+![Power mode guide: normal use is ON and RUN with no sign USB cable; charging is OFF and PROGRAM with charger USB only; servicing is OFF and PROGRAM with XIAO USB only.](docs/images/manual/power-modes.svg)
 
-```sh
-cmake -S apps/controller-esp32s3/test -B build/desk-tests
-cmake --build build/desk-tests
-ctest --test-dir build/desk-tests --output-on-failure
-west twister -T tests -v --inline-logs --integration --outdir build/twister
-```
+| Activity | POWER | MODE | Sign USB connection |
+| --- | --- | --- | --- |
+| Normal use | **ON** | **RUN** | Neither port |
+| Turn the sign off | **OFF** | RUN | Neither port |
+| Charge the battery | **OFF** | **PROGRAM** | **Charger USB only** |
+| Firmware service | **OFF** | **PROGRAM** | **XIAO USB only**; see the developer guide |
 
-After building the controller and four-pixel receiver, check the actual OLED
-renderer and simulated pixel waveform:
+To charge:
 
-```sh
-python -m pip install Pillow==10.4.0
-python tools/render_buddy_ui.py
-python tools/simulate_pixels.py --profile timing375
-```
+1. Turn POWER OFF. With both USB cables removed, move MODE to PROGRAM.
+2. Connect power to the **charger USB port**. Leave XIAO USB unplugged.
+3. The rear light guides show the charger's indicators. Their meaning depends
+   on the fitted charger board; use its verified labels. The OLED does not show
+   battery percentage or a charging estimate.
+4. After charging, unplug USB first. With POWER still OFF, select RUN, then turn
+   POWER ON to use the sign.
 
-The OLED renderer uses g++ and the PlatformIO-installed GFX library. Previews,
-test output and simulations stay under `build/`. [CI](.github/workflows/ci.yml)
-checks formatting, host and core tests, both controllers, receiver profiles,
-OLED bounds and pixel timing on pull requests.
+Only change MODE with POWER OFF and both USB ports unplugged. PROGRAM provides
+electrical isolation; selecting it does not itself start a firmware update.
+POWER OFF disconnects the normal load but does not disconnect the battery from
+the charging board.
 
-CI and release builds share a [cached Zephyr setup](.github/actions/setup-zephyr/action.yml).
-The official Zephyr action caches the SDK, pip downloads and compiled objects;
-the local wrapper also caches west source dependencies by the pinned manifest
-and setup configuration. Only the Nordic HAL is needed for the current Zephyr
-targets. ESP32 builds cache PlatformIO packages and libraries by `platformio.ini`
-and the PlatformIO version. Builds and tests still run on every CI invocation,
-and a missing cache is populated automatically. Update the HAL filter when
-adding a Zephyr target from another chip vendor.
+The controller's USB port is separate from these restrictions: it normally stays
+plugged in during use. Do not open a powered sign or charge a damaged battery;
+have wiring, a loose connector or battery replacement checked using the
+[assembly and commissioning guidance](CONTRIBUTING.md#hardware-and-bill-of-materials).
 
-## Project layout and further reading
+## Understand the indicator lights
 
-Firmware lives in `apps/`, `src/`, `include/` and `boards/`. Current CAD and print
-files are under `hardware/enclosure/` and `hardware/controller/`; older designs
-are under `hardware/archive/`. Published manufacturing bundles retain their
-versioned paths in `release/`. Disposable output belongs in `build/`, and local
-firmware snapshots, bench evidence and scratch work belong in `.local/`.
+There are three different kinds of light:
 
-- [Workspace guide](docs/WORKSPACE.md): directory map and preserved local records.
-- [Architecture](docs/ARCHITECTURE.md): shared protocol, state machines and persistence.
-- [Power](docs/POWER.md) and [debugging](docs/DEBUGGING.md): board-specific details.
-- [Hardware acceptance](docs/HARDWARE_ACCEPTANCE.md): physical validation checklist.
-- [Contributing](CONTRIBUTING.md) and [agent guidance](AGENTS.md): development conventions.
+| Light | Appearance | Meaning |
+| --- | --- | --- |
+| Sign's large front panel | One of the six moods | The sign's saved, active mood |
+| Controller's round light | Mood color or animation | The mood confirmed by the sign, not the knob preview |
+| Controller's round light | Dim steady white | The sign's state is currently unverified |
+| Sign's small front power indicator | Steady red | Powered and paired; stays red even when the mood is Off |
+| Sign's small front power indicator | Fast red blink, about twice per second | Unpaired; pairing window is open |
+| Sign's small front power indicator | Mostly red with a short dark gap every two seconds | Unpaired; pairing window has closed |
+| Rear charger light guides | Charger-board indicators | Charging status, separate from Bluetooth and mood |
+
+The little face on the OLED is decorative and sometimes blinks. Use the screen
+heading and text to judge connection state.
+
+## Troubleshooting
+
+| Symptom | Try this |
+| --- | --- |
+| Turning the knob does not change the sign | Press to send the preview. If the screen was asleep, the first gesture only woke it. |
+| Screen is dark | Press once to wake it. If it stays dark, check controller USB power and the cable. |
+| **SIGN IS OFFLINE** or **Can't reach your sign** | Check sign battery/power and RUN mode, move closer, then use **Check my sign**. A Last value is not confirmation. |
+| Controller light is white | It is waiting for a verified sign state. Check power and use **Check my sign**. |
+| Controller is on but sign is dark | Off is a valid mood. Check the sign's separate red indicator, then send Okay or On Air. If the indicator is also off, check power and charge the battery using the sequence above. |
+| The sign stays red after choosing Off | The small power indicator should stay red. The large front mood panel should be dark. |
+| Pairing does not finish | Open the sign's 60-second window again and keep it nearby. If either device remembers a different partner, use Forget and the five-reset recovery steps. |
+| **Already connected!** when choosing Connect | Connect does not replace a partner. Use **Forget this sign** before changing signs. |
+| **One sec, please!** | Let the current operation finish before starting another. |
+| **Press to try again** after a failed operation | Restore connectivity, then press again. A failed request is not silently sent later. |
+| Mood animation resumes when the controller is unplugged | Expected: the sign runs independently and retains its mood. |
+| Reset seems to enter an update mode | Avoid rapid double taps. Power-cycle normally, then space pairing-reset presses about two seconds apart. |
+| **State save failed**, **Cache clear failed**, or repeated **Radio needs a restart** | Restart the controller and check again. If it recurs, record the exact message and firmware versions for service; do not repeatedly erase pairing as a substitute for diagnosis. |
+| Front panel flickers, shows the wrong color or only some corners light | Check with another steady mood. If it persists, stop and have the pixel wiring and matching receiver firmware checked; Light test only tests the controller light. |
+
+## Versions and further help
+
+This manual describes the **ESP32-S3 controller firmware 0.4.0** with the current
+matching four-pixel nRF52840 receiver firmware, **Igor measured v4 controller**
+and **v2.15 sign case** with open-backed frame wire channels. Older reset-button
+controllers have different controls. Older receiver firmware may not support
+Request, Special or unlinking both devices through Forget.
+
+Manufacturing ZIPs preserve the firmware that shipped with their design snapshot;
+that may be older than this manual. Use the [developer firmware guide](CONTRIBUTING.md#build-and-flash)
+when updating a device, and follow the sign's USB isolation sequence above.
+
+- [Developer guide](CONTRIBUTING.md): BOM, wiring, architecture, setup, builds,
+  tests, diagnostics and making changes.
+- [Current hardware](hardware/README.md): assembly guides and print files.
+- [Recorded hardware observations](docs/PAIRING_POWER_UPDATE.md): what has
+  actually been checked on the assembled devices.
+- [Report a problem](https://github.com/sayhiben/little-on-air/issues): include
+  the screen message, selected mood, power arrangement and installed versions.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE). Hardware source attribution is recorded with each design.

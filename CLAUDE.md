@@ -5,5 +5,6 @@ the shared source for project structure, development commands, workspace
 organization, firmware invariants, hardware handling and validation.
 
 Keep common project guidance in `AGENTS.md` so instructions stay consistent
-across coding agents. Start with [README.md](README.md) for the current system
-and [docs/WORKSPACE.md](docs/WORKSPACE.md) for the directory layout.
+across coding agents. Start with [README.md](README.md) for product behavior,
+[CONTRIBUTING.md](CONTRIBUTING.md) for implementation, hardware and builds, and
+[docs/WORKSPACE.md](docs/WORKSPACE.md) for the directory layout.
