@@ -2,8 +2,8 @@
 
 The desk controller is a USB-powered XIAO ESP32-S3 and has no battery. Its OLED
 dims after 30 seconds and turns off after two minutes; the first gesture wakes
-it without sending a command. Its mood pixel uses brightness 24/255. Background
-reads do not wake the OLED or restart the animation.
+it without sending a command. Its mood pixel defaults to brightness 24/255.
+Background reads do not wake the OLED or restart the animation.
 
 The sign uses a single-cell LiPo, protected TP4056 charger, POWER switch and
 RUN/PROGRAM isolation switch. Normal use is battery-powered RUN with both sign
@@ -18,9 +18,12 @@ the independent onboard indicator. Bonded advertisements are about one second
 apart; the unpaired 60-second pairing window uses 100 ms intervals. Animation
 runs on the receiver without continuous radio traffic.
 
-Front-pixel brightness is 160 permille (16%). Onboard RGB brightness is 125
-permille with R/G/B calibration 1000/650/500; the current power indicator is red.
-These receiver definitions live in `apps/receiver/CMakeLists.txt`. The power
+Front-pixel brightness defaults to 160 permille (16%). Onboard RGB brightness
+defaults to 125 permille with R/G/B calibration 1000/650/500; the current power
+indicator is red.
+The controller's Brightness menu adjusts and saves both devices' light levels
+and the OLED's awake/dim contrast. See [brightness settings](BRIGHTNESS.md) for
+the ranges and exact defaults, implemented in `src/brightness.c`. The power
 light remains on when the mood is Off, so Off does not mean zero power draw.
 
 No current battery-runtime guarantee or measured idle-current specification is

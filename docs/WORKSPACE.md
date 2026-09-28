@@ -65,6 +65,12 @@ The installed `.venv/`, `.zephyr-sdk/`, `.zephyr-workspace/` and `.tool-bin/`
 remain in place so cleanup does not require reinstalling the toolchain.
 The `.local/` records are not disposable build caches.
 
+The [September 27 brightness bench](BRIGHTNESS_BENCH.md) retains the flashed
+0.5.0 images and validation manifest in
+`.local/firmware/brightness-0.5.0-2026-09-27/`, with serial logs and private flash
+backups in `.local/bench/brightness-2026-09-27/`. The older `current/` snapshot
+above still preserves the September 26 firmware; it was not overwritten.
+
 ## Historical hardware
 
 Use the [hardware archive index](../hardware/archive/README.md) to find older

@@ -27,7 +27,13 @@ The pixel uses GRB, 800 kHz and a default brightness limit of 24/255.
   to go the other way. Turning does not change the sign.
 - **Press:** set the selected mood. When unpaired, start connecting to a sign.
 - **Hold 1.2 seconds:** open the menu; hold again to return home.
-- **Menu:** Back to my sign, Check my sign, Connect a sign, Light test, Forget this sign.
+- **Menu:** Back to my sign, Check my sign, Connect a sign, Brightness, Light test, Forget this sign.
+- **Brightness:** separate sign frame/indicator, awake/dim OLED and controller-light
+  controls. Press Level, turn, press again and Save. Reset default prepares a reset
+  for that value; Save commits it. Local edits preview immediately; sign edits apply
+  on Save with exact transaction/levels read-back. Cancel/hold/timeout discards drafts.
+  Each device retains its own levels independently of pairing. See the
+  [brightness guide](../../docs/BRIGHTNESS.md) for ranges, protocol and validation.
 - **Forget this sign:** defaults to Keep my sign. Turn to Forget sign and press to erase.
   Keep the sign powered: firmware 0.4.0 clears both devices' pairing, then a
   press connects them again. If the sign cannot be reached, the OLED shows

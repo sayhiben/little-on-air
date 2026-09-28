@@ -25,7 +25,7 @@ manual. [AGENTS.md](AGENTS.md) is the shared guidance for coding agents;
 
 | Component | Current implementation | Entry point |
 | --- | --- | --- |
-| Desk controller | USB-powered XIAO ESP32-S3, OLED, rotary push encoder, one NeoPixel; Arduino/PlatformIO; firmware `esp32s3-0.4.0` | [Application](apps/controller-esp32s3/README.md) |
+| Desk controller | USB-powered XIAO ESP32-S3, OLED, rotary push encoder, one NeoPixel; Arduino/PlatformIO; firmware `esp32s3-0.5.0` | [Application](apps/controller-esp32s3/README.md) |
 | Sign receiver | XIAO nRF52840, Zephyr 4.3.0, four external pixels, independent red power indicator | [Receiver source](apps/receiver/src/main.c) and [default build](#four-pixel-nrf52840-receiver) |
 | Controller enclosure | Igor measured v4, including measured OLED/encoder/strip envelopes | [Design](hardware/controller/igor-measured-v4/README.md) |
 | Sign enclosure | v2.15, with open-backed frame wire channels and its original housing/yoke | [Tooling](hardware/enclosure/v215/README.md) and [manufacturing bundle](release/little-on-air-enclosure-v2.15/README.md) |
@@ -58,7 +58,7 @@ receiver firmware.
 | `apps/receiver/` | Zephyr peripheral application, GATT server, reset intent and padded SPI transport |
 | `include/little_on_air/`, `src/` | Shared C interfaces and implementation: protocol, status, receiver processing, persistence, reset and pixel encoding |
 | `boards/` | Complete nRF52840 sign overlay and optional USB debug overlay |
-| `apps/receiver/CMakeLists.txt` | Receiver sources and brightness/calibration definitions |
+| `src/brightness.c`, `apps/receiver/CMakeLists.txt` | Runtime brightness ranges/defaults and receiver channel calibration |
 | `tests/` | Host checks for both devices, Zephyr core regressions and real-GFX OLED rendering harness |
 | `tools/` | Pixel simulations, OLED/manual rendering, serial helpers and paired bench runner |
 | `.github/workflows/`, `.github/actions/` | CI, release workflow and cached Zephyr setup |
@@ -218,6 +218,7 @@ operations, not as a permanent streaming link.
 | [main.cpp](apps/controller-esp32s3/src/main.cpp) | Pin setup, menus, screen transitions, sleep, Preferences cache, serial commands and application scheduling |
 | [controller.hpp](apps/controller-esp32s3/src/controller.hpp) | Host-testable encoder/button handling, selected/confirmed state and exact acknowledgement checks |
 | [buddy_ui.hpp](apps/controller-esp32s3/src/buddy_ui.hpp) | Shared home-screen and pairing-help drawing, text and buddy expressions |
+| [brightness_ui.hpp](apps/controller-esp32s3/src/brightness_ui.hpp) | Brightness editor, local record validation and host-rendered settings screens |
 | [receiver_link.hpp](apps/controller-esp32s3/src/receiver_link.hpp), [receiver_link.cpp](apps/controller-esp32s3/src/receiver_link.cpp) | Request/result types, BLE worker, scan/connect/security/read/write/Forget/pixel operations |
 | [bond_store.cpp](apps/controller-esp32s3/src/bond_store.cpp) | Bond-store handling and private-address bookkeeping without evicting the paired identity |
 | [nimble_guard.py](apps/controller-esp32s3/nimble_guard.py) | Build-time guard on the pinned NimBLE source to prevent implicit repair/re-pair during ordinary operations |
@@ -251,6 +252,7 @@ Unchanged reads must not wake the OLED, rewrite flash or restart animations.
 | [device_indicator.c](apps/receiver/src/device_indicator.c) | Independent red power/pairing indicator |
 | [mood_indicator.c](apps/receiver/src/mood_indicator.c) | Schedule current moods without restarting unchanged animations |
 | [status_output.c](apps/receiver/src/status_output.c) | Drive front pixels and independent onboard power light |
+| [brightness_settings.c](apps/receiver/src/brightness_settings.c) | Load/store brightness and expose only applied, durable settings |
 | [padded_pixels.c](apps/receiver/src/padded_pixels.c) | SPI transfer of explicitly encoded WS2812 frames with low reset padding |
 
 The receiver owns the truth. Its readable state and acknowledgement reflect
@@ -264,6 +266,7 @@ is about once per second; the unpaired pairing window uses faster advertising.
 | --- | --- |
 | `status.c` | Stable mood enumeration, labels, colors and animated corner colors |
 | `protocol.c` | Versioned wire encode/decode and validation |
+| `brightness.c` | Normalized brightness mapping, separate versioned settings packet/record and durable apply ordering |
 | `receiver_processor.c` | Validate, deduplicate, persist, apply and acknowledge |
 | `record.c`, `store.c` | Durable record encoding/CRC and Zephyr settings adapter |
 | `reset_gesture.c`, `reset_input.c` | Paced reset counting, persistence and reset-reason handling |
@@ -284,11 +287,14 @@ Status values are fixed: `0 Off`, `1 Warn`, `2 On Air`, `3 Okay`, `4 Request`,
 every 50 ms across a 20-second cycle with corner hue offsets `[0,140,224,84]`.
 Separate devices have independent animation phase.
 
-Default external sign brightness is **160 permille (16%)**, controlled by
-`LOA_PIXEL_BRIGHTNESS_PERMILLE`. Onboard RGB uses 125 permille and channel
-calibration R=1000, G=650, B=500. The ESP32 pixel uses brightness **24/255**;
-the build bounds it to 1–64. These are digital drive limits, not optical
-measurements. Older bench documents may describe an earlier brightness setting.
+Default external sign brightness is **160 permille (16%)**. The Brightness menu
+maps normalized 0–100% levels to 50–500 permille for the frame, 50–250 permille
+for the onboard indicator, and 13–76/255 for the controller pixel. Defaults retain
+160, 125 and 24 respectively. Onboard calibration stays R=1000, G=650, B=500.
+OLED awake contrast spans 41–207 (default 207), dim contrast 0–40 (default 0).
+Contrast zero is the existing visible idle mode; DISPLAYOFF still controls sleep.
+These digital drive/contrast values are not optical measurements. See
+[brightness implementation and validation](docs/BRIGHTNESS.md).
 
 The assembled sign uses the repository's padded SPI driver: 8 MHz SPI,
 10-bit symbols, `0x380` for zero and `0x3f0` for one. Each LED bit is 1.25 µs;
@@ -314,6 +320,7 @@ All UUIDs share the suffix `-6b7e-4c80-9f2a-f9b9d7e2a601`:
 | `7f6c0002` | State | Encrypted read and indication; same six-byte layout |
 | `7f6c0003` | Pixel test | Encrypted read/write of version, index, R, G, B |
 | `7f6c0004` | Pairing control | Current bonded/encrypted peer only; six-byte Forget request |
+| `7f6c0005` | Brightness | Encrypted read/write; seven-byte version/transaction/frame/indicator packet; [details](docs/BRIGHTNESS.md#wire-and-storage-contract) |
 
 Version-1 mood messages:
 
@@ -372,6 +379,8 @@ hardware and should only be used as part of deliberate bench work.
 | Zephyr settings | `loa_reset/count` | Paced pin-reset count; loaded before evaluation |
 | Zephyr settings | `loa_pair/pending` | Durable explicit Forget intent; processed/retried at boot |
 | ESP32 Preferences | Namespace `loa-desk`, key `state` | Six-byte last-confirmed protocol record; loading it leaves state unverified |
+| Zephyr settings/NVS | `loa_light/levels` | Eight-byte versioned brightness transaction/levels/CRC-8 record; missing/invalid data uses defaults |
+| ESP32 Preferences | Namespace `loa-desk`, key `brightness` | Five-byte version/awake/dim/pixel/CRC-8 record, separate from mood cache and bonds |
 | NimBLE storage | Bond and peer identity records | Separate from the display cache; preserve keys during normal sync/send |
 
 The XIAO's stock 32 KiB storage partition is retained. Do not resize partitions,
@@ -756,8 +765,10 @@ a compatibility/versioning decision and coordinated firmware updates.
 
 ### Change brightness, pixels, pins or power behavior
 
-Zephyr brightness/calibration is in `apps/receiver/CMakeLists.txt`; ESP32 brightness and
-pins are in `platformio.ini`/`main.cpp`. Receiver pixel configuration spans
+Brightness ranges and exact defaults are in `src/brightness.c`; onboard channel
+calibration stays in `apps/receiver/CMakeLists.txt`, and controller pins stay in
+`main.cpp`. [The brightness guide](docs/BRIGHTNESS.md) describes the additional
+GATT characteristic, durable records and edit/save behavior. Receiver pixel configuration spans
 `apps/receiver/prj.conf`, the receiver board overlay, `padded_pixels.c` and
 `ws2812_frame.c`. Check both generated configuration and hardware wiring. Preserve
 the independent power indicator and no-flash/no-phase-reset reconciliation.
@@ -826,7 +837,7 @@ assembly and electrical commissioning remain separate from digital validation.
 
 [CI](.github/workflows/ci.yml) has three jobs:
 
-- **ESP32-S3 controller:** six host suites, PlatformIO build, actual-GFX bounds
+- **ESP32-S3 controller:** eight host suites, PlatformIO build, actual-GFX bounds
   rendering, and upload of the controller's four flash images, ELF and preview.
 - **test-and-build:** whitespace and pinned-style C formatting, 14 Zephyr core
   tests, normal and USB diagnostic receiver builds, current waveform simulation,
@@ -855,7 +866,7 @@ behavior rather than using old local dependencies as proof of reproducibility.
 
 ### Versions, releases and recovery
 
-The root [VERSION](VERSION) is the **device-pair bundle version**, now `0.4.0`.
+The root [VERSION](VERSION) is the **device-pair bundle version**, now `0.5.0`.
 The ESP32 version string is in `main.cpp`; packaging requires it to agree with
 VERSION. The receiver is identified by its source revision, configuration and
 image hash; VERSION is not automatically embedded as a Zephyr runtime string.
@@ -911,6 +922,7 @@ commit. Keep the end-user manual and this guide aligned with the final change.
 - [Architecture](docs/ARCHITECTURE.md): current device roles and implementation map.
 - [ESP32 controller guide](apps/controller-esp32s3/README.md): application wiring and command details.
 - [Pairing and power update](docs/PAIRING_POWER_UPDATE.md): current physical observations and hashes.
+- [Brightness hardware bench](docs/BRIGHTNESS_BENCH.md): 0.5.0 flashed images, physical observations and test limits.
 - [Buddy/six-mood update](docs/BUDDY_UPDATE.md): UI, reconciliation and animation history.
 - [Power](docs/POWER.md), [debugging](docs/DEBUGGING.md), [flashing](docs/FLASHING.md).
 - [Firmware history](docs/HISTORY.md): retired targets and dated bench evidence, including the 375 ns selection.

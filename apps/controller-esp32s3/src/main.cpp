@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+#include "brightness_ui.hpp"
 #include "buddy_ui.hpp"
 #include "controller.hpp"
 #include "receiver_link.hpp"
@@ -13,8 +14,7 @@
 namespace {
 constexpr int encoderClk = 1, encoderDt = 2, encoderSw = 4;
 constexpr int oledSda = 5, oledScl = 6, pixelPin = 44;
-constexpr char firmwareVersion[] = "esp32s3-0.4.0";
-static_assert(LOA_PIXEL_BRIGHTNESS > 0 && LOA_PIXEL_BRIGHTNESS <= 64, "Keep the desk pixel dim");
+constexpr char firmwareVersion[] = "esp32s3-0.5.0";
 static_assert(LOA_ENCODER_DIRECTION == 1 || LOA_ENCODER_DIRECTION == -1, "Direction must be +/-1");
 
 Adafruit_SSD1306 display(128, 64, &Wire, -1);
@@ -23,6 +23,10 @@ Preferences preferences;
 loa::State state;
 loa::Button button;
 loa::Encoder encoder;
+loa::LocalBrightness localBrightness;
+loa::BrightnessEditor brightnessEditor;
+loa_brightness signBrightness = loa_brightness_defaults();
+const char *brightnessError = "Press to read sign";
 portMUX_TYPE encoderLock = portMUX_INITIALIZER_UNLOCKED;
 volatile int encoderSteps = 0;
 bool oledReady = false, storageReady = false, radioReady = false, bonded = false, busy = false;
@@ -33,14 +37,17 @@ bool quietOperation = false, sendAfterCheck = false;
 loa_status queuedSelection = LOA_STATUS_OFF;
 unsigned retries = 0;
 int turns = 0, clicks = 0, holds = 0;
-enum class Screen { Home, Menu, Test, Forget, PairHelp };
+enum class Screen { Home, Menu, Test, Forget, PairHelp, Brightness, LightEdit };
 Screen screen = Screen::Home;
 int menuItem = 0, testColor = 0;
+int brightnessItem = 0;
 bool confirmForget = false;
 const char *notice = "Hi, stream buddy!";
 uint32_t noticeAt = 0;
-const char *const menuItems[] = {"Back to my sign", "Check my sign", "Connect a sign", "Light test",
-                                 "Forget this sign"};
+const char *const menuItems[] = {"Back to my sign", "Check my sign", "Connect a sign",
+                                 "Brightness",      "Light test",    "Forget this sign"};
+const char *const brightnessItems[] = {"Back to settings", "Sign frame", "Sign indicator",
+                                       "Screen awake",     "Screen dim", "Controller light"};
 const char *const testNames[] = {"OFF", "RED", "GREEN", "BLUE", "WHITE", "YELLOW"};
 constexpr loa_rgb testColors[] = {{0, 0, 0},   {255, 0, 0},     {0, 255, 0},
                                   {0, 0, 255}, {255, 255, 255}, {255, 255, 0}};
@@ -78,7 +85,8 @@ bool start(LinkOperation operation, uint8_t pixelIndex = 255, loa_rgb pixelColor
         return false;
     }
     if ((operation == LinkOperation::Send || operation == LinkOperation::Sync ||
-         operation == LinkOperation::Pixel) &&
+         operation == LinkOperation::Pixel || operation == LinkOperation::ReadBrightness ||
+         operation == LinkOperation::SetBrightness) &&
         !bonded) {
         say("Connect a sign first");
         return false;
@@ -86,17 +94,31 @@ bool start(LinkOperation operation, uint8_t pixelIndex = 255, loa_rgb pixelColor
     uint32_t transaction = esp_random();
     if (transaction == 0)
         transaction = 1;
-    LinkRequest request{operation, {transaction, state.selected}, pixelIndex, pixelColor};
+    LinkRequest request{operation, {transaction, state.selected}, pixelIndex, pixelColor, {}};
+    if (operation == LinkOperation::SetBrightness) {
+        request.brightness = signBrightness;
+        // Never reuse the transaction of the snapshot being edited.
+        if (transaction == signBrightness.transaction_id)
+            transaction = transaction == UINT32_MAX ? 1 : transaction + 1;
+        request.brightness.transaction_id = transaction;
+        if (brightnessEditor.light == LOA_LIGHT_FRAME)
+            request.brightness.frame = brightnessEditor.value;
+        else
+            request.brightness.indicator = brightnessEditor.value;
+    }
     if (!linkStart(request))
         return false;
     busy = true;
     quietOperation = quietly;
-    retryAt = 0;
+    if (operation != LinkOperation::ReadBrightness && operation != LinkOperation::SetBrightness)
+        retryAt = 0;
     if (!quietly)
-        say(operation == LinkOperation::Pixel  ? "Testing a light"
-            : operation == LinkOperation::Send ? "Telling your sign..."
-            : operation == LinkOperation::Pair ? "Looking for a friend"
-                                               : "Checking your sign");
+        say(operation == LinkOperation::SetBrightness    ? "Saving brightness..."
+            : operation == LinkOperation::ReadBrightness ? "Reading brightness"
+            : operation == LinkOperation::Pixel          ? "Testing a light"
+            : operation == LinkOperation::Send           ? "Telling your sign..."
+            : operation == LinkOperation::Pair           ? "Looking for a friend"
+                                                         : "Checking your sign");
     Serial.printf("REQUEST op=%u tx=%08lx status=%s\n", unsigned(operation),
                   static_cast<unsigned long>(transaction), loa_status_name(state.selected));
     return true;
@@ -111,6 +133,8 @@ void report() {
                   state.verified, loa_status_name(state.confirmed.status),
                   loa_status_name(state.selected), unsigned(screen), testNames[testColor], turns,
                   clicks, holds, ESP.getFreeHeap());
+    Serial.printf("LIGHTS saved_awake=%u saved_dim=%u saved_controller=%u\n", localBrightness.awake,
+                  localBrightness.dim, localBrightness.led);
 }
 
 void enterTest() {
@@ -124,8 +148,71 @@ void enterTest() {
     Serial.println("TEST RED; rotate or click for colors; hold to exit; no receiver command sent");
 }
 
+void openBrightness() {
+    if (busy) {
+        say("One sec, please!");
+        return;
+    }
+    const auto light = static_cast<loa_light>(brightnessItem - 1);
+    if (light <= LOA_LIGHT_SIGN_LED && (!bonded || !radioReady)) {
+        say(!bonded ? "Connect a sign first" : "Radio needs a restart");
+        return;
+    }
+    brightnessEditor.open(light, localBrightness.get(light), light > LOA_LIGHT_SIGN_LED);
+    screen = Screen::LightEdit;
+    brightnessError = "Press to read sign";
+    if (brightnessEditor.remote())
+        start(LinkOperation::ReadBrightness);
+}
+
+void saveBrightness() {
+    if (brightnessEditor.remote()) {
+        start(LinkOperation::SetBrightness);
+        return;
+    }
+    auto next = localBrightness;
+    next.set(brightnessEditor.light, brightnessEditor.value);
+    uint8_t payload[LOA_LOCAL_BRIGHTNESS_RECORD_LEN], previous[LOA_LOCAL_BRIGHTNESS_RECORD_LEN];
+    next.encode(payload);
+    localBrightness.encode(previous);
+    if (memcmp(payload, previous, sizeof(payload)) != 0 &&
+        (!storageReady ||
+         preferences.putBytes("brightness", payload, sizeof(payload)) != sizeof(payload))) {
+        // Restore the saved output and keep an explicit failure visible.
+        screen = Screen::Brightness;
+        say("Light save failed");
+        return;
+    }
+    localBrightness = next;
+    screen = Screen::Brightness;
+    say("Brightness saved");
+}
+
 void click() {
     switch (screen) {
+    case Screen::Brightness:
+        if (brightnessItem == 0)
+            screen = Screen::Menu;
+        else
+            openBrightness();
+        break;
+    case Screen::LightEdit:
+        if (busy)
+            break;
+        if (!brightnessEditor.ready) {
+            start(LinkOperation::ReadBrightness);
+        } else if (brightnessEditor.editing) {
+            brightnessEditor.editing = false;
+            brightnessEditor.row = 1;
+        } else if (brightnessEditor.row == 0)
+            brightnessEditor.editing = true;
+        else if (brightnessEditor.row == 1)
+            saveBrightness();
+        else if (brightnessEditor.row == 2)
+            brightnessEditor.reset();
+        else
+            screen = Screen::Brightness;
+        break;
     case Screen::PairHelp:
         retries = 0;
         if (start(LinkOperation::Pair))
@@ -157,9 +244,13 @@ void click() {
                 screen = Screen::Home;
             break;
         case 3:
-            enterTest();
+            screen = Screen::Brightness;
+            brightnessItem = 0;
             break;
         case 4:
+            enterTest();
+            break;
+        case 5:
             if (!busy) {
                 screen = Screen::Forget;
                 confirmForget = false;
@@ -217,7 +308,14 @@ void input() {
                 state.selected = loa::rotate(state.selected, direction);
             break;
         case Screen::Menu:
-            menuItem = (menuItem + direction + 5) % 5;
+            menuItem = (menuItem + direction + 6) % 6;
+            break;
+        case Screen::Brightness:
+            brightnessItem = (brightnessItem + direction + 6) % 6;
+            break;
+        case Screen::LightEdit:
+            if (!busy)
+                brightnessEditor.turn(direction);
             break;
         case Screen::Test:
             testColor = (testColor + direction + 6) % 6;
@@ -355,6 +453,43 @@ void receive() {
     const bool quiet = quietOperation;
     quietOperation = false;
     bonded = result.bonded;
+    if (result.request.operation == LinkOperation::ReadBrightness ||
+        result.request.operation == LinkOperation::SetBrightness) {
+        if (result.success) {
+            signBrightness = result.brightness;
+            if (screen == Screen::LightEdit) {
+                if (result.request.operation == LinkOperation::SetBrightness) {
+                    screen = Screen::Brightness;
+                    say("Brightness saved");
+                } else {
+                    brightnessEditor.open(brightnessEditor.light,
+                                          brightnessEditor.light == LOA_LIGHT_FRAME
+                                              ? signBrightness.frame
+                                              : signBrightness.indicator,
+                                          true);
+                }
+            }
+        } else {
+            brightnessEditor.ready = false;
+            brightnessError = !strcmp(result.error, "Update sign firmware") ? result.error
+                              : result.request.operation == LinkOperation::SetBrightness
+                                  ? "Save not confirmed"
+                                  : "Can't read sign";
+            say(brightnessError);
+            if (strcmp(result.error, "Update sign firmware") != 0) {
+                state.verified = false;
+                if (bonded && retries < 3) {
+                    retryAt = millis() + (1000U << retries);
+                    ++retries;
+                }
+            }
+        }
+        // No mood confirmation, automatic replay, or cached brightness confirmation.
+        Serial.printf("BRIGHTNESS success=%u frame=%u indicator=%u detail=%s\n", result.success,
+                      result.brightness.frame, result.brightness.indicator,
+                      result.success ? "confirmed" : result.error);
+        return;
+    }
     lastCheck = millis();
     Serial.printf("RESULT op=%u success=%u bonded=%u tx=%08lx status=%s detail=%s\n",
                   unsigned(result.request.operation), result.success, bonded,
@@ -453,7 +588,9 @@ void render() {
     lastFrame = now;
     if (screen == Screen::Test && now - lastActivity >= 60000)
         screen = Screen::Home;
-    if ((screen == Screen::Menu || screen == Screen::Forget) && now - lastActivity >= 30000) {
+    if ((screen == Screen::Menu || screen == Screen::Forget || screen == Screen::Brightness ||
+         screen == Screen::LightEdit) &&
+        !busy && now - lastActivity >= 30000) {
         screen = Screen::Home;
         confirmForget = false;
     }
@@ -465,8 +602,15 @@ void render() {
     else
         color = {12, 12, 12}; // Quiet unknown/offline marker; details stay on the OLED.
     static uint32_t lastColor = UINT32_MAX;
+    auto preview = localBrightness;
+    if (screen == Screen::LightEdit && brightnessEditor.ready && !brightnessEditor.remote())
+        preview.set(brightnessEditor.light, brightnessEditor.value);
+    static int lastBrightness = -1;
+    const int ledBrightness = loa_brightness_native(LOA_LIGHT_DESK_LED, preview.led);
     const uint32_t packed = pixel.Color(color.red, color.green, color.blue);
-    if (packed != lastColor) {
+    if (packed != lastColor || lastBrightness != ledBrightness) {
+        pixel.setBrightness(ledBrightness);
+        lastBrightness = ledBrightness;
         pixel.setPixelColor(0, packed);
         pixel.show();
         lastColor = packed;
@@ -478,8 +622,18 @@ void render() {
         loa::screenPower(now - lastActivity, loa::foregroundBusy(busy, quietOperation));
     if (power != desiredPower) {
         display.ssd1306_command(desiredPower ? SSD1306_DISPLAYON : SSD1306_DISPLAYOFF);
-        display.dim(desiredPower < 2);
         power = desiredPower;
+    }
+    const bool previewDim =
+        screen == Screen::LightEdit && brightnessEditor.light == LOA_LIGHT_SCREEN_DIM;
+    const int contrast = desiredPower < 2 || previewDim
+                             ? loa_brightness_native(LOA_LIGHT_SCREEN_DIM, preview.dim)
+                             : loa_brightness_native(LOA_LIGHT_SCREEN, preview.awake);
+    static int lastContrast = -1;
+    if (lastContrast != contrast) {
+        display.ssd1306_command(SSD1306_SETCONTRAST);
+        display.ssd1306_command(contrast);
+        lastContrast = contrast;
     }
     if (!desiredPower)
         return;
@@ -495,17 +649,17 @@ void render() {
                        now - noticeAt < 3000 ? notice : nullptr},
                       now);
         break;
-    case Screen::Menu: {
-        text(0, 0, "BUDDY SETTINGS");
-        display.drawFastHLine(0, 11, 128, SSD1306_WHITE);
-        const int first = menuItem >= 3 ? 2 : 0;
-        for (int i = first; i < first + 3 && i < 5; ++i) {
-            snprintf(line, sizeof(line), "%c %s", i == menuItem ? '>' : ' ', menuItems[i]);
-            text(0, 16 + (i - first) * 12, line);
-        }
-        text(0, 56, now - noticeAt < 4000 ? notice : "Press:open Hold:back");
+    case Screen::Menu:
+        loa::drawChoiceMenu(display, "BUDDY SETTINGS", menuItems, 6, menuItem,
+                            now - noticeAt < 4000 ? notice : "Press:open Hold:back");
         break;
-    }
+    case Screen::Brightness:
+        loa::drawChoiceMenu(display, "BRIGHTNESS", brightnessItems, 6, brightnessItem,
+                            now - noticeAt < 4000 ? notice : "Press:open Hold:back");
+        break;
+    case Screen::LightEdit:
+        loa::drawBrightness(display, brightnessEditor, busy, brightnessError);
+        break;
     case Screen::Test:
         display.drawRect(0, 0, 128, 64, SSD1306_WHITE);
         text(4, 3, "LIGHT CHECK");
@@ -541,8 +695,13 @@ void setup() {
     encoder = loa::Encoder((digitalRead(encoderClk) << 1) | digitalRead(encoderDt));
     attachInterrupt(digitalPinToInterrupt(encoderClk), onEncoder, CHANGE);
     attachInterrupt(digitalPinToInterrupt(encoderDt), onEncoder, CHANGE);
+    storageReady = preferences.begin("loa-desk", false);
+    uint8_t lightRecord[LOA_LOCAL_BRIGHTNESS_RECORD_LEN];
+    if (storageReady && preferences.getBytesLength("brightness") == sizeof(lightRecord) &&
+        preferences.getBytes("brightness", lightRecord, sizeof(lightRecord)) == sizeof(lightRecord))
+        localBrightness.restore(lightRecord, sizeof(lightRecord));
     pixel.begin();
-    pixel.setBrightness(LOA_PIXEL_BRIGHTNESS);
+    pixel.setBrightness(loa_brightness_native(LOA_LIGHT_DESK_LED, localBrightness.led));
     pixel.clear();
     pixel.show();
     Wire.begin(oledSda, oledScl);
@@ -556,13 +715,14 @@ void setup() {
     }
     oledReady = oledAddress && display.begin(SSD1306_SWITCHCAPVCC, oledAddress, false, false);
     if (oledReady) {
+        display.ssd1306_command(SSD1306_SETCONTRAST);
+        display.ssd1306_command(loa_brightness_native(LOA_LIGHT_SCREEN, localBrightness.awake));
         display.clearDisplay();
         display.setTextColor(SSD1306_WHITE);
         text(0, 4, "LITTLE ON AIR");
         text(0, 22, "Hi, stream buddy!");
         display.display();
     }
-    storageReady = preferences.begin("loa-desk", false);
     uint8_t payload[LOA_PROTOCOL_PAYLOAD_LEN];
     loa_message cached{};
     if (storageReady && preferences.getBytesLength("state") == sizeof(payload) &&

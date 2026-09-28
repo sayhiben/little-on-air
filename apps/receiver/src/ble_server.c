@@ -17,6 +17,7 @@
 #include <little_on_air/pairing_control.h>
 
 #include "ble_server.h"
+#include "brightness_settings.h"
 #include "device_indicator.h"
 #include "mood_indicator.h"
 #include "pair_reset.h"
@@ -210,6 +211,38 @@ static ssize_t write_pairing_control(struct bt_conn *conn, const struct bt_gatt_
 	return err == 0 ? len : BT_GATT_ERR(BT_ATT_ERR_UNLIKELY);
 }
 
+static struct bt_uuid_128 brightness_uuid =
+	BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x7f6c0005, 0x6b7e, 0x4c80, 0x9f2a, 0xf9b9d7e2a601));
+
+static ssize_t read_brightness(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf,
+			       uint16_t len, uint16_t offset)
+{
+	uint8_t payload[LOA_BRIGHTNESS_PAYLOAD_LEN];
+	struct loa_brightness value = loa_brightness_settings_get();
+	(void)loa_brightness_encode(payload, &value);
+	return bt_gatt_attr_read(conn, attr, buf, len, offset, payload, sizeof(payload));
+}
+
+static ssize_t write_brightness(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+				const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
+{
+	ARG_UNUSED(attr);
+	if (offset != 0U) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_OFFSET);
+	}
+	if ((flags & BT_GATT_WRITE_FLAG_PREPARE) != 0U || len != LOA_BRIGHTNESS_PAYLOAD_LEN) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_ATTRIBUTE_LEN);
+	}
+	if (!bonded || conn != current_conn || bt_conn_get_security(conn) < BT_SECURITY_L2) {
+		return BT_GATT_ERR(BT_ATT_ERR_AUTHORIZATION);
+	}
+	int err = loa_brightness_settings_write(buf, len);
+	if (err == -EINVAL) {
+		return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+	}
+	return err == 0 ? len : BT_GATT_ERR(BT_ATT_ERR_UNLIKELY);
+}
+
 BT_GATT_SERVICE_DEFINE(
 	loa_service, BT_GATT_PRIMARY_SERVICE(&service_uuid),
 	BT_GATT_CHARACTERISTIC(&command_uuid.uuid, BT_GATT_CHRC_WRITE, BT_GATT_PERM_WRITE_ENCRYPT,
@@ -221,7 +254,10 @@ BT_GATT_SERVICE_DEFINE(
 			       BT_GATT_PERM_WRITE_ENCRYPT | BT_GATT_PERM_READ_ENCRYPT, read_pixel,
 			       write_pixel, NULL),
 	BT_GATT_CHARACTERISTIC(&pairing_control_uuid.uuid, BT_GATT_CHRC_WRITE,
-			       BT_GATT_PERM_WRITE_ENCRYPT, NULL, write_pairing_control, NULL));
+			       BT_GATT_PERM_WRITE_ENCRYPT, NULL, write_pairing_control, NULL),
+	BT_GATT_CHARACTERISTIC(&brightness_uuid.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_WRITE,
+			       BT_GATT_PERM_READ_ENCRYPT | BT_GATT_PERM_WRITE_ENCRYPT,
+			       read_brightness, write_brightness, NULL));
 
 static void send_indication(struct k_work *work)
 {
