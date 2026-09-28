@@ -130,7 +130,7 @@ bool forgetReceiver(const LinkRequest &request) {
 }
 
 LinkResult transact(const LinkRequest &request) {
-    LinkResult result{request, false, linkBonded(), {}, "Receiver unavailable", false};
+    LinkResult result{request, false, linkBonded(), {}, "Receiver unavailable", false, {}};
     if (request.operation == LinkOperation::Forget) {
         result.receiverForgotten = forgetReceiver(request);
         Serial.printf("FORGET receiver_accepted=%u\n", result.receiverForgotten);
@@ -177,6 +177,32 @@ LinkResult transact(const LinkRequest &request) {
         return result;
     }
     result.bonded = linkBonded();
+    if (request.operation == LinkOperation::ReadBrightness ||
+        request.operation == LinkOperation::SetBrightness) {
+        auto *brightness = service->getCharacteristic(LOA_BRIGHTNESS_UUID);
+        if (!brightness || !brightness->canRead() || !brightness->canWrite()) {
+            result.error = "Update sign firmware";
+            return result;
+        }
+        if (request.operation == LinkOperation::SetBrightness) {
+            uint8_t payload[LOA_BRIGHTNESS_PAYLOAD_LEN];
+            phase = LinkPhase::Sending;
+            if (loa_brightness_encode(payload, &request.brightness) != 0 || expired ||
+                !brightness->writeValue(payload, sizeof(payload), true)) {
+                result.error = "Save not confirmed";
+                return result;
+            }
+        }
+        phase = LinkPhase::Reading;
+        const auto value = brightness->readValue();
+        result.success =
+            !expired &&
+            loa_brightness_decode(&result.brightness, value.data(), value.size()) == 0 &&
+            (request.operation == LinkOperation::ReadBrightness ||
+             loa_brightness_equal(&request.brightness, &result.brightness));
+        result.error = "Save not confirmed";
+        return result;
+    }
     if (request.operation == LinkOperation::Pixel) {
         auto *test = service->getCharacteristic(pixelUuid);
         if (!test || !test->canWrite() || !test->canRead()) {

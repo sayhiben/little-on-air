@@ -23,7 +23,10 @@ subprocess.run(['g++', '-std=c++11', '-O2', '-DARDUINO=100',
                 '-o', str(out / 'render')], check=True)
 subprocess.run([str(out / 'render'), str(out)], check=True)
 names = ['off', 'warn', 'on-air', 'okay', 'request', 'special', 'preview', 'offline',
-         'first-start', 'sending', 'confirmed', 'not-checked', 'pair-help']
+         'first-start', 'sending', 'confirmed', 'not-checked', 'pair-help',
+         'settings-brightness', 'brightness-list', 'sign-frame', 'controller-light',
+         'screen-dim-edit', 'brightness-saving', 'brightness-offline', 'brightness-default',
+         'brightness-save-error', 'brightness-unsupported']
 sheet = Image.new('RGB', (3 * 416, ((len(names) + 2) // 3) * 236 + 52), '#111722')
 draw = ImageDraw.Draw(sheet)
 draw.text((18, 15), 'Little On Air / Buddy UI - actual 128x64 firmware frames, enlarged 3x', fill='#dae7ed')

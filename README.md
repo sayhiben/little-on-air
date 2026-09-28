@@ -139,11 +139,43 @@ Hold the knob, turn to an item and press to select it.
 | **Back to my sign** | Return to the home screen |
 | **Check my sign** | Read the sign's current mood without changing it |
 | **Connect a sign** | Pair an unpaired controller with a sign in its pairing window; an already paired controller says **Already connected!** |
+| **Brightness** | Adjust the sign frame, sign indicator, awake screen, dim screen and controller light; reset each to its default |
 | **Light test** | Test the controller's small mood light; see below |
 | **Forget this sign** | Ask for confirmation, then remove the pairing; see [changing or reconnecting a sign](#changing-or-reconnecting-a-sign) |
 
 Settings and an unanswered Forget confirmation return home after 30 seconds
 without input. You can also hold the knob to leave them.
+
+### Brightness
+
+Choose **Brightness**, then the light or screen mode you want to adjust. Press
+**Level**, turn to change it in 5-point steps, and press again. Choose **Save**
+to keep it. **Reset default** selects that item's original brightness; choose
+**Save** to keep the reset. **Cancel**, holding the knob, or leaving the editor
+idle discards an unsaved change.
+
+Every level uses a **0–100% adjustment scale**: 0% is the lowest available
+brightness, not off. The ranges are limited for each light. The default is 50%
+for the three LED controls, 100% for **Screen awake**, and 0% for **Screen dim**.
+These defaults reproduce the previous firmware's light levels. Awake and dim
+are adjustable separately; dim stays below the awake range. Screen sleep still
+turns the display off after two minutes.
+
+The controller previews its own light and screen while editing, including the
+idle contrast when editing **Screen dim**. Its light continues showing the
+current mood, so choose a lit mood first if it is Off. The sign applies a change
+when you save. Its mood and animation continue without restarting.
+
+The sign must be reachable to read or save its brightness. Wait for
+**Brightness saved**. **Save not confirmed** means the result is uncertain;
+press to read the sign again before making another change. Unsaved or failed
+requests are never sent automatically later. **Update sign firmware** means the
+sign needs the matching brightness-capable firmware.
+
+Each device saves its own brightness through power cycles and disconnects.
+Changing or forgetting a pairing preserves these settings, so a replacement
+controller reads the sign's own levels. Controller settings also work without a
+paired sign.
 
 ### Light test
 
@@ -291,7 +323,7 @@ heading and text to judge connection state.
 
 ## Versions and further help
 
-This manual describes the **ESP32-S3 controller firmware 0.4.0** with the current
+This manual describes the **ESP32-S3 controller firmware 0.5.0** with the current
 matching four-pixel nRF52840 receiver firmware, **Igor measured v4 controller**
 and **v2.15 sign case** with open-backed frame wire channels. This project
 maintains this one device pair; install the current controller and receiver
@@ -304,8 +336,9 @@ when updating a device, and follow the sign's USB isolation sequence above.
 - [Developer guide](CONTRIBUTING.md): BOM, wiring, architecture, setup, builds,
   tests, diagnostics and making changes.
 - [Current hardware](hardware/README.md): assembly guides and print files.
-- [Recorded hardware observations](docs/PAIRING_POWER_UPDATE.md): what has
-  actually been checked on the assembled devices.
+- [Brightness hardware checks](docs/BRIGHTNESS_BENCH.md) and
+  [pairing/power observations](docs/PAIRING_POWER_UPDATE.md): what has actually
+  been checked on the assembled devices.
 - [Report a problem](https://github.com/sayhiben/little-on-air/issues): include
   the screen message, selected mood, power arrangement and installed versions.
 

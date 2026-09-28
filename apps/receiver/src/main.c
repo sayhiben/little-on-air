@@ -9,6 +9,7 @@
 #include <little_on_air/store.h>
 
 #include "ble_server.h"
+#include "brightness_settings.h"
 #include "device_indicator.h"
 #include "mood_indicator.h"
 #include "pair_reset.h"
@@ -58,9 +59,12 @@ static void bench_usb_poll(void)
 			sys_reboot(SYS_REBOOT_COLD);
 		} else if (strcmp(line, "status") == 0) {
 			struct loa_message current = loa_store_get_state();
+			struct loa_brightness brightness = loa_brightness_settings_get();
 			printk("BENCH bonded=%u saved=%u tx=%08x status=%u\n",
 			       loa_ble_server_has_bond(), loa_store_has_state(),
 			       current.transaction_id, current.status);
+			printk("BENCH brightness_tx=%08x frame=%u indicator=%u\n",
+			       brightness.transaction_id, brightness.frame, brightness.indicator);
 		} else {
 			printk("BENCH commands: status | pair-reset | reboot | bootloader\n");
 		}
@@ -99,6 +103,11 @@ int main(void)
 		return err;
 	}
 	LOG_INF("settings loaded");
+	err = loa_brightness_settings_init();
+	if (err != 0) {
+		LOG_ERR("brightness restore failed err=%d", err);
+		return err;
+	}
 	err = loa_reset_input_resolve(&input);
 	if (err != 0) {
 		LOG_ERR("reset gesture storage failed err=%d", err);

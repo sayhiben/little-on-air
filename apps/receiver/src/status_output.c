@@ -10,12 +10,6 @@
 
 #include "status_output.h"
 
-#ifndef LOA_LED_BRIGHTNESS_PERMILLE
-#define LOA_LED_BRIGHTNESS_PERMILLE 125U
-#endif
-#ifndef LOA_PIXEL_BRIGHTNESS_PERMILLE
-#define LOA_PIXEL_BRIGHTNESS_PERMILLE 160U
-#endif
 #ifndef LOA_LED_RED_CALIBRATION_PERMILLE
 #define LOA_LED_RED_CALIBRATION_PERMILLE 1000U
 #endif
@@ -33,6 +27,11 @@ static const struct pwm_dt_spec blue_pwm = PWM_DT_SPEC_GET(DT_ALIAS(pwm_blue));
 static const struct device *const pixels = DEVICE_DT_GET(DT_ALIAS(loa_pixels));
 static struct led_rgb pixel_colors[DT_PROP(DT_ALIAS(loa_pixels), chain_length)];
 K_MUTEX_DEFINE(pixel_lock);
+/* This lock covers both outputs so brightness changes preserve their raw colors. */
+static uint16_t frame_brightness = 160U, device_brightness = 125U;
+static struct loa_rgb device_color;
+static uint8_t test_index;
+static struct loa_rgb test_color;
 static bool pixel_test_active;
 static struct loa_rgb latest_colors[DT_PROP(DT_ALIAS(loa_pixels), chain_length)];
 static struct k_work_delayable pixel_test_timeout;
@@ -40,16 +39,19 @@ static struct k_work_delayable pixel_test_timeout;
 static struct led_rgb scaled_pixel(struct loa_rgb color)
 {
 	return (struct led_rgb){
-		.r = color.red * LOA_PIXEL_BRIGHTNESS_PERMILLE / 1000U,
-		.g = color.green * LOA_PIXEL_BRIGHTNESS_PERMILLE / 1000U,
-		.b = color.blue * LOA_PIXEL_BRIGHTNESS_PERMILLE / 1000U,
+		.r = color.red * frame_brightness / 1000U,
+		.g = color.green * frame_brightness / 1000U,
+		.b = color.blue * frame_brightness / 1000U,
 	};
 }
 
 static int restore_pixels(void)
 {
 	for (size_t i = 0; i < ARRAY_SIZE(pixel_colors); ++i) {
-		pixel_colors[i] = scaled_pixel(latest_colors[i]);
+		struct loa_rgb raw = pixel_test_active
+					     ? (i == test_index ? test_color : (struct loa_rgb){0})
+					     : latest_colors[i];
+		pixel_colors[i] = scaled_pixel(raw);
 	}
 	return led_strip_update_rgb(pixels, pixel_colors, ARRAY_SIZE(pixel_colors));
 }
@@ -59,15 +61,13 @@ static void pixel_test_expired(struct k_work *work)
 	ARG_UNUSED(work);
 	(void)loa_status_output_test_pixel(UINT8_MAX, (struct loa_rgb){0});
 }
-BUILD_ASSERT(LOA_PIXEL_BRIGHTNESS_PERMILLE > 0 && LOA_PIXEL_BRIGHTNESS_PERMILLE <= 250,
-	     "Front pixel brightness must be within the configured 25 percent ceiling");
 
 static int set_channel(const struct pwm_dt_spec *channel, uint8_t intensity, uint16_t calibration)
 {
 	uint64_t pulse = channel->period;
 
 	pulse *= intensity;
-	pulse *= LOA_LED_BRIGHTNESS_PERMILLE;
+	pulse *= device_brightness;
 	pulse *= calibration;
 	pulse /= 255U * 1000U * 1000U;
 
@@ -92,7 +92,7 @@ int loa_status_output_init(void)
 	return loa_status_output_set_status(LOA_STATUS_OFF, 0U);
 }
 
-int loa_status_output_set_device_rgb(struct loa_rgb color)
+static int set_device_rgb(struct loa_rgb color)
 {
 	int err;
 
@@ -107,6 +107,38 @@ int loa_status_output_set_device_rgb(struct loa_rgb color)
 	}
 
 	err = set_channel(&blue_pwm, color.blue, LOA_LED_BLUE_CALIBRATION_PERMILLE);
+	return err;
+}
+
+int loa_status_output_set_device_rgb(struct loa_rgb color)
+{
+	k_mutex_lock(&pixel_lock, K_FOREVER);
+	device_color = color;
+	int err = set_device_rgb(color);
+	k_mutex_unlock(&pixel_lock);
+	return err;
+}
+
+int loa_status_output_set_brightness(uint8_t frame, uint8_t indicator)
+{
+	if (frame > 100U || indicator > 100U) {
+		return -EINVAL;
+	}
+	k_mutex_lock(&pixel_lock, K_FOREVER);
+	uint16_t old_frame = frame_brightness, old_device = device_brightness;
+	frame_brightness = loa_brightness_native(LOA_LIGHT_FRAME, frame);
+	device_brightness = loa_brightness_native(LOA_LIGHT_SIGN_LED, indicator);
+	int err = old_frame == frame_brightness ? 0 : restore_pixels();
+	if (err == 0 && old_device != device_brightness) {
+		err = set_device_rgb(device_color);
+	}
+	if (err != 0) {
+		frame_brightness = old_frame;
+		device_brightness = old_device;
+		(void)restore_pixels();
+		(void)set_device_rgb(device_color);
+	}
+	k_mutex_unlock(&pixel_lock);
 	return err;
 }
 
@@ -136,6 +168,8 @@ int loa_status_output_test_pixel(uint8_t index, struct loa_rgb color)
 		(void)k_work_cancel_delayable(&pixel_test_timeout);
 		err = restore_pixels();
 	} else {
+		test_index = index;
+		test_color = color;
 		for (size_t i = 0; i < ARRAY_SIZE(pixel_colors); ++i) {
 			pixel_colors[i] = i == index ? scaled_pixel(color) : (struct led_rgb){0};
 		}
